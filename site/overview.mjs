@@ -138,13 +138,17 @@ function workCard(item, data, compact = false) {
 
 function renderProject(slide, data, article) {
   article.querySelector('h2').classList.add('project-title');
-  article.append(
+  const copy = element('div', 'project-copy');
+  copy.append(
     element('p', 'project-subtitle', data.project.subtitle),
     element('p', 'project-thesis', data.project.thesis),
     element('p', 'project-status', data.project.status),
     sourceLinks([['Read the source report →', data.project.reportUrl]]),
     sourceDetail(slide.section, 'project-abstract', `Read the source: ${slide.section.title}`),
   );
+  const summary = element('div', 'project-summary');
+  summary.append(copy, byId('project-share').content.cloneNode(true));
+  article.append(summary);
 }
 
 function renderDemos(slide, article) {

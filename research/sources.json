@@ -640,6 +640,46 @@
     "accessed": "2026-09-18"
   },
   {
+    "id": "S80",
+    "author": "Wikimedia Enterprise / Wikimedia Foundation",
+    "year": "Undated; accessed 2026",
+    "title": "About Wikimedia Enterprise",
+    "url": "https://enterprise.wikimedia.com/about/",
+    "claim": "Describes enterprise-grade APIs, data-quality signals, developer support, continued free services, and operation through Wikimedia LLC, a Foundation-owned entity.",
+    "limit": "An organizational example, not proof that separate entities are always necessary, that the proposed CCF model will succeed, or that individual contributors receive these payments.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S81",
+    "author": "arXiv",
+    "year": "Undated; accessed 2026",
+    "title": "Membership",
+    "url": "https://info.arxiv.org/about/membership.html",
+    "claim": "Institutional membership supports a platform free for researchers to read and submit to, with member benefits including recognition, statistics, and governance eligibility.",
+    "limit": "A funding arrangement, not evidence of individual-contributor payments or sufficient AI-specific commercial demand for another institution.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S82",
+    "author": "Crossref",
+    "year": "Undated; accessed 2026",
+    "title": "Fees",
+    "url": "https://www.crossref.org/fees/",
+    "claim": "Documents membership and registration fees, a free public metadata API, and optional Metadata Plus subscriptions for more predictable service.",
+    "limit": "Fees and programs may change. Service differentiation does not create royalties over underlying public knowledge or demonstrate payments to individual authors.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S83",
+    "author": "Wikimedia Enterprise",
+    "year": "Undated; accessed 2026",
+    "title": "Wikimedia Enterprise/Principles",
+    "url": "https://meta.wikimedia.org/wiki/Wikimedia_Enterprise/Principles",
+    "claim": "Operating principles distinguish paid service from restrictions on free use, exclusive access, or customer editorial influence, and describe transparent mission-directed use of receipts.",
+    "limit": "Project-specific commitments, not universal legal rules, independently audited financial results, or endorsement of Commons Collective.",
+    "accessed": "2026-09-18"
+  },
+  {
     "id": "S31",
     "author": "Charles I. Jones and Christopher Tonetti",
     "year": "2020",

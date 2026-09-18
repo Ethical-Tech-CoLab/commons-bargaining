@@ -63,6 +63,8 @@ connections are documented rather than presented as a new official charter.
   boundaries, independent evidence, and scoped operational acceptance tests.
 - A verified agent-harness and discovery shortlist, adoption incentives, and an
   unfilled component passport for an eligibility-first agency starter kit.
+- A private-institution service-operator model, existing commons funding examples,
+  and an audited hypothetical cash worksheet with reserve and sensitivity checks.
 
 ## Run locally
 
@@ -78,7 +80,9 @@ npm run preview
 Preview uses Python 3's built-in HTTP server and listens only on
 `http://127.0.0.1:4173`. Python is not required for building or deployment.
 
-There is one build-time dependency, `marked`, locked in the lockfile.
+Build-time dependencies are `marked` and `qrcode`, locked in the lockfile.
+The QR code is generated locally from the canonical site URL, with a white
+quiet zone; an independent decoder verifies its PNG version in the tests.
 The deployed site has no runtime dependencies, analytics, external fonts,
 API calls, cookies, or account system. The calculator processes only hypothetical
 numbers locally in the browser. GitHub's own hosting infrastructure may retain
@@ -138,6 +142,7 @@ Statuses describe empirical/institutional research, not completion of this websi
 | `site/template.html` | Accessible publication shell |
 | `site/header.html`, `site/header.css` | Shared persistent Overview, Demos, Research navigation |
 | `site/favicon.svg` | Shared green header mark and browser favicon |
+| `site/qr-share.html`, `site/qr-share.css` | Locally generated project QR on the homepage and opening presentation slide |
 | `site/styles.css` | Responsive CoLab-inspired styling and print layout |
 | `site/model.mjs` | Pure integer-cent illustrative settlement arithmetic |
 | `site/app.mjs` | Browser-only calculator and bibliography filter |
@@ -149,6 +154,7 @@ Statuses describe empirical/institutional research, not completion of this websi
 | `examples/knowledge-object.json` | Fictional interoperable-object sketch, not a production contract/schema |
 | `examples/reputation-observation.json` | Unexecuted evidence-record sketch, not a real reputation score or ERC implementation |
 | `examples/component-passport.json` | Unfilled component-review record, not approval or runtime isolation |
+| `examples/service-operator-economics.json` | Hypothetical annual cash model with protected liabilities and restricted funds |
 | `test/` | Node built-in test-runner checks |
 | `dist/` | Generated Pages artifact; intentionally not committed |
 

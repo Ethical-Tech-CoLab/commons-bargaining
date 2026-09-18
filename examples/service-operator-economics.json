@@ -1,0 +1,64 @@
+{
+  "currency": "USD",
+  "unit": "whole_dollars_per_year",
+  "hypothetical": true,
+  "status": "planning-example-not-a-forecast-or-statutory-accounts",
+  "openingCashAllLedgers": 0,
+  "inputs": {
+    "anchorCount": 6,
+    "anchorPrice": 90000,
+    "curationPerAnchor": 30000,
+    "infrastructureSupportPerAnchor": 12000,
+    "projectCount": 6,
+    "projectPrice": 20000,
+    "directCostPerProject": 8000,
+    "continuingOperations": 240000,
+    "ccfChargeIncludedInOperations": 24000,
+    "designatedCommonsAllocation": 60000,
+    "reserveMonths": 3
+  },
+  "operator": {
+    "earnedServiceReceipts": 660000,
+    "directServiceCostsPaid": 300000,
+    "grossServiceContribution": 360000,
+    "continuingOperationsPaid": 240000,
+    "surplusBeforeCommonsAllocation": 120000,
+    "transferToRestrictedCommonsFund": 60000,
+    "retainedUnrestrictedCash": 60000
+  },
+  "contributorAgencyLedger": {
+    "passThroughReceipts": 100000,
+    "payments": 80000,
+    "closingPayable": 20000,
+    "closingCashForPayable": 20000,
+    "includedInOperatorRevenue": 0
+  },
+  "commonsFund": {
+    "externalRestrictedGrantReceived": 120000,
+    "operatorTransferReceived": 60000,
+    "publicMaintenancePaid": 130000,
+    "communityAccessParticipationPaid": 40000,
+    "closingRestrictedCash": 10000
+  },
+  "reconciliation": {
+    "operatorSideReceiptsIncludingPassThrough": 760000,
+    "operatorSideOutflowsIncludingInternalTransfer": 680000,
+    "operatorSideClosingCashIncludingPayable": 80000,
+    "consolidatedExternalReceipts": 880000,
+    "consolidatedExternalOutflows": 790000,
+    "consolidatedClosingCash": 90000,
+    "internalTransferEliminated": 60000
+  },
+  "liquidity": {
+    "annualOperatorCashCostsExcludingPassThrough": 600000,
+    "unrestrictedReserveTarget": 150000,
+    "availableUnrestrictedReserve": 60000,
+    "reserveFundingGap": 90000,
+    "baseAnnualOperatingFundingGap": 0
+  },
+  "omissions": [
+    "Tax, VAT or sales tax, depreciation, debt service and launch costs.",
+    "Deferred revenue, grant conditions, invoice timing and a monthly liquidity model.",
+    "Legal and accounting review of principal-versus-agent treatment and client-money custody."
+  ]
+}

@@ -1087,7 +1087,102 @@ Compare eligible model providers using a fixed harness, then compare harnesses s
 
 The counterhypothesis is that a proprietary managed service delivers better outcomes at lower full cost under sufficiently portable and accountable terms. The CCF can choose that result if supported. **Collective agency concerns who sets conditions, contests decisions, exits, and shares benefits.** Openness by itself supplies neither supplier democracy nor commons funding.
 
-## 27. Conclusion
+## 27. Private institutions and the commons service model
+
+### Correct the premise, then solve the narrower problem
+
+The commons does not lack all business models. arXiv combines free reading and submission with institutional membership; Crossref combines membership and service fees with a free public metadata API; Wikimedia Enterprise offers commercial delivery services while maintaining commitments to free use and editorial independence. These examples do not prove that every commons can be commercially self-supporting or that individual contributors are paid. [S80] [S81] [S82] [S83]
+
+**The gap to address:** a replicable way to convert demand for maintained, trustworthy information into durable revenue, shared benefits, and contributor agency without enclosing the underlying commons.
+
+"Private institution" is not synonymous with "for-profit." A university, library, foundation, nonprofit, or company may sponsor a sector collective under different legal duties. The CCF should supply a tested operating method and shared infrastructure, not declare those differences irrelevant.
+
+### Stewardship and service operation
+
+Keep two functions distinguishable: **commons stewardship** governs participation, permissions, public access, scientific/editorial integrity, and public-benefit allocation; **service operation** handles contracts, delivery, support, employment, billing, and commercial risk.
+
+Initially these may be separate budgets and decision processes in one suitable organization. Use an independent steward and mission-bound operator where law, liability, financing, or credible independence requires separation. Wikimedia's organizational example is not a universal prescription. Do not incorporate multiple entities without a functional reason. [S80]
+
+The federation can provide buyer discovery, assurance, procurement, and administrative support for disclosed fees. Sector collectives retain protected decisions. Neither investors nor paying customers should acquire permissions the collective cannot grant, editorial control, or additional constitutional votes through a purchase.
+
+### Who pays, and for what?
+
+Sell maintained services: validated updates, quality checks, provenance diligence, integration, evaluations, availability commitments, purchasing support, and appropriately authorized commissioned work. Do not claim retroactive royalties for public-domain material or uses already permitted by open licenses. A commercial service can coexist with a free commons; Wikimedia Enterprise's principles provide one explicit example of that boundary. [S83]
+
+| Sector | Potential customer | Offering and pricing unit | Main cost | Protected boundary |
+|---|---|---|---|---|
+| Open access | Research platforms and libraries | Maintained metadata, correction feeds, and integrations; annual institutional/feed contract | Normalization and support | No charge merely for exercising existing reuse rights |
+| Open data | Application providers and public agencies | Validated current observations and change records; maintained endpoint/site/year | Collection, quality control, hosting | Verified authority and permitted uses; sensitive records protected |
+| Open science | Laboratories and AI developers | Reproducibility services and maintained evaluations; benchmark subscription or commissioned run | Expert review and computation | No purchased scientific outcomes or unauthorized participant data |
+| Open education | Universities and education providers | Accessible resources, curriculum alignment, and integration; institutional support contract | Educator time and accessibility | Preserve resource freedoms and learner privacy |
+| Open cultural heritage | Museums and research platforms | Digitization, contextual metadata, and maintenance; collection contract plus upkeep | Conservation, digitization, community review | Custody of an object is not authority over every use |
+| Open journalism | Newsrooms and information services | Verified feeds, archive delivery, and specialist verification; annual feed plus commissioned work | Reporting, verification, corrections | No purchased editorial decisions or confidential-source disclosure |
+
+These are proposed offerings, not verified willingness-to-pay estimates. Each sector must test a specific customer's need and distinguish services from underlying rights.
+
+### Three funding obligations
+
+Recurring anchor contracts should cover predictable delivery and ongoing operations. Variable projects should fund their own work and contribute a disclosed margin; do not assume they recur.
+
+Grants and public finance should fund identified public benefits, such as underserved coverage, preservation, public interfaces, participation, or reusable infrastructure. Report these as funded public goods, not evidence of commercial demand.
+
+Contributor funds require protected accounting. An agent cannot count every dollar passing through its accounts as revenue. Unpaid contributor balances, restricted grants, and commons money cannot silently become an operating reserve.
+
+### A separate hypothetical annual service-operator case
+
+**All amounts below are invented planning assumptions in annual USD, not observed prices, promised revenues, or committed grants.** This is a separate maintained-services scenario, not an addition to the consumer-dues example in sections 7-8. Assume service fees are earned and collected within the year.
+
+Six anchor contracts at $90,000 generate $540,000. Delivery costs $42,000 per anchor, comprising $30,000 contracted curation and $12,000 infrastructure/support. Six integration projects at $20,000 generate another $120,000, with $8,000 delivery cost each.
+
+| Operator cash-planning line | Annual amount |
+|---|---|
+| Earned service receipts | $660,000 |
+| Direct service costs | $300,000 |
+| Gross service contribution | $360,000 |
+| Continuing operations, including an assumed $24,000 CCF shared-services charge | $240,000 |
+| Surplus before commons allocation | $120,000 |
+| Contractually designated transfer to a restricted commons fund | $60,000 |
+| Retained unrestricted cash before omitted obligations | $60,000 |
+
+The separate contributor-agency ledger receives $100,000 of customer pass-through, pays $80,000, and retains $20,000 entirely against a contributor payable. **None of that $100,000 is operator revenue.** It is distinct from the contracted curation already included in direct service costs. Appropriate regulated providers and legal segregation are required; this worksheet does not authorize commingling or holding client funds.
+
+The commons fund receives a hypothetical $120,000 restricted grant and the $60,000 operator transfer. It pays $130,000 for public maintenance and $40,000 for access and participation, leaving $10,000 restricted cash.
+
+Across the operator-side and commons ledgers, external receipts are **$880,000**, external outflows **$790,000**, and closing cash **$90,000**: $60,000 unrestricted, $20,000 owed to contributors, and $10,000 restricted. Eliminate the internal $60,000 transfer on consolidation. Reserve retention is not another expense. The CCF service charge is already within operations, not an additional deduction from the displayed result.
+
+The [machine-readable worksheet](./service-operator-economics.json) records these inputs, ledgers, and reconciliations; automated tests check the arithmetic.
+
+### Viable under assumptions does not mean adequately capitalized
+
+The scenario has no annual operating gap under its assumptions, but a three-month unrestricted reserve target based on $600,000 annual operator cash costs is $150,000. Only $60,000 is available, leaving a **$90,000 reserve-funding gap**, before other launch and liquidity needs.
+
+| Sensitivity | Result before omitted obligations |
+|---|---|
+| Five anchors and six projects; corresponding delivery costs adjust | $12,000 retained cash |
+| Six anchors, no integration projects | $12,000 deficit |
+| No projects: seven $90,000 anchors, or six anchors at $92,000 | Covers operations and the stated commons allocation before reserve building |
+| Direct service costs rise 20% | $60,000 baseline surplus falls to zero |
+| Service revenue falls 10% without cost reductions | $6,000 deficit |
+| One anchor is lost and its $42,000 delivery cost disappears | $12,000 retained cash |
+| One anchor is lost but delivery costs remain sticky | $30,000 deficit |
+
+The commons program is separately grant-dependent: without its $120,000 grant, $170,000 of planned spending exceeds the $60,000 operator contribution by $110,000. That public-funding requirement is not evidence that the operator generates $170,000 of market-financed commons support.
+
+This is a cash-planning model, not a statutory P&L. Tax, VAT/sales tax, depreciation, debt service, launch costs, deferred income, grant conditions, principal-versus-agent treatment, and invoice timing require professional review and a monthly model. The reserve gap does not cover all of those omissions.
+
+### Founding and capital discipline
+
+By day 90, seek two independent paid pilots specifying deliverables, acceptance, permissions, cancellation, payment timing, and contributor obligations. Expressions of interest are not sales. By day 180, seek renewal or conversion from actual purchasing budgets and compare quality-adjusted full cost with direct licensing, open alternatives, and in-house provision.
+
+Track payment timeliness, participation, decisions changed by members, complaints, public access, and migration alongside revenue. Publish bounded exit obligations and protect earned payments. Stop or redesign when customers do not renew, permissions remain unresolved, buyers demand editorial control, contributor costs are hidden, or operations depend on undisclosed permanent subsidy.
+
+Use grants for institution-building and demonstrated public goods. Consider recoverable working capital only when contracts and credible economics support repayment, subject to legal review; program-related-investment eligibility is not automatic. Openness and member control can limit exclusivity, investor control, and margins. Some operators may support patient bounded-return capital; others belong in membership- or grant-funded public infrastructure.
+
+**Founding checklist:** identify the customer problem; separate paid service from underlying rights; assign steward/operator duties; calculate full costs and recurring requirements; protect restricted and contributor money; set paid-pilot, renewal, concentration, and shutdown gates; and disclose capital needs and repayment assumptions.
+
+The approach does not solve viability by declaration. It makes the business and public-benefit bargain **testable, financeable where justified, and accountable when subsidy remains necessary**.
+
+## 28. Conclusion
 
 Commons Collective is best understood as an effort to align **voice, authority, service, and benefit**, not as a universal auction of personal data. Consumer purchasing power can operate without data sales. Creator bargaining can operate without enclosing the public domain. Commons funding can operate without pretending to identify every person's contribution to a model. Communities can demand a say in physical infrastructure without first becoming data vendors.
 

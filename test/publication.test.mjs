@@ -36,7 +36,8 @@ test('research covers requested surfaces and labels its limits', () => {
     'Weather Underground', 'quality-adjusted total cost', 'Commons Reward Trust',
     'reinforcement-learning reward', 'compensatory average', 'pro-human stack',
     'accountability tuple', 'funded exit/maintenance', 'Oh My Pi',
-    'Commons Collective Agency Starter Kit', 'component passport']) {
+    'Commons Collective Agency Starter Kit', 'component passport',
+    'commons service model', 'reserve-funding gap']) {
     assert.ok(html.toLowerCase().includes(term.toLowerCase()), `missing ${term}`);
   }
   assert.doesNotMatch(html, /\{\{[A-Z_]+\}\}/);

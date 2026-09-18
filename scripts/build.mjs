@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile, copyFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { createPresentationData } from './presentation-data.mjs';
 import { renderResearch } from './render-research.mjs';
+import QRCode from 'qrcode';
 
 const root = new URL('../', import.meta.url);
 const read = path => readFile(new URL(path, root), 'utf8');
@@ -23,6 +24,17 @@ const renderHeader = page => header.replaceAll('{{PREFIX}}', page === 'main' ? '
   .replace('{{RESEARCH_CURRENT}}', page === 'work' ? 'aria-current="location"' : '');
 const fingerprint = value => createHash('sha256').update(value).digest('hex').slice(0, 12);
 const faviconUrl = `./favicon.svg?v=${fingerprint(await read('site/favicon.svg'))}`;
+const canonical = template.match(/<link rel="canonical" href="([^"]+)">/)?.[1];
+if (!canonical) throw new Error('Project QR code needs the canonical project URL');
+const projectUrl = new URL(canonical);
+if (projectUrl.protocol !== 'https:') throw new Error('Project QR code must use an HTTPS URL');
+const qrCss = await read('site/qr-share.css');
+const qrOptions = { errorCorrectionLevel: 'M', margin: 4, color: { dark: '#000000', light: '#ffffff' } };
+const qrSvg = await QRCode.toString(projectUrl.href, { ...qrOptions, type: 'svg' });
+const qrMarkup = (await read('site/qr-share.html'))
+  .replaceAll('{{PROJECT_URL}}', escape(projectUrl.href))
+  .replace('{{PROJECT_DISPLAY_URL}}', escape(`${projectUrl.hostname}${projectUrl.pathname}`))
+  .replace('./project-qr.svg', `./project-qr.svg?v=${fingerprint(qrSvg)}`);
 const stylesheet = await read('site/styles.css');
 const model = await read('site/model.mjs');
 const app = (await read('site/app.mjs')).replace("'./model.mjs'", `'./model.mjs?v=${fingerprint(model)}'`);
@@ -46,14 +58,19 @@ const references = sources.map(source =>
 const contents = `<ol>${headings.map(({ id, text }) => `<li><a href="#${id}">${text}</a></li>`).join('')}</ol>`;
 const html = template.replace('{{REPORT}}', rendered).replace('{{CONTENTS}}', contents)
   .replace('{{HEADER}}', renderHeader('main'))
+  .replace('{{PROJECT_QR}}', qrMarkup)
   .replaceAll('./favicon.svg', faviconUrl)
   .replace('{{REFERENCES}}', references).replace('{{SOURCE_COUNT}}', sources.length)
   .replace('href="./styles.css"', `href="./styles.css?v=${fingerprint(stylesheet)}"`)
   .replace('href="./header.css"', `href="./header.css?v=${fingerprint(headerCss)}"`)
+  .replace('href="./qr-share.css"', `href="./qr-share.css?v=${fingerprint(qrCss)}"`)
   .replace('src="./app.mjs"', `src="./app.mjs?v=${fingerprint(app)}"`);
 if (/\{\{[A-Z_]+\}\}/.test(html)) throw new Error('Unresolved template placeholder');
 
 await mkdir(new URL('dist/', root), { recursive: true });
+await writeFile(new URL('dist/project-qr.svg', root), qrSvg);
+await writeFile(new URL('dist/project-qr.png', root), await QRCode.toBuffer(projectUrl.href, { ...qrOptions, type: 'png', width: 512 }));
+await writeFile(new URL('dist/qr-share.css', root), qrCss);
 await writeFile(new URL('dist/index.html', root), html);
 await writeFile(new URL('dist/app.mjs', root), app);
 const diagram = diagramTemplate.replace('{{HEADER}}', renderHeader('diagram'))
@@ -70,6 +87,7 @@ await copyFile(new URL('research/sources.json', root), new URL('dist/sources.jso
 await copyFile(new URL('examples/knowledge-object.json', root), new URL('dist/knowledge-object.json', root));
 await copyFile(new URL('examples/reputation-observation.json', root), new URL('dist/reputation-observation.json', root));
 await copyFile(new URL('examples/component-passport.json', root), new URL('dist/component-passport.json', root));
+await copyFile(new URL('examples/service-operator-economics.json', root), new URL('dist/service-operator-economics.json', root));
 
 const presentation = createPresentationData({
   report, headings, template, diagramTemplate, work, sources,
@@ -87,9 +105,11 @@ const overviewApp = (await read('site/overview.mjs')).replaceAll('./presentation
 const overviewCss = await read('site/overview.css');
 const overview = (await read('site/overview.html'))
   .replace('{{HEADER}}', renderHeader('overview'))
+  .replace('{{PROJECT_QR}}', qrMarkup)
   .replaceAll('./favicon.svg', faviconUrl)
   .replace('href="./header.css"', `href="./header.css?v=${fingerprint(headerCss)}"`)
   .replace('href="./overview.css"', `href="./overview.css?v=${fingerprint(overviewCss)}"`)
+  .replace('href="./qr-share.css"', `href="./qr-share.css?v=${fingerprint(qrCss)}"`)
   .replace('src="./overview.mjs"', `src="./overview.mjs?v=${fingerprint(overviewApp)}"`);
 if (/\{\{[A-Z_]+\}\}/.test(overview)) throw new Error('Unresolved overview template placeholder');
 await writeFile(new URL('dist/overview.html', root), overview);

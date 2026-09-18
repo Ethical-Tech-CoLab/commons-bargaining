@@ -10,11 +10,13 @@
   <link rel="icon" type="image/svg+xml" sizes="any" href="./favicon.svg">
   <link rel="stylesheet" href="./header.css">
   <link rel="stylesheet" href="./overview.css">
+  <link rel="stylesheet" href="./qr-share.css">
   <script type="module" src="./overview.mjs"></script>
 </head>
 <body>
   <a class="skip" href="#presentation">Skip to presentation</a>
   {{HEADER}}
+  <template id="project-share">{{PROJECT_QR}}</template>
   <main id="presentation" aria-labelledby="overview-title">
     <div class="presentation-heading">
       <div>

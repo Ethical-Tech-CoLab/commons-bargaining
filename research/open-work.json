@@ -121,6 +121,14 @@
       "status": "open",
       "nextStep": "Complete component passports, apply eligibility gates, compare models under a fixed harness, then test harness differences and an actual supplier switch.",
       "sourceTitles": ["Open-agent incentives and a Commons Collective Agency Starter Kit", "A pro-human stack: working definition and test"]
+    },
+    {
+      "id": "private-institution-economics",
+      "title": "Validate the commons service business",
+      "question": "Will real customers renew a maintained service at prices that cover its full costs and commons commitments without enclosing existing open knowledge or using restricted money for losses?",
+      "status": "open",
+      "nextStep": "Secure two independent paid pilots, build monthly cash and reserve scenarios, protect contributor liabilities, and test renewal and public-benefit outcomes.",
+      "sourceTitles": ["Private institutions and the commons service model"]
     }
   ]
 }
