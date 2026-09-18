@@ -265,3 +265,16 @@ test('invalid JSON, invalid schema, and network failures reject', async () => {
     fetchImpl: async () => { throw new TypeError('Network unavailable'); },
   }), /Network unavailable/);
 });
+
+test('timeouts while reading the response retain their identity for the refresh error state', async () => {
+  const timeout = new Error('Body read aborted');
+  timeout.name = 'AbortError';
+  await assert.rejects(fetchPresentationData({
+    baseUrl,
+    fetchImpl: async () => ({ ok: true, json: async () => { throw timeout; } }),
+  }), error => {
+    assert.equal(error, timeout);
+    assert.match(refreshViewState('error', { error }).errorMessage, /timed out/);
+    return true;
+  });
+});

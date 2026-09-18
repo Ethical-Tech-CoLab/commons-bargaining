@@ -199,8 +199,9 @@ export async function fetchPresentationData({
   let input;
   try {
     input = await response.json();
-  } catch {
-    throw new PresentationDataError('The publication returned invalid JSON.');
+  } catch (error) {
+    if (error instanceof SyntaxError) throw new PresentationDataError('The publication returned invalid JSON.');
+    throw error;
   }
   return createSlideModel(input, baseUrl);
 }
