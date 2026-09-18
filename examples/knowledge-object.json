@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "0.1-experimental",
+  "id": "urn:commons-bargaining:example:alice-field-guide:v1",
+  "syntheticExample": true,
+  "description": "Fictional authored field-guide excerpt; no actual personal data or licensed asset is included.",
+  "origin": { "type": "human-authored", "syntheticFraction": 0 },
+  "steward": "Fictional member cooperative",
+  "rights": {
+    "copyrightStatus": "copyrighted",
+    "claimant": "Alice (fictional)",
+    "authorityEvidence": "Placeholder only: production requires a verified chain of title.",
+    "license": "hypothetical-bespoke-retrieval-license",
+    "publicDomain": false,
+    "personalDataReview": "not-applicable-to-fictional-example",
+    "communityProtocols": [],
+    "permittedPurpose": ["retrieval-augmented-generation"],
+    "prohibitedPurpose": ["model-training", "onward-sale"],
+    "territory": ["pilot-jurisdiction-to-be-selected"],
+    "validUntil": "2027-09-18"
+  },
+  "provenance": {
+    "derivedFrom": [],
+    "version": 1,
+    "verificationStatus": "unverified-demonstration",
+    "contentDigest": null
+  },
+  "mandate": {
+    "id": "fictional-mandate-alice-001",
+    "revocableForFutureAccess": true,
+    "historicalUseErasureGuaranteed": false
+  },
+  "benefits": {
+    "contractCurrency": "USD",
+    "memberPoolBps": 4000,
+    "commonsBps": 3000,
+    "operationsBps": 2000,
+    "reserveBps": 1000,
+    "memberAllocation": "equal-share-among-eligible-contributors",
+    "status": "illustrative-not-an-executed-contract"
+  },
+  "access": {
+    "delivery": "time-limited-retrieval-endpoint",
+    "authorization": "deny-unless-current-purpose-and-mandate-match",
+    "publicLedgerContainsRawData": false,
+    "receiptRequired": true
+  }
+}

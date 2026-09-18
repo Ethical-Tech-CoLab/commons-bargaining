@@ -1,0 +1,285 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="2520" viewBox="0 0 1680 2520" role="img" aria-labelledby="diagram-title diagram-description">
+  <title id="diagram-title">Every node is a bargaining point: ten choices between concentrated capture and collective agency</title>
+  <desc id="diagram-description">A request travels down ten stages: web protocols and standards; consumer agent and browser; domain and application, example.com; CDN and edge, with Cloudflare as an illustrative provider; identity and consent; database, server and cloud; model and compute; provenance and measurement; payment and settlement; and community and energy return. Every stage branches left to a concentrated capture risk and right to a collective agency or commons option, naming the control, data, rent or resources at stake. A separate dashed lime path returns value and receipts upstream. These are illustrative design options, not findings about providers. Centralized infrastructure can serve a commons under enforceable governance; an open protocol or open branding alone does not ensure equitable control. A full semantic text equivalent is available in divergence.html.</desc>
+  <defs>
+    <marker id="arrow-violet" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0 0 8 4 0 8Z" fill="#b3a0ff"/></marker>
+    <marker id="arrow-lime" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0 0 8 4 0 8Z" fill="#c8f04b"/></marker>
+    <style>
+      text { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; fill: #f3eefb; }
+      .eyebrow { font-size: 17px; font-weight: 700; letter-spacing: 2px; fill: #c8f04b; }
+      .title { font-size: 44px; font-weight: 750; letter-spacing: -1px; }
+      .intro { font-size: 21px; fill: #d8cce9; }
+      .legend { font-size: 18px; fill: #d8cce9; }
+      .column { font-size: 22px; font-weight: 700; }
+      .column-note { font-size: 16px; fill: #d8cce9; }
+      .risk-card { fill: #201630; stroke: #78639d; stroke-width: 1.5; }
+      .commons-card { fill: #201630; stroke: #8fab3b; stroke-width: 1.5; }
+      .node { fill: #2c2041; stroke: #b3a0ff; stroke-width: 1.5; }
+      .card-title { font-size: 22px; font-weight: 700; }
+      .body { font-size: 19px; fill: #e5dced; }
+      .number { font-size: 15px; font-weight: 750; fill: #b3a0ff; letter-spacing: 1px; }
+      .node-title { font-size: 23px; font-weight: 700; text-anchor: middle; }
+      .stake-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; fill: #d8cce9; text-anchor: middle; }
+      .stake { font-size: 17px; fill: #c8f04b; text-anchor: middle; }
+      .request, .risk-branch { fill: none; stroke: #b3a0ff; stroke-width: 2.5; marker-end: url(#arrow-violet); }
+      .commons-branch { fill: none; stroke: #c8f04b; stroke-width: 2.5; marker-end: url(#arrow-lime); }
+      .return { fill: none; stroke: #c8f04b; stroke-width: 2.5; stroke-dasharray: 8 7; marker-end: url(#arrow-lime); }
+      .footer-title { font-size: 25px; font-weight: 700; }
+      .footer-body { font-size: 20px; fill: #e5dced; }
+      .lime { fill: #c8f04b; }
+      .violet { fill: #b3a0ff; }
+    </style>
+  </defs>
+  <rect width="1680" height="2520" fill="#120c1a"/>
+  <text x="48" y="51" class="eyebrow">COMMONS BARGAINING / A NODE-BY-NODE DESIGN MAP</text>
+  <text x="48" y="107" class="title">Every node is a bargaining point.</text>
+  <text x="48" y="149" class="intro">Follow a request. At each handoff, ask where control, data, rents and resources go — and who can change the terms.</text>
+  <text x="48" y="181" class="intro">The branches are possible governance choices, not automatic outcomes or judgments about named providers.</text>
+  <path d="M50 220H87" class="request"/><text x="102" y="226" class="legend">Request / execution ↓</text>
+  <path d="M389 220H352" class="risk-branch"/><text x="407" y="226" class="legend">Capture risk ←</text>
+  <path d="M648 220H685" class="commons-branch"/><text x="701" y="226" class="legend">Commons option →</text>
+  <path d="M992 220H1042" class="return"/><text x="1060" y="226" class="legend">Value + receipts return ↑ · dashed outer path</text>
+  <text x="48" y="273" class="column violet">CONCENTRATED CAPTURE RISK</text>
+  <text x="48" y="297" class="column-note">What could be diverted into one-sided control or rent</text>
+  <text x="694" y="273" class="column">REQUEST FLOW ↓</text>
+  <text x="694" y="297" class="column-note">Ordered handoffs · illustrative</text>
+  <text x="1062" y="273" class="column lime">COLLECTIVE AGENCY / COMMONS OPTION</text>
+  <text x="1062" y="297" class="column-note">A right, allocation or check that changes the outcome</text>
+
+  <g aria-label="Stage 1: web protocols and standards">
+    <rect x="48" y="320" width="570" height="144" rx="14" class="risk-card"/>
+    <text x="72" y="353" class="card-title">Rule-setting power concentrates</text>
+    <text x="72" y="384" class="body">A dominant implementation can set de facto terms.</text>
+    <text x="72" y="410" class="body">High participation costs can narrow who writes rules.</text>
+    <text x="72" y="436" class="body">An “open” specification alone does not fix control.</text>
+    <path d="M694 392H624" class="risk-branch"/>
+    <rect x="694" y="320" width="292" height="144" rx="14" class="node"/>
+    <text x="714" y="344" class="number">01</text>
+    <text x="840" y="376" class="node-title">Web protocols</text>
+    <text x="840" y="402" class="node-title">&amp; standards</text>
+    <text x="840" y="432" class="stake-label">AT STAKE</text>
+    <text x="840" y="452" class="stake">Standards / control</text>
+    <path d="M986 392H1056" class="commons-branch"/>
+    <rect x="1062" y="320" width="570" height="144" rx="14" class="commons-card"/>
+    <text x="1086" y="353" class="card-title">Open rules + shared rulemaking</text>
+    <text x="1086" y="384" class="body">Fund public-interest seats and publish decisions.</text>
+    <text x="1086" y="410" class="body">Require interoperable alternatives and fair appeals.</text>
+    <text x="1086" y="436" class="body">Audit conformance, not merely an “open” badge.</text>
+    <path d="M840 464V489" class="request"/>
+  </g>
+
+  <g aria-label="Stage 2: consumer agent and browser">
+    <rect x="48" y="496" width="570" height="144" rx="14" class="risk-card"/>
+    <text x="72" y="529" class="card-title">Attention, intent and defaults</text>
+    <text x="72" y="560" class="body">A locked default can steer requests to paid partners.</text>
+    <text x="72" y="586" class="body">Private history can become targeting or training data.</text>
+    <text x="72" y="612" class="body">Users bear switching costs; intermediaries collect.</text>
+    <path d="M694 568H624" class="risk-branch"/>
+    <rect x="694" y="496" width="292" height="144" rx="14" class="node"/>
+    <text x="714" y="520" class="number">02</text>
+    <text x="840" y="552" class="node-title">Consumer agent</text>
+    <text x="840" y="578" class="node-title">&amp; browser</text>
+    <text x="840" y="608" class="stake-label">AT STAKE</text>
+    <text x="840" y="628" class="stake">Intent / data / routing</text>
+    <path d="M986 568H1056" class="commons-branch"/>
+    <rect x="1062" y="496" width="570" height="144" rx="14" class="commons-card"/>
+    <text x="1086" y="529" class="card-title">A user-directed intermediary</text>
+    <text x="1086" y="560" class="body">Users choose routes, permissions and paid features.</text>
+    <text x="1086" y="586" class="body">Export history; revoke access; switch the agent.</text>
+    <text x="1086" y="612" class="body">Disclose commissions; audit routing and data use.</text>
+    <path d="M840 640V665" class="request"/>
+  </g>
+
+  <g aria-label="Stage 3: domain and application, example.com">
+    <rect x="48" y="672" width="570" height="144" rx="14" class="risk-card"/>
+    <text x="72" y="705" class="card-title">Access becomes a toll gate</text>
+    <text x="72" y="736" class="body">An app can capture reach, account ties and fees.</text>
+    <text x="72" y="762" class="body">Unilateral terms can shift value away from creators.</text>
+    <text x="72" y="788" class="body">A domain name does not reveal who has a voice.</text>
+    <path d="M694 744H624" class="risk-branch"/>
+    <rect x="694" y="672" width="292" height="144" rx="14" class="node"/>
+    <text x="714" y="696" class="number">03</text>
+    <text x="840" y="728" class="node-title">Domain &amp; app</text>
+    <text x="840" y="754" class="node-title">example.com</text>
+    <text x="840" y="784" class="stake-label">AT STAKE</text>
+    <text x="840" y="804" class="stake">Access / audience / rent</text>
+    <path d="M986 744H1056" class="commons-branch"/>
+    <rect x="1062" y="672" width="570" height="144" rx="14" class="commons-card"/>
+    <text x="1086" y="705" class="card-title">Member voice + portable participation</text>
+    <text x="1086" y="736" class="body">Give members a vote, appeal rights and an exit path.</text>
+    <text x="1086" y="762" class="body">Publish creator shares and changes to access terms.</text>
+    <text x="1086" y="788" class="body">Test export and audit fee and ranking decisions.</text>
+    <path d="M840 816V841" class="request"/>
+  </g>
+
+  <g aria-label="Stage 4: CDN and edge; Cloudflare is an illustrative provider, not an allegation">
+    <rect x="48" y="848" width="570" height="144" rx="14" class="risk-card"/>
+    <text x="72" y="881" class="card-title">Traffic control and dependency</text>
+    <text x="72" y="912" class="body">Any concentrated edge can become a chokepoint.</text>
+    <text x="72" y="938" class="body">Logs, opaque blocks or lock-in can shift leverage.</text>
+    <text x="72" y="964" class="body">This is a design risk, not a provider-specific finding.</text>
+    <path d="M694 920H624" class="risk-branch"/>
+    <rect x="694" y="848" width="292" height="144" rx="14" class="node"/>
+    <text x="714" y="872" class="number">04</text>
+    <text x="840" y="904" class="node-title">CDN &amp; edge</text>
+    <text x="840" y="930" class="node-title">e.g. Cloudflare</text>
+    <text x="840" y="960" class="stake-label">AT STAKE</text>
+    <text x="840" y="980" class="stake">Traffic / metadata / fees</text>
+    <path d="M986 920H1056" class="commons-branch"/>
+    <rect x="1062" y="848" width="570" height="144" rx="14" class="commons-card"/>
+    <text x="1086" y="881" class="card-title">Procure service, retain bargaining power</text>
+    <text x="1086" y="912" class="body">Contract for minimal logs and reviewable blocking.</text>
+    <text x="1086" y="938" class="body">Operators can move traffic; rehearse failover.</text>
+    <text x="1086" y="964" class="body">Pay disclosed fees; independently audit commitments.</text>
+    <path d="M840 992V1017" class="request"/>
+  </g>
+
+  <g aria-label="Stage 5: identity and consent">
+    <rect x="48" y="1024" width="570" height="144" rx="14" class="risk-card"/>
+    <text x="72" y="1057" class="card-title">Identity becomes permission to extract</text>
+    <text x="72" y="1088" class="body">Bundled consent can tie access to unrelated uses.</text>
+    <text x="72" y="1114" class="body">A central identity graph can enable cross-context use.</text>
+    <text x="72" y="1140" class="body">A consent screen is not proof of meaningful refusal.</text>
+    <path d="M694 1096H624" class="risk-branch"/>
+    <rect x="694" y="1024" width="292" height="144" rx="14" class="node"/>
+    <text x="714" y="1048" class="number">05</text>
+    <text x="840" y="1080" class="node-title">Identity</text>
+    <text x="840" y="1106" class="node-title">&amp; consent</text>
+    <text x="840" y="1136" class="stake-label">AT STAKE</text>
+    <text x="840" y="1156" class="stake">Identity / permissions</text>
+    <path d="M986 1096H1056" class="commons-branch"/>
+    <rect x="1062" y="1024" width="570" height="144" rx="14" class="commons-card"/>
+    <text x="1086" y="1057" class="card-title">Specific, revocable authority</text>
+    <text x="1086" y="1088" class="body">Separate service access from optional data uses.</text>
+    <text x="1086" y="1114" class="body">Users refuse, revoke or choose an identity provider.</text>
+    <text x="1086" y="1140" class="body">Audit purpose limits and downstream revocation.</text>
+    <path d="M840 1168V1193" class="request"/>
+  </g>
+
+  <g aria-label="Stage 6: database, server and cloud">
+    <rect x="48" y="1200" width="570" height="144" rx="14" class="risk-card"/>
+    <text x="72" y="1233" class="card-title">Custody hardens into lock-in</text>
+    <text x="72" y="1264" class="body">Proprietary formats and exit fees can trap a dataset.</text>
+    <text x="72" y="1290" class="body">Hosting power can become power over secondary use.</text>
+    <text x="72" y="1316" class="body">A downloadable file may still be costly to reuse.</text>
+    <path d="M694 1272H624" class="risk-branch"/>
+    <rect x="694" y="1200" width="292" height="144" rx="14" class="node"/>
+    <text x="714" y="1224" class="number">06</text>
+    <text x="840" y="1256" class="node-title">Database / server</text>
+    <text x="840" y="1282" class="node-title">&amp; cloud</text>
+    <text x="840" y="1312" class="stake-label">AT STAKE</text>
+    <text x="840" y="1332" class="stake">Custody / reuse / rent</text>
+    <path d="M986 1272H1056" class="commons-branch"/>
+    <rect x="1062" y="1200" width="570" height="144" rx="14" class="commons-card"/>
+    <text x="1086" y="1233" class="card-title">Stewardship with a tested exit</text>
+    <text x="1086" y="1264" class="body">Community stewards set use and retention rules.</text>
+    <text x="1086" y="1290" class="body">Contract for usable export, deletion and exit costs.</text>
+    <text x="1086" y="1316" class="body">Pay for hosting; audit access and migration tests.</text>
+    <path d="M840 1344V1369" class="request"/>
+  </g>
+
+  <g aria-label="Stage 7: model and compute">
+    <rect x="48" y="1376" width="570" height="144" rx="14" class="risk-card"/>
+    <text x="72" y="1409" class="card-title">Knowledge and energy become margin</text>
+    <text x="72" y="1440" class="body">Exclusive model access can concentrate pricing power.</text>
+    <text x="72" y="1466" class="body">Contributors may go unpaid while costs stay opaque.</text>
+    <text x="72" y="1492" class="body">Open weights alone do not share compute or revenue.</text>
+    <path d="M694 1448H624" class="risk-branch"/>
+    <rect x="694" y="1376" width="292" height="144" rx="14" class="node"/>
+    <text x="714" y="1400" class="number">07</text>
+    <text x="840" y="1432" class="node-title">Model</text>
+    <text x="840" y="1458" class="node-title">&amp; compute</text>
+    <text x="840" y="1488" class="stake-label">AT STAKE</text>
+    <text x="840" y="1508" class="stake">Knowledge / compute / energy</text>
+    <path d="M986 1448H1056" class="commons-branch"/>
+    <rect x="1062" y="1376" width="570" height="144" rx="14" class="commons-card"/>
+    <text x="1086" y="1409" class="card-title">Contestable supply + negotiated returns</text>
+    <text x="1086" y="1440" class="body">Buyers can route elsewhere; set reuse permissions.</text>
+    <text x="1086" y="1466" class="body">Negotiate contributor shares and compute access.</text>
+    <text x="1086" y="1492" class="body">Audit metered use, stated limits and energy reports.</text>
+    <path d="M840 1520V1545" class="request"/>
+  </g>
+
+  <g aria-label="Stage 8: provenance and measurement">
+    <rect x="48" y="1552" width="570" height="144" rx="14" class="risk-card"/>
+    <text x="72" y="1585" class="card-title">The scorer controls the allocation</text>
+    <text x="72" y="1616" class="body">One operator can define credit and price the score.</text>
+    <text x="72" y="1642" class="body">Hidden metrics can exclude small contributors.</text>
+    <text x="72" y="1668" class="body">A receipt alone does not prove attribution is correct.</text>
+    <path d="M694 1624H624" class="risk-branch"/>
+    <rect x="694" y="1552" width="292" height="144" rx="14" class="node"/>
+    <text x="714" y="1576" class="number">08</text>
+    <text x="840" y="1608" class="node-title">Provenance</text>
+    <text x="840" y="1634" class="node-title">&amp; measurement</text>
+    <text x="840" y="1664" class="stake-label">AT STAKE</text>
+    <text x="840" y="1684" class="stake">Credit / evidence / metrics</text>
+    <path d="M986 1624H1056" class="commons-branch"/>
+    <rect x="1062" y="1552" width="570" height="144" rx="14" class="commons-card"/>
+    <text x="1086" y="1585" class="card-title">Evidence that contributors can contest</text>
+    <text x="1086" y="1616" class="body">Share receipt formats; state uncertainty and limits.</text>
+    <text x="1086" y="1642" class="body">Contributors challenge scores and choose reviewers.</text>
+    <text x="1086" y="1668" class="body">Independent audits check credit, privacy and payouts.</text>
+    <path d="M840 1696V1721" class="request"/>
+  </g>
+
+  <g aria-label="Stage 9: payment and settlement">
+    <rect x="48" y="1728" width="570" height="144" rx="14" class="risk-card"/>
+    <text x="72" y="1761" class="card-title">The intermediary keeps the spread</text>
+    <text x="72" y="1792" class="body">Opaque fees can absorb small contributor payments.</text>
+    <text x="72" y="1818" class="body">Thresholds or frozen balances can limit usable exit.</text>
+    <text x="72" y="1844" class="body">A payment rail alone does not decide a fair split.</text>
+    <path d="M694 1800H624" class="risk-branch"/>
+    <rect x="694" y="1728" width="292" height="144" rx="14" class="node"/>
+    <text x="714" y="1752" class="number">09</text>
+    <text x="840" y="1784" class="node-title">Payment</text>
+    <text x="840" y="1810" class="node-title">&amp; settlement</text>
+    <text x="840" y="1840" class="stake-label">AT STAKE</text>
+    <text x="840" y="1860" class="stake">Fees / revenue / liquidity</text>
+    <path d="M986 1800H1056" class="commons-branch"/>
+    <rect x="1062" y="1728" width="570" height="144" rx="14" class="commons-card"/>
+    <text x="1086" y="1761" class="card-title">A disclosed, enforceable distribution rule</text>
+    <text x="1086" y="1792" class="body">Specify who gets paid, fees, timing and appeals.</text>
+    <text x="1086" y="1818" class="body">Recipients can use alternative rails where available.</text>
+    <text x="1086" y="1844" class="body">Reconcile receipts to payouts with an external audit.</text>
+    <path d="M840 1872V1897" class="request"/>
+  </g>
+
+  <g aria-label="Stage 10: community and energy return">
+    <rect x="48" y="1904" width="570" height="144" rx="14" class="risk-card"/>
+    <text x="72" y="1937" class="card-title">Benefits leave; burdens remain</text>
+    <text x="72" y="1968" class="body">Surplus can leave the people and places enabling it.</text>
+    <text x="72" y="1994" class="body">Labor, grid, water and land costs may go uncounted.</text>
+    <text x="72" y="2020" class="body">A “community” label or green claim is not a return.</text>
+    <path d="M694 1976H624" class="risk-branch"/>
+    <rect x="694" y="1904" width="292" height="144" rx="14" class="node"/>
+    <text x="714" y="1928" class="number">10</text>
+    <text x="840" y="1960" class="node-title">Community</text>
+    <text x="840" y="1986" class="node-title">&amp; energy return</text>
+    <text x="840" y="2016" class="stake-label">AT STAKE</text>
+    <text x="840" y="2036" class="stake">Surplus / resources / repair</text>
+    <path d="M986 1976H1056" class="commons-branch"/>
+    <rect x="1062" y="1904" width="570" height="144" rx="14" class="commons-card"/>
+    <text x="1086" y="1937" class="card-title">Community-governed return and limits</text>
+    <text x="1086" y="1968" class="body">Agree a fund share, resource budget and remedies.</text>
+    <text x="1086" y="1994" class="body">Affected people can object and trigger review.</text>
+    <text x="1086" y="2020" class="body">Elected stewards report spending; outsiders verify.</text>
+  </g>
+  <path d="M840 2048V2075H1656V319" class="return"/>
+  <text x="48" y="2081" class="legend lime">RETURN PATH: allocations + auditable receipts, not raw personal data</text>
+  <text x="48" y="2142" class="footer-title">Mixed systems are possible. The decisive question is who holds enforceable rights.</text>
+  <rect x="48" y="2170" width="768" height="220" rx="16" fill="#201630" stroke="#78639d"/>
+  <text x="72" y="2210" class="footer-title lime">Contracted commons, not just open branding</text>
+  <text x="72" y="2248" class="footer-body">A centralized host, CDN or model can serve a commons.</text>
+  <text x="72" y="2278" class="footer-body">Require negotiated use limits, portable exit, shared returns,</text>
+  <text x="72" y="2308" class="footer-body">independent audit access and remedies for a breach.</text>
+  <text x="72" y="2347" class="footer-body">Open code or protocols help; neither guarantees fair control.</text>
+  <rect x="840" y="2170" width="792" height="220" rx="16" fill="#201630" stroke="#8fab3b"/>
+  <text x="864" y="2210" class="footer-title lime">Three checks at every node</text>
+  <text x="864" y="2248" class="footer-body">REFUSE / SWITCH · Who can say no, export or replace a supplier?</text>
+  <text x="864" y="2286" class="footer-body">GET PAID · Which people, providers and funds receive value?</text>
+  <text x="864" y="2324" class="footer-body">AUDIT · Who sees the evidence, challenges it and orders repair?</text>
+  <text x="864" y="2362" class="footer-body">Name the right-holder, obligation, verifier and remedy.</text>
+  <text x="48" y="2433" class="legend">All alternatives are illustrative design options, not findings of provider misconduct. Cloudflare names an example of an edge provider only.</text>
+  <text x="48" y="2465" class="legend">Conceptual sequence: real systems may combine, repeat or reorder stages. Return arrows represent proposed allocations and evidence, not existing payments.</text>
+  <text x="48" y="2497" class="legend">Text equivalent and mobile-friendly explanation: divergence.html · Commons Bargaining</text>
+</svg>

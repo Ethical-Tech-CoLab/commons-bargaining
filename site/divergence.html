@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Ten handoffs where a request can concentrate control or support collective agency: an accessible commons bargaining diagram and text equivalent.">
+  <title>Every node is a bargaining point · Commons Bargaining</title>
+  <style>
+    :root { color-scheme: dark; --bg: #120c1a; --surface: #201630; --text: #f3eefb; --muted: #d8cce9; --lime: #c8f04b; --violet: #b3a0ff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.65; }
+    a { color: var(--lime); text-underline-offset: .2em; }
+    a:hover { color: var(--text); }
+    :focus-visible { outline: 3px solid var(--lime); outline-offset: 5px; }
+    .skip { position: absolute; left: 1rem; top: -10rem; padding: .75rem 1rem; background: var(--surface); z-index: 1; }
+    .skip:focus { top: 1rem; }
+    header, main, footer { max-width: 1728px; margin: auto; padding: clamp(1rem, 3vw, 3rem); }
+    header { padding-bottom: 1rem; }
+    .eyebrow { color: var(--lime); text-transform: uppercase; letter-spacing: .13em; font-size: .8rem; font-weight: 750; }
+    h1 { font-size: clamp(2rem, 4.3vw, 4.2rem); line-height: 1.08; letter-spacing: -.04em; max-width: 22ch; margin: .5em 0; }
+    h2 { font-size: clamp(1.5rem, 2.4vw, 2.2rem); line-height: 1.25; margin: 0 0 1rem; letter-spacing: -.025em; }
+    h3 { font-size: 1.25rem; line-height: 1.4; margin: 0; }
+    h4 { font-size: 1rem; margin: 0 0 .5rem; }
+    p { margin: .5rem 0 1rem; }
+    .lede { max-width: 83ch; font-size: 1.12rem; color: var(--muted); }
+    .links { display: flex; gap: .75rem 1.5rem; flex-wrap: wrap; margin: 1.4rem 0; }
+    .notice { border-left: 3px solid var(--violet); padding: .8rem 1.2rem; background: var(--surface); max-width: 95ch; }
+    main { padding-top: 1rem; }
+    section + section { margin-top: 3rem; }
+    figure { margin: 0; }
+    figcaption { color: var(--muted); margin-bottom: 1rem; max-width: 95ch; }
+    .diagram-scroll { overflow-x: auto; border: 1px solid #78639d; border-radius: 1rem; background: var(--bg); }
+    .diagram-scroll img { display: block; width: 100%; min-width: 1440px; height: auto; }
+    .key { display: flex; flex-wrap: wrap; gap: .65rem 1.6rem; padding: 0; margin: 1rem 0 0; list-style: none; color: var(--muted); }
+    .key strong { color: var(--text); }
+    .principles { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    .panel { padding: clamp(1rem, 2vw, 2rem); background: var(--surface); border: 1px solid #78639d; border-radius: 1rem; }
+    .panel ul { margin: 0; padding-left: 1.4rem; }
+    .panel li + li { margin-top: .5rem; }
+    .stages { list-style: none; padding: 0; margin: 1.5rem 0 0; counter-reset: stage; display: grid; gap: 1rem; }
+    .stage { counter-increment: stage; background: var(--surface); border: 1px solid #78639d; border-radius: 1rem; padding: clamp(1rem, 2vw, 2rem); }
+    .stage h3::before { content: counter(stage, decimal-leading-zero) " / "; color: var(--violet); }
+    .stake { color: var(--lime); font-size: .94rem; margin: .35rem 0 1rem; }
+    .choices { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.8rem; }
+    .choices p { color: var(--muted); margin: 0; }
+    .risk h4 { color: var(--violet); }
+    .commons h4 { color: var(--lime); }
+    .test { border-left: 2px solid #78639d; padding-left: 1.2rem; }
+    footer { color: var(--muted); padding-top: 0; font-size: .94rem; }
+    @media (max-width: 850px) {
+      .principles, .choices { grid-template-columns: 1fr; }
+      .choices { gap: 1.1rem; }
+      .test { padding-left: 1rem; }
+    }
+    @media print {
+      body { background: #fff; color: #120c1a; }
+      .diagram-scroll img { min-width: 0; }
+      .diagram-scroll { overflow: visible; }
+      .stage, .panel { break-inside: avoid; background: #fff; }
+      .choices p, .stake, .lede, footer, a, .eyebrow, .risk h4, .commons h4, .stage h3::before { color: #120c1a; }
+      .choices { grid-template-columns: 1fr; gap: .5rem; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#text-equivalent">Skip to the diagram’s text equivalent</a>
+  <header>
+    <p class="eyebrow">Commons Bargaining / a node-by-node design map</p>
+    <h1>Every node is a bargaining point.</h1>
+    <p class="lede">A request passes through more than a model. Standards, browsers, applications, infrastructure and settlement systems all shape where control and value go. At <strong>every handoff</strong>, the design can concentrate capture or create collective agency.</p>
+    <nav class="links" aria-label="Diagram navigation">
+      <a href="./index.html#11-new-knowledge-objects-and-technical-architecture">Return to the research</a>
+      <a href="#visual-map">Explore the diagram</a>
+      <a href="#text-equivalent">Read the mobile-friendly text equivalent</a>
+      <a href="divergence.svg">Open the original SVG</a>
+    </nav>
+    <p class="notice"><strong>Illustrative, not accusatory.</strong> These are design risks and possible alternatives, not findings of provider misconduct. <strong>Cloudflare</strong> is named only as an example of a CDN/edge provider; <strong>example.com</strong> is a placeholder application. The sequence is conceptual: actual systems may combine, repeat or reorder stages.</p>
+  </header>
+  <main>
+    <section id="visual-map" aria-labelledby="visual-heading">
+      <h2 id="visual-heading">Ten handoffs. A choice at each one.</h2>
+      <figure>
+        <figcaption id="diagram-help">Read down the central request flow. Each row branches left to a <strong>concentrated capture risk</strong> and right to a <strong>collective agency / commons option</strong>. The dashed outer path returns proposed value allocations and auditable receipts upstream. On smaller screens, scroll horizontally or use the <a href="#text-equivalent">text equivalent below</a>.</figcaption>
+        <div class="diagram-scroll" tabindex="0" role="region" aria-label="Horizontally scrollable ten-stage divergence diagram" aria-describedby="diagram-help">
+          <img src="divergence.svg" width="1680" height="2520" alt="Every node is a bargaining point. Ten stages each branch between concentrated capture risk and a commons option. Full stage-by-stage equivalent follows below.">
+        </div>
+      </figure>
+      <ul class="key" aria-label="Diagram key">
+        <li><strong>↓ Central solid arrows:</strong> request / execution order</li>
+        <li><strong>← Left branches:</strong> possible concentrated capture</li>
+        <li><strong>→ Right branches:</strong> possible commons governance</li>
+        <li><strong>↑ Dashed outer arrow:</strong> value + receipts return, not raw personal data</li>
+      </ul>
+      <p class="lede">Branches are choices, not two simultaneous traffic pipes. The return path is a proposed allocation and accountability loop, not a claim that payments already happen at these stages. Receipts document a claim; they do not by themselves establish correct attribution.</p>
+    </section>
+
+    <section class="principles" aria-label="How to evaluate a commons option">
+      <div class="panel">
+        <h2>Mixed systems can serve a commons.</h2>
+        <p>A centralized host, CDN, payment service or model can serve collectively governed goals under a governance contract. Public or cooperative ownership is another option, not a prerequisite for every component.</p>
+        <p><strong>Open branding is not an enforceable condition.</strong> An open protocol, downloadable dataset or open model can still leave control, compute, money and exit costs concentrated.</p>
+        <p>For each proposed condition, name the right-holder, obligated party, observable evidence, independent verifier and remedy for failure. Treat an untested promise as a proposal, not an achieved safeguard.</p>
+      </div>
+      <div class="panel">
+        <h2>Ask three questions at every node.</h2>
+        <ul>
+          <li><strong>Who can refuse or switch?</strong> Can users, members or their stewards decline an optional use, export usable data, replace a supplier or challenge a decision? What costs or limits remain?</li>
+          <li><strong>Who gets paid?</strong> Name the providers, workers, creators, contributors, stewards and community funds receiving each share. Specify fees, timing and allocation rules.</li>
+          <li><strong>Who audits?</strong> Give a named, sufficiently independent reviewer access to evidence, with privacy protections, a challenge process and a route to repair.</li>
+        </ul>
+        <p><strong>The test:</strong> a right that can be exercised, a distribution that can be reconciled, and a breach that has consequences.</p>
+      </div>
+    </section>
+
+    <section id="text-equivalent" aria-labelledby="text-heading">
+      <h2 id="text-heading">The complete text equivalent</h2>
+      <p class="lede">The same ten stages in request order, with the asset at stake, the possible diversion, the commons alternative and concrete accountability questions. All conditions below are proposed design commitments, not statements about an existing service or legal guarantees.</p>
+      <ol class="stages">
+        <li class="stage">
+          <h3>Web protocols &amp; standards</h3>
+          <p class="stake">At stake: standards and rule-setting control.</p>
+          <div class="choices">
+            <div class="risk"><h4>Concentrated capture risk</h4><p>A dominant implementation can set de facto terms. High participation costs can narrow who writes the rules. An “open” specification does not, by itself, distribute control.</p></div>
+            <div class="commons"><h4>Collective agency / commons option</h4><p>Fund public-interest participation, publish decisions, require interoperable alternatives and provide fair appeals. Evaluate conformance rather than accepting an “open” badge.</p></div>
+            <div class="test"><h4>Rights, returns and audit</h4><p><strong>Refuse/switch:</strong> implementers and users can choose compatible implementations. <strong>Paid:</strong> funded participation and maintenance have disclosed budgets. <strong>Audit:</strong> an independent reviewer checks conformance, representation and the appeal process.</p></div>
+          </div>
+        </li>
+        <li class="stage">
+          <h3>Consumer agent &amp; browser</h3>
+          <p class="stake">At stake: intent, personal data and request routing.</p>
+          <div class="choices">
+            <div class="risk"><h4>Concentrated capture risk</h4><p>A locked default can steer requests toward paid partners. Private history can become targeting or training data. Users bear switching costs while intermediaries collect commissions.</p></div>
+            <div class="commons"><h4>Collective agency / commons option</h4><p>Let users choose routes, permissions and paid features; export history; revoke access; and replace the agent. Disclose commissions and inspect routing and data use.</p></div>
+            <div class="test"><h4>Rights, returns and audit</h4><p><strong>Refuse/switch:</strong> users decline optional uses and move to another agent with a usable export. <strong>Paid:</strong> service fees and referral commissions are visible. <strong>Audit:</strong> an independent reviewer tests defaults, routing records and permission enforcement.</p></div>
+          </div>
+        </li>
+        <li class="stage">
+          <h3>Domain &amp; application: example.com</h3>
+          <p class="stake">At stake: access, audience relationships and platform rent.</p>
+          <div class="choices">
+            <div class="risk"><h4>Concentrated capture risk</h4><p>An application can capture reach, account ties and fees. Unilateral terms can shift value away from creators. A domain name does not reveal who has a voice.</p></div>
+            <div class="commons"><h4>Collective agency / commons option</h4><p>Give members a vote, appeal rights and a practical exit path. Publish creator shares and changes to access terms. Test account exports and audit fee and ranking decisions.</p></div>
+            <div class="test"><h4>Rights, returns and audit</h4><p><strong>Refuse/switch:</strong> members challenge terms or leave with portable records. <strong>Paid:</strong> creators and app operators receive disclosed shares. <strong>Audit:</strong> member-appointed independent reviewers inspect allocations, ranking rules and usable export.</p></div>
+          </div>
+        </li>
+        <li class="stage">
+          <h3>CDN &amp; edge: Cloudflare as an illustrative provider</h3>
+          <p class="stake">At stake: traffic control, metadata and infrastructure fees.</p>
+          <div class="choices">
+            <div class="risk"><h4>Concentrated capture risk</h4><p>Any concentrated edge can become a chokepoint. Logs, opaque blocking or lock-in can shift bargaining power. This is a generic design risk, not a finding about Cloudflare.</p></div>
+            <div class="commons"><h4>Collective agency / commons option</h4><p>Procure a service without surrendering governance. Contract for minimal logs and reviewable blocking. Retain the ability to move traffic and rehearse failover.</p></div>
+            <div class="test"><h4>Rights, returns and audit</h4><p><strong>Refuse/switch:</strong> authorized operators can reroute traffic and challenge blocks under agreed procedures. <strong>Paid:</strong> edge providers receive disclosed service fees. <strong>Audit:</strong> an independent reviewer verifies logs, commitments, invoices and failover tests.</p></div>
+          </div>
+        </li>
+        <li class="stage">
+          <h3>Identity &amp; consent</h3>
+          <p class="stake">At stake: identity linkage and authority to use data.</p>
+          <div class="choices">
+            <div class="risk"><h4>Concentrated capture risk</h4><p>Bundled consent can tie access to unrelated uses. A central identity graph can enable cross-context use. Displaying a consent screen does not prove that refusal is meaningful.</p></div>
+            <div class="commons"><h4>Collective agency / commons option</h4><p>Separate service access from optional data uses. Make permission specific and revocable. Allow users to refuse, revoke or choose a different identity provider; verify purpose limits downstream.</p></div>
+            <div class="test"><h4>Rights, returns and audit</h4><p><strong>Refuse/switch:</strong> users can decline optional uses without losing unrelated access and choose compatible identity services. <strong>Paid:</strong> disclose identity-service fees; do not treat payment as blanket consent. <strong>Audit:</strong> privacy reviewers test purpose limits and downstream revocation.</p></div>
+          </div>
+        </li>
+        <li class="stage">
+          <h3>Database, server &amp; cloud</h3>
+          <p class="stake">At stake: data custody, reuse rights and hosting rent.</p>
+          <div class="choices">
+            <div class="risk"><h4>Concentrated capture risk</h4><p>Proprietary formats and exit fees can trap a dataset. Hosting power can become power over secondary use. Even a downloadable file may remain costly or impractical to reuse.</p></div>
+            <div class="commons"><h4>Collective agency / commons option</h4><p>Community stewards set use and retention rules. Contract for usable exports, deletion and predictable exit costs. Pay for hosting while keeping custody and reuse decisions accountable.</p></div>
+            <div class="test"><h4>Rights, returns and audit</h4><p><strong>Refuse/switch:</strong> authorized stewards can reject secondary use and migrate under tested procedures. <strong>Paid:</strong> hosting and stewardship fees are specified. <strong>Audit:</strong> an independent reviewer checks access records, deletion evidence and migration tests.</p></div>
+          </div>
+        </li>
+        <li class="stage">
+          <h3>Model &amp; compute</h3>
+          <p class="stake">At stake: knowledge, compute access, energy use and model revenue.</p>
+          <div class="choices">
+            <div class="risk"><h4>Concentrated capture risk</h4><p>Exclusive model access can concentrate pricing power. Contributors may go unpaid while costs remain opaque. Open weights alone do not share compute or revenue.</p></div>
+            <div class="commons"><h4>Collective agency / commons option</h4><p>Make supply contestable: buyers can route to alternatives and set reuse permissions. Negotiate contributor shares and shared compute access. Report metered use, limitations and energy consumption.</p></div>
+            <div class="test"><h4>Rights, returns and audit</h4><p><strong>Refuse/switch:</strong> buyers can replace models; contributors have specified reuse choices before use. <strong>Paid:</strong> contracts name compute providers and eligible contributor shares. <strong>Audit:</strong> independent reviewers inspect use, payout and energy evidence, including estimation limits.</p></div>
+          </div>
+        </li>
+        <li class="stage">
+          <h3>Provenance &amp; measurement</h3>
+          <p class="stake">At stake: credit, evidence, scoring power and allocation metrics.</p>
+          <div class="choices">
+            <div class="risk"><h4>Concentrated capture risk</h4><p>One operator can define credit and price the score. Hidden metrics can exclude small contributors. A receipt alone does not prove that attribution is correct.</p></div>
+            <div class="commons"><h4>Collective agency / commons option</h4><p>Use shared receipt formats; disclose uncertainty and limits. Let contributors contest scores and choose reviewers. Independent checks examine credit, privacy and resulting payouts.</p></div>
+            <div class="test"><h4>Rights, returns and audit</h4><p><strong>Refuse/switch:</strong> contributors can challenge a score and seek an alternative reviewer. <strong>Paid:</strong> contributor allocations and measurement-service fees are distinct and visible. <strong>Audit:</strong> independent reviewers access sufficient evidence without unnecessary personal-data disclosure.</p></div>
+          </div>
+        </li>
+        <li class="stage">
+          <h3>Payment &amp; settlement</h3>
+          <p class="stake">At stake: fees, revenue shares and access to usable balances.</p>
+          <div class="choices">
+            <div class="risk"><h4>Concentrated capture risk</h4><p>Opaque fees can absorb small contributor payments. Thresholds or frozen balances can make exit impractical. A payment rail does not, by itself, determine a fair split.</p></div>
+            <div class="commons"><h4>Collective agency / commons option</h4><p>Specify an enforceable distribution rule: recipients, fees, timing and appeals. Offer alternative rails where available. Reconcile receipts with actual payouts through an external audit.</p></div>
+            <div class="test"><h4>Rights, returns and audit</h4><p><strong>Refuse/switch:</strong> recipients can challenge settlement and choose eligible alternative rails, with constraints disclosed. <strong>Paid:</strong> creators, workers, providers and funds have named shares. <strong>Audit:</strong> an external financial reviewer reconciles allocations, deductions and transfers.</p></div>
+          </div>
+        </li>
+        <li class="stage">
+          <h3>Community &amp; energy return</h3>
+          <p class="stake">At stake: surplus, labor, energy, water, land and repair.</p>
+          <div class="choices">
+            <div class="risk"><h4>Concentrated capture risk</h4><p>Benefits can leave the people and places enabling a system while labor, grid, water and land costs go uncounted. A “community” label or green claim is not an actual return.</p></div>
+            <div class="commons"><h4>Collective agency / commons option</h4><p>Agree a community-governed fund share, resource budget and remedies. Give affected people a way to object and trigger review. Elected stewards publish spending while outside reviewers verify it.</p></div>
+            <div class="test"><h4>Rights, returns and audit</h4><p><strong>Refuse/switch:</strong> affected people can trigger review and agreed limits or stop conditions. <strong>Paid:</strong> named local beneficiaries, workers and community funds receive agreed returns. <strong>Audit:</strong> independent financial and resource reviewers check spending, burdens and repairs.</p></div>
+          </div>
+        </li>
+      </ol>
+      <p class="notice"><strong>Close the loop:</strong> return value allocations and auditable receipts to the people and institutions entitled to them at earlier stages. Minimize personal data in that evidence. An open interface, a receipt or a benefit promise only becomes useful bargaining power when someone can exercise a right, verify performance and obtain a remedy.</p>
+    </section>
+  </main>
+  <footer>
+    <p>Commons Bargaining · Original illustrative design map. No external fonts, scripts, images, analytics or network dependencies. This diagram proposes governance conditions; it does not assess providers or establish their legal duties.</p>
+    <a href="#visual-map">Back to diagram</a>
+  </footer>
+</body>
+</html>

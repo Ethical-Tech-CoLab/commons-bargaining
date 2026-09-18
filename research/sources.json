@@ -1,0 +1,412 @@
+[
+  {
+    "id": "S01",
+    "author": "Ethical Tech CoLab",
+    "year": "2026",
+    "title": "Public website source: mission, vision, and working principles",
+    "url": "https://github.com/Ethical-Tech-CoLab/website/blob/6fadc0fb0a93c112bee7cc91a2f9e3c00a2f9565/src/content/site.ts",
+    "claim": "Published working principles are Field-grounded, Prototype-first, and Open by default; the mission and vision emphasize technology shaped by affected people.",
+    "limit": "Institutional self-description, not evidence that this proposed project has been reviewed or endorsed. Source is pinned to the revision inspected.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S02",
+    "author": "Ethical Tech CoLab",
+    "year": "2026",
+    "title": "What Is Ethical AI?",
+    "url": "https://ethical-tech-colab.github.io/what-is-ethical-ai/",
+    "claim": "The CoLab's July 2026 paper frames ethical AI institutionally, with human rights, avoidance of harm, ethical deliberation, and affected-person participation.",
+    "limit": "Cited for the CoLab's normative framework, not as independent validation of the present proposals or of every historical claim in that paper.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S03",
+    "author": "Elinor Ostrom",
+    "year": "2009",
+    "title": "Beyond Markets and States: Polycentric Governance of Complex Economic Systems",
+    "url": "https://www.nobelprize.org/prizes/economic-sciences/2009/ostrom/lecture/",
+    "claim": "Nobel lecture distinguishes resource subtractability and exclusion and describes collective-choice arrangements, monitoring, sanctions, and conflict resolution. Printed pages 412-413 and 422-423.",
+    "limit": "Knowledge and pasture have different resource economics. Institutional findings are not a universal template or an endorsement of an AI-data proposal.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S04",
+    "author": "U.S. Bureau of Land Management",
+    "year": "Undated; accessed 2026",
+    "title": "Livestock Grazing on Public Lands",
+    "url": "https://www.blm.gov/programs/natural-resources/rangelands-and-grazing/livestock-grazing",
+    "claim": "Describes permits or leases, eligibility, authorized grazing privileges, and fees, including animal-unit months as a forage measure.",
+    "limit": "A publicly managed, subtractable resource regime; it establishes neither public ownership of internet content nor authority to license others' data.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S07",
+    "author": "Sylvie Delacroix and Neil D. Lawrence",
+    "year": "2019",
+    "title": "Bottom-up data Trusts: disturbing the 'one size fits all' approach to data governance",
+    "url": "https://www.repository.cam.ac.uk/handle/1810/301307",
+    "claim": "Proposes plural independently administered trusts with fiduciary obligations and negotiation tied to beneficiaries' purposes. International Data Privacy Law 9(4): 236-252; doi:10.1093/idpl/ipz014.",
+    "limit": "A proposed model, not universally recognized ownership of personal data or an international trust regime. Accessible university full text notes limits on erasure and bargaining.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S08",
+    "author": "Creative Commons",
+    "year": "Undated; accessed 2026",
+    "title": "Frequently Asked Questions",
+    "url": "https://creativecommons.org/faq/",
+    "claim": "Explains CC's standardized legal tools and sharing mission, the relationship to copyright, and differences and limits across licenses.",
+    "limit": "General institutional guidance, not legal advice, a universal determination of AI-training legality, or evidence that CC operates the proposed payment intermediary.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S09",
+    "author": "Creative Commons",
+    "year": "Undated; accessed 2026",
+    "title": "CC Signals",
+    "url": "https://creativecommons.org/cc-signals/",
+    "claim": "Describes a developing commons-friendly framework for communicating expectations about AI use and advancing reciprocity alongside existing licensing tools.",
+    "limit": "A developing institutional framework; a preference signal is not automatically a new legal obligation or a retroactive amendment to existing CC licenses.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S10",
+    "author": "European Union",
+    "year": "2016",
+    "title": "Regulation (EU) 2016/679 (General Data Protection Regulation)",
+    "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng",
+    "claim": "Articles 5-9, 17, 21, and 80 address processing principles, lawful bases, consent, specified rights, and representative enforcement; recital 26 distinguishes anonymity from pseudonymity.",
+    "limit": "Not a general property or collective-licensing right. Withdrawal does not invalidate prior lawful processing; erasure and other rights have conditions and exceptions.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S11",
+    "author": "European Union",
+    "year": "2022",
+    "title": "Regulation (EU) 2022/868 (Data Governance Act)",
+    "url": "https://eur-lex.europa.eu/eli/reg/2022/868/oj/eng",
+    "claim": "Recognizes data-cooperative services and regulates specified intermediation and data-altruism recognition. Articles 2(15)-(16), 10-12, and 18-19; applicable from 24 September 2023.",
+    "limit": "No new personal-data processing basis or competition-law immunity. Altruism excludes rewards beyond specified cost compensation; neutrality and organizational requirements matter.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S12",
+    "author": "European Union",
+    "year": "2024",
+    "title": "Regulation (EU) 2024/1689 (Artificial Intelligence Act)",
+    "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+    "claim": "Article 53(1)(c)-(d) establishes GPAI copyright-policy and public training-content-summary duties; Articles 111(3) and 113 set relevant phased dates. Read with the 2026 amendment.",
+    "limit": "Does not establish universal royalties or an item-level public training ledger. The limited open-source exception does not remove those two duties.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S13",
+    "author": "European Commission",
+    "year": "2022",
+    "title": "Guidelines on the application of Union competition law to collective agreements regarding the working conditions of solo self-employed persons",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A52022XC0930%2802%29",
+    "claim": "Communication 2022/C 374/02 distinguishes specified working-condition agreements outside Article 101 from categories subject to Commission nonintervention.",
+    "limit": "Guidance, not new social rights or a blanket data-licensing exemption. Paragraphs 17-18 limit scope, including exclusion of mere asset exploitation.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S14",
+    "author": "U.S. Copyright Office",
+    "year": "2025",
+    "title": "Copyright and Artificial Intelligence, Part 3: Generative AI Training",
+    "url": "https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf",
+    "claim": "Discusses training and exclusive rights, contextual fair-use analysis, licensing markets, and targeted policy intervention. Printed pages 99 and 105-108.",
+    "limit": "The 9 May 2025 pre-publication advisory report, not a statute or court judgment. Its litigation discussion is not a verified September 2026 docket update.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S25",
+    "author": "Salome Viljoen",
+    "year": "2021",
+    "title": "A Relational Theory of Data Governance",
+    "url": "https://yalelawjournal.org/feature/a-relational-theory-of-data-governance",
+    "claim": "Analyzes population-level data relationships and interests beyond individual consent or payment; warns that contributor-only trusts can omit affected noncontributors. Yale Law Journal 131: 573-654, especially pages 598 and 645-648.",
+    "limit": "Normative legal scholarship, not enacted institutional authority or empirical validation of the proposed federation.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S26",
+    "author": "Creative Commons",
+    "year": "2013; version 4.0",
+    "title": "Attribution 4.0 International: Legal Code",
+    "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en",
+    "claim": "Provides a nonexclusive, royalty-free, irrevocable license over licensed rights, with terms, independent exceptions, limits on additional restrictions, and breach/reinstatement provisions.",
+    "limit": "CC BY 4.0 specifically. Privacy/publicity and other rights remain separately addressed; no universal answer to every AI use or permission over rights the licensor does not hold.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S32",
+    "author": "European Union",
+    "year": "2026",
+    "title": "Regulation (EU) 2026/1744 (Digital Omnibus on AI)",
+    "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202601744",
+    "claim": "Enacted 8 July 2026 and in force 27 July 2026; changes relevant Annex III high-risk dates to 2 December 2027 and Annex I dates to 2 August 2028 while retaining the principal GPAI timetable discussed here.",
+    "limit": "Not a delay of all AI obligations. Interpret the specific application/transition provisions and obtain current model- and use-specific legal review.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S33",
+    "author": "United States",
+    "year": "1935, as amended",
+    "title": "National Labor Relations Act: 29 U.S.C. 152",
+    "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title29-section152&num=0&edition=prelim",
+    "claim": "Section 152(3)'s definition of employee excludes independent contractors and other specified categories, limiting assumptions about data-union labor-law status.",
+    "limit": "Exclusion from this statute alone does not establish that every collective negotiation is unlawful under other law; actual employment classification requires factual analysis.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S34",
+    "author": "European Data Protection Board",
+    "year": "2024",
+    "title": "Opinion 28/2024 on certain data protection aspects related to the processing of personal data in the context of AI models",
+    "url": "https://www.edpb.europa.eu/system/files/documents/2024-12/edpb_opinion_202428_ai-models_en.pdf",
+    "claim": "Models trained on personal data are not automatically anonymous; analysis considers reasonably likely extraction/disclosure and contextual lawful-basis assessment. Executive summary, pages 2-4.",
+    "limit": "A regulatory opinion, not a statute or a finding that every model or synthetic dataset contains personal data.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S35",
+    "author": "European Union",
+    "year": "2019",
+    "title": "Directive (EU) 2019/790 on copyright and related rights in the Digital Single Market",
+    "url": "https://eur-lex.europa.eu/eli/dir/2019/790/oj/eng",
+    "claim": "Articles 3-4 address text-and-data mining and lawful access, with rights reservations under Article 4; Article 7 protects the specified research exception against conflicting contracts.",
+    "limit": "Requires national implementation and fact-specific analysis. Research labels do not automatically qualify; public accessibility is not unlimited permission.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S05",
+    "author": "Imanol Arrieta-Ibarra, Leonard Goff, Diego Jimenez-Hernandez, Jaron Lanier, and E. Glen Weyl",
+    "year": "2018",
+    "title": "Should We Treat Data as Labor? Moving beyond 'Free'",
+    "url": "https://www.aeaweb.org/articles?id=10.1257/pandp.20181003",
+    "claim": "Argues for treating data partly as labor and for countervailing power against dominant data buyers. AEA Papers and Proceedings 108: 38-42.",
+    "limit": "An institutional argument, not a demonstrated viable cooperative, universal data price, or legal finding of employee status. Publisher abstract and bibliographic record verified.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S06",
+    "author": "Nicholas Vincent, Hanlin Li, Nicole Tilly, Stevie Chancellor, and Brent Hecht",
+    "year": "2021",
+    "title": "Data Leverage: A Framework for Empowering the Public in its Relationship with Technology Companies",
+    "url": "https://arxiv.org/abs/2012.09995",
+    "claim": "Examines public power arising from dependence on human-generated data, including withholding and conscious contributions to alternatives. Warns of collateral harm to public commons. FAccT 2021.",
+    "limit": "A framework and synthesis, not a contemporary frontier-model bargaining trial. Originally posted as a 2020 preprint, revised in 2021.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S15",
+    "author": "Omidyar Network",
+    "year": "2025-10-14",
+    "title": "Humanity AI launches $500 million commitment to mobilize civil society in shaping the future of AI",
+    "url": "https://omidyar.com/update/humanity-ai/",
+    "claim": "Official founder announcement of ten philanthropies committing $500 million over five years, with aligned grantmaking and a pooled fund managed by Rockefeller Philanthropy Advisors.",
+    "limit": "An announced collective commitment is not evidence of completed disbursement, a single available funding pot, or an award to Commons Bargaining.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S16",
+    "author": "Costco Wholesale Corporation",
+    "year": "Undated; accessed 2026",
+    "title": "Company Profile",
+    "url": "https://investor.costco.com/company-profile/default.aspx",
+    "claim": "Describes membership warehouses, membership fees, and lower-price positioning; identifies Costco as a publicly traded corporation.",
+    "limit": "Costco is not a member-owned cooperative. Its company description does not validate pooled AI procurement, data sales, or democratic governance.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S17",
+    "author": "Google",
+    "year": "Undated; accessed 2026",
+    "title": "Learn how Gmail keeps your information secure & protects your privacy",
+    "url": "https://support.google.com/mail/answer/10434152?hl=en",
+    "claim": "Gmail's published explanation describes processing for smart features and spam detection, user controls, and a distinction between email content and advertising.",
+    "limit": "A provider's product-specific policy statement, not an independent audit or a blanket policy covering every AI service, account type, setting, or model-training use.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S18",
+    "author": "W3C Provenance Working Group",
+    "year": "2013",
+    "title": "PROV-DM: The PROV Data Model",
+    "url": "https://www.w3.org/TR/prov-dm/",
+    "claim": "The Recommendation models provenance using entities, activities, agents, derivations, and related structures for interoperable exchange.",
+    "limit": "A representation standard; it does not establish ownership, verify the truth of a recorded assertion, or supply a compensation formula.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S19",
+    "author": "W3C Verifiable Credentials Working Group",
+    "year": "2025",
+    "title": "Verifiable Credentials Data Model v2.0",
+    "url": "https://www.w3.org/TR/vc-data-model-2.0/",
+    "claim": "Provides an interoperable model for issuer claims and discusses correlation, data minimization, and credential privacy risks.",
+    "limit": "A credential's validity does not establish the substantive truth or legal sufficiency of its claims; privacy depends on implementation.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S20",
+    "author": "Local Contexts",
+    "year": "Undated; accessed 2026",
+    "title": "Traditional Knowledge (TK) Labels",
+    "url": "https://localcontexts.org/labels/traditional-knowledge-labels/",
+    "claim": "Community-developed labels communicate Indigenous protocols and responsibilities for culturally situated knowledge and materials.",
+    "limit": "Not a generic commercial license, a replacement for community engagement, or proof of a platform's authority to commercialize cultural materials.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S21",
+    "author": "International Energy Agency",
+    "year": "2025",
+    "title": "Energy and AI: Energy demand from AI",
+    "url": "https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai",
+    "claim": "Estimates global data-center electricity consumption around 415 TWh in 2024 and projects around 945 TWh by 2030 in its Base Case, with substantial uncertainty.",
+    "limit": "Figures concern total data centers, not AI alone; 2030 is a scenario projection from the 2025 report, not observed consumption or a new 2026 forecast.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S22",
+    "author": "Ilia Shumailov, Zakhar Shumaylov, Yiren Zhao, Yarin Gal, Nicolas Papernot, and Ross Anderson",
+    "year": "2023; v3 revised 2024",
+    "title": "The Curse of Recursion: Training on Generated Data Makes Models Forget",
+    "url": "https://arxiv.org/html/2305.17493v3",
+    "claim": "Analyzes model-collapse mechanisms in recursive learning from generated data under the paper's theoretical and experimental conditions.",
+    "limit": "A version-specific preprint reference; it does not show that every synthetic-data method fails or establish copyright or privacy clearance.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S23",
+    "author": "Jean-Charles Rochet and Jean Tirole",
+    "year": "2003",
+    "title": "Platform Competition in Two-Sided Markets",
+    "url": "https://www.tse-fr.eu/publications/platform-competition-two-sided-markets",
+    "claim": "Models participation and price structure across platform sides, including profit-maximizing and nonprofit arrangements. Journal of the European Economic Association 1(4): 990-1029.",
+    "limit": "Stylized platform theory, not evidence that an AI-data cooperative will succeed. The university record also links a 2002 working-paper version.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S24",
+    "author": "Daron Acemoglu, Ali Makhdoumi, Azarakhsh Malekian, and Asu Ozdaglar",
+    "year": "2022",
+    "title": "Too Much Data: Prices and Inefficiencies in Data Markets",
+    "url": "https://www.aeaweb.org/articles?id=10.1257/mic.20200200",
+    "claim": "Models how one person's disclosure can reveal information about others, depress prices, and generate excessive sharing. AEJ: Microeconomics 14(4): 218-56.",
+    "limit": "A theoretical model, not a measured estimate of the externality in the proposed pilot. Low prices do not imply low social stakes.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S27",
+    "author": "Amirata Ghorbani and James Zou",
+    "year": "2019",
+    "title": "Data Shapley: Equitable Valuation of Data for Machine Learning",
+    "url": "https://proceedings.mlr.press/v97/ghorbani19c.html",
+    "claim": "Allocates contributions to predictive performance for a specified learning algorithm and evaluation measure, with computational approximations. ICML, PMLR 97: 2242-2251.",
+    "limit": "Not an intrinsic cash price, moral entitlement, or share of corporate revenue. Exact computation is exponentially costly, and fairness assumptions may not fit every setting.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S28",
+    "author": "Humanity AI",
+    "year": "2026-09-10",
+    "title": "Humanity AI Announces $10 Million Open Call for Grants Supporting Community-Led Projects",
+    "url": "https://humanityai.ai/press-release-open-call-for-grants/",
+    "claim": "Announces a $10 million competitive call for U.S.-based community-led work in education, labor and economy, and humanities, arts, and culture.",
+    "limit": "The $10 million is the call-wide envelope, not an individual award or funding for this report's separate hypothetical strategy. Application conditions may change.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S29",
+    "author": "Humanity AI",
+    "year": "2026",
+    "title": "Open Call for Proposals: Communities Leading on AI",
+    "url": "https://humanityai.ai/open-call/",
+    "claim": "Lists $75,000-$1 million grants, terms up to three years, U.S. community focus, nonprofit/fiscal-sponsorship requirements, and a 21 October 2026 deadline at 7:59 p.m. ET.",
+    "limit": "Research-only and primarily AI-literacy/adoption projects are out of scope. The call describes grants, not a PRI program. Check live terms before applying.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S30",
+    "author": "Alessandro Acquisti, Leslie K. John, and George Loewenstein",
+    "year": "2013",
+    "title": "What Is Privacy Worth?",
+    "url": "https://kilthub.cmu.edu/articles/journal_contribution/What_Is_Privacy_Worth_/16540101",
+    "claim": "A field experiment finds that endowments and presentation order affect consumer privacy choices. Journal of Legal Studies 42(2): 249-274.",
+    "limit": "Context-dependent privacy preferences, not a universal price for personal data or an estimate of AI training value. The repository upload date differs from the 2013 publication date.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S36",
+    "author": "Thomas Helbling, International Monetary Fund",
+    "year": "2010",
+    "title": "Back to Basics: What Are Externalities?",
+    "url": "https://www.imf.org/external/pubs/ft/fandd/2010/12/basics.htm",
+    "claim": "Explains external costs, Pigouvian taxation, positive externalities, and public goods, supporting a distinction between harm correction and commons subsidy.",
+    "limit": "An economic explanation, not an estimate of an optimal AI tax rate or a justification for a uniform 50% tax.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S37",
+    "author": "U.S. Internal Revenue Service",
+    "year": "2026",
+    "title": "Credits and deductions",
+    "url": "https://www.irs.gov/credits-and-deductions",
+    "claim": "Explains that credits reduce tax due while deductions reduce taxable income.",
+    "limit": "Does not establish an existing AI-commons or Wikimedia contribution credit, corporate eligibility, or the proposed calculation's legal validity.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S38",
+    "author": "Office of Senator Bernie Sanders",
+    "year": "2026-06-18",
+    "title": "Sanders Introduces Legislation to Create $7 Trillion AI Sovereign Wealth Fund",
+    "url": "https://www.sanders.senate.gov/press-releases/news-sanders-introduces-legislation-to-create-7-trillion-ai-sovereign-wealth-fund/",
+    "claim": "Announces the American AI Sovereign Wealth Fund Act, a one-time equity-paid levy seeking 50% public ownership of covered AI companies. Linked proposed section 5000E(b) specifies newly issued equity and post-issuance ownership.",
+    "limit": "An introduced proposal, not evidence of enactment. Fund valuation and dividend amounts are sponsor projections, not independently verified forecasts; no Wikimedia-credit mechanism is established.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S39",
+    "author": "Office of Senator Bernie Sanders",
+    "year": "2026-03-02",
+    "title": "Sanders and Khanna Introduce Legislation to Tax Billionaire Wealth and Invest in Working Families",
+    "url": "https://www.sanders.senate.gov/press-releases/news-sanders-and-khanna-introduce-legislation-to-tax-billionaire-wealth-and-invest-in-working-families/",
+    "claim": "Describes the Make Billionaires Pay Their Fair Share Act and a proposed 5% annual billionaire wealth tax.",
+    "limit": "Different base and mechanism from an AI-company revenue, profit, or equity levy. Sponsor-supported projected receipts are not realized revenue.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S40",
+    "author": "Office of Senator Bernie Sanders",
+    "year": "2025-10-06",
+    "title": "Sanders Releases Report on Big Tech Oligarchs' War Against Workers, Warns AI Could Eliminate Nearly 100 Million U.S. Jobs",
+    "url": "https://www.sanders.senate.gov/press-releases/news-sanders-releases-report-on-big-tech-oligarchs-war-against-workers-warns-ai-could-eliminate-nearly-100-million-u-s-jobs/",
+    "claim": "Includes a proposal for a robot tax on corporations replacing workers with machines; the announcement does not specify a tax rate.",
+    "limit": "A policy proposal. The headline's job-loss figure is a sponsor-reported scenario, not adopted here as a validated forecast; it does not establish a 50% rate.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S41",
+    "author": "Wikimedia Foundation",
+    "year": "2025 revision",
+    "title": "Gift policy",
+    "url": "https://foundation.wikimedia.org/wiki/Policy:Gift_policy",
+    "claim": "Describes gift review, a preference for unrestricted support, additional scrutiny of large or restricted gifts, and the Foundation's right to refuse donations.",
+    "limit": "Not an endorsement of the proposed tax credit or designation as an eligible recipient under any new scheme. Recipient independence and actual law remain controlling.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S31",
+    "author": "Charles I. Jones and Christopher Tonetti",
+    "year": "2020",
+    "title": "Nonrivalry and the Economics of Data",
+    "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20191330",
+    "claim": "Models simultaneous use of data by multiple firms, gains from nonrival use, and inefficiencies from hoarding. American Economic Review 110(9): 2819-58.",
+    "limit": "Model-dependent welfare results, not a claim that unrestricted sharing is always beneficial or will finance its own stewardship.",
+    "accessed": "2026-09-18"
+  }
+]

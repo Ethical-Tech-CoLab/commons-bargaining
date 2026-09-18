@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="An evidence-linked research agenda for collective bargaining institutions, the AI data commons, and shared agency.">
+  <meta name="theme-color" content="#120c1a">
+  <meta name="color-scheme" content="dark">
+  <title>Commons Bargaining | Ethical Tech CoLab</title>
+  <link rel="canonical" href="https://ethical-tech-colab.github.io/commons-bargaining/">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#report">Skip to research</a>
+  <header class="masthead">
+    <a href="https://ethical-tech-colab.github.io/website/" class="brand">ETHICAL TECH COLAB <span>RESEARCH / WORKING PAPER</span></a>
+    <a href="https://github.com/Ethical-Tech-CoLab/commons-bargaining">Repository &amp; revisions <span aria-hidden="true">&nearr;</span></a>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="title">
+      <p class="eyebrow">Institutions for shared agency &bull; 18 September 2026</p>
+      <h1 id="title">Commons<br><em>Bargaining.</em></h1>
+      <p class="deck">What would it take for people to negotiate with AI at the scale at which AI negotiates with society?</p>
+      <div class="hero-bottom">
+        <p>Collective bargaining institutions for the AI data commons.<br>A research agenda, institutional design, and testable economic model.</p>
+        <span class="status">DISCUSSION DRAFT &middot; v0.1</span>
+      </div>
+      <div class="actions">
+        <a class="button" href="#abstract">Read the research <span aria-hidden="true">&darr;</span></a>
+        <a href="#lab">Explore the toy economy</a>
+        <button id="print" type="button">Print / save PDF</button>
+        <a href="./report.md" download>Download Markdown</a>
+      </div>
+    </section>
+    <section class="thesis" aria-label="Research thesis">
+      <p class="eyebrow">The central proposition</p>
+      <p>Pool <strong>negotiating power</strong>, not unrestricted personal data. Return value to people <em>and</em> the commons without enclosing open knowledge.</p>
+      <div class="three-up">
+        <div><span>01 / PEOPLE</span><h2>Agency before extraction</h2><p>Membership, meaningful refusal, representative governance, and enforceable remedies.</p></div>
+        <div><span>02 / MARKETS</span><h2>Scale on both sides</h2><p>Separate consumer purchasing power from contributors' permission to license work.</p></div>
+        <div><span>03 / COMMONS</span><h2>A public-good return</h2><p>Transparent funding for shared knowledge, stewardship, and affected communities.</p></div>
+      </div>
+    </section>
+    <div class="reading-layout">
+      <aside>
+        <nav aria-label="Research contents"><p class="eyebrow">In this paper</p>{{CONTENTS}}</nav>
+        <p class="aside-note">Evidence, interpretation, and proposals are distinguished throughout. No participant endorsement is implied.</p>
+      </aside>
+      <article id="report">{{REPORT}}</article>
+    </div>
+    <section id="lab" class="lab" aria-labelledby="lab-title">
+      <p class="eyebrow">A working, inspectable prototype</p>
+      <h2 id="lab-title">Follow the money.</h2>
+      <p>Change an assumed annual licensing contract and the eligible contributor count. This is arithmetic, not a forecast, valuation, payment service, or promise of income. All calculations run in your browser; nothing is uploaded.</p>
+      <noscript><p>The interactive calculator requires JavaScript. The complete worked example and allocation table remain available in the research above.</p></noscript>
+      <form id="calculator">
+        <div><label for="revenue">Annual licensing receipts (whole USD)</label><input id="revenue" name="revenue" type="number" min="0" max="10000000000" step="1" value="120000" required></div>
+        <div><label for="members">Eligible contributors</label><input id="members" name="members" type="number" min="1" max="1000000000" step="1" value="1000" required></div>
+        <button class="button" type="submit">Recalculate</button>
+      </form>
+      <p id="calculator-error" role="alert"></p>
+      <div id="calculator-output" aria-live="polite" aria-atomic="true">
+        <dl class="results">
+          <div><dt>Member pool &middot; 40%</dt><dd data-result="members">$48,000.00</dd></div>
+          <div><dt>Commons fund &middot; 30%</dt><dd data-result="commons">$36,000.00</dd></div>
+          <div><dt>Operations &middot; 20%</dt><dd data-result="operations">$24,000.00</dd></div>
+          <div><dt>Reserve &middot; 10% + rounding</dt><dd data-result="reserve">$12,000.00</dd></div>
+          <div><dt>Per eligible contributor</dt><dd data-result="perMember">$48.00</dd></div>
+          <div><dt>Undisbursed member liability</dt><dd data-result="memberLiability">$0.00</dd></div>
+        </dl>
+        <p class="small">Payouts round down to whole cents. The member remainder stays owed to members, not to the operator. Allocation rounding stays in the disclosed reserve. Taxes, payment costs, contract liabilities, and eligibility must be resolved before any real distribution.</p>
+      </div>
+      <a href="./knowledge-object.json" download>Inspect the example knowledge object (JSON)</a>
+    </section>
+    <section id="references" class="references" aria-labelledby="references-title">
+      <p class="eyebrow">Evidence register</p>
+      <h2 id="references-title">Sources &amp; their limits</h2>
+      <p>Primary materials and academic research. Accessed 18 September 2026. A source supports the stated claim, not every proposal built upon it.</p>
+      <label for="source-search">Filter sources by author, topic, or title</label>
+      <input type="search" id="source-search" placeholder="Try: copyright, commons, energy...">
+      <p id="source-count" role="status">{{SOURCE_COUNT}} sources</p>
+      <ol>{{REFERENCES}}</ol>
+      <p><a href="./sources.json" download>Download the machine-readable source register</a></p>
+    </section>
+  </main>
+  <footer>
+    <p class="brand">ETHICAL TECH COLAB <span>COMMONS BARGAINING</span></p>
+    <p>AI-assisted research synthesis commissioned from a session brief. Human review, authorship confirmation, legal review, and empirical validation remain necessary. Names identify the requested research circle, not signatories.</p>
+    <p>Views are not official positions of NYU, Microsoft, Creative Commons, Humanity AI, or any participant or partner. Experimental research; not legal, investment, or financial advice.</p>
+    <p>Original research: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Software: MIT. Third-party works retain their own terms. No analytics, cookies, external fonts, or personal-data collection on this site.</p>
+    <a href="https://github.com/Ethical-Tech-CoLab/commons-bargaining/issues">Propose a correction or contribute evidence</a>
+  </footer>
+</body>
+</html>
