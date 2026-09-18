@@ -90,3 +90,19 @@ test('the reputation sketch cannot masquerade as a verified evaluation or eligib
   assert.equal(observation.overallTrustScore, null);
   assert.equal(observation.erc8004ConformanceClaimed, false);
 });
+
+test('both pages use the same green icon for the header and favicon', async () => {
+  const diagram = await readFile(new URL('../dist/divergence.html', import.meta.url), 'utf8');
+  const icon = await readFile(new URL('../dist/favicon.svg', import.meta.url), 'utf8');
+  assert.match(icon, /viewBox="0 0 28 28"/);
+  assert.match(icon, /fill="#c8f04b"/);
+  assert.equal([...icon.matchAll(/<circle /g)].length, 3);
+  for (const page of [html, diagram]) {
+    const favicon = page.match(/<link rel="icon" type="image\/svg\+xml" sizes="any" href="([^"]+)">/);
+    const headerIcon = page.match(/<img class="header-mark" src="([^"]+)"/);
+    assert.ok(favicon && headerIcon);
+    assert.match(favicon[1], /^\.\/favicon\.svg\?v=[a-f0-9]{12}$/);
+    assert.equal(headerIcon[1], favicon[1]);
+    await access(new URL(`../dist/${favicon[1]}`, import.meta.url));
+  }
+});

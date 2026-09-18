@@ -103,6 +103,7 @@ of the proposed institutions. External source access can change.
 | `research/sources.json` | Evidence, source URL, supported claim, and limitation |
 | `site/template.html` | Accessible publication shell |
 | `site/header.html`, `site/header.css` | Shared persistent Overview, Demos, Research navigation |
+| `site/favicon.svg` | Shared green header mark and browser favicon |
 | `site/styles.css` | Responsive CoLab-inspired styling and print layout |
 | `site/model.mjs` | Pure integer-cent illustrative settlement arithmetic |
 | `site/app.mjs` | Browser-only calculator and bibliography filter |

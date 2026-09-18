@@ -17,6 +17,7 @@ const renderHeader = demo => header.replaceAll('{{PREFIX}}', demo ? './index.htm
   .replace('{{OVERVIEW_CURRENT}}', demo ? '' : 'aria-current="location"')
   .replace('{{DEMOS_CURRENT}}', demo ? 'aria-current="location"' : '');
 const fingerprint = value => createHash('sha256').update(value).digest('hex').slice(0, 12);
+const faviconUrl = `./favicon.svg?v=${fingerprint(await read('site/favicon.svg'))}`;
 const stylesheet = await read('site/styles.css');
 const model = await read('site/model.mjs');
 const app = (await read('site/app.mjs')).replace("'./model.mjs'", `'./model.mjs?v=${fingerprint(model)}'`);
@@ -57,6 +58,7 @@ const references = sources.map(source =>
 const contents = `<ol>${headings.map(({ id, text }) => `<li><a href="#${id}">${text}</a></li>`).join('')}</ol>`;
 const html = template.replace('{{REPORT}}', rendered).replace('{{CONTENTS}}', contents)
   .replace('{{HEADER}}', renderHeader(false))
+  .replaceAll('./favicon.svg', faviconUrl)
   .replace('{{REFERENCES}}', references).replace('{{SOURCE_COUNT}}', sources.length)
   .replace('href="./styles.css"', `href="./styles.css?v=${fingerprint(stylesheet)}"`)
   .replace('href="./header.css"', `href="./header.css?v=${fingerprint(headerCss)}"`)
@@ -67,10 +69,11 @@ await mkdir(new URL('dist/', root), { recursive: true });
 await writeFile(new URL('dist/index.html', root), html);
 await writeFile(new URL('dist/app.mjs', root), app);
 const diagram = (await read('site/divergence.html')).replace('{{HEADER}}', renderHeader(true))
+  .replaceAll('./favicon.svg', faviconUrl)
   .replace('href="./header.css"', `href="./header.css?v=${fingerprint(headerCss)}"`);
 if (/\{\{[A-Z_]+\}\}/.test(diagram)) throw new Error('Unresolved diagram template placeholder');
 await writeFile(new URL('dist/divergence.html', root), diagram);
-for (const file of ['styles.css', 'header.css', 'model.mjs', 'divergence.svg']) {
+for (const file of ['styles.css', 'header.css', 'model.mjs', 'divergence.svg', 'favicon.svg']) {
   await copyFile(new URL(`site/${file}`, root), new URL(`dist/${file}`, root));
 }
 const bibliography = sources.map(s => `- **${s.id}.** ${s.author} (${s.year}). [${s.title}](${s.url}). ${s.claim} Limit: ${s.limit}`).join('\n\n');
