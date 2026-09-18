@@ -1182,7 +1182,66 @@ Use grants for institution-building and demonstrated public goods. Consider reco
 
 The approach does not solve viability by declaration. It makes the business and public-benefit bargain **testable, financeable where justified, and accountable when subsidy remains necessary**.
 
-## 28. Conclusion
+## 28. The quasi-commons tension: contribution without control
+
+**The important tension is distributed contribution without corresponding shared control.** It is not established that every Claude Code interaction changes model weights, or that AI contributors outnumber everyone who has ever contributed to Wikimedia. Those stronger claims require evidence and comparable definitions.
+
+"Conscription" can express concern about unequal bargaining power and meaningful choice, but should not become a blanket allegation of involuntary training use. Accounts, settings, feedback mechanisms, authority, and actual downstream processing matter.
+
+### Context, memory, feedback, and weights are different
+
+Anthropic describes Claude Code as an agentic harness around models, tools, and an execution environment. Prompts, retrieved files, tool results, corrections, and test outcomes can inform subsequent responses. Project instructions in `CLAUDE.md`, auto-memory, and saved sessions can support future interactions without proving a change to underlying model weights. [S91]
+
+Distinguish **session context, persistent memory, tool traces, operational telemetry, explicit feedback, and material selected for future training**. Collection or retention in one category does not establish movement into another. Training eligibility is not proof of dataset inclusion, an update, or a traceable contribution to a model capability. [S90] [S92] [S93]
+
+### Provider policy varies by account and mechanism
+
+The official documentation reviewed on 18 September 2026 distinguishes:
+
+- **Consumer Free, Pro, and Max:** model-improvement settings can permit account data, including associated Claude Code sessions, to train future models. The privacy article also describes explicit opt-ins, feedback, and particular safety-review purposes. Safety-related use must not be generalized into unrestricted training permission. [S90] [S92]
+- **Commercial Team, Enterprise, and API use:** the documented default is no model training on commercial inputs or outputs. Explicit feedback, separately authorized sharing, or programs such as the Development Partner Program can create exceptions. Identify the actual account, authentication route, and agreement rather than relying on the product name. [S90] [S93]
+- **Different feedback paths:** thumbs-up/down feedback may make the associated conversation available for training under the relevant privacy terms. The documented Claude Code session-quality survey, including its separate optional transcript-sharing step, is described differently and as not usable for model training. Do not flatten these into one rule. [S90] [S92] [S93]
+
+These are statements of provider policy, **not an independent audit of implementation**. They establish neither universal training nor universal exclusion. Recheck the applicable current terms before making a deployment decision.
+
+### Two Alice cases
+
+**Commercial task:** Alice uses a commercial API for employer work. Her prompts and tool outputs assist the task; absent an applicable opt-in or feedback exception, the documented default is no model training on those inputs and outputs. That does not mean processing is local, eliminate every retention question, or establish her authority to send the employer's material. It does mean task usefulness alone is not evidence of a future weight contribution. [S90] [S91] [S93]
+
+**Optional improvement contribution:** Alice uses a consumer account with model improvement enabled and submits relevant feedback. The conversation can become eligible for future training under the documented arrangements. Selection into a specific run is still not established. Her choice cannot automatically authorize use of a colleague's personal information, third-party code, or confidential client material. [S90] [S92]
+
+### Audit the claims before counting contributors
+
+| Proposed claim | What the evidence supports | Limit and next measurement |
+|---|---|---|
+| Every interaction augments weights | Context and tool results inform subsequent responses [S91] | Contextual adaptation is not a demonstrated parameter update; distinguish inference, memory, collection, and training records |
+| All users contribute training data | Consumer opt-in and feedback routes exist [S90] [S92] | Defaults and mechanisms differ; measure eligibility and actual selected contribution separately |
+| AI contributors exceed all-time Wikimedia contributors | Wikimedia publishes defined participation metrics [S94] [S95] | No comparable all-time person totals were established; agree period, scope, contribution threshold, and deduplication |
+| Dispersed inputs make a governed commons | Many actors can provide useful inputs | Contribution does not establish shared ownership or decision rights; inspect governance, benefits, and exit |
+
+Wikimedia's active-editor metric counts registered, non-bot editors making at least five edits in a month. Its newly registered-user metric counts specified account creation, not editing or unique human contributors. Neither establishes an all-time count of everyone contributing across Wikimedia. [S94] [S95]
+
+Likewise, AI users, paid accounts, eligible training participants, selected contributors, and paid evaluators are different populations. Comparing cumulative AI accounts with monthly active Wikimedia editors would be invalid. The reviewed evidence does **not** establish the "more than ever contributed" proposition.
+
+A defensible study would specify Wikipedia versus all Wikimedia projects, a common period, qualifying activity, anonymous contributions and bots, and cross-account/project duplication. Provider-side counts should separate authorized eligibility, actual inclusion, and paid evaluation work. Use privacy-preserving aggregate measurement and disclose uncertainty; do not construct unnecessary cross-platform identity tracking to produce a dramatic headline.
+
+### A critical working concept, not automatic ownership
+
+Use **quasi-commons** here to describe dispersed contributions that may support a widely used infrastructure while control remains concentrated. This is a critical working term, not a legal classification. Public inputs, private weights, and public benefits can coexist without a governed commons in which participants have decision rights.
+
+Counterarguments belong in the analysis. Users obtain useful services; providers fund research, compute, engineering, and safety; terms and choices vary; and supplying an input does not automatically create an ownership share in the whole model. The institutional question is what representation, compensation, assurance, and bargaining arrangements are justified, not whether every interaction already creates a property claim. Commons and relational-governance scholarship informs that inquiry without deciding it automatically. [S03] [S25]
+
+### The Commons Collective response
+
+1. Separate necessary processing from optional model improvement and make the consequences of account settings understandable.
+2. Negotiate evidence-use receipts that identify authority, purpose, processing category, and known inclusion decisions, rather than pretending to attribute every model capability to a particular record.
+3. Use collective procurement to obtain meaningful defaults, feedback controls, assurance, remedies, and tested exit.
+4. Pay deliberate elicitation and evaluation work, and negotiate commons-benefit covenants without asserting rights over third-party or public-domain material.
+5. Give affected groups a contestable role in objectives and evaluation while preserving minority protections and applicable individual rights.
+
+Explain what withdrawal can stop and what it cannot reliably reverse after processing or training. **Accountable contribution under legitimate authority**, rather than rhetorical conversion of every user into an involuntary owner or unpaid worker, is the testable institutional objective.
+
+## 29. Conclusion
 
 Commons Collective is best understood as an effort to align **voice, authority, service, and benefit**, not as a universal auction of personal data. Consumer purchasing power can operate without data sales. Creator bargaining can operate without enclosing the public domain. Commons funding can operate without pretending to identify every person's contribution to a model. Communities can demand a say in physical infrastructure without first becoming data vendors.
 

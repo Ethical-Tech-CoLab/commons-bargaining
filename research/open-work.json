@@ -129,6 +129,14 @@
       "status": "open",
       "nextStep": "Secure two independent paid pilots, build monthly cash and reserve scenarios, protect contributor liabilities, and test renewal and public-benefit outcomes.",
       "sourceTitles": ["Private institutions and the commons service model"]
+    },
+    {
+      "id": "quasi-commons-participation",
+      "title": "Measure contribution and control without conflating populations",
+      "question": "Which interactions actually enter model development, under what authority, and what collective influence or benefit returns are justified compared with governed knowledge commons?",
+      "status": "open",
+      "nextStep": "Audit account-specific policy and processing categories, define comparable contributor measures, and test procurement, feedback, and representation mechanisms without cross-platform identity tracking.",
+      "sourceTitles": ["The quasi-commons tension: contribution without control"]
     }
   ]
 }

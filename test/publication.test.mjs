@@ -37,7 +37,8 @@ test('research covers requested surfaces and labels its limits', () => {
     'reinforcement-learning reward', 'compensatory average', 'pro-human stack',
     'accountability tuple', 'funded exit/maintenance', 'Oh My Pi',
     'Commons Collective Agency Starter Kit', 'component passport',
-    'commons service model', 'reserve-funding gap']) {
+    'commons service model', 'reserve-funding gap', 'quasi-commons',
+    'not an independent audit', 'monthly active Wikimedia editors']) {
     assert.ok(html.toLowerCase().includes(term.toLowerCase()), `missing ${term}`);
   }
   assert.doesNotMatch(html, /\{\{[A-Z_]+\}\}/);

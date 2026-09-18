@@ -680,6 +680,66 @@
     "accessed": "2026-09-18"
   },
   {
+    "id": "S90",
+    "author": "Anthropic",
+    "year": "Undated living documentation; accessed 2026",
+    "title": "Data usage - Claude Code",
+    "url": "https://code.claude.com/docs/en/data-usage",
+    "claim": "Documents consumer/commercial distinctions, improvement opt-ins, the Development Partner Program, and distinct feedback and session-quality-survey pathways.",
+    "limit": "Provider policy, not an implementation audit or proof that a particular record entered a training run. Retention does not by itself establish training use.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S91",
+    "author": "Anthropic",
+    "year": "Undated living documentation; accessed 2026",
+    "title": "How Claude Code works",
+    "url": "https://code.claude.com/docs/en/how-claude-code-works",
+    "claim": "Describes an agentic harness around models and tools, with context management, project instructions, auto-memory, and saved sessions.",
+    "limit": "Contextual adaptation and persistent instructions do not establish universal or immediate updates to underlying model weights.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S92",
+    "author": "Anthropic",
+    "year": "Undated living documentation; accessed 2026",
+    "title": "Is my data used for model training? - Consumer accounts",
+    "url": "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
+    "claim": "Describes consumer model-improvement choices, explicit opt-ins, feedback handling, and specified safety-review uses.",
+    "limit": "Applies to the specified products/accounts, not every commercial plan or interface. Safety-related uses are not a blanket permission for unrestricted generative-model training.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S93",
+    "author": "Anthropic",
+    "year": "Undated living documentation; accessed 2026",
+    "title": "Is my data used for model training? - Commercial accounts",
+    "url": "https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training",
+    "claim": "States that commercial inputs and outputs are not used for model training by default, with explicit feedback or separately authorized sharing capable of creating exceptions.",
+    "limit": "Does not make every feedback mechanism identical or replace review of the actual agreement, account, authentication route, and program.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S94",
+    "author": "Wikimedia contributors",
+    "year": "2026 definition",
+    "title": "Research:Wikistats metrics/Active editors",
+    "url": "https://meta.wikimedia.org/wiki/Research:Wikistats_metrics/Active_editors",
+    "claim": "Defines the metric as registered, non-bot editors with at least five edits in a given month, including redirect-page edits.",
+    "limit": "Not an all-time count of unique human contributors, registered accounts, or every kind of Wikimedia participation.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S95",
+    "author": "Wikimedia contributors",
+    "year": "2026 definition",
+    "title": "Research:Newly registered user",
+    "url": "https://meta.wikimedia.org/wiki/Research:Newly_registered_user",
+    "claim": "Specifies self-created account registration as a user-acquisition metric, with exclusions and limitations concerning attached/proxy-created accounts, alternate accounts, and later bot classification.",
+    "limit": "Registration does not prove editing, unique personhood, or a contribution to a knowledge commons.",
+    "accessed": "2026-09-18"
+  },
+  {
     "id": "S31",
     "author": "Charles I. Jones and Christopher Tonetti",
     "year": "2020",

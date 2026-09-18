@@ -65,6 +65,8 @@ connections are documented rather than presented as a new official charter.
   unfilled component passport for an eligibility-first agency starter kit.
 - A private-institution service-operator model, existing commons funding examples,
   and an audited hypothetical cash worksheet with reserve and sensitivity checks.
+- The quasi-commons tension: account-specific Claude Code policies, context versus
+  training, and why AI-user and Wikimedia-contributor counts cannot be conflated.
 
 ## Run locally
 
