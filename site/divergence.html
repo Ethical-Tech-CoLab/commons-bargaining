@@ -26,7 +26,8 @@
     h4 { font-size: 1rem; margin: 0 0 .5rem; }
     p { margin: .5rem 0 1rem; }
     .lede { max-width: 83ch; font-size: 1.12rem; color: var(--muted); }
-    .links { display: flex; gap: .75rem 1.5rem; flex-wrap: wrap; margin: 1.4rem 0; }
+    .links { display: flex; gap: .75rem 1.5rem; flex-wrap: wrap; align-items: center; margin: 1.4rem 0; }
+    .tipping-link { padding: .55rem .85rem; border: 1px solid var(--lime); border-radius: .5rem; background: var(--surface); font-weight: 700; }
     .notice { border-left: 3px solid var(--violet); padding: .8rem 1.2rem; background: var(--surface); max-width: 95ch; }
     main { padding-top: 1rem; }
     section + section { margin-top: 3rem; }
@@ -49,9 +50,20 @@
     .risk h4 { color: var(--violet); }
     .commons h4 { color: var(--lime); }
     .test { border-left: 2px solid #78639d; padding-left: 1.2rem; }
+    .node-links { display: flex; flex-wrap: wrap; gap: .6rem 1.4rem; margin: 1.25rem 0; }
+    .tipping-cards { list-style: none; padding: 0; margin: 1.5rem 0 0; counter-reset: tipping; display: grid; gap: 1.25rem; }
+    .tipping-card { counter-increment: tipping; padding: clamp(1rem, 2vw, 2rem); background: var(--surface); border: 1px solid #78639d; border-radius: 1rem; }
+    .tipping-card h3::before { content: counter(tipping, decimal-leading-zero) " / "; color: var(--violet); }
+    .tipping-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 2rem; margin: 1.1rem 0 0; }
+    .tipping-details .lever { grid-column: 1 / -1; max-width: 100ch; }
+    .tipping-details dt { font-weight: 700; margin-bottom: .3rem; }
+    .tipping-details dd { margin: 0; color: var(--muted); }
+    .tipping-details .lever dt { color: var(--lime); }
+    .tipping-details .residual-risk dt { color: var(--violet); }
+    .context-links { max-width: 100ch; color: var(--muted); }
     footer { color: var(--muted); padding-top: 0; font-size: .94rem; }
     @media (max-width: 850px) {
-      .principles, .choices { grid-template-columns: 1fr; }
+      .principles, .choices, .tipping-details { grid-template-columns: 1fr; }
       .choices { gap: 1.1rem; }
       .test { padding-left: 1rem; }
     }
@@ -62,6 +74,12 @@
       .stage, .panel { break-inside: avoid; background: #fff; }
       .choices p, .stake, .lede, footer, a, .eyebrow, .risk h4, .commons h4, .stage h3::before { color: #120c1a; }
       .choices { grid-template-columns: 1fr; gap: .5rem; }
+      .tipping-card { break-inside: avoid; background: #fff; }
+      .tipping-card h3::before, .tipping-details dt, .tipping-details dd, .tipping-details .lever dt, .tipping-details .residual-risk dt, .context-links { color: #120c1a; }
+      .tipping-details { display: block; }
+      .tipping-details > div + div { margin-top: .65rem; }
+      #tipping-points .notice, .tipping-link { background: #fff; color: #120c1a; border-color: currentColor; }
+      .node-links { display: none; }
     }
   </style>
 </head>
@@ -71,10 +89,11 @@
   <div class="diagram-heading">
     <p class="eyebrow">Commons Bargaining / a node-by-node design map</p>
     <h1>Every node is a bargaining point.</h1>
-    <p class="lede">A request passes through more than a model. Standards, browsers, applications, infrastructure and settlement systems all shape where control and value go. At <strong>every handoff</strong>, the design can concentrate capture or create collective agency.</p>
+    <p class="lede">A request passes through more than a model. Standards, browsers, applications, infrastructure and settlement systems all shape where control and value go. At <strong>every handoff</strong>, the design can concentrate capture or create collective agency. We ask what could tip each node toward a collective commons: organized leverage, enforceable terms and independent evidence.</p>
     <nav class="links" aria-label="Diagram navigation">
       <a href="./index.html#11-new-knowledge-objects-and-technical-architecture">Return to the research</a>
       <a href="#visual-map">Explore the diagram</a>
+      <a class="tipping-link" href="#tipping-points">What tips the scales?</a>
       <a href="#text-equivalent">Read the mobile-friendly text equivalent</a>
       <a href="divergence.svg">Open the original SVG</a>
     </nav>
@@ -114,6 +133,129 @@
         </ul>
         <p><strong>The test:</strong> a right that can be exercised, a distribution that can be reconciled, and a breach that has consequences.</p>
       </div>
+    </section>
+
+    <section id="tipping-points" aria-labelledby="tipping-heading">
+      <h2 id="tipping-heading">What tips the scales toward a collective commons?</h2>
+      <p class="lede">An alternative gives someone another option. A <strong>credible collective mandate</strong> lets an accountable organization move purchases, authorized supply or approvals; <strong>enforceable terms</strong> bind that power to members’ purposes; <strong>independent evidence</strong> makes performance contestable; and <strong>funded stewardship</strong> keeps exit, representation and repair usable. The proposed shift is from isolated choice to organized bargaining with consequences.</p>
+      <p class="notice"><strong>Interventions and diagnostics, not established thresholds.</strong> The mechanisms below are proposals to test, not empirically proven tipping points, vendor assessments or guarantees of legal enforceability. A named instrument still needs authorized parties, applicable-law review, a funded verifier and a usable remedy. More members, more data or more decentralization do not automatically create leverage. A centralized supplier can serve a commons under accountable terms; a decentralized network can still concentrate ownership, rulemaking or rent.</p>
+      <p class="context-links"><strong>Existing conceptual context:</strong> this guide applies the research’s distinction between <a href="./index.html#5-from-digital-costco-to-a-bargaining-federation">buyer power, authorized supplier power and public-good representation</a>, its <a href="./index.html#20-follow-on-research-a-commons-bargaining-framework-agreement">non-binding agreement architecture</a>, <a href="./index.html#21-reputation-validation-and-quality-ranking">separation of identity, reputation and validation</a>, and <a href="./index.html#14-energy-data-centers-and-community-bargaining">community and energy bargaining</a>. Its tests follow the existing <a href="./index.html#16-research-program-and-falsifiable-hypotheses">falsifiable research approach</a>, not a new set of findings.</p>
+      <nav class="node-links" aria-label="Tipping points by request node">
+        <a href="#tip-protocols">01 · Protocols</a>
+        <a href="#tip-browser-agent">02 · Browser / agent</a>
+        <a href="#tip-domain-app">03 · Domain / app</a>
+        <a href="#tip-cdn">04 · CDN / edge</a>
+        <a href="#tip-identity-consent">05 · Identity / consent</a>
+        <a href="#tip-database-server">06 · Database / server</a>
+        <a href="#tip-model-compute">07 · Model / compute</a>
+        <a href="#tip-provenance-validation">08 · Provenance / validation</a>
+        <a href="#tip-settlement">09 · Settlement</a>
+        <a href="#tip-community-energy">10 · Community / energy</a>
+      </nav>
+      <ol class="tipping-cards">
+        <li class="tipping-card" id="tip-protocols">
+          <h3>Web protocols &amp; standards</h3>
+          <dl class="tipping-details">
+            <div class="lever"><dt>Countervailing power</dt><dd><strong>Funded public-interest participation plus procurement demand.</strong> Buyers that condition purchases on independently implementable standards give maintainers and underrepresented users leverage beyond an invitation to a working group. Maintained alternatives make ignoring their requirements costlier.</dd></div>
+            <div><dt>Who organizes / acts</dt><dd>A coalition of public-interest implementers, accessibility advocates and participating buyers funds delegates and maintenance. Delegates report to represented constituencies, not just the largest sponsors.</dd></div>
+            <div><dt>Enforceable instrument</dt><dd>A standards-governance charter assigns voting, conflict and appeal rules; procurement agreements require published interoperability tests and fund independent implementations. Specify how a failed requirement affects acceptance or renewal.</dd></div>
+            <div><dt>Observable proof / decision test</dt><dd>Can a separately maintained implementation interoperate without private vendor permission? Can a minority constituency challenge a rule and obtain a recorded decision? If buyers waive these requirements whenever inconvenient, the collective mandate is not credible.</dd></div>
+            <div class="residual-risk"><dt>Remaining capture risk</dt><dd>A dominant firm may control the reference implementation, test suite or paid participation. A formally open process can still depend on one sponsor’s engineering budget.</dd></div>
+          </dl>
+        </li>
+        <li class="tipping-card" id="tip-browser-agent">
+          <h3>Consumer agent &amp; browser</h3>
+          <dl class="tipping-details">
+            <div class="lever"><dt>Countervailing power</dt><dd><strong>Pooled purchasing and a credible routing exit.</strong> A member-authorized operator that can actually redirect a service budget gives suppliers a reason to negotiate. Membership counts or a choice menu do not do this if defaults, history or workflows cannot move.</dd></div>
+            <div><dt>Who organizes / acts</dt><dd>A consumer purchasing cooperative elects and can recall its procurement representatives. A staffed service team supports members during migration; purchasing authority does not include automatic permission to sell or train on their data.</dd></div>
+            <div><dt>Enforceable instrument</dt><dd>A scoped purchasing mandate and service agreement prohibit undisclosed steering, disclose commissions, separate optional data uses and require usable exports. Budget migration support and specify remedies for routing or permission breaches.</dd></div>
+            <div><dt>Observable proof / decision test</dt><dd>With member authorization, route a bounded task to an alternative and record quality, continuity and total switching cost. Test whether a member vote can stop an unfavorable renewal and whether refusal of optional data use is respected.</dd></div>
+            <div class="residual-risk"><dt>Remaining capture risk</dt><dd>The “member-serving” agent can become a new gatekeeper, steering toward its own commissions or making exit from the cooperative harder than exit from a supplier.</dd></div>
+          </dl>
+        </li>
+        <li class="tipping-card" id="tip-domain-app">
+          <h3>Domain &amp; application: example.com</h3>
+          <dl class="tipping-details">
+            <div class="lever"><dt>Countervailing power</dt><dd><strong>Organized users and authorized contributors with portable relationships.</strong> Their ability to move participation and future contributions makes unilateral fee or access changes negotiable. Supplier voice matters only if it can delay, reject or change a consequential decision.</dd></div>
+            <div><dt>Who organizes / acts</dt><dd>Member and contributor chambers negotiate with the app operator; an affected-party council represents interests not captured by paying accounts. Representatives need recall, conflict disclosure and compensated participation.</dd></div>
+            <div><dt>Enforceable instrument</dt><dd>A member charter and operator agreement reserve specified decisions for constituency approval, bind revenue-share rules and require permission-respecting account export. Define appeals and remedies when the operator bypasses an approval.</dd></div>
+            <div><dt>Observable proof / decision test</dt><dd>Rehearse a proposed fee or ranking change: can the affected chamber reject it and require revision? Test migration of authorized records and reconcile creator statements to the approved split, rather than merely counting votes or downloads.</dd></div>
+            <div class="residual-risk"><dt>Remaining capture risk</dt><dd>Network effects can strand members even with export. Large contributors may dominate representation; moving an audience must not expose other people’s data or compel them to move.</dd></div>
+          </dl>
+        </li>
+        <li class="tipping-card" id="tip-cdn">
+          <h3>CDN &amp; edge</h3>
+          <dl class="tipping-details">
+            <div class="lever"><dt>Countervailing power</dt><dd><strong>Aggregated procurement backed by operational independence.</strong> Common requirements and a funded failover path make renewal negotiable: operators can buy protection and performance without surrendering all leverage over logs, blocking and price. Cloudflare remains an illustrative provider, not the subject of a finding.</dd></div>
+            <div><dt>Who organizes / acts</dt><dd>A federation of site operators pools procurement expertise and funds an operations team. Member-appointed reviewers oversee security and privacy; only authorized operators move live traffic.</dd></div>
+            <div><dt>Enforceable instrument</dt><dd>A service agreement sets log limits, block-review procedures, audit access, exit assistance and breach remedies. Maintain operator control of necessary domains and credentials and a budget for an alternative delivery path.</dd></div>
+            <div><dt>Observable proof / decision test</dt><dd>Rehearse failover without sacrificing agreed security or availability. Compare actual migration costs and logs with contract promises, and test a blocking appeal. If the alternative cannot meet the service need, exit remains nominal.</dd></div>
+            <div class="residual-risk"><dt>Remaining capture risk</dt><dd>Alternatives can share upstream dependencies or lack affordable protection. The procurement federation itself may favor a supplier through opaque discounts or inaccessible technical decisions.</dd></div>
+          </dl>
+        </li>
+        <li class="tipping-card" id="tip-identity-consent">
+          <h3>Identity &amp; consent</h3>
+          <dl class="tipping-details">
+            <div class="lever"><dt>Countervailing power</dt><dd><strong>Collective negotiation of terms while retaining individual refusal.</strong> A service coalition can condition procurement on purpose limits and compatible identity options. That changes bargaining only if a representative cannot trade away someone’s authorization to secure a cheaper deal.</dd></div>
+            <div><dt>Who organizes / acts</dt><dd>Members appoint a rights steward with authority to pause disputed processing, while affected nonmembers have an objection route. Service operators and identity providers must implement—not merely display—the agreed permissions.</dd></div>
+            <div><dt>Enforceable instrument</dt><dd>A scoped delegation, purpose schedule and downstream-use agreement separate necessary service processing from optional uses. Specify revocation handling, alternative authentication, deletion limits and remedies; do not promise to undo every past use.</dd></div>
+            <div><dt>Observable proof / decision test</dt><dd>Test refusal, identity-provider switching and prospective revocation across recipients. Does unrelated service still work? Can the steward pause a disputed use despite commercial pressure, and does the audit expose unresolved downstream copies?</dd></div>
+            <div class="residual-risk"><dt>Remaining capture risk</dt><dd>A collective consent broker can become a new surveillance hub. Majority approval cannot resolve absent third-party authority, and historical disclosure or model use may not be reversible.</dd></div>
+          </dl>
+        </li>
+        <li class="tipping-card" id="tip-database-server">
+          <h3>Database, server &amp; cloud</h3>
+          <dl class="tipping-details">
+            <div class="lever"><dt>Countervailing power</dt><dd><strong>Steward-controlled custody and a funded migration capability.</strong> A usable substitute makes cloud renewal contestable; a file-download button does not. Shared technical staff can reduce the cost of enforcing use limits and moving a working service.</dd></div>
+            <div><dt>Who organizes / acts</dt><dd>Authorized community data stewards set retention and reuse boundaries. A pooled operations team maintains schema documentation, controlled backups, keys and restoration expertise under those mandates.</dd></div>
+            <div><dt>Enforceable instrument</dt><dd>A hosting and processing agreement specifies usable formats, access limits, deletion evidence, migration assistance, exit charges and remedies. Ring-fence an exit budget instead of spending all funds on current hosting.</dd></div>
+            <div><dt>Observable proof / decision test</dt><dd>Restore a permission-safe representative workload elsewhere, including its access rules and dependencies. Record time, full cost and functionality; verify a prohibited secondary-use request is denied and a deletion request receives qualified evidence.</dd></div>
+            <div class="residual-risk"><dt>Remaining capture risk</dt><dd>Specialized managed services, hidden dependencies and scarce staff can recreate lock-in. The steward can also overreach: holding infrastructure or keys does not confer universal rights over its contents.</dd></div>
+          </dl>
+        </li>
+        <li class="tipping-card" id="tip-model-compute">
+          <h3>Model &amp; compute</h3>
+          <dl class="tipping-details">
+            <div class="lever"><dt>Countervailing power</dt><dd><strong>Pooled demand, or scarce accountable supply that buyers actually need.</strong> Buyers can negotiate through contestable procurement; authorized contributors may bargain through dependable updates, coverage or verification that substitutes cannot match. A large corpus or open weights alone establishes neither advantage.</dd></div>
+            <div><dt>Who organizes / acts</dt><dd>Keep the purchasing cooperative and contributor association’s mandates distinct. Authorized stewards define offered services; independent evaluators compare models and supply alternatives; staff budget compute and contribution costs.</dd></div>
+            <div><dt>Enforceable instrument</dt><dd>Use separate procurement and bounded supply agreements with purpose limits, quality commitments, contributor compensation, compute access, energy reporting and remedies. Coordinate only within verified authority and applicable legal constraints.</dd></div>
+            <div><dt>Observable proof / decision test</dt><dd>Compare the offered service with available alternatives on the same task and full-cost basis. Seek buyer renewal on acceptable terms and test model switching. Reject the scarcity claim if substitutes perform as well or contributors cannot be sustainably paid.</dd></div>
+            <div class="residual-risk"><dt>Remaining capture risk</dt><dd>Compute bottlenecks can overwhelm supply-side leverage; buyers can substitute away. A bargaining club may manufacture exclusivity, enclose public knowledge or pass uncompensated work to contributors.</dd></div>
+          </dl>
+        </li>
+        <li class="tipping-card" id="tip-provenance-validation">
+          <h3>Provenance, measurement &amp; validation</h3>
+          <dl class="tipping-details">
+            <div class="lever"><dt>Countervailing power</dt><dd><strong>Independent, contestable evidence with consequences for selection and payment.</strong> Contributors gain leverage when they can challenge a score and buyers act on validated findings. More receipts do not help if the operator alone defines truth or can bury adverse results.</dd></div>
+            <div><dt>Who organizes / acts</dt><dd>A buyer-and-contributor review body commissions qualified independent validators. A separate appeals function hears challenges; an explicitly funded evidence commons maintains methods and privacy-preserving records.</dd></div>
+            <div><dt>Enforceable instrument</dt><dd>Validation contracts and a governance charter separate outcome-independent reviewer fees from commercial ranking, require conflict disclosure and protect publication of adverse findings. Specify evidence access, correction deadlines and consequences for unsupported claims.</dd></div>
+            <div><dt>Observable proof / decision test</dt><dd>Can a second qualified reviewer reproduce a bounded result from permitted evidence? Seed a known error in a rehearsal: does correction reach the ranking and any affected payout? Separate identity, authority, observed performance and uncertainty.</dd></div>
+            <div class="residual-risk"><dt>Remaining capture risk</dt><dd>Validators can form a cartel or optimize easy metrics; wealthy participants can buy more evidence. A signature authenticates a claim, not its truth, and public provenance can expose sensitive relationships.</dd></div>
+          </dl>
+        </li>
+        <li class="tipping-card" id="tip-settlement">
+          <h3>Payment &amp; settlement</h3>
+          <dl class="tipping-details">
+            <div class="lever"><dt>Countervailing power</dt><dd><strong>Aggregated payment volume plus member control of the allocation rule.</strong> Shared procurement may negotiate processing costs, but only protected accounting and recipient voice prevent those savings becoming another intermediary’s margin. The ability to replace a processor must preserve what recipients are owed.</dd></div>
+            <div><dt>Who organizes / acts</dt><dd>A member-accountable treasury works with appropriately authorized payment providers. Recipient representatives approve distribution rules; independent financial reviewers are separate from staff calculating and executing payouts.</dd></div>
+            <div><dt>Enforceable instrument</dt><dd>A settlement agreement specifies the waterfall, fee changes, segregated accounting, payout timing, failed-transfer liabilities and dispute remedies. Define processor replacement and legally appropriate safeguarding arrangements before accepting funds.</dd></div>
+            <div><dt>Observable proof / decision test</dt><dd>Trace a bounded transaction from receipt through deductions to confirmed recipient delivery. Rehearse a failed transfer and processor exit: the unpaid liability must remain visible, recoverable and subject to remedy, not become a success-shaped receipt.</dd></div>
+            <div class="residual-risk"><dt>Remaining capture risk</dt><dd>Banking access, compliance checks or frozen balances can still constrain exit. Treasury insiders may alter fees or distributions; a transparent ledger cannot by itself prevent missing funds or insolvency.</dd></div>
+          </dl>
+        </li>
+        <li class="tipping-card" id="tip-community-energy">
+          <h3>Community &amp; energy return</h3>
+          <dl class="tipping-details">
+            <div class="lever"><dt>Countervailing power</dt><dd><strong>Affected-party organization linked to consequential resource or purchasing decisions.</strong> Communities have more than an advisory voice when authorized decision-makers condition commitments on agreed limits and returns. Negotiate before dependencies and sunk costs make refusal impractical.</dd></div>
+            <div><dt>Who organizes / acts</dt><dd>Residents, workers and affected nonmembers choose accountable representatives. Relevant purchasers, public bodies and resource operators participate within their actual authority; independent technical advisers are funded without sponsor veto over findings.</dd></div>
+            <div><dt>Enforceable instrument</dt><dd>A community-benefit covenant tied to agreements the parties can actually bind specifies a fund share, absolute resource budgets, disclosure, review and pause or repair triggers. Protect community oversight funding and do not exchange away individual rights.</dd></div>
+            <div><dt>Observable proof / decision test</dt><dd>Compare independently checked energy and water use with agreed budgets, including location, timing and who bears costs. Can an affected-party objection trigger a contractual remedy? Reconcile fund payments to community-approved spending, not publicity claims.</dd></div>
+            <div class="residual-risk"><dt>Remaining capture risk</dt><dd>Local elites can capture benefits while burdens move elsewhere. Efficiency can coexist with rising total demand; a community payment does not cancel privacy, labor or environmental harm.</dd></div>
+          </dl>
+        </li>
+      </ol>
+      <p class="notice"><strong>A practical go/no-go question:</strong> can the represented people authorize a consequential choice, carry it out without disproportionate penalty, inspect independent evidence and obtain a funded remedy? Rehearse refusal, switching and a failed obligation—not just a successful purchase. If leverage or sustainable stewardship is missing, redesign the arrangement or fund an existing public-interest institution rather than treating “commons” branding as proof.</p>
+      <p><a href="#text-equivalent">Continue to the diagram’s complete text equivalent</a></p>
     </section>
 
     <section id="text-equivalent" aria-labelledby="text-heading">
