@@ -2,7 +2,7 @@
 
 **Research question.** Under what conditions can collective bargaining institutions (CBIs) convert dispersed contributions to AI into effective agency, fair compensation, and sustained funding for shared knowledge, without privatizing the public domain or turning privacy into a luxury?
 
-**Thesis.** A viable institution should aggregate negotiating mandates rather than indiscriminately aggregate data. It should distinguish three functions: buying AI services collectively; bargaining over uses that contributors can actually authorize; and financing public goods that no individual contributor owns. We call the coordinated arrangement **Commons Bargaining**. Its consumer-facing expression is a **digital Costco**: a community-governed buyers' and suppliers' club that uses scale for people, while maintaining distinct purchasing, contributor-licensing, and commons-finance functions. This is an analogy, not a proposed affiliation with Costco.
+**Thesis.** A viable institution should aggregate negotiating mandates rather than indiscriminately aggregate data. It should distinguish three functions: buying AI services collectively; bargaining over uses that contributors can actually authorize; and financing public goods that no individual contributor owns. We call the coordinated arrangement **Commons Collective**. Its consumer-facing expression is a **digital Costco**: a community-governed buyers' and suppliers' club that uses scale for people, while maintaining distinct purchasing, contributor-licensing, and commons-finance functions. This is an analogy, not a proposed affiliation with Costco.
 
 **Method and contribution.** This discussion draft combines a targeted literature and primary-source review with institutional comparison, legal issue-spotting, a technical permission-and-receipt architecture, and reproducible financial scenarios. It proposes a rights-aware knowledge object, a separated-governance federation, a commons-benefit covenant, and a staged empirical program. It does not report completed fieldwork, demonstrated bargaining gains, or a validated willingness-to-pay estimate.
 
@@ -102,7 +102,7 @@ Similarly, the EDPB rejects an automatic inference that a model trained on perso
 
 ## 5. From digital Costco to a bargaining federation
 
-**The institution to build is a proposed Commons Bargaining Federation (CBF):** a member-governed organization that buys accountable AI services, represents specifically authorized contributors, and funds independent commons stewardship. Its first product is an enforceable service agreement, not a universal data pool. The [institution blueprint](#23-institution-blueprint-a-commons-bargaining-federation) specifies the functions, mandates, governance, and bounded starting sequence.
+**The institution to build is a proposed Commons Collective Federation (CCF):** a member-governed organization that buys accountable AI services, represents specifically authorized contributors, and funds independent commons stewardship. Its first product is an enforceable service agreement, not a universal data pool. The [institution blueprint](#23-institution-blueprint-a-commons-collective-federation) specifies the functions, mandates, governance, and bounded starting sequence.
 
 ### Two different forms of scale
 
@@ -615,11 +615,11 @@ For a genuine harm tax, credits should normally correspond to demonstrable reduc
 
 In **What Is Privacy Worth?**, Acquisti, John, and Loewenstein studied choices between a $10 anonymous gift card and a $12 identified card, varying endowment and presentation. The field experiment finds that privacy choices depend strongly on those conditions. It therefore cautions against reading a single willingness-to-accept response as an intrinsic price. [S30]
 
-It does **not** establish a universal $2 privacy price, a fair data dividend, an AI training value, or an optimal tax rate. For Commons Bargaining, the practical implication is to test comprehension and choice under multiple neutral presentations, protect refusal, and never treat payment as evidence that privacy concerns have been fully compensated.
+It does **not** establish a universal $2 privacy price, a fair data dividend, an AI training value, or an optimal tax rate. For Commons Collective, the practical implication is to test comprehension and choice under multiple neutral presentations, protect refusal, and never treat payment as evidence that privacy concerns have been fully compensated.
 
 **Recommendation:** test a narrow, independently audited commons-reinvestment credit alongside transparent public-good grants, while analyzing the equity-fund, rent-tax, and harm-tax alternatives separately. Judge success by incremental public benefit, distribution, enforceable agency, administrative cost, and forgone treasury revenue, not corporate participation counts or a "good behavior" badge.
 
-## 20. Follow-on research: a Commons Bargaining Framework Agreement
+## 20. Follow-on research: a Commons Collective Framework Agreement
 
 **Status:** an illustrative, non-binding research framework, not legal advice or a production-ready agreement. The gaps below are **not resolved in this study**; this is not a claim that no sector, jurisdiction, or existing organization has addressed them.
 
@@ -789,7 +789,7 @@ The PWS overview supports visualization, local-information, and historical-archi
 
 The contributor API-key page required login, and a reliable dated official record of historical API/subscription terms was not established in this research. Accordingly, we do **not** assert that uploading observations universally earned unlimited API access, either historically or today. This is a verification gap, not evidence that such benefits never existed.
 
-Likewise, neither network's community language proves an open-data license, contributor ownership, or binding voting rights. Those would be additional commitments in Commons Bargaining.
+Likewise, neither network's community language proves an open-data license, contributor ownership, or binding voting rights. Those would be additional commitments in Commons Collective.
 
 ### Projecting the value proposition: dependable observation as a service
 
@@ -823,9 +823,9 @@ Measure paid willingness to subscribe, renewal after the initial trial, quality 
 
 The strategic question is not "How much data can the club collect?" It is **which dependable service the community can provide better than its alternatives, at a sustainable cost and on acceptable terms**.
 
-## 23. Institution blueprint: a Commons Bargaining Federation
+## 23. Institution blueprint: a Commons Collective Federation
 
-**Recommendation: build a Commons Bargaining Federation (CBF).** It is a member-governed institution for purchasing accountable AI services, representing specifically authorized contributors, and supporting independent public-interest stewardship. Its first product should be a competitively negotiated, enforceable AI-service agreement, not a universal data pool or a token.
+**Recommendation: build a Commons Collective Federation (CCF).** It is a member-governed institution for purchasing accountable AI services, representing specifically authorized contributors, and supporting independent public-interest stewardship. Its first product should be a competitively negotiated, enforceable AI-service agreement, not a universal data pool or a token.
 
 This is a **proposed institutional blueprint**, not an incorporated organization, validated business, statutory labor union, investment fund, or endorsement by any named researcher. "Federation" describes the governance arrangement; local counsel must establish the legal forms and actual authority.
 
@@ -957,7 +957,7 @@ Preregister held-out tests, subgroup analysis, uncertainty reporting, full costs
 
 ## 25. Conclusion
 
-Commons Bargaining is best understood as an effort to align **voice, authority, service, and benefit**, not as a universal auction of personal data. Consumer purchasing power can operate without data sales. Creator bargaining can operate without enclosing the public domain. Commons funding can operate without pretending to identify every person's contribution to a model. Communities can demand a say in physical infrastructure without first becoming data vendors.
+Commons Collective is best understood as an effort to align **voice, authority, service, and benefit**, not as a universal auction of personal data. Consumer purchasing power can operate without data sales. Creator bargaining can operate without enclosing the public domain. Commons funding can operate without pretending to identify every person's contribution to a model. Communities can demand a say in physical infrastructure without first becoming data vendors.
 
 The institutional wager is that coordinated, accountable representation can negotiate better terms than isolated consent screens. The ethical constraint is that new bargaining power must not be purchased by overriding others' rights or rebuilding extraction inside a cooperative wrapper. The scientific obligation is to test that wager, disclose its costs, and remain willing to reject it.
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "0.1-experimental",
-  "id": "urn:commons-bargaining:example:alice-field-guide:v1",
+  "id": "urn:commons-collective:example:alice-field-guide:v1",
   "syntheticExample": true,
   "description": "Fictional authored field-guide excerpt; no actual personal data or licensed asset is included.",
   "origin": { "type": "human-authored", "syntheticFraction": 0 },

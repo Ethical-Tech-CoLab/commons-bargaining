@@ -1,13 +1,13 @@
-# Commons Bargaining
+# Commons Collective
 
 **Collective Bargaining Institutions for the AI Data Commons**
 
-[Read the research](https://ethical-tech-colab.github.io/commons-bargaining/) |
-[Live overview presentation](https://ethical-tech-colab.github.io/commons-bargaining/overview.html) |
-[Open research questions](https://ethical-tech-colab.github.io/commons-bargaining/open-work.html) |
+[Read the research](https://ethical-tech-colab.github.io/commons-collective/) |
+[Live overview presentation](https://ethical-tech-colab.github.io/commons-collective/overview.html) |
+[Open research questions](https://ethical-tech-colab.github.io/commons-collective/open-work.html) |
 [Source report](research/report.md) |
 [Evidence register](research/sources.json) |
-[Deployment](https://github.com/Ethical-Tech-CoLab/commons-bargaining/actions/workflows/pages.yml)
+[Deployment](https://github.com/Ethical-Tech-CoLab/commons-collective/actions/workflows/pages.yml)
 
 An AI-assisted academic discussion draft, dated **18 September 2026**, developed
 from a session brief for the Ethical Tech CoLab. It combines an institutional
@@ -55,7 +55,7 @@ connections are documented rather than presented as a new official charter.
   eligibility-first ranking for data and the agents serving it.
 - Waze and Weather Underground participation incentives, data-quality limits,
   and falsifiable scenarios for future AI demand for a governed data club.
-- A concrete Commons Bargaining Federation blueprint and node-by-node levers
+- A concrete Commons Collective Federation blueprint and node-by-node levers
   for changing control, bargaining power, and benefit allocation.
 - Commons-authored RL rewards, the limits of fixed reward quotas, and a proposed
   participation-and-outcomes regulatory pathway.
@@ -103,11 +103,11 @@ of the proposed institutions. External source access can change.
 
 ## Live overview and research work register
 
-[The overview presentation](https://ethical-tech-colab.github.io/commons-bargaining/overview.html)
+[The overview presentation](https://ethical-tech-colab.github.io/commons-collective/overview.html)
 is a reader of published source data, not a separately maintained slide draft.
 The ordinary build derives `presentation-data.json` from the report, source
 register, project and demo pages, and [research/open-work.json](research/open-work.json).
-It also publishes [the work register](https://ethical-tech-colab.github.io/commons-bargaining/open-work.html)
+It also publishes [the work register](https://ethical-tech-colab.github.io/commons-collective/open-work.html)
 from that same canonical work file.
 
 On opening the presentation or returning to it, the browser requests the current
@@ -160,10 +160,10 @@ Published revisions should retain the evidence/proposal distinction.
 
 ## Suggested citation
 
-*Commons Bargaining: Collective Bargaining Institutions for the AI Data Commons.*
+*Commons Collective: Collective Bargaining Institutions for the AI Data Commons.*
 (2026). Discussion draft v0.1, 18 September. Ethical Tech CoLab GitHub repository.
 AI-assisted synthesis; human authorship and endorsement unconfirmed.
-https://ethical-tech-colab.github.io/commons-bargaining/
+https://ethical-tech-colab.github.io/commons-collective/
 
 ## License
 

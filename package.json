@@ -1,9 +1,9 @@
 {
-  "name": "commons-bargaining",
+  "name": "commons-collective",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Evidence-linked research and a transparent commons-bargaining demonstrator.",
+  "description": "Evidence-linked research and a transparent commons-collective demonstrator.",
   "engines": {
     "node": ">=22"
   },

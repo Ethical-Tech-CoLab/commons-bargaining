@@ -169,3 +169,14 @@ test('every divergence node explains the levers and tests that could change its 
     assert.ok(html.includes(`id="${id}"`), `missing diagram research link ${id}`);
   }
 });
+
+test('current publication branding and repository links use Commons Collective', async () => {
+  for (const file of ['index.html', 'divergence.html', 'overview.html', 'open-work.html']) {
+    const page = await readFile(new URL(`../dist/${file}`, import.meta.url), 'utf8');
+    assert.match(page, /Commons Collective/);
+    assert.match(page, /github\.com\/Ethical-Tech-CoLab\/commons-collective/);
+    assert.doesNotMatch(page, /Commons Bargaining|COMMONS BARGAINING|commons-bargaining/);
+  }
+  const data = JSON.parse(await readFile(new URL('../dist/presentation-data.json', import.meta.url)));
+  assert.equal(data.project.title, 'Commons Collective');
+});

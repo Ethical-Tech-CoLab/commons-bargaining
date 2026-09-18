@@ -31,7 +31,7 @@
     </style>
   </defs>
   <rect width="1680" height="2520" fill="#120c1a"/>
-  <text x="48" y="51" class="eyebrow">COMMONS BARGAINING / A NODE-BY-NODE DESIGN MAP</text>
+  <text x="48" y="51" class="eyebrow">COMMONS COLLECTIVE / A NODE-BY-NODE DESIGN MAP</text>
   <text x="48" y="107" class="title">Every node is a bargaining point.</text>
   <text x="48" y="149" class="intro">Follow a request. At each handoff, ask where control, data, rents and resources go — and who can change the terms.</text>
   <text x="48" y="181" class="intro">The branches are possible governance choices, not automatic outcomes or judgments about named providers.</text>
@@ -281,5 +281,5 @@
   <text x="864" y="2362" class="footer-body">Name the right-holder, obligation, verifier and remedy.</text>
   <text x="48" y="2433" class="legend">All alternatives are illustrative design options, not findings of provider misconduct. Cloudflare names an example of an edge provider only.</text>
   <text x="48" y="2465" class="legend">Conceptual sequence: real systems may combine, repeat or reorder stages. Return arrows represent proposed allocations and evidence, not existing payments.</text>
-  <text x="48" y="2497" class="legend">Text equivalent and mobile-friendly explanation: divergence.html · Commons Bargaining</text>
+  <text x="48" y="2497" class="legend">Text equivalent and mobile-friendly explanation: divergence.html · Commons Collective</text>
 </svg>

@@ -25,7 +25,7 @@ Test before deployment.`,
       { id: '16-research-program-and-falsifiable-hypotheses' },
       { id: '18-a-ninety-day-starting-sequence' },
     ],
-    template: `<h1 id="title">Commons<br><em>Bargaining.</em></h1>
+    template: `<h1 id="title">Commons<br><em>Collective.</em></h1>
       <p class="deck">A current project question.</p>
       <span class="status">DISCUSSION DRAFT &middot; v0.1</span>
       <section class="thesis"><p class="eyebrow">Thesis</p><p>Shared <strong>agency</strong>.</p></section>
@@ -50,7 +50,7 @@ Test before deployment.`,
 
 test('presentation data derives plain text and links from the canonical source inputs', () => {
   const data = createPresentationData(input());
-  assert.equal(data.project.title, 'Commons Bargaining');
+  assert.equal(data.project.title, 'Commons Collective');
   assert.equal(data.project.thesis, 'Shared agency.');
   assert.equal(data.sections[0].paragraphs[0], 'Original finding.');
   assert.equal(data.featured.questions, '16-research-program-and-falsifiable-hypotheses');

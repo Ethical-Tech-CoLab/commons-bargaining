@@ -56,7 +56,7 @@
       "question": "Which representative mandates, contract terms, enforcement resources, and competition-law routes are defensible for the selected participants and jurisdiction?",
       "status": "open",
       "nextStep": "Compare existing instruments, commission local legal review, and test a redlined nonbinding framework before any executed pilot.",
-      "sourceTitles": ["Follow-on research: a Commons Bargaining Framework Agreement", "Regulatory framework: present rules and proposals"]
+      "sourceTitles": ["Follow-on research: a Commons Collective Framework Agreement", "Regulatory framework: present rules and proposals"]
     },
     {
       "id": "ranker-validation",
@@ -93,10 +93,10 @@
     {
       "id": "federation-pilot",
       "title": "Validate a minimum viable bargaining institution",
-      "question": "Can a professionally operated Commons Bargaining Federation secure an enforceable agreement and demonstrable member benefits before taking on unnecessary institutional complexity?",
+      "question": "Can a professionally operated Commons Collective Federation secure an enforceable agreement and demonstrable member benefits before taking on unnecessary institutional complexity?",
       "status": "open",
       "nextStep": "Choose a jurisdiction and founding cohort, fund counsel and enforcement, ratify a capped mandate, and compare credible vendor offers.",
-      "sourceTitles": ["Institution blueprint: a Commons Bargaining Federation", "From digital Costco to a bargaining federation"]
+      "sourceTitles": ["Institution blueprint: a Commons Collective Federation", "From digital Costco to a bargaining federation"]
     },
     {
       "id": "commons-rl-rewards",

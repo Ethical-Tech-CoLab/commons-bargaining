@@ -1,7 +1,7 @@
 {
   "schemaVersion": "0.1-experimental",
   "publicationStatus": "fictional-not-executed-demonstration",
-  "subjectId": "urn:commons-bargaining:example:alice-field-guide:v1",
+  "subjectId": "urn:commons-collective:example:alice-field-guide:v1",
   "subjectKind": "knowledge-object-version",
   "versionCommitment": null,
   "claimOrMetric": "source-grounded-answer-accuracy",
