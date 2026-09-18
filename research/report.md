@@ -890,7 +890,72 @@ Stop or redesign if authority remains unresolved, competition compliance lacks a
 
 **Build the bargaining capacity before the marketplace.** Begin with a sponsored, professionally operated federation pilot; incorporate only the structure demonstrated functions and applicable law require.
 
-## 24. Conclusion
+## 24. Commons-authored RL rewards and regulatory design
+
+**Assessment:** commons participation in defining AI objectives is a plausible route to collective agency. A mandatory fixed percentage of a reinforcement-learning reward, however, is a weak standalone policy instrument. A stronger proposal combines public contributions to training signals, documented treatment of those contributions, independent evaluation, and enforceable outcomes.
+
+First distinguish meanings of **reward**. An RL reward is a numerical optimization signal, not contributor pay or a pool of money. Paying reviewers, compensating contributors, licensing materials, or financing commons stewardship requires separate arrangements. An optimization coefficient cannot substitute for fair payment.
+
+### What the technical evidence establishes
+
+Christiano and colleagues learned reward functions from comparisons of agent behavior. InstructGPT used human-ranked responses to fit a reward model and optimize a language model. These establish methods for incorporating feedback, not democratic authorization of the preferences being optimized. [S53] [S54]
+
+Constitutional AI adds a route through written principles: AI-generated critiques, revisions, and preference judgments support supervised training and reinforcement learning from AI feedback, or RLAIF. Public participation could therefore shape rubrics and principles as well as individual labels. But an AI judge still interprets those principles, and that interpretation remains contestable. [S55]
+
+Collective Constitutional AI offers a relevant bounded experiment: input from 1,002 U.S. adults, with demographic sampling and an AI-familiarity screen, was translated into training principles. The authors report reduced measured bias on their evaluated dimensions alongside broadly comparable results on other reported evaluations. This is not global representation, a complete measure of adherence to public preferences, or proof of democratic legitimacy. [S56]
+
+### A proposed Commons Reward Trust
+
+Use the name for a **governance function**, not an assertion that a legal trust has been established. Its outputs could include domain-specific deliberated rubrics, consented preference comparisons that retain disagreement, versioned reward models and calibration records, adversarial cases, and separately controlled held-out evaluations.
+
+Each artifact should state the intended population, scope, provenance, exclusions, contributors' terms, revision process, and appeal route. The body producing training signals must not be the sole certifier of their effects. Publish methods and governance while protecting personal data and sensitive test items. Participation should be compensated for effort, not for supplying the operator's preferred answers.
+
+This could be a protected public-interest function associated with the federation, but its independence from commercial negotiation and model evaluation requires explicit design. A public label alone does not prevent state, corporate, or organized-interest capture.
+
+### Why a reward share is not a share of agency
+
+Consider the illustrative objective:
+
+```text
+R = (1 - alpha) * R_task + alpha * R_commons
+```
+
+Setting `alpha = 0.2` does not mean that 20% of behavior reflects commons preferences. Multiplying `R_commons` by 100 changes its numerical contribution by 100 while leaving the coefficient unchanged. Reward scales, distributions, correlations, sampling, normalization, optimizer behavior, and regularization all affect the result. InstructGPT's objective itself used normalization and a KL penalty, with an additional pretraining term in one variant. [S54]
+
+A study should report component distributions and calibration, training settings, ablations, and independently measured effects. It should test several weights rather than advertise a coefficient as a democratic entitlement. More commons weight is not automatically better.
+
+**Mandatory rights and safety requirements cannot be traded away in a compensatory average.** High helpfulness cannot authorize unlawful disclosure. Use applicable requirements as admissibility conditions, deployment controls, and independently tested constraints. Neither a large penalty nor a "hard constraint" label guarantees actual compliance. Required legal bases and third-party protections remain necessary. [S10]
+
+### What regulation could require
+
+These are **future policy options**, not a description of an existing commons-reward quota. The research is not a global legal survey; authority and scope require jurisdiction- and domain-specific analysis.
+
+| Step | Proposed instrument | Evidence and boundary |
+|---|---|---|
+| Procurement pilot | Contract for documented consideration of public rubrics, fairly compensated participation, independent testing, and remedies | Establish feasibility and actual benefit before imposing a general rule |
+| Participation and evidence duties | Require disclosure of whose preferences shaped objectives, exclusions, conflicts, and reasons for accepting or rejecting principles | Disclosure must permit scrutiny without exposing participants or pretending consultation equals consent |
+| Outcome accountability | Specify contextual performance, harm controls, monitoring, incident reporting, and redress | Permit different technical routes to demonstrated compliance; test metrics themselves for manipulation |
+| Narrower process obligations, if justified | Consider stronger requirements after evidence of benefit, cost, enforceability, and safeguards | Any fixed reward mix would need calibration rules, auditability, equivalent-method provisions, review, and a sunset or revision mechanism |
+
+An obligation should not vanish merely because a provider uses a different architecture, supervised adaptation, or distillation rather than explicit RL. Conversely, requiring one technical recipe risks locking regulation to a method and encouraging formal compliance without improved outcomes.
+
+### Participation, pluralism, and reward hacking
+
+Define the affected population, include people disproportionately exposed to harm, protect minority rights, disclose conflicts, publish dissent, and permit plural domain-specific rubrics. A majority vote cannot waive another person's rights. Minimize and protect participation data; representativeness does not justify indiscriminate collection of sensitive attributes.
+
+Separate the production of feedback from independent evaluation. Gao and colleagues show that stronger optimization of a proxy reward can eventually worsen performance measured by a separate gold reward model in their studied setup. That gold model is itself synthetic, not a measure of human welfare. The result supports caution about proxy optimization, not a claim that a particular public rubric will necessarily fail. [S57]
+
+Shared benchmarks can leak or be overfit. Restrict access to held-out items where justified, refresh evaluations, examine subgroup outcomes, and make dispute resolution independent of the people paid to deliver high scores.
+
+### A bounded first experiment
+
+Start with a low-risk public-library assistant over licensed, non-sensitive material. Develop rubrics for faithful answers, attribution, uncertainty, and accessibility. Compare a baseline, a rubric-only condition, and several commons-reward variants under comparable budgets and multiple runs. Illustrative coefficients might be 0, 0.1, 0.2, and 0.4; they are experiment settings, not proposed universal legal minima.
+
+Preregister held-out tests, subgroup analysis, uncertainty reporting, full costs, and adverse-effect thresholds. Pause for material privacy failures, serious rights violations, unexplained subgroup harm, test leakage, or evaluator manipulation. Do not expand because the training reward alone rises.
+
+**The institutional objective is accountable public influence, not a particular coefficient.** Mandating a process or share is defensible only if independently assessed outcomes, rights protections, legitimacy, and costs support it.
+
+## 25. Conclusion
 
 Commons Bargaining is best understood as an effort to align **voice, authority, service, and benefit**, not as a universal auction of personal data. Consumer purchasing power can operate without data sales. Creator bargaining can operate without enclosing the public domain. Commons funding can operate without pretending to identify every person's contribution to a model. Communities can demand a say in physical infrastructure without first becoming data vendors.
 

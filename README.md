@@ -57,6 +57,8 @@ connections are documented rather than presented as a new official charter.
   and falsifiable scenarios for future AI demand for a governed data club.
 - A concrete Commons Bargaining Federation blueprint and node-by-node levers
   for changing control, bargaining power, and benefit allocation.
+- Commons-authored RL rewards, the limits of fixed reward quotas, and a proposed
+  participation-and-outcomes regulatory pathway.
 
 ## Run locally
 

@@ -33,7 +33,8 @@ test('research covers requested surfaces and labels its limits', () => {
     'Soho House', 'supplier chamber', 'Free opt-in', 'Schedule G',
     'non-binding clause sketches', 'ERC-8004', 'task-local ordering',
     'eligible candidates', 'validation registries', 'Waze',
-    'Weather Underground', 'quality-adjusted total cost']) {
+    'Weather Underground', 'quality-adjusted total cost', 'Commons Reward Trust',
+    'reinforcement-learning reward', 'compensatory average']) {
     assert.ok(html.toLowerCase().includes(term.toLowerCase()), `missing ${term}`);
   }
   assert.doesNotMatch(html, /\{\{[A-Z_]+\}\}/);

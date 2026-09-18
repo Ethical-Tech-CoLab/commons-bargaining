@@ -510,6 +510,56 @@
     "accessed": "2026-09-18"
   },
   {
+    "id": "S53",
+    "author": "Paul Christiano, Jan Leike, Tom B. Brown, Miljan Martic, Shane Legg, and Dario Amodei",
+    "year": "2017",
+    "title": "Deep reinforcement learning from human preferences",
+    "url": "https://arxiv.org/abs/1706.03741",
+    "claim": "Section 2 describes learning a reward predictor from human comparisons of behavior and optimizing an agent against the predicted reward.",
+    "limit": "Experiments concern simulated locomotion and Atari tasks, not representative public governance, democratic legitimacy, or regulatory authority.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S54",
+    "author": "Long Ouyang and colleagues",
+    "year": "2022",
+    "title": "Training language models to follow instructions with human feedback",
+    "url": "https://arxiv.org/abs/2203.02155",
+    "claim": "Documents instruction fine-tuning, preference rankings, reward modeling, and PPO; section 3.5 discusses normalization, KL regularization, and the combined objective.",
+    "limit": "Reported effects depend on the studied models, prompts, and labeler populations. A reward coefficient does not imply an equivalent share of behavioral influence.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S55",
+    "author": "Yuntao Bai and colleagues",
+    "year": "2022",
+    "title": "Constitutional AI: Harmlessness from AI Feedback",
+    "url": "https://arxiv.org/abs/2212.08073",
+    "claim": "Demonstrates principle-guided critique and revision and AI-generated preference judgments used in training and reinforcement learning from AI feedback.",
+    "limit": "Developer-selected principles and AI judges do not remove human governance choices. The paper treats principle selection as exploratory, not democratically settled.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S56",
+    "author": "Saffron Huang, Divya Siddarth, Liane Lovitt, Thomas I. Liao, Esin Durmus, Alex Tamkin, and Deep Ganguli",
+    "year": "2024",
+    "title": "Collective Constitutional AI: Aligning a Language Model with Public Input",
+    "url": "https://arxiv.org/abs/2406.07814",
+    "claim": "FAccT study connects a public-input process involving 1,002 U.S. adults to constitutional training and comparative model evaluation. DOI:10.1145/3630106.3658979.",
+    "limit": "U.S.-focused, screened participation and interpretation choices do not establish global representativeness, democratic legitimacy, or comprehensive adherence to public principles.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S57",
+    "author": "Leo Gao, John Schulman, and Jacob Hilton",
+    "year": "2022 preprint",
+    "title": "Scaling Laws for Reward Model Overoptimization",
+    "url": "https://arxiv.org/abs/2210.10760",
+    "claim": "Studies divergence between an optimized proxy reward and a separate gold-model score under reinforcement learning and best-of-n sampling.",
+    "limit": "The synthetic gold-model signal is not ground-truth human welfare; the study does not eliminate the gap between preference labels and human intent.",
+    "accessed": "2026-09-18"
+  },
+  {
     "id": "S31",
     "author": "Charles I. Jones and Christopher Tonetti",
     "year": "2020",

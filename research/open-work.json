@@ -97,6 +97,14 @@
       "status": "open",
       "nextStep": "Choose a jurisdiction and founding cohort, fund counsel and enforcement, ratify a capped mandate, and compare credible vendor offers.",
       "sourceTitles": ["Institution blueprint: a Commons Bargaining Federation", "From digital Costco to a bargaining federation"]
+    },
+    {
+      "id": "commons-rl-rewards",
+      "title": "Evaluate commons-authored training objectives",
+      "question": "Can publicly governed rubrics or reward signals improve independently measured model outcomes and collective agency without reward gaming, rights violations, or unrepresentative control?",
+      "status": "open",
+      "nextStep": "Preregister a low-risk library-assistant study with baseline, rubric-only, and calibrated reward variants; keep evaluation independent and assess regulatory alternatives separately.",
+      "sourceTitles": ["Commons-authored RL rewards and regulatory design"]
     }
   ]
 }
