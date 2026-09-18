@@ -29,7 +29,9 @@ test('research covers requested surfaces and labels its limits', () => {
   for (const term of ['Alice', 'Bob', 'Humanity AI', 'Creative Commons', 'synthetic',
     'Gmail', 'Costco', 'energy', 'philanthrop', 'antitrust', 'Tomica', 'Sonam',
     'Ilan', 'payment', 'knowledge object', 'not peer-reviewed', 'Field-grounded',
-    'Pigouvian', 'Sanders', 'Wikimedia', 'Treasury payment', 'What Is Privacy Worth']) {
+    'Pigouvian', 'Sanders', 'Wikimedia', 'Treasury payment', 'What Is Privacy Worth',
+    'Soho House', 'supplier chamber', 'Free opt-in', 'Schedule G',
+    'non-binding clause sketches']) {
     assert.ok(html.toLowerCase().includes(term.toLowerCase()), `missing ${term}`);
   }
   assert.doesNotMatch(html, /\{\{[A-Z_]+\}\}/);

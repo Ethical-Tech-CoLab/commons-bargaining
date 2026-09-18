@@ -2,7 +2,7 @@
 
 **Research question.** Under what conditions can collective bargaining institutions (CBIs) convert dispersed contributions to AI into effective agency, fair compensation, and sustained funding for shared knowledge, without privatizing the public domain or turning privacy into a luxury?
 
-**Thesis.** A viable institution should aggregate negotiating mandates rather than indiscriminately aggregate data. It should distinguish three functions: buying AI services collectively; bargaining over uses that contributors can actually authorize; and financing public goods that no individual contributor owns. We call the coordinated arrangement **Commons Bargaining**. Its consumer-facing expression is a **digital Costco**: a member-governed purchasing cooperative that uses scale for people, while maintaining a legally and financially distinct contributor-licensing function. This is an analogy, not a proposed affiliation with Costco.
+**Thesis.** A viable institution should aggregate negotiating mandates rather than indiscriminately aggregate data. It should distinguish three functions: buying AI services collectively; bargaining over uses that contributors can actually authorize; and financing public goods that no individual contributor owns. We call the coordinated arrangement **Commons Bargaining**. Its consumer-facing expression is a **digital Costco**: a community-governed buyers' and suppliers' club that uses scale for people, while maintaining distinct purchasing, contributor-licensing, and commons-finance functions. This is an analogy, not a proposed affiliation with Costco.
 
 **Method and contribution.** This discussion draft combines a targeted literature and primary-source review with institutional comparison, legal issue-spotting, a technical permission-and-receipt architecture, and reproducible financial scenarios. It proposes a rights-aware knowledge object, a separated-governance federation, a commons-benefit covenant, and a staged empirical program. It does not report completed fieldwork, demonstrated bargaining gains, or a validated willingness-to-pay estimate.
 
@@ -126,13 +126,47 @@ The federation may share an open protocol, counsel, and procurement infrastructu
 
 ### Governance and collective agency
 
-**Proposed charter:** one member, one vote for ordinary cooperative business; elected, recallable representatives; compensated deliberative panels selected to include underrepresented people; and a separate affected-community chamber for commons decisions. No investor acquires additional votes by purchasing more data or funding the operator.
+**Proposed charter:** one member, one vote within defined constituencies; elected, recallable representatives; compensated deliberative panels; buyer and supplier chambers; and an independent commons and affected-party council. The federation's constitutional forum coordinates these constituencies while each legal entity retains its own duties. No investor acquires additional votes by purchasing more data or funding the operator.
 
 Material changes to permitted use require approval by the affected constituency and an individual refusal path where individual authorization is needed. New use does not inherit permission from an old vote. Budget rules, representation, and extraordinary decisions should be constitutional; routine implementation should remain delegated so the institution can operate.
 
 A rights-and-ethics steward can pause unsafe processing pending independent review. Its mandate, appeal route, conflicts, and response deadlines must be published. Sponsors cannot veto adverse findings. Paid staff may administer the institution but cannot secretly alter member mandates.
 
 The test of **advancing collective agency** is not total dollars paid. It is whether members understand choices, can refuse without disproportionate penalty, can change negotiators, can switch suppliers, can contest uses, and can redirect surplus toward shared priorities.
+
+### A buyers' club, a suppliers' club, and a community
+
+The session's extension sharpens the analogy: a successful club assembles both demand and supply. Buyers gain scale and better terms; suppliers gain predictable demand, lower transaction costs, and a voice in the institution. The aim is **fair, sustainable total value**, not the lowest buyer price at any cost. Evaluate price alongside quality, reliability, contributor livelihoods, privacy, access, and commons maintenance. Two-sided-market theory supports examining these interactions, not assuming that scale alone makes every participant better off. [S23]
+
+The phrase **community-governed Soho House** describes shared purpose, community norms, and social infrastructure. It is not a claim that Soho House or Costco is a cooperative or that their suppliers currently hold these proposed voting rights. The intended community is not organized around wealth, status, or exclusivity. No affiliation or endorsement is implied. [S16]
+
+### Free opt-in does not mean unfunded services
+
+**Proposal:** make basic participation free, including deliberation, applicable voting rights, and core community resources. Optional dues buy specified purchasing support, managed services, or other cost-bearing benefits. Sponsored participation and waivers can widen access, without granting sponsors votes. Free membership does not promise unlimited free AI consumption.
+
+Fund the model through optional dues, disclosed procurement-service charges, transparent transaction fees, and grants for public goods. Budget cross-subsidies explicitly. Public knowledge can benefit nonpayers by design; intensive private services may need a subscription or subsidy. Measure utilization, renewal, governance costs, and subsidy dependence before claiming a scalable free tier. **Payment buys services, not extra citizenship; membership never requires a data sale.**
+
+### Supplier voice must have consequences
+
+The **buyer chamber** represents members consuming the club's services. The **supplier chamber** represents contributors, creators, curators, maintainers, and community stewards supplying the club. A commercial AI vendor selected by procurement is not automatically a voting supplier: a sales contract does not confer constitutional rights. Any overlapping role requires separate qualification, disclosure, and recusal.
+
+The **commons and affected-party council** represents interests beyond the immediate transaction. Its powers should be enumerated, supported by written reasons and an appeal route, rather than an unlimited veto over ordinary operations. The reason for this third body is substantive: people affected by data use may be neither the buyer nor the contributing seller. [S25]
+
+| Decision | Proposed decision-maker | Protected condition |
+|---|---|---|
+| Fees and service tiers | Each chamber approves charges on its constituency; both approve shared charges | Protect free basic participation and voting; disclose cross-subsidies and waivers |
+| Membership and catalog admission | Joint committee applies published eligibility, quality, and conduct criteria | Written reasons, independent appeal, and no incumbent-protecting exclusion |
+| Procurement and vendor selection | Delegated buyer committee within an approved budget | Recusal; no procurement decision can silently expand contributor permissions |
+| Data uses and contributor terms | Relevant rights holders authorize participation; supplier chamber approves material program changes | Required individual/community authorization survives; council review does not consent for absent people |
+| Commons budget | Both chambers approve allocations with council participation in priorities | Restricted commitments cannot be diverted without specified approvals |
+| Charter and protected rights | Supermajority in each chamber after notice and deliberation | Council assent for changes to its protected remit; no influence purchased through dues |
+| Deadlock and exit | Time-limited mediation followed by the last valid rule, only within its continuing lawful scope | Silence is not consent; expired permissions do not continue; exit preserves earned payment claims |
+
+Supplier protections can include timely payment, transparent deductions, and bounded workload commitments. Coordinated price floors require jurisdiction-specific competition review; calling the institution a club does not create an exemption. [S13]
+
+Members with overlapping roles can register a primary voting chamber for a fixed term while retaining their separate authorization rights. Representation must not scale with sales, spending, or donations. Duplicate-membership controls should be proportionate, privacy-preserving, minimally retained, and appealable; neither public identity disclosure nor proof of wealth is an acceptable default.
+
+Dual chambers can constrain domination but also create delay and factional capture. Delegate routine operations, reserve cross-chamber approval for consequential choices, publish conflicts, and measure governance costs. A committee structure is valuable only if members gain usable agency.
 
 ## 6. Archetypes and the multi-sided marketplace
 
@@ -174,7 +208,7 @@ All figures below are **annual, hypothetical USD assumptions**, before tax and v
 
 | Assumption or result | Arithmetic | Interpretation |
 |---|---|---|
-| 10,000 purchasing members | 10,000 x $24 dues = $240,000 | Dues are cooperative revenue, not creator compensation |
+| 10,000 paying purchasing-service members | 10,000 x $24 dues = $240,000 | Optional service dues are revenue, not creator compensation or voting fees |
 | AI service baseline | $240 per member | Hypothetical market benchmark; requires a matched real quote |
 | Negotiated discount | 20% x $240 = $48 | Gross annual saving; no data transfer is required |
 | Consumer saving after dues | $48 - $24 = $24 | $240,000 across members, if comparable service quality is maintained |
@@ -187,6 +221,8 @@ All figures below are **annual, hypothetical USD assumptions**, before tax and v
 | 20% of memberships waived | $192,000 dues + $24,000 = $216,000 | Gap grows to $84,000 unless sponsors cover waivers or costs fall |
 
 At $24 dues, $24,000 licensing operations income, and $300,000 costs, break-even requires **11,500 paying members**, assuming costs and the licensing contract remain unchanged. With 20% fee waivers, it requires **14,375 total members** under the same simplified assumptions. Real costs may scale with membership; these are arithmetic thresholds, not forecasts.
+
+These calculations concern the paid purchasing-service tier and its waivers, not every person opting into the free community. Additional free participants add support and governance costs that must be measured and funded; the example does not establish that those costs are negligible.
 
 Equal member payments are a governance choice, not an estimate of marginal contribution. A more granular valuation scheme might reward effort or quality but adds measurement, gaming, and dispute costs. No precise attribution from an individual record to every generated output is assumed. Externalities also mean that one person's sale can affect others who never agreed to sell. [S24]
 
@@ -577,7 +613,61 @@ It does **not** establish a universal $2 privacy price, a fair data dividend, an
 
 **Recommendation:** test a narrow, independently audited commons-reinvestment credit alongside transparent public-good grants, while analyzing the equity-fund, rent-tax, and harm-tax alternatives separately. Judge success by incremental public benefit, distribution, enforceable agency, administrative cost, and forgone treasury revenue, not corporate participation counts or a "good behavior" badge.
 
-## 20. Conclusion
+## 20. Follow-on research: a Commons Bargaining Framework Agreement
+
+**Status:** an illustrative, non-binding research framework, not legal advice or a production-ready agreement. The gaps below are **not resolved in this study**; this is not a claim that no sector, jurisdiction, or existing organization has addressed them.
+
+A statutory labor collective bargaining agreement operates within applicable employment law. Other constituencies may need a **multi-party service, licensing, and governance agreement** instead. The label does not create employment status, rights ownership, a duty to bargain, or competition immunity. Local counsel must establish the legal route for actual parties and activities. [S33] [S13]
+
+### Which agreements still need investigation?
+
+| Constituency | Candidate agreement and negotiable terms | Authority boundary and research gap |
+|---|---|---|
+| Ordinary AI consumers | Collective service agreement covering price, accessibility, reliability, profiling limits, portability, and complaints | Establish valid representation and provider commitments; membership alone is not a lawful basis for processing [S10] |
+| Nonemployee creators | Licensing/services agreement covering represented works, permitted uses, remuneration, attribution, and reports | Only administered rights can be licensed; preserve exceptions and existing permissions; assess coordinated terms under competition law [S13] [S35] |
+| Open/public-domain stewards | Stewardship and infrastructure agreement covering curation, preservation, delivery, and public benefits | No invented ownership or retroactive CC restriction; distinguish service fees from claimed royalties [S26] |
+| Private/relational data participants and affected nonmembers | Purpose-limited access and governance agreement with independent impact review | A contributor cannot waive others' privacy; an affected-person council cannot substitute for lawful processing [S10] [S25] |
+| Synthetic/derived-data participants | Provenance and downstream-use agreement covering generation methods, validation, reuse, and disclosure controls | Derivation proves neither rights clearance nor anonymity; map actual rights and contractual obligations rather than invent exclusivity [S10] [S34] |
+| Host communities | Community-impact agreement with an accountable operator covering monitoring, mitigation, complaints, and benefits | Validate representation and public-law requirements; proximity alone does not confer rights over training data |
+
+Existing sectoral agreements, licensing collectives, cooperative and trust instruments, and community-benefit arrangements should be comparators. The next research step is to identify their coverage and limits, not assume institutional absence.
+
+### An annotated agreement architecture
+
+Use a short master agreement with independently amendable schedules. Each promise must identify an accountable party, evidence of performance, a remedy, and funding for enforcement.
+
+1. **Schedule A: membership and representation.** Define constituencies, elections, mandates, dissent, and affected-nonmember participation. Trustee duties need an appropriate legal structure, not simply a title. [S07] [S25]
+2. **Schedule B: authority and scope.** Identify parties, rights, objects, exclusions, and whether authority derives from ownership, agency, service provision, or statute.
+3. **Schedule C: permitted uses.** Specify retrieval, embeddings/indexing, pretraining, fine-tuning, evaluation, inference, and onward disclosure separately. A new use needs its own authority analysis.
+4. **Schedule D: payment and public-good allocation.** Separate licensing, stewardship, and services; define eligible receipts, fees, reserves, contribution splits, payment dates, and audited liabilities. Rewarded licensing must not be mislabeled as DGA altruism. [S11]
+5. **Schedule E: evidence and audit.** Define authorization references, object versions, recipients, purposes, retention, access controls, and independent inspection. Receipts are evidence to evaluate, not proof that all underlying rights were valid.
+6. **Third-party and mandatory rights.** Require provenance checks, lawful processing, incident escalation, and confidential-data protections. Payment does not cure unlawful sourcing. [S10]
+7. **Schedule F: withdrawal and remediation.** Distinguish future supply, contractual termination, deletion, and model remediation. State surviving permissions, legally required cessation, and technically verifiable duties.
+8. **Schedule G: grievance and funded enforcement.** Set accessible complaint channels, response deadlines, independent review, proportionate remedies, and a protected enforcement budget; preserve statutory routes.
+9. **Conflicts and competition compliance.** Disclose interests, separate incompatible roles, and limit coordination to counsel-approved scope. DGA status is not competition immunity. [S11] [S13]
+10. **Portability and exit.** Specify usable formats, representative switching, continuing payment liabilities, and safeguards for other people's information.
+11. **Term and renegotiation.** Trigger review for new purposes, material model changes, acquisitions, and relevant legal changes. Do not treat nonresponse as renewal.
+12. **Law and jurisdiction.** Identify forums, governing law, cross-border responsibilities, and mandatory protections that contractual choices cannot remove.
+
+### Four non-binding clause sketches
+
+**Authority limitation.** A representative may act only within the verified mandate and rights identified in Schedules A and B. Joining the framework does not establish ownership of contributed material, authority over nonmembers, employee status, or a competition exemption.
+
+**Open-knowledge safeguard.** No payment or restriction is asserted solely because information is publicly available or in the public domain. Existing compliant CC permissions and independently applicable exceptions remain unaffected. Any purchased service is identified separately.
+
+**Affected-person protection.** A collective decision does not authorize processing inconsistent with applicable law. The affected-party council may challenge a use, but its review does not consent on behalf of absent people or extinguish individual remedies.
+
+**Withdrawal without false promises.** Withdrawal ends future supply according to Schedule F. Retained-record deletion, termination, and model-remediation duties are evaluated separately against applicable law, surviving licenses, and validated capabilities. This distinction does not permit continued processing when cessation is legally required. [S10] [S26]
+
+These are design sketches, not clauses to sign without local adaptation. Every operative duty would need precise definitions, deadlines, evidence standards, allocation of liability, and an enforceable remedy.
+
+### A focused follow-on work package
+
+Compare existing instruments in one selected jurisdiction and two bounded domains, then convene compensated consumer, supplier, steward, and affected-person sessions. Produce an authority map, a redlined framework, plain-language member explanations, and an independently evaluated negotiation simulation.
+
+**Go/no-go tests:** verified mandates and rights chains; no majority waiver of protected rights; a defensible competition-law route; comprehensible retrieval-versus-training permissions; practical exit and payment reconciliation; and demonstrated capacity to fund complaints and enforce remedies. If an essential promise cannot be evidenced or enforced, do not proceed to general deployment. Move only to a bounded voluntary pilot that can be stopped.
+
+## 21. Conclusion
 
 Commons Bargaining is best understood as an effort to align **voice, authority, service, and benefit**, not as a universal auction of personal data. Consumer purchasing power can operate without data sales. Creator bargaining can operate without enclosing the public domain. Commons funding can operate without pretending to identify every person's contribution to a model. Communities can demand a say in physical infrastructure without first becoming data vendors.
 

@@ -1,4 +1,5 @@
 import { mkdir, readFile, writeFile, copyFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 import { marked } from 'marked';
 
 const root = new URL('../', import.meta.url);
@@ -10,6 +11,10 @@ const escape = value => String(value).replace(/[&<>"']/g, char => ({
 const sources = JSON.parse(await read('research/sources.json')).sort((a, b) => a.id.localeCompare(b.id));
 const report = await read('research/report.md');
 const template = await read('site/template.html');
+const fingerprint = value => createHash('sha256').update(value).digest('hex').slice(0, 12);
+const stylesheet = await read('site/styles.css');
+const model = await read('site/model.mjs');
+const app = (await read('site/app.mjs')).replace("'./model.mjs'", `'./model.mjs?v=${fingerprint(model)}'`);
 const ids = new Set();
 for (const source of sources) {
   if (!/^S\d{2}$/.test(source.id) || ids.has(source.id)) throw new Error(`Invalid/duplicate source: ${source.id}`);
@@ -46,12 +51,15 @@ const references = sources.map(source =>
 ).join('\n');
 const contents = `<ol>${headings.map(({ id, text }) => `<li><a href="#${id}">${text}</a></li>`).join('')}</ol>`;
 const html = template.replace('{{REPORT}}', rendered).replace('{{CONTENTS}}', contents)
-  .replace('{{REFERENCES}}', references).replace('{{SOURCE_COUNT}}', sources.length);
+  .replace('{{REFERENCES}}', references).replace('{{SOURCE_COUNT}}', sources.length)
+  .replace('href="./styles.css"', `href="./styles.css?v=${fingerprint(stylesheet)}"`)
+  .replace('src="./app.mjs"', `src="./app.mjs?v=${fingerprint(app)}"`);
 if (/\{\{[A-Z_]+\}\}/.test(html)) throw new Error('Unresolved template placeholder');
 
 await mkdir(new URL('dist/', root), { recursive: true });
 await writeFile(new URL('dist/index.html', root), html);
-for (const file of ['styles.css', 'app.mjs', 'model.mjs', 'divergence.svg', 'divergence.html']) {
+await writeFile(new URL('dist/app.mjs', root), app);
+for (const file of ['styles.css', 'model.mjs', 'divergence.svg', 'divergence.html']) {
   await copyFile(new URL(`site/${file}`, root), new URL(`dist/${file}`, root));
 }
 const bibliography = sources.map(s => `- **${s.id}.** ${s.author} (${s.year}). [${s.title}](${s.url}). ${s.claim} Limit: ${s.limit}`).join('\n\n');

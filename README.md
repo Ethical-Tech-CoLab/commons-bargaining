@@ -34,6 +34,8 @@ connections are documented rather than presented as a new official charter.
 - Data spectrum: mass-public, private, professional, synthetic, and community-held.
 - Digital Costco: consumer purchasing power versus contributor bargaining.
 - Institutional structure, governance, multi-sided markets, and public-good return.
+- A free-entry buyers' and suppliers' club with optional paid services,
+  meaningful supplier voting rights, and an affected-party council.
 - Creative Commons-compatible aggregation without enclosing open knowledge.
 - Gmail analogy, permission scope, knowledge objects, and Alice/Bob workflows.
 - A node-by-node divergence chart of concentrated capture risks and
@@ -45,6 +47,8 @@ connections are documented rather than presented as a new official charter.
 - Data dividends, Pigouvian versus rent taxation, and a hypothetical 50% tax
   with capped, auditable credits for additional commons support.
 - Falsifiable hypotheses, staged research, safeguards, and stopping rules.
+- Follow-on agreement research: coverage gaps, an annotated nonbinding framework,
+  clause sketches, and go/no-go tests before legal implementation.
 
 ## Run locally
 
