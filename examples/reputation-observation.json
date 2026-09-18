@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "0.1-experimental",
+  "publicationStatus": "fictional-not-executed-demonstration",
+  "subjectId": "urn:commons-bargaining:example:alice-field-guide:v1",
+  "subjectKind": "knowledge-object-version",
+  "versionCommitment": null,
+  "claimOrMetric": "source-grounded-answer-accuracy",
+  "taskScope": {
+    "operation": "retrieval-augmented-generation",
+    "language": "en",
+    "domain": "fictional-field-guide",
+    "agentVersion": "fictional-bob-assistant-v1"
+  },
+  "outcome": null,
+  "unit": "fraction-correct-on-specified-evaluation",
+  "sampleCount": 0,
+  "uncertainty": "not-estimated",
+  "methodVersion": "proposed-evaluation-protocol-v1",
+  "evidenceReference": null,
+  "issuerId": "fictional-evaluator",
+  "observedAt": null,
+  "expiresAt": null,
+  "conflictDisclosure": "No real evaluator, evaluation, or independence review exists for this sketch.",
+  "useProofReference": null,
+  "supersedes": null,
+  "statusReference": null,
+  "signature": null,
+  "admissibility": {
+    "status": "not-verified",
+    "eligibleForRanking": false,
+    "reason": "Missing verified authority, evidence, evaluation, and signatures."
+  },
+  "privacy": {
+    "publicPersonalData": false,
+    "rawEvidencePublic": false
+  },
+  "paymentPolicy": "No payment entitlement is changed by this example observation.",
+  "overallTrustScore": null,
+  "erc8004ConformanceClaimed": false
+}

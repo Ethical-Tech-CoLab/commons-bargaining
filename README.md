@@ -49,6 +49,8 @@ connections are documented rather than presented as a new official charter.
 - Falsifiable hypotheses, staged research, safeguards, and stopping rules.
 - Follow-on agreement research: coverage gaps, an annotated nonbinding framework,
   clause sketches, and go/no-go tests before legal implementation.
+- Ethereum agent-registry precedents, scoped reputation evidence, and transparent
+  eligibility-first ranking for data and the agents serving it.
 
 ## Run locally
 
@@ -98,11 +100,13 @@ of the proposed institutions. External source access can change.
 | `research/report.md` | Canonical original research text |
 | `research/sources.json` | Evidence, source URL, supported claim, and limitation |
 | `site/template.html` | Accessible publication shell |
+| `site/header.html`, `site/header.css` | Shared persistent Overview, Demos, Research navigation |
 | `site/styles.css` | Responsive CoLab-inspired styling and print layout |
 | `site/model.mjs` | Pure integer-cent illustrative settlement arithmetic |
 | `site/app.mjs` | Browser-only calculator and bibliography filter |
 | `scripts/build.mjs` | Markdown, citations, navigation, and downloads |
 | `examples/knowledge-object.json` | Fictional interoperable-object sketch, not a production contract/schema |
+| `examples/reputation-observation.json` | Unexecuted evidence-record sketch, not a real reputation score or ERC implementation |
 | `test/` | Node built-in test-runner checks |
 | `dist/` | Generated Pages artifact; intentionally not committed |
 

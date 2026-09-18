@@ -667,7 +667,89 @@ Compare existing instruments in one selected jurisdiction and two bounded domain
 
 **Go/no-go tests:** verified mandates and rights chains; no majority waiver of protected rights; a defensible competition-law route; comprehensible retrieval-versus-training permissions; practical exit and payment reconciliation; and demonstrated capacity to fund complaints and enforce remedies. If an essential promise cannot be evidenced or enforced, do not proceed to general deployment. Move only to a bounded voluntary pilot that can be stopped.
 
-## 21. Conclusion
+## 21. Reputation, validation, and quality ranking
+
+### What to borrow from Ethereum agent examples
+
+**Proposal:** add contextual reputation to provenance through separately signed, challengeable evidence about particular objects, versions, providers, and tasks. Do not turn "trust" into a single transferable score.
+
+The likely Ethereum referent is **ERC-8004: Trustless Agents**. At the research cutoff, the inspected official specification remains **Draft**. It proposes identity, reputation, and validation registries: ERC-721-based agent identity, contextual feedback, and requests to designated validators. Its normative interface language operates within a proposal; it is not proof of final standardization. Payments are outside its scope. [S42]
+
+The curated contracts repository contains validation implementation code while warning that validation design remains under discussion and revision. Thus validation is neither simply absent nor established as a finalized, uniformly deployed mechanism. This report has not verified a chain deployment or contract address and does not present the example below as ERC-conformant. [S43]
+
+### Five layers, five different questions
+
+| Layer | Question | What it cannot establish alone |
+|---|---|---|
+| Identity | Which actor or organizational role controls this identifier and signs? | Honesty, legal authority, or one-human-one-identity |
+| Provenance | What origin, transformation, contribution, and custody history is recorded? | Truth of that recorded history |
+| Claim verification | What evidence supports this particular rights, source, or delivery assertion? | Universal ownership or freedom from third-party claims |
+| Task validation | Does this version meet stated requirements for this use? | Fitness for every other task or permission for a different use |
+| Reputation | What can be inferred from accumulated, scoped observations? | A permanent or context-free judgment of a person or organization |
+
+A hash demonstrates correspondence with committed bytes, not truth, authorship, ownership, or permission. A token identifying an agent does not transfer copyright in its outputs or training sources. Signed false statements remain false.
+
+Maintain distinct identifiers for objects and immutable versions; authors, providers, and stewards; evaluators and methods; and observations with status histories. A proposed observation record contains:
+
+```text
+subjectId, subjectKind, versionCommitment, claimOrMetric,
+taskScope, outcome, unit, methodVersion, evidenceReference,
+issuerId, observedAt, expiresAt, conflictDisclosure,
+useProofReference, supersedes, statusReference, signature
+```
+
+An evidence registry holds the records; a reputation view interprets them under a published policy. Expose recency rules, raw and effective sample counts, uncertainty, reviewer selection, conflicts, and unresolved disputes. Do not average licensing evidence, translation accuracy, and delivery reliability as if they were the same quantity. "Insufficient evidence" is different from "poor performance." New versions and new owners do not automatically inherit old ratings.
+
+ERC-8004's contextual tags, reviewer-filtered summaries, and off-chain aggregation are useful precedents, not an obligation to use a particular score. Ethereum Attestation Service supplies another comparator for schemas, issuer identity, linked statements, expiry, and revocation. Applications must check those conditions explicitly rather than treat the existence of an attestation as proof of validity for their use. [S42] [S44]
+
+### Alice's evidence and Bob's experience
+
+1. Alice registers a version commitment and a separate rights claim. Controlled storage retains sensitive evidence.
+2. A qualified, conflict-controlled reviewer checks the specific authority claim and records the evidence, jurisdictional assumptions, limitations, and expiry. It does not certify ownership for all purposes.
+3. Bob chooses a permitted task and acceptance criteria. An evaluator tests that exact data and agent version, identifying the method and limits.
+4. After an authorized interaction, Bob can submit feedback tied to a replay-resistant use receipt. Legitimate free use can qualify; purchasing is not the only credible interaction. The receipt proves an interaction, not independence or honesty.
+5. Alice can respond, and an independent appeal can record a counter-observation. Revocations, corrections, and contested status affect future decisions without pretending historical events never occurred.
+6. Payment follows the agreed contract, including any specified acceptance condition. A changing reputation score cannot silently rewrite an earned payment claim.
+
+The [fictional observation sketch](./reputation-observation.json) makes these fields inspectable. It contains no real evaluation, signature, validated rights claim, or usable reputation rating.
+
+Do not publish personal data, private purchase histories, or guessable hashes of sensitive content. Keep evidence access controlled; if public anchoring is justified, assess appropriate hiding commitments. A blockchain is optional: the first pilot could use signed records in an ordinary database with independently auditable exports.
+
+### Is Costco the verification and reputation marketplace?
+
+**Only as a limited analogy.** Costco is a curated membership retailer/merchant, not a pure neutral two-sided marketplace. Its role in assembling an assortment and a buying relationship is useful to this design, but the research does not attribute supplier democracy, blockchain registries, or independent validation to actual Costco. [S16]
+
+The proposed club could bundle discovery, rights clearance, testing, delivery histories, and dispute resolution. Commercially bundling these functions does not make them independent. A platform paid for a sale should not be the sole unchallengeable judge of that seller's quality. Separate evidence custody, evaluator selection, ranking policy, appeals, and independent audit; allow competing qualified evaluators.
+
+### Does Costco rank the best products to the top?
+
+The official Costco Business Delivery search configuration inspected here includes **Best Match**, a descending-score setting, and other sorting vocabulary. It does not disclose the scoring inputs or prove that the highest-quality products rank first. We could not establish the exact proprietary algorithm. This finding is limited to the inspected Business Delivery configuration, not every Costco channel. [S45]
+
+Distinguish **assortment curation**, **search/review sorting**, **commercial merchandising**, and **empirically validated task ranking**. Popular, highly rated, heavily viewed, best-selling, and suitable for a particular purpose are not equivalent.
+
+### How a data commons should rank data and serving agents
+
+**First apply hard eligibility gates.** Check applicable authority, license compatibility, required consent or other authorization, privacy restrictions, and security constraints for the requested use and versions. Missing or disputed mandatory evidence means exclusion or review, not a small penalty that popularity, donations, or payment can overcome.
+
+**Then evaluate three distinct candidates:**
+
+| Candidate | Task-specific evidence |
+|---|---|
+| Dataset or knowledge-object version | Target-task utility, relevant population/domain coverage, appropriate freshness, provenance-evidence completeness and verification status |
+| Serving-agent version | Groundedness against authorized sources, reliability, latency distribution, and actual cost under a specified workload |
+| Data-agent combination | End-to-end outcomes, including retrieval failures, unsupported answers, version compatibility, and interaction effects |
+
+Freshness is task-dependent: an old historical source is not defective merely because it is old. Excellent data cannot make an unreliable agent trustworthy, and a capable agent cannot make unsuitable data adequate.
+
+**Proposed ranking trace:** task profile -> eligibility-policy version -> eligible candidates -> evaluation records -> task-local ordering -> explanation. Publish metrics, normalization, weights where used, tie-breaks, methods, and conflicts. Show evaluation dates, exact versions, sample counts, uncertainty, and whether evidence is independent or provider-supplied. A task-local suitability score is acceptable if its components and assumptions remain inspectable; a universal reputation score is not.
+
+In a fictional query, Bob requests a grounded answer within a latency and cost budget. Alice's collection passes permission checks. A more popular collection missing the required authority is excluded. Bob compares remaining collections and compatible agents on the displayed metrics, with an explanation of the ordering and the option to choose different legitimate tradeoffs.
+
+**Validate the ranker, not only the candidates.** Test whether ordering predicts successful held-out task outcomes rather than clicks or purchases. Audit coverage and unequal exposure. Keep advertisements visibly separate; membership spending and Wikimedia donations are not quality evidence.
+
+Threat-model self-reviews, Sybil identities, fake transactions, reciprocal review rings, collusion, bribery, validator capture, and feedback loops that entrench incumbents. Use conflict disclosures, duplicate-use checks, reviewer-correlation analysis, independent samples, appeals, and bounded discovery opportunities for newcomers **only among eligible candidates**. Wallet counts are not independent-person counts, and tokenizing reputation does not resolve that problem. [S42]
+
+## 22. Conclusion
 
 Commons Bargaining is best understood as an effort to align **voice, authority, service, and benefit**, not as a universal auction of personal data. Consumer purchasing power can operate without data sales. Creator bargaining can operate without enclosing the public domain. Commons funding can operate without pretending to identify every person's contribution to a model. Communities can demand a say in physical infrastructure without first becoming data vendors.
 

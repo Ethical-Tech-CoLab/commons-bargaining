@@ -46,3 +46,37 @@ document.querySelector('#report').addEventListener('click', event => {
     search.dispatchEvent(new Event('input'));
   }
 });
+
+const header = document.querySelector('.site-header');
+const navigation = [...header.querySelectorAll('[data-nav]')];
+const sections = [
+  { name: 'overview', element: document.querySelector('#overview') },
+  { name: 'research', element: document.querySelector('#report') },
+  { name: 'demos', element: document.querySelector('#lab') },
+  { name: 'research', element: document.querySelector('#references') },
+];
+let navigationFramePending = false;
+
+function updateNavigation() {
+  navigationFramePending = false;
+  const height = header.getBoundingClientRect().height;
+  document.documentElement.style.setProperty('--header-height', `${height}px`);
+  let current = 'overview';
+  for (const section of sections) {
+    if (section.element.getBoundingClientRect().top <= height + 40) current = section.name;
+  }
+  for (const link of navigation) {
+    if (link.dataset.nav === current) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  }
+}
+
+function scheduleNavigationUpdate() {
+  if (navigationFramePending) return;
+  navigationFramePending = true;
+  requestAnimationFrame(updateNavigation);
+}
+
+window.addEventListener('scroll', scheduleNavigationUpdate, { passive: true });
+new ResizeObserver(scheduleNavigationUpdate).observe(header);
+updateNavigation();

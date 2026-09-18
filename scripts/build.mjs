@@ -11,6 +11,11 @@ const escape = value => String(value).replace(/[&<>"']/g, char => ({
 const sources = JSON.parse(await read('research/sources.json')).sort((a, b) => a.id.localeCompare(b.id));
 const report = await read('research/report.md');
 const template = await read('site/template.html');
+const header = await read('site/header.html');
+const headerCss = await read('site/header.css');
+const renderHeader = demo => header.replaceAll('{{PREFIX}}', demo ? './index.html#' : '#')
+  .replace('{{OVERVIEW_CURRENT}}', demo ? '' : 'aria-current="location"')
+  .replace('{{DEMOS_CURRENT}}', demo ? 'aria-current="location"' : '');
 const fingerprint = value => createHash('sha256').update(value).digest('hex').slice(0, 12);
 const stylesheet = await read('site/styles.css');
 const model = await read('site/model.mjs');
@@ -51,20 +56,27 @@ const references = sources.map(source =>
 ).join('\n');
 const contents = `<ol>${headings.map(({ id, text }) => `<li><a href="#${id}">${text}</a></li>`).join('')}</ol>`;
 const html = template.replace('{{REPORT}}', rendered).replace('{{CONTENTS}}', contents)
+  .replace('{{HEADER}}', renderHeader(false))
   .replace('{{REFERENCES}}', references).replace('{{SOURCE_COUNT}}', sources.length)
   .replace('href="./styles.css"', `href="./styles.css?v=${fingerprint(stylesheet)}"`)
+  .replace('href="./header.css"', `href="./header.css?v=${fingerprint(headerCss)}"`)
   .replace('src="./app.mjs"', `src="./app.mjs?v=${fingerprint(app)}"`);
 if (/\{\{[A-Z_]+\}\}/.test(html)) throw new Error('Unresolved template placeholder');
 
 await mkdir(new URL('dist/', root), { recursive: true });
 await writeFile(new URL('dist/index.html', root), html);
 await writeFile(new URL('dist/app.mjs', root), app);
-for (const file of ['styles.css', 'model.mjs', 'divergence.svg', 'divergence.html']) {
+const diagram = (await read('site/divergence.html')).replace('{{HEADER}}', renderHeader(true))
+  .replace('href="./header.css"', `href="./header.css?v=${fingerprint(headerCss)}"`);
+if (/\{\{[A-Z_]+\}\}/.test(diagram)) throw new Error('Unresolved diagram template placeholder');
+await writeFile(new URL('dist/divergence.html', root), diagram);
+for (const file of ['styles.css', 'header.css', 'model.mjs', 'divergence.svg']) {
   await copyFile(new URL(`site/${file}`, root), new URL(`dist/${file}`, root));
 }
 const bibliography = sources.map(s => `- **${s.id}.** ${s.author} (${s.year}). [${s.title}](${s.url}). ${s.claim} Limit: ${s.limit}`).join('\n\n');
 await writeFile(new URL('dist/report.md', root), `${report}\n\n## References\n\n${bibliography}\n`);
 await copyFile(new URL('research/sources.json', root), new URL('dist/sources.json', root));
 await copyFile(new URL('examples/knowledge-object.json', root), new URL('dist/knowledge-object.json', root));
+await copyFile(new URL('examples/reputation-observation.json', root), new URL('dist/reputation-observation.json', root));
 await writeFile(new URL('dist/.nojekyll', root), '');
 console.log(`Built ${headings.length} sections; validated ${sources.length} cited sources.`);

@@ -400,6 +400,46 @@
     "accessed": "2026-09-18"
   },
   {
+    "id": "S42",
+    "author": "ERC-8004 authors and Ethereum ERC contributors",
+    "year": "2025; inspected revision 2026",
+    "title": "ERC-8004: Trustless Agents",
+    "url": "https://github.com/ethereum/ERCs/blob/503591a6e80e6e1affdd6403341e25269141f046/ERCS/erc-8004.md",
+    "claim": "Draft specification proposes identity, reputation, and validation registries; includes contextual feedback and off-chain aggregation, and explicitly separates payments from scope.",
+    "limit": "Draft at the research cutoff, not a final standard or evidence of any specific deployed contract. Identity and integrity commitments do not prove capability, authority, or freedom from Sybil manipulation.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S43",
+    "author": "ERC-8004 contracts contributors",
+    "year": "2026 snapshot",
+    "title": "ERC-8004: Trustless Agents - curated contracts implementation",
+    "url": "https://github.com/erc-8004/erc-8004-contracts/tree/b9e466c250744a7e06b13dff9d3c2844ed64f825",
+    "claim": "Implementation includes validation requests/responses while its README flags ongoing validation-registry discussion and anticipated specification updates.",
+    "limit": "Source existence is not proof of finalized design, independent audit quality, economic security, or uniformly deployed behavior; no deployment address was verified.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S44",
+    "author": "Ethereum Attestation Service contributors",
+    "year": "2026 snapshot",
+    "title": "Ethereum Attestation Service contracts",
+    "url": "https://github.com/ethereum-attestation-service/eas-contracts/tree/e6e970286ff18bbdfc5d8eff2742c5ece46040e4/contracts",
+    "claim": "Schemas and attestations represent issuers, linked records, timestamps, expiry, revocation, and custom data. Applications must evaluate status and policy explicitly.",
+    "limit": "Attestation infrastructure, not a universal reputation algorithm or truth verifier. The inspected isAttestationValid implementation checks existence, not every condition an application needs.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S45",
+    "author": "Costco Business Delivery",
+    "year": "Dynamic page; accessed 2026",
+    "title": "Search | Costco",
+    "url": "https://www.costcobusinessdelivery.com/s?keyword=coffee",
+    "claim": "Delivered official search configuration contains Best Match with descending-score ordering and other sorting vocabulary, including price, ratings, and best sellers.",
+    "limit": "Configuration does not disclose scoring inputs or establish quality optimization, visible controls in every session, or identical behavior across Costco consumer channels. The proprietary ranking algorithm was not verified.",
+    "accessed": "2026-09-18"
+  },
+  {
     "id": "S31",
     "author": "Charles I. Jones and Christopher Tonetti",
     "year": "2020",

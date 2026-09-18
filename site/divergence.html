@@ -6,6 +6,7 @@
   <meta name="color-scheme" content="dark">
   <meta name="description" content="Ten handoffs where a request can concentrate control or support collective agency: an accessible commons bargaining diagram and text equivalent.">
   <title>Every node is a bargaining point · Commons Bargaining</title>
+  <link rel="stylesheet" href="./header.css">
   <style>
     :root { color-scheme: dark; --bg: #120c1a; --surface: #201630; --text: #f3eefb; --muted: #d8cce9; --lime: #c8f04b; --violet: #b3a0ff; }
     * { box-sizing: border-box; }
@@ -15,8 +16,8 @@
     :focus-visible { outline: 3px solid var(--lime); outline-offset: 5px; }
     .skip { position: absolute; left: 1rem; top: -10rem; padding: .75rem 1rem; background: var(--surface); z-index: 1; }
     .skip:focus { top: 1rem; }
-    header, main, footer { max-width: 1728px; margin: auto; padding: clamp(1rem, 3vw, 3rem); }
-    header { padding-bottom: 1rem; }
+    .diagram-heading, main, footer { max-width: 1728px; margin: auto; padding: clamp(1rem, 3vw, 3rem); }
+    .diagram-heading { padding-bottom: 1rem; }
     .eyebrow { color: var(--lime); text-transform: uppercase; letter-spacing: .13em; font-size: .8rem; font-weight: 750; }
     h1 { font-size: clamp(2rem, 4.3vw, 4.2rem); line-height: 1.08; letter-spacing: -.04em; max-width: 22ch; margin: .5em 0; }
     h2 { font-size: clamp(1.5rem, 2.4vw, 2.2rem); line-height: 1.25; margin: 0 0 1rem; letter-spacing: -.025em; }
@@ -65,7 +66,8 @@
 </head>
 <body>
   <a class="skip" href="#text-equivalent">Skip to the diagram’s text equivalent</a>
-  <header>
+  {{HEADER}}
+  <div class="diagram-heading">
     <p class="eyebrow">Commons Bargaining / a node-by-node design map</p>
     <h1>Every node is a bargaining point.</h1>
     <p class="lede">A request passes through more than a model. Standards, browsers, applications, infrastructure and settlement systems all shape where control and value go. At <strong>every handoff</strong>, the design can concentrate capture or create collective agency.</p>
@@ -76,7 +78,7 @@
       <a href="divergence.svg">Open the original SVG</a>
     </nav>
     <p class="notice"><strong>Illustrative, not accusatory.</strong> These are design risks and possible alternatives, not findings of provider misconduct. <strong>Cloudflare</strong> is named only as an example of a CDN/edge provider; <strong>example.com</strong> is a placeholder application. The sequence is conceptual: actual systems may combine, repeat or reorder stages.</p>
-  </header>
+  </div>
   <main>
     <section id="visual-map" aria-labelledby="visual-heading">
       <h2 id="visual-heading">Ten handoffs. A choice at each one.</h2>

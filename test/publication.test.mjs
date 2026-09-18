@@ -31,7 +31,8 @@ test('research covers requested surfaces and labels its limits', () => {
     'Ilan', 'payment', 'knowledge object', 'not peer-reviewed', 'Field-grounded',
     'Pigouvian', 'Sanders', 'Wikimedia', 'Treasury payment', 'What Is Privacy Worth',
     'Soho House', 'supplier chamber', 'Free opt-in', 'Schedule G',
-    'non-binding clause sketches']) {
+    'non-binding clause sketches', 'ERC-8004', 'task-local ordering',
+    'eligible candidates', 'validation registries']) {
     assert.ok(html.toLowerCase().includes(term.toLowerCase()), `missing ${term}`);
   }
   assert.doesNotMatch(html, /\{\{[A-Z_]+\}\}/);
@@ -59,4 +60,32 @@ test('divergence map has all ten request nodes and a pair of governance choices 
   assert.match(page, /Return to the research/);
   assert.match(svg, /<title id="diagram-title">/);
   assert.match(svg, /<desc id="diagram-description">/);
+});
+
+test('both pages have shared permanent navigation with the requested labels', async () => {
+  const diagram = await readFile(new URL('../dist/divergence.html', import.meta.url), 'utf8');
+  for (const page of [html, diagram]) {
+    assert.match(page, /class="site-header"/);
+    assert.match(page, /aria-label="Primary navigation"/);
+    assert.match(page, /data-nav="overview"[^>]*>Overview<\/a>/);
+    assert.match(page, /data-nav="demos"[^>]*>Demos<\/a>/);
+    assert.match(page, /data-nav="research"[^>]*>Research<\/a>/);
+    assert.match(page, /\.\/header\.css\?v=[a-f0-9]{12}/);
+    assert.doesNotMatch(page, /\{\{[A-Z_]+\}\}/);
+  }
+  assert.match(diagram, /data-nav="demos" aria-current="location"/);
+  for (const [, anchor] of diagram.matchAll(/href="\.\/index\.html#([^"]+)"/g)) {
+    assert.ok(html.includes(`id="${anchor}"`), `missing cross-page anchor ${anchor}`);
+  }
+});
+
+test('the reputation sketch cannot masquerade as a verified evaluation or eligible candidate', async () => {
+  const observation = JSON.parse(await readFile(new URL('../dist/reputation-observation.json', import.meta.url)));
+  assert.equal(observation.publicationStatus, 'fictional-not-executed-demonstration');
+  assert.equal(observation.sampleCount, 0);
+  assert.equal(observation.outcome, null);
+  assert.equal(observation.signature, null);
+  assert.equal(observation.admissibility.eligibleForRanking, false);
+  assert.equal(observation.overallTrustScore, null);
+  assert.equal(observation.erc8004ConformanceClaimed, false);
 });
