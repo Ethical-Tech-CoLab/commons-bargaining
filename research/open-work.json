@@ -113,6 +113,14 @@
       "status": "open",
       "nextStep": "Specify a task and jurisdiction, document every component's accountability tuple, and independently rehearse permission, failure, complaint, payment, and migration cases.",
       "sourceTitles": ["A pro-human stack: working definition and test"]
+    },
+    {
+      "id": "open-agent-adoption",
+      "title": "Compare open and proprietary agent arrangements",
+      "question": "Which combination of harness, model, tools, operating controls, and contracts delivers meaningful agency and accepted-task quality at sustainable full cost?",
+      "status": "open",
+      "nextStep": "Complete component passports, apply eligibility gates, compare models under a fixed harness, then test harness differences and an actual supplier switch.",
+      "sourceTitles": ["Open-agent incentives and a Commons Collective Agency Starter Kit", "A pro-human stack: working definition and test"]
     }
   ]
 }

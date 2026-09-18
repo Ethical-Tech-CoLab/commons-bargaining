@@ -35,7 +35,8 @@ test('research covers requested surfaces and labels its limits', () => {
     'eligible candidates', 'validation registries', 'Waze',
     'Weather Underground', 'quality-adjusted total cost', 'Commons Reward Trust',
     'reinforcement-learning reward', 'compensatory average', 'pro-human stack',
-    'accountability tuple', 'funded exit/maintenance']) {
+    'accountability tuple', 'funded exit/maintenance', 'Oh My Pi',
+    'Commons Collective Agency Starter Kit', 'component passport']) {
     assert.ok(html.toLowerCase().includes(term.toLowerCase()), `missing ${term}`);
   }
   assert.doesNotMatch(html, /\{\{[A-Z_]+\}\}/);
@@ -180,4 +181,14 @@ test('current publication branding and repository links use Commons Collective',
   }
   const data = JSON.parse(await readFile(new URL('../dist/presentation-data.json', import.meta.url)));
   assert.equal(data.project.title, 'Commons Collective');
+});
+
+test('the component passport is explicitly unfilled and does not approve an agent', async () => {
+  const passport = JSON.parse(await readFile(new URL('../dist/component-passport.json', import.meta.url)));
+  assert.equal(passport.status, 'unfilled-demonstration-not-approved');
+  assert.equal(passport.component.releaseOrCommit, null);
+  assert.equal(passport.evaluation.sampleCount, 0);
+  assert.equal(passport.eligibility.approvedForUse, false);
+  assert.equal(passport.eligibility.unknownMandatoryEvidenceBlocksApproval, true);
+  assert.match(passport.notice, /do not prove runtime isolation/);
 });

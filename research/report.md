@@ -1021,7 +1021,73 @@ A fully open-source system that traps user histories, hides charges, or penalize
 
 The stack is therefore **an allocation of accountable power across the whole system**, supported by technology, not a shopping list of software labeled open.
 
-## 26. Conclusion
+## 26. Open-agent incentives and a Commons Collective Agency Starter Kit
+
+**Recommendation:** choose components for demonstrated agency, task fitness, and sustainable full cost, not the word "open." An open harness can make orchestration inspectable, customization feasible, and supplier switching credible. Those possibilities become collective agency only through tested controls, enforceable terms, and institutions that can exercise them.
+
+### Separate the harness from the model and service
+
+A harness coordinates model requests, tools, context, and execution. Pi and Oh My Pi support configurable model/provider connections, so an open harness can call a proprietary API. Conversely, open or downloadable weights can be exposed through a closed managed service. Record openness separately for orchestration, policy configuration, tools, weights, licenses, and training-data documentation. [S58] [S59]
+
+Local tool execution does not imply local model processing. Nor does a downloadable model establish an unrestricted license or complete training-data permission. Model and dataset cards are useful disclosures to inspect, not automatic clearance. Open policy files remain instructions; enforcement depends on operating controls and implementation. [S60] [S63] [S64]
+
+### Incentives that should be tested
+
+| Potential reason to choose an open or substitutable component | Cost or countervailing consideration | Evidence needed |
+|---|---|---|
+| Privacy and control over context, tools, and routing | Hosted inference may still transmit data; local isolation needs engineering | Observed data flows, contractual terms, access tests, and incident handling |
+| Inspectability and customization | Maintaining a fork, reviewing dependencies, and retaining skills cost money | A reproducible configuration, review responsibilities, and a maintenance budget |
+| Portability and stronger procurement leverage | Nominal alternatives may perform poorly or require expensive migration | Same-task comparisons and a successful, full-cost switch |
+| Collective purchasing and shared improvements | Coordination can add overhead; contributors need support | Net member benefit, accountable decisions, and sustained shared maintenance |
+| Independent evaluation and contestability | Benchmarks can be incomplete, manipulated, or costly | Relevant held-out tasks, uncertainty, conflicts, and replication |
+
+Compare quality, latency, setup, repair time, hardware utilization, accessibility, compliance, support, and convenience. **Full cost per accepted task** is more informative than token price alone. A managed proprietary component can be the better choice for a bounded workload if its protections and demonstrated exit meet the federation's requirements.
+
+### Where to look: an authoritative shortlist, not a trust seal
+
+| Resource | Useful layer or function | What not to infer |
+|---|---|---|
+| **Pi Agent Harness**, currently resolved by GitHub from `badlogic/pi-mono` to `earendil-works/pi` | Inspectable MIT-root-licensed orchestration and provider configuration | Pi explicitly leaves execution isolation to the deployment; do not assume files, processes, network, or credentials are restricted by the harness [S58] |
+| **Oh My Pi**, `can1357/oh-my-pi` | Pi-derived harness and configurable providers; MIT root code license | No blanket assurance for dependencies, models, performance, or security [S59] |
+| **Official VS Code agent documentation** | Understand harness, model, and execution choices | The phrase "Pi VS Code Agents" is ambiguous; no official product relationship is inferred here [S60] |
+| **Official MCP Registry**, documented as preview | Discover published server metadata and publisher namespaces | Listing or namespace authentication is not a security or quality certificate [S61] |
+| **MCP architecture specification** | Evaluate host/client/server interfaces and responsibilities | Protocol documentation does not prove correct implementation or compatibility with every harness [S62] |
+| **Hugging Face Model Cards** | Inspect declared model uses, licenses, training information, and evaluations | Declarations do not independently establish capability or legal clearance [S63] |
+| **Hugging Face Dataset Cards** | Inspect declared provenance, licensing, content, and bias considerations | A card is not consent or permission for all downstream uses [S64] |
+| **Inspect AI** | Build comparative model evaluations using documented tasks, solvers, and scorers | A framework does not supply a universal ranking or certification [S65] |
+
+License statements above concern the identified code repositories, not every dependency, model, dataset, or hosted service. Verify the exact version before adoption. No packages or plugins were installed or executed to make this shortlist.
+
+### What the proposed starter kit contains
+
+The **Commons Collective Agency Starter Kit** should be a source-controlled collection of configurations, policies, evaluation tasks, component passports, contract templates, and redacted run manifests. It is not one magic package, and the report does not claim that a complete production kit has already been implemented.
+
+A component passport records maintainer and exact release/commit; license and dependency review; permissions and egress; hosting and upstream providers; task-evaluation method, sample, results, and date; full cost and support; export and migration evidence; governance and benefit terms; and incidents, appeals, and an accountable reviewer.
+
+The [unfilled component-passport sketch](./component-passport.json) is a starting artifact, not an approved component or runtime enforcement system. Keep credentials and personal information out of such public records. Mark missing evidence as unknown, not as a successful review.
+
+Use eligibility gates before ranking. Establish required authority, rights, security, accessibility, and operational conditions; then compare eligible candidates by task outcomes and cost. Supplier payments cannot buy eligibility or higher quality scores.
+
+### A workflow mapped to the agency chart
+
+1. **Agent/browser:** specify the member's mandate, interruption, revocation, and approval boundaries; pin the harness and extensions. Use appropriate isolation and least privilege, and verify prohibited actions are blocked. A permissive code license is not a sandbox.
+2. **Protocols/tools:** inventory endpoints, publisher identities, dependencies, permissions, and supported versions. Prefer narrow capabilities to unrestricted shell or database access. Test replacement rather than assuming a common protocol eliminates exit costs.
+3. **Model/compute:** compare the same tasks across at least two eligible providers, retaining the current service as a baseline. Include a self-hosted option where feasible. Record routing, retention, failures, latency, and staffing; do not conceal fallback to a different provider.
+4. **Database/knowledge:** start with synthetic or approved low-risk material. Apply purpose-limited, preferably read-only access; minimize logs; test export and applicable deletion; preserve others' rights.
+5. **Provenance/validation:** link outcomes to source permissions, versions, and evaluation runs. Retain uncertainty and failed tests. Keep independent review distinct from supplier claims.
+6. **Settlement/governance:** define purchasing authority, representation, payment approval, public benefits, complaints, and exit in the proposed Commons Collective Framework Agreement. Fund shared maintenance and independent assurance.
+
+At each stage, identify an enforceable condition, beneficiary, refusal or exit path, and verification method. Without them, a claimed collective benefit remains an aspiration.
+
+### An adoption experiment, not a predetermined winner
+
+Run a proposed four-week feasibility pilot over two low-risk workflows, with approximately 30 representative cases per workflow and repeated runs where affordable. This is a feasibility target, not a statistical power calculation. Plan the sample required for any subsequent confirmatory claims.
+
+Compare eligible model providers using a fixed harness, then compare harnesses separately to avoid conflating effects. Track accepted-task quality, human repair, latency, full cost, prohibited-action attempts, data egress, and time to switch and recover working state. Publish limitations and negative findings without exposing secrets.
+
+The counterhypothesis is that a proprietary managed service delivers better outcomes at lower full cost under sufficiently portable and accountable terms. The CCF can choose that result if supported. **Collective agency concerns who sets conditions, contests decisions, exits, and shares benefits.** Openness by itself supplies neither supplier democracy nor commons funding.
+
+## 27. Conclusion
 
 Commons Collective is best understood as an effort to align **voice, authority, service, and benefit**, not as a universal auction of personal data. Consumer purchasing power can operate without data sales. Creator bargaining can operate without enclosing the public domain. Commons funding can operate without pretending to identify every person's contribution to a model. Communities can demand a say in physical infrastructure without first becoming data vendors.
 

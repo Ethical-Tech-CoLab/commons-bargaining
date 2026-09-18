@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "0.1-experimental",
+  "id": "urn:commons-collective:example:component-passport",
+  "status": "unfilled-demonstration-not-approved",
+  "component": {
+    "name": null,
+    "layer": null,
+    "maintainer": null,
+    "repository": null,
+    "releaseOrCommit": null,
+    "codeLicense": null,
+    "dependencyReview": "not-reviewed"
+  },
+  "permissions": {
+    "filesystemScope": [],
+    "networkAllowlist": [],
+    "dataEgressReview": "not-reviewed",
+    "credentialAccessReview": "not-reviewed",
+    "approvalPolicyReference": null
+  },
+  "hosting": {
+    "location": null,
+    "modelProviders": [],
+    "providerRetentionTerms": null,
+    "fallbackRouting": "not-reviewed"
+  },
+  "evaluation": {
+    "taskProfile": null,
+    "methodVersion": null,
+    "sampleCount": 0,
+    "results": null,
+    "evaluatedAt": null,
+    "independentReviewer": null
+  },
+  "economics": {
+    "fullCostPerAcceptedTask": null,
+    "supportOwner": null,
+    "maintenanceBudget": null
+  },
+  "exit": {
+    "exportFormat": null,
+    "migrationEvidence": null,
+    "estimatedCost": null
+  },
+  "governance": {
+    "accountableActor": null,
+    "benefitTerms": null,
+    "incidentProcess": null,
+    "appealProcess": null,
+    "reviewedAt": null
+  },
+  "eligibility": {
+    "status": "not-reviewed",
+    "approvedForUse": false,
+    "unknownMandatoryEvidenceBlocksApproval": true
+  },
+  "notice": "A structural sketch only. Empty lists do not prove runtime isolation. No credentials, personal data, actual evaluation, legal approval, or enforcement mechanism is supplied."
+}

@@ -61,6 +61,8 @@ connections are documented rather than presented as a new official charter.
   participation-and-outcomes regulatory pathway.
 - A proposed pro-human stack definition with component accountability, rights
   boundaries, independent evidence, and scoped operational acceptance tests.
+- A verified agent-harness and discovery shortlist, adoption incentives, and an
+  unfilled component passport for an eligibility-first agency starter kit.
 
 ## Run locally
 
@@ -140,11 +142,13 @@ Statuses describe empirical/institutional research, not completion of this websi
 | `site/model.mjs` | Pure integer-cent illustrative settlement arithmetic |
 | `site/app.mjs` | Browser-only calculator and bibliography filter |
 | `scripts/build.mjs` | Markdown, citations, navigation, and downloads |
+| `scripts/render-research.mjs` | Shared citation-aware renderer for research documents |
 | `scripts/presentation-data.mjs` | Derives live presentation data from canonical published sources |
 | `site/overview.html`, `site/overview.mjs`, `site/overview.css` | Source-loaded presentation and refresh states |
 | `site/open-work.html`, `site/open-work.css` | Source-linked research work-register view |
 | `examples/knowledge-object.json` | Fictional interoperable-object sketch, not a production contract/schema |
 | `examples/reputation-observation.json` | Unexecuted evidence-record sketch, not a real reputation score or ERC implementation |
+| `examples/component-passport.json` | Unfilled component-review record, not approval or runtime isolation |
 | `test/` | Node built-in test-runner checks |
 | `dist/` | Generated Pages artifact; intentionally not committed |
 

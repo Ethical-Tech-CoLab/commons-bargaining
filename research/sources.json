@@ -560,6 +560,86 @@
     "accessed": "2026-09-18"
   },
   {
+    "id": "S58",
+    "author": "Pi maintainers",
+    "year": "Repository inspected 2026",
+    "title": "Pi Agent Harness",
+    "url": "https://github.com/earendil-works/pi",
+    "claim": "The canonical repository reached from badlogic/pi-mono documents configurable model/provider connections and an MIT root code license, and explicitly assigns execution isolation to the deployment.",
+    "limit": "An inspectable harness, not a guarantee of model openness, security, dependency licensing, or restricted access to files, processes, networks, and credentials. Review the exact version and deployment.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S59",
+    "author": "Oh My Pi maintainers",
+    "year": "Repository inspected 2026",
+    "title": "can1357/oh-my-pi",
+    "url": "https://github.com/can1357/oh-my-pi",
+    "claim": "Identifies the project as a Pi fork, provides configurable model/provider endpoints and overrides, and includes an MIT root code license.",
+    "limit": "Does not independently establish performance, dependency safety, legal clearance, or an official relationship with VS Code. The root license does not license every connected model or service.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S60",
+    "author": "Microsoft",
+    "year": "Documentation approved 2026-09-16",
+    "title": "Build with agents in VS Code",
+    "url": "https://code.visualstudio.com/docs/agents/overview",
+    "claim": "Official documentation distinguishes agent harnesses, model choices, and execution environments, including the separation of local tool execution from model hosting.",
+    "limit": "Product documentation, not an independent benchmark or a statement that all model processing stays local. It does not establish an official Pi-VS Code product relationship.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S61",
+    "author": "Model Context Protocol Registry contributors",
+    "year": "Preview documentation inspected 2026",
+    "title": "The MCP Registry",
+    "url": "https://modelcontextprotocol.io/registry/about",
+    "claim": "Describes a preview metadata registry for open- and closed-source MCP servers, namespace authentication, and the separation of discovery from downstream code-security scanning.",
+    "limit": "Publisher authentication and registry inclusion are not security, quality, provenance, or legal-clearance certificates for a server.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S62",
+    "author": "Model Context Protocol contributors",
+    "year": "2026-07-28 specification",
+    "title": "Architecture - Model Context Protocol",
+    "url": "https://modelcontextprotocol.io/specification/2026-07-28/architecture",
+    "claim": "Defines host, client, and server architecture and responsibilities for controlled tool and resource integration.",
+    "limit": "A protocol reference, not proof that a specific adapter or deployment implements all responsibilities; exact supported versions and behavior require testing.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S63",
+    "author": "Hugging Face",
+    "year": "Live documentation inspected 2026",
+    "title": "Model Cards",
+    "url": "https://huggingface.co/docs/hub/model-cards",
+    "claim": "Describes model documentation and metadata for intended uses, licenses, training information, limitations, and evaluation.",
+    "limit": "Declared information is not independent verification or a blanket license. Downloadable weights do not establish training-data clearance or unrestricted reuse.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S64",
+    "author": "Hugging Face",
+    "year": "Live documentation inspected 2026",
+    "title": "Dataset Cards",
+    "url": "https://huggingface.co/docs/hub/datasets-cards",
+    "claim": "Describes dataset documentation, declared licensing, contents, use considerations, and potential biases.",
+    "limit": "A card does not prove complete provenance, consent, or permission for every intended use; dataset-specific terms and evidence remain necessary.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S65",
+    "author": "UK AI Security Institute and Inspect AI contributors",
+    "year": "Documentation inspected 2026",
+    "title": "Inspect AI: Framework for Large Language Model Evaluations",
+    "url": "https://inspect.aisi.org.uk/",
+    "claim": "An MIT-licensed evaluation framework with datasets, solvers, scorers, and multiple model-provider integrations.",
+    "limit": "A testing framework, not a universal quality or safety certification. Conclusions depend on task selection, grading methods, and integration fidelity.",
+    "accessed": "2026-09-18"
+  },
+  {
     "id": "S31",
     "author": "Charles I. Jones and Christopher Tonetti",
     "year": "2020",

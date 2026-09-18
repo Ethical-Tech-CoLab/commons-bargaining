@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile, copyFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { marked } from 'marked';
 import { createPresentationData } from './presentation-data.mjs';
+import { renderResearch } from './render-research.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => readFile(new URL(path, root), 'utf8');
@@ -36,24 +36,7 @@ for (const source of sources) {
   ids.add(source.id);
 }
 
-const headings = [];
-const renderer = new marked.Renderer();
-renderer.heading = ({ tokens, depth }) => {
-  const text = renderer.parser.parseInline(tokens);
-  const id = text.replace(/<[^>]*>/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  if (depth === 2) headings.push({ id, text });
-  return `<h${depth} id="${id}">${text}</h${depth}>\n`;
-};
-renderer.table = function (token) {
-  return `<div class="table-wrap" tabindex="0" role="region" aria-label="Research comparison table">${marked.Renderer.prototype.table.call(this, token)}</div>`;
-};
-const cited = new Set();
-const citedReport = report.replace(/\[(S\d{2})\]/g, (_, id) => {
-  if (!ids.has(id)) throw new Error(`Unknown citation: ${id}`);
-  cited.add(id);
-  return `<sup><a href="#ref-${id}" aria-label="Source ${id}">[${id}]</a></sup>`;
-});
-const rendered = marked.parse(citedReport, { renderer });
+const { html: rendered, headings, cited } = renderResearch(report, ids);
 for (const id of ids) if (!cited.has(id)) throw new Error(`Uncited source: ${id}`);
 const references = sources.map(source =>
   `<li id="ref-${source.id}"><span class="source-id">${source.id} / ${escape(source.year)}</span>
@@ -86,6 +69,7 @@ await writeFile(new URL('dist/report.md', root), `${report}\n\n## References\n\n
 await copyFile(new URL('research/sources.json', root), new URL('dist/sources.json', root));
 await copyFile(new URL('examples/knowledge-object.json', root), new URL('dist/knowledge-object.json', root));
 await copyFile(new URL('examples/reputation-observation.json', root), new URL('dist/reputation-observation.json', root));
+await copyFile(new URL('examples/component-passport.json', root), new URL('dist/component-passport.json', root));
 
 const presentation = createPresentationData({
   report, headings, template, diagramTemplate, work, sources,
