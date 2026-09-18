@@ -51,6 +51,8 @@ connections are documented rather than presented as a new official charter.
   clause sketches, and go/no-go tests before legal implementation.
 - Ethereum agent-registry precedents, scoped reputation evidence, and transparent
   eligibility-first ranking for data and the agents serving it.
+- Waze and Weather Underground participation incentives, data-quality limits,
+  and falsifiable scenarios for future AI demand for a governed data club.
 
 ## Run locally
 

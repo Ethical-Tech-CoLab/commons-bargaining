@@ -440,6 +440,76 @@
     "accessed": "2026-09-18"
   },
   {
+    "id": "S46",
+    "author": "Waze / Google",
+    "year": "Undated live documentation; accessed 2026",
+    "title": "About Waze",
+    "url": "https://support.google.com/waze/answer/6071177?hl=en",
+    "claim": "Describes how driving with Waze open contributes real-time information used for speeds, routing, and road information, alongside community reports.",
+    "limit": "A product description, not an independent causal evaluation of participation incentives or proof of contributor ownership or open licensing.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S47",
+    "author": "Waze / Google",
+    "year": "Undated live documentation; accessed 2026",
+    "title": "Earn points on Waze",
+    "url": "https://support.google.com/waze/answer/6273662?hl=en",
+    "claim": "Documents current participation points for driving, reports, confirmations, and map contributions.",
+    "limit": "Points are not a promise of cash compensation. The current schedule does not establish historical schedules or the causal effect of points on participation.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S48",
+    "author": "Waze / Google",
+    "year": "Undated live documentation; accessed 2026",
+    "title": "Join our community",
+    "url": "https://support.google.com/waze/answer/7312857?hl=en",
+    "claim": "Describes map-editor, localization, and beta-testing communities and contributions to map accuracy and currency.",
+    "limit": "Community participation does not establish corporate ownership, binding contributor votes, or an open-data license.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S49",
+    "author": "Weather Underground",
+    "year": "Undated live documentation; accessed 2026",
+    "title": "PWS Network Overview",
+    "url": "https://www.wunderground.com/pws/overview",
+    "claim": "Describes local conditions, visualization, historical archives, and sharing benefits for personal weather-station owners, with a participation path involving equipment purchase and installation.",
+    "limit": "Not proof of payments per reading or independent quality improvement. Inconsistent live network-size figures were not used; API and subscription entitlements are not established by this page.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S50",
+    "author": "Weather Underground",
+    "year": "Undated live documentation; accessed 2026",
+    "title": "Installing your Personal Weather Station",
+    "url": "https://www.wunderground.com/pws/installation-guide",
+    "claim": "Explains how station placement affects temperature, wind, rainfall, and humidity measurements, including sunlight and obstruction problems.",
+    "limit": "Installation guidance, not evidence that every contributing station complies or that all readings receive equivalent quality control.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S51",
+    "author": "Weather Underground",
+    "year": "Undated live documentation; accessed 2026",
+    "title": "Personal Weather Station Buying Guide",
+    "url": "https://www.wunderground.com/pws/buying-guide",
+    "claim": "Discusses compatible equipment, sensor quality, connectivity, and hardware choices for contribution to the station network.",
+    "limit": "Some product examples may be old. The guide neither quantifies typical contributor expenditure nor establishes compensation for observations.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S52",
+    "author": "The Weather Company",
+    "year": "Undated live documentation; accessed 2026",
+    "title": "Weather Data APIs",
+    "url": "https://www.weathercompany.com/weather-data-apis/",
+    "claim": "Describes commercial weather APIs and a limited 30-day trial.",
+    "limit": "A commercial product offer, not evidence of a personal weather-station contributor's API or subscription entitlement. Historical contributor-access terms were not verified.",
+    "accessed": "2026-09-18"
+  },
+  {
     "id": "S31",
     "author": "Charles I. Jones and Christopher Tonetti",
     "year": "2020",
