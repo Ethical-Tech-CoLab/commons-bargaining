@@ -102,6 +102,8 @@ Similarly, the EDPB rejects an automatic inference that a model trained on perso
 
 ## 5. From digital Costco to a bargaining federation
 
+**The institution to build is a proposed Commons Bargaining Federation (CBF):** a member-governed organization that buys accountable AI services, represents specifically authorized contributors, and funds independent commons stewardship. Its first product is an enforceable service agreement, not a universal data pool. The [institution blueprint](#23-institution-blueprint-a-commons-bargaining-federation) specifies the functions, mandates, governance, and bounded starting sequence.
+
 ### Two different forms of scale
 
 The brief's "digital costo" is interpreted as a **digital Costco**, a membership-based aggregation analogy. Costco's own reporting supports the commercial relevance of membership and scale; it does not validate a consumer-owned AI institution or imply that Costco itself is a cooperative. [S16]
@@ -357,6 +359,8 @@ For Alice's request to example.com, this means choosing the browser or agent's d
 
 At each contract handoff, record an **enforceable condition**, an **exit or refusal mechanism**, a **beneficiary**, and an **independent verification method**. If a claimed commons branch lacks these, label it an aspiration rather than a demonstrated return to the commons.
 
+The companion page's [node-by-node tipping points](./divergence.html#tipping-points) identifies the countervailing power, organizing actor, enforceable instrument, evidence, and remaining capture risk at each handoff. These are proposed causal mechanisms to test, not measured transition thresholds: open infrastructure alone does not force an incumbent to share control or surplus.
+
 ## 12. Alice and Bob: three end-to-end flows
 
 ### A. Alice buys an assistant; Bob is her correspondent
@@ -481,6 +485,8 @@ Philanthropy should buy learning and institution-building capacity, not merely a
 ## 16. Research program and falsifiable hypotheses
 
 The central empirical question is whether an institution changes bargaining outcomes and control, not whether participants express abstract enthusiasm for fairness.
+
+The [open research questions and work register](./open-work.html) records the current follow-on questions, next steps, and explicit statuses. It is the canonical work source for the [live overview presentation](./overview.html); presentation text is drawn from this report rather than maintained as a separate slide draft.
 
 | Hypothesis | Study and comparison | Primary outcome and failure signal |
 |---|---|---|
@@ -817,7 +823,74 @@ Measure paid willingness to subscribe, renewal after the initial trial, quality 
 
 The strategic question is not "How much data can the club collect?" It is **which dependable service the community can provide better than its alternatives, at a sustainable cost and on acceptable terms**.
 
-## 23. Conclusion
+## 23. Institution blueprint: a Commons Bargaining Federation
+
+**Recommendation: build a Commons Bargaining Federation (CBF).** It is a member-governed institution for purchasing accountable AI services, representing specifically authorized contributors, and supporting independent public-interest stewardship. Its first product should be a competitively negotiated, enforceable AI-service agreement, not a universal data pool or a token.
+
+This is a **proposed institutional blueprint**, not an incorporated organization, validated business, statutory labor union, investment fund, or endorsement by any named researcher. "Federation" describes the governance arrangement; local counsel must establish the legal forms and actual authority.
+
+### Functions first, legal entities when justified
+
+Preserve the three-part purchasing, contributor-representation, and commons-funding design, but do not incorporate three entities automatically on day one.
+
+| Required function | Concrete responsibility | Boundary that makes it credible |
+|---|---|---|
+| Purchasing cooperative function | Aggregate authorized commitments, solicit bids, and negotiate service, price, portability, and accountability | No commitments beyond members' approved mandates or spending limits |
+| Contributor bargaining association | Maintain the rights-and-mandates register and negotiate specified licensing or contribution schedules | Contributors retain ungranted rights; membership is not blanket consent or data transfer |
+| Independent commons fund | Finance preservation, open knowledge, public-interest evaluation, and participation support | Restricted accounts, independent allocation, and public reporting; not an opaque operator subsidy |
+| Professional operator | Run procurement, administer contracts and records, and support complaints | No authority to expand purposes or waive protected rights |
+| Independent assurance | Inspect authority records, contractual compliance, privacy, and reported benefits | Findings cannot be controlled by the commercial team whose work is evaluated |
+| Regulated payment partner | Process charges and distributions through appropriately authorized services | The federation does not assume that holding or moving other people's money is unregulated |
+
+Use separate legal entities where law, fiduciary duties, or credible independence require them. Applicable DGA intermediation and neutrality requirements must be assessed before combining services or reusing intermediated data. Functional separation in a diagram is not a substitute for a required legal separation. [S11]
+
+### Membership, representation, and mandates
+
+The initial buyers could include individuals, libraries, nonprofits, and small organizations. Contributors could include creators, professionals, and organizations with demonstrable authority over specified inputs. Open-knowledge stewards participate as stewards, not presumed owners of public-domain material.
+
+Provide free civic participation, consultation, and complaint access alongside optional paid services. Formal legal membership is a separate matter: if the chosen cooperative form requires a capital contribution, provide lawful inclusion subsidies or another suitable arrangement rather than pretending the requirement disappears. Payment must not buy extra constitutional influence.
+
+Members need information, voting, recall, and exit rights. Affected nonmembers and host communities need representation and complaints access because contributor votes alone do not represent everyone exposed to data use. [S25]
+
+**Proposed founding governance to test:** buyer and contributor/supplier chambers, with a seven-seat steering board composed of two delegates from each chamber and three public-interest representatives, including affected-community representation. Keep the independent commons/affected-party review and reserved approvals described earlier; the steering board is not a substitute for them. Vendor counterparties do not gain governance control through a sales contract.
+
+Test one-year representative terms and six-month, transaction-specific negotiating mandates. These durations and seat allocations are initial design choices for community ratification, not evidence of an optimal constitution. Mandates should identify counterparties, scope, price limits, prohibited concessions, ratification, and expiry. Individual authorization and mandatory protections cannot be overridden by a board vote.
+
+Actual authority comes from lawful membership arrangements, agency, purchasing commitments, and contracts. A trustee label, member count, or "collective bargaining" name does not manufacture authority or employee status. [S03] [S07] [S33]
+
+### What is negotiated, and what creates leverage?
+
+Start with AI-service providers or resellers as counterparties. Negotiate predictable pricing, quality, accessibility, permitted processing, privacy settings, portability, incident response, audit evidence, and remedies. Clear contributor schedules separately, specifying retrieval, embeddings, training, fine-tuning, evaluation, and onward disclosure.
+
+Leverage requires credible commitments and alternatives: a buyer coalition that can purchase or switch; authorized inputs or continuing services that have real value; and reliable provenance, administration, and correction. Reduced transaction costs can benefit the counterparty too. Member count alone is not a credible purchasing commitment, and the public domain must not be enclosed to create artificial scarcity. [S16] [S23] [S26]
+
+The institution needs professionally competent procurement and contract management, local counsel, funded enforcement, and independent assurance. Fractional appointments may reduce initial overhead. Optional subscriptions, disclosed administration fees, and stewardship services can provide earned income; grants can finance research, inclusion, safeguards, and public goods. The earlier financial model remains hypothetical.
+
+Maintain distinct ledgers for operations, contributor liabilities, restricted grants, reserves, and commons allocations. Publish related-party transactions and allocation rules. Do not silently use contributor money to cover operating losses or describe rewarded licensing as DGA altruism. [S11]
+
+### Constitutional boundaries
+
+- Preserve public-domain freedoms and existing compliant CC permissions. [S26]
+- Do not infer permission to process personal information, including third-party information, merely from membership. [S10]
+- Do not presume employee bargaining protections or competition immunity for nonemployee licensing. [S13] [S33]
+- Distinguish future withdrawal, retained-record deletion, surviving permissions, and technically verifiable model remediation.
+- Do not launch binding commitments without a funded, accessible route to complain, investigate, enforce, and obtain a remedy.
+
+### A minimum viable institution
+
+**Days 1-30:** recruit a founding cohort; establish interim representation; commission legal scoping; adopt draft conflicts, mandate, and constitutional rules. A suitable sponsor may host the research pilot under written arrangements before incorporation, subject to counsel. This does not establish tax-exempt eligibility or a sponsor's commitment.
+
+**Days 31-60:** fund the bounded operator, counsel, assurance, and enforcement work. Seek commitments from two or three institutional buyers, assess a small contributor inventory, and request at least two credible vendor proposals. These are pilot targets, not proof of sufficient bargaining scale.
+
+**Days 61-90:** rehearse switching, authority review, use receipts, complaints, and payment failure. Ratify one capped purchasing mandate. Approve any contributor schedule separately; refuse unclear authority rather than treating participation as clearance.
+
+**Days 90-180:** run one purchasing contract and, only if cleared, one small contributor schedule. Publish the negotiated terms where lawful, independently reviewed mandate register, full-cost benefit analysis, portability test, grievance exercise, and lessons.
+
+Stop or redesign if authority remains unresolved, competition compliance lacks a defensible route, third-party rights cannot be protected, vendors reject essential accountability, exit fails, or the benefits do not justify full costs. If public benefits justify explicit subsidy, assess that transparently rather than presenting it as earned commercial viability.
+
+**Build the bargaining capacity before the marketplace.** Begin with a sponsored, professionally operated federation pilot; incorporate only the structure demonstrated functions and applicable law require.
+
+## 24. Conclusion
 
 Commons Bargaining is best understood as an effort to align **voice, authority, service, and benefit**, not as a universal auction of personal data. Consumer purchasing power can operate without data sales. Creator bargaining can operate without enclosing the public domain. Commons funding can operate without pretending to identify every person's contribution to a model. Communities can demand a say in physical infrastructure without first becoming data vendors.
 

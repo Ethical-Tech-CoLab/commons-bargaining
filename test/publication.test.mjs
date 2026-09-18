@@ -63,9 +63,11 @@ test('divergence map has all ten request nodes and a pair of governance choices 
   assert.match(svg, /<desc id="diagram-description">/);
 });
 
-test('both pages have shared permanent navigation with the requested labels', async () => {
+test('all publication pages have shared permanent navigation with the requested labels', async () => {
   const diagram = await readFile(new URL('../dist/divergence.html', import.meta.url), 'utf8');
-  for (const page of [html, diagram]) {
+  const overview = await readFile(new URL('../dist/overview.html', import.meta.url), 'utf8');
+  const work = await readFile(new URL('../dist/open-work.html', import.meta.url), 'utf8');
+  for (const page of [html, diagram, overview, work]) {
     assert.match(page, /class="site-header"/);
     assert.match(page, /aria-label="Primary navigation"/);
     assert.match(page, /data-nav="overview"[^>]*>Overview<\/a>/);
@@ -75,6 +77,8 @@ test('both pages have shared permanent navigation with the requested labels', as
     assert.doesNotMatch(page, /\{\{[A-Z_]+\}\}/);
   }
   assert.match(diagram, /data-nav="demos" aria-current="location"/);
+  assert.match(overview, /data-nav="overview" aria-current="location"/);
+  assert.match(work, /data-nav="research" aria-current="location"/);
   for (const [, anchor] of diagram.matchAll(/href="\.\/index\.html#([^"]+)"/g)) {
     assert.ok(html.includes(`id="${anchor}"`), `missing cross-page anchor ${anchor}`);
   }
@@ -91,18 +95,76 @@ test('the reputation sketch cannot masquerade as a verified evaluation or eligib
   assert.equal(observation.erc8004ConformanceClaimed, false);
 });
 
-test('both pages use the same green icon for the header and favicon', async () => {
+test('all publication pages use the same green icon for the header and favicon', async () => {
   const diagram = await readFile(new URL('../dist/divergence.html', import.meta.url), 'utf8');
+  const overview = await readFile(new URL('../dist/overview.html', import.meta.url), 'utf8');
+  const work = await readFile(new URL('../dist/open-work.html', import.meta.url), 'utf8');
   const icon = await readFile(new URL('../dist/favicon.svg', import.meta.url), 'utf8');
   assert.match(icon, /viewBox="0 0 28 28"/);
   assert.match(icon, /fill="#c8f04b"/);
   assert.equal([...icon.matchAll(/<circle /g)].length, 3);
-  for (const page of [html, diagram]) {
-    const favicon = page.match(/<link rel="icon" type="image\/svg\+xml" sizes="any" href="([^"]+)">/);
+  for (const page of [html, diagram, overview, work]) {
+    const favicon = page.match(/<link rel="icon"[^>]*href="([^"]+)"/);
     const headerIcon = page.match(/<img class="header-mark" src="([^"]+)"/);
     assert.ok(favicon && headerIcon);
     assert.match(favicon[1], /^\.\/favicon\.svg\?v=[a-f0-9]{12}$/);
     assert.equal(headerIcon[1], favicon[1]);
     await access(new URL(`../dist/${favicon[1]}`, import.meta.url));
+  }
+});
+
+test('presentation and open-work sources match the published report and canonical register', async () => {
+  const data = JSON.parse(await readFile(new URL('../dist/presentation-data.json', import.meta.url), 'utf8'));
+  const canonical = JSON.parse(await readFile(new URL('../research/open-work.json', import.meta.url), 'utf8'));
+  const work = await readFile(new URL('../dist/open-work.html', import.meta.url), 'utf8');
+  assert.equal(data.schemaVersion, 1);
+  assert.equal(data.sourceCount, sources.length);
+  assert.equal(data.workItems.length, canonical.items.length);
+  assert.match(data.revision.contentHash, /^[a-f0-9]{12}$/);
+  assert.ok(Number.isFinite(Date.parse(data.revision.builtAt)));
+  for (const section of data.sections) {
+    assert.ok(html.includes(`id="${section.id}"`), `missing research section ${section.id}`);
+    assert.equal(section.url, `./index.html#${section.id}`);
+  }
+  for (const [index, item] of data.workItems.entries()) {
+    assert.equal(item.question, canonical.items[index].question);
+    assert.equal(item.status, canonical.items[index].status);
+    assert.ok(work.includes(`id="${item.id}"`));
+    for (const id of item.sourceIds) assert.ok(html.includes(`id="${id}"`));
+  }
+  assert.match(work, /source of record/);
+});
+
+test('presentation and work-register pages have resolvable local assets and source links', async () => {
+  for (const file of ['overview.html', 'open-work.html']) {
+    const page = await readFile(new URL(`../dist/${file}`, import.meta.url), 'utf8');
+    const ids = [...page.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
+    assert.equal(ids.length, new Set(ids).size, `duplicate ids in ${file}`);
+    for (const [, anchor] of page.matchAll(/href="#([^"]+)"/g)) {
+      assert.ok(ids.includes(anchor), `missing anchor ${anchor} in ${file}`);
+    }
+    for (const [, path] of page.matchAll(/(?:href|src)="\.\/([^"#]+)"/g)) {
+      await access(new URL(`../dist/${path}`, import.meta.url));
+    }
+    for (const [, id] of page.matchAll(/href="\.\/index\.html#([^"]+)"/g)) {
+      assert.ok(html.includes(`id="${id}"`), `missing report target ${id}`);
+    }
+  }
+});
+
+test('every divergence node explains the levers and tests that could change its bargain', async () => {
+  const page = await readFile(new URL('../dist/divergence.html', import.meta.url), 'utf8');
+  const cards = [...page.matchAll(/<li class="tipping-card"[\s\S]*?<\/li>/g)].map(match => match[0]);
+  assert.equal(cards.length, 10);
+  for (const card of cards) {
+    for (const label of ['Countervailing power', 'Who organizes / acts', 'Enforceable instrument',
+      'Observable proof / decision test', 'Remaining capture risk']) {
+      assert.ok(card.includes(label), `missing tipping-point dimension ${label}`);
+    }
+  }
+  const ids = new Set([...page.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]));
+  for (const [, id] of page.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.has(id), `missing diagram anchor ${id}`);
+  for (const [, id] of page.matchAll(/href="\.\/index\.html#([^"]+)"/g)) {
+    assert.ok(html.includes(`id="${id}"`), `missing diagram research link ${id}`);
   }
 });

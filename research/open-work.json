@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "description": "Canonical research questions and follow-on work. Statuses refer to the research, not completion of this website. No investigators or funding commitments are assigned.",
+  "items": [
+    {
+      "id": "procurement-benefit",
+      "title": "Test collective purchasing benefits",
+      "question": "Does pooled procurement improve price and service after dues, switching costs, and differences in privacy or quality?",
+      "status": "open",
+      "nextStep": "Obtain matched individual and collective offers, define comparable service conditions, and preregister net-benefit measures.",
+      "sourceTitles": ["Research program and falsifiable hypotheses", "Business model and economic discipline"]
+    },
+    {
+      "id": "mandate-comprehension",
+      "title": "Test meaningful permission and refusal",
+      "question": "Do members understand retrieval versus training permissions and successfully exercise refusal, withdrawal, and exit?",
+      "status": "open",
+      "nextStep": "Run compensated usability studies with low-risk fictional records and test actual revocation and export workflows.",
+      "sourceTitles": ["Research program and falsifiable hypotheses", "Gmail, private AI, and meaningful opt-in"]
+    },
+    {
+      "id": "contributor-bargaining",
+      "title": "Measure supplier bargaining gains",
+      "question": "Can collective representation improve contributors' net compensation and enforceable conditions without depending indefinitely on subsidy?",
+      "status": "open",
+      "nextStep": "Compare bounded licensing or stewardship offers, full transaction costs, repeat buyer demand, and contributor outcomes.",
+      "sourceTitles": ["Research program and falsifiable hypotheses", "From digital Costco to a bargaining federation"]
+    },
+    {
+      "id": "commons-additionality",
+      "title": "Verify additional commons benefits",
+      "question": "Do benefit covenants and funding awards improve maintenance and public access without enclosing open knowledge or merely replacing existing support?",
+      "status": "open",
+      "nextStep": "Choose matched open resources and measure additional maintenance, accessibility, steward autonomy, and continued lawful reuse.",
+      "sourceTitles": ["Research program and falsifiable hypotheses", "Creative Commons as an aggregation model"]
+    },
+    {
+      "id": "supplier-voice",
+      "title": "Test representative club governance",
+      "question": "Can buyer and supplier chambers plus an affected-party council prevent capture while keeping decisions practical and participation accessible?",
+      "status": "open",
+      "nextStep": "Rehearse admission, fees, conflicts, data-use changes, deadlock, and exit with compensated participants; record whose decisions change.",
+      "sourceTitles": ["From digital Costco to a bargaining federation", "Research program and falsifiable hypotheses"]
+    },
+    {
+      "id": "energy-bargaining",
+      "title": "Evaluate infrastructure bargaining",
+      "question": "Can collective procurement and host-community representation measurably reduce externalized energy, water, and ratepayer burdens?",
+      "status": "open",
+      "nextStep": "Select a bounded site or procurement case, establish a credible comparison, and fund independent measurement and community review.",
+      "sourceTitles": ["Energy, data centers, and community bargaining", "Research program and falsifiable hypotheses"]
+    },
+    {
+      "id": "agreement-authority",
+      "title": "Validate a bargaining agreement",
+      "question": "Which representative mandates, contract terms, enforcement resources, and competition-law routes are defensible for the selected participants and jurisdiction?",
+      "status": "open",
+      "nextStep": "Compare existing instruments, commission local legal review, and test a redlined nonbinding framework before any executed pilot.",
+      "sourceTitles": ["Follow-on research: a Commons Bargaining Framework Agreement", "Regulatory framework: present rules and proposals"]
+    },
+    {
+      "id": "ranker-validation",
+      "title": "Evaluate contextual reputation and ranking",
+      "question": "Does eligibility-first, task-specific ranking predict successful outcomes while resisting manipulation and giving qualified newcomers fair exposure?",
+      "status": "open",
+      "nextStep": "Define a held-out evaluation, publish component metrics and uncertainty, and test conflicts, fake feedback, version changes, and appeals.",
+      "sourceTitles": ["Reputation, validation, and quality ranking"]
+    },
+    {
+      "id": "commons-credit",
+      "title": "Assess commons-reinvestment credits",
+      "question": "Can capped credits create additional public benefit at an acceptable administrative and fiscal cost without donor control, laundering, or double counting?",
+      "status": "open",
+      "nextStep": "Specify the tax base and counterfactual, model forgone treasury revenue, and independently review eligible spending and recipient protections.",
+      "sourceTitles": ["Data dividends, Pigouvian taxes, and commons credits"]
+    },
+    {
+      "id": "maintained-data-demand",
+      "title": "Test future AI demand",
+      "question": "For a real application, does a governed contributor network outperform open data, direct licensing, or in-house collection on quality-adjusted total cost?",
+      "status": "open",
+      "nextStep": "Run a narrow paid pilot, compare held-out outcomes and full costs, and measure renewals, contributor burdens, coverage, and meaningful agency.",
+      "sourceTitles": ["Participation incentives and the future AI data club", "A ninety-day starting sequence"]
+    },
+    {
+      "id": "node-leverage",
+      "title": "Test what changes each infrastructure bargain",
+      "question": "At each node, which combination of organized demand, credible alternatives, enforceable conditions, and independent evidence changes actual control or benefit allocation?",
+      "status": "open",
+      "nextStep": "Select a bounded node and counterparty, document the proposed lever, negotiate a measurable commitment, and test exit, audit, and remedies.",
+      "sourceTitles": ["New knowledge objects and technical architecture"]
+    },
+    {
+      "id": "federation-pilot",
+      "title": "Validate a minimum viable bargaining institution",
+      "question": "Can a professionally operated Commons Bargaining Federation secure an enforceable agreement and demonstrable member benefits before taking on unnecessary institutional complexity?",
+      "status": "open",
+      "nextStep": "Choose a jurisdiction and founding cohort, fund counsel and enforcement, ratify a capped mandate, and compare credible vendor offers.",
+      "sourceTitles": ["Institution blueprint: a Commons Bargaining Federation", "From digital Costco to a bargaining federation"]
+    }
+  ]
+}

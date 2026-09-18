@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#120c1a">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="A live, source-linked presentation of the project, research, demonstrations, and open work.">
+  <title>Live overview | Commons Bargaining</title>
+  <link rel="icon" type="image/svg+xml" sizes="any" href="./favicon.svg">
+  <link rel="stylesheet" href="./header.css">
+  <link rel="stylesheet" href="./overview.css">
+  <script type="module" src="./overview.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#presentation">Skip to presentation</a>
+  {{HEADER}}
+  <main id="presentation" aria-labelledby="overview-title">
+    <div class="presentation-heading">
+      <div>
+        <p class="eyebrow">A source-linked briefing</p>
+        <h1 id="overview-title">Live overview</h1>
+      </div>
+      <div class="utility-actions">
+        <button id="refresh" type="button">Refresh publication <span aria-hidden="true">↻</span></button>
+        <button id="print-overview" type="button" disabled>Print all slides</button>
+      </div>
+    </div>
+    <section class="publication-status" aria-label="Publication freshness" data-state="loading">
+      <span class="status-dot" aria-hidden="true"></span>
+      <div>
+        <p id="freshness-status" role="status" aria-live="polite" aria-atomic="true">Loading the latest published presentation…</p>
+        <p id="revision" class="revision">No published revision loaded yet.</p>
+      </div>
+    </section>
+    <div id="load-error" class="error-panel" role="alert" hidden>
+      <h2>Publication could not be verified</h2>
+      <p id="error-message"></p>
+      <p>Previous content is not being shown as current. Check your connection and retry, or open the canonical sources directly.</p>
+      <button id="retry" class="primary-button" type="button">Retry loading</button>
+      <a href="./index.html#report">Read the report</a>
+      <a href="./open-work.html">Open the work register</a>
+    </div>
+    <noscript>
+      <div class="error-panel">
+        <h2>This live presentation requires JavaScript</h2>
+        <p>Read the <a href="./index.html#report">complete research</a> and <a href="./open-work.html">canonical work register</a> without JavaScript.</p>
+      </div>
+    </noscript>
+    <div id="loading-panel" class="loading-panel" aria-hidden="true">
+      <span class="loading-number">↻</span>
+      <p>Retrieving research, sources, and open work</p>
+    </div>
+    <div id="deck" hidden aria-busy="true">
+      <nav id="chapters" class="chapters" aria-label="Presentation chapters"></nav>
+      <div id="slides"></div>
+      <div class="slide-controls">
+        <button id="previous" type="button" aria-label="Previous slide">← <span>Previous</span></button>
+        <p id="slide-position" role="status" aria-live="polite" aria-atomic="true"></p>
+        <button id="next" type="button" aria-label="Next slide"><span>Next</span> →</button>
+      </div>
+      <p class="keyboard-help">Use ← / → or Page Up / Page Down to move. Home / End jumps to the first / last slide. Expand a source to go deeper.</p>
+    </div>
+    <details class="freshness-explanation">
+      <summary>What “live” means</summary>
+      <p>This presentation reads the published research and work register when opened, restored, or returned to view. It requests a fresh copy, and every excerpt links back to its canonical source. There is no separately maintained slide narrative.</p>
+      <p>“Latest” means the latest published revision returned by this site—not unpublished edits. Browser, network, or CDN delays can still affect delivery. The publication timestamp, revision, and last successful check are shown above. A failed refresh is explicit and hides unverified content.</p>
+    </details>
+  </main>
+  <footer class="overview-footer">
+    <span>Research excerpts, not independent summaries.</span>
+    <a href="./index.html#report">Complete research</a>
+    <a href="./open-work.html">Canonical work register</a>
+  </footer>
+</body>
+</html>

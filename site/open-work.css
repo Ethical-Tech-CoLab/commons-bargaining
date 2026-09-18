@@ -1,0 +1,34 @@
+:root { color-scheme: dark; background: #120c1a; color: #f3eefb; font-family: system-ui, sans-serif; line-height: 1.65; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: #c8f04b; text-underline-offset: .2em; }
+:focus-visible { outline: 3px solid #c8f04b; outline-offset: 5px; }
+main, footer { max-width: 1200px; margin: auto; padding: 3rem 5vw; }
+h1 { font-size: clamp(2.3rem, 6vw, 4.8rem); line-height: 1.05; letter-spacing: -.05em; }
+h1 em { font-style: normal; color: #c8f04b; }
+h2 { font-size: 1.25rem; line-height: 1.3; }
+.eyebrow { color: #c8f04b; font-size: .75rem; letter-spacing: .15em; text-transform: uppercase; }
+.intro { max-width: 850px; font-size: 1.1rem; color: #c1b6d2; }
+.revision, footer { font-size: .8rem; color: #c1b6d2; }
+.work-links { display: flex; flex-wrap: wrap; gap: 1rem 2rem; margin: 2rem 0; }
+.summary { padding: 1rem 0; border-block: 1px solid #4a355d; }
+.work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.work-item { padding: 1.5rem; border: 1px solid #4a355d; border-radius: 8px; background: #201630; }
+.work-item:target { outline: 2px solid #c8f04b; outline-offset: 4px; }
+.work-item h2 { margin-top: 1rem; }
+.work-item .status { display: inline-block; color: #c8f04b; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; }
+.work-item .next { color: #c1b6d2; font-size: .9rem; }
+.work-item ul { padding-left: 1.2rem; font-size: .8rem; }
+aside { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #4a355d; }
+footer { padding-top: 0; }
+.skip { position: absolute; top: -100px; left: 1rem; padding: 1rem; background: #c8f04b; color: #141414; }
+.skip:focus { top: 1rem; }
+@media (max-width: 700px) { .work-grid { grid-template-columns: 1fr; } main { padding-top: 2rem; } }
+@media print {
+  :root { color-scheme: light; background: white; color: #111; }
+  .work-links, .skip { display: none; }
+  .work-item { background: white; break-inside: avoid; }
+  h1 em, a, .eyebrow, .intro, .revision, .work-item .status, .work-item .next, footer { color: #111; }
+  .work-grid { display: block; }
+  .work-item { margin: 1rem 0; }
+}

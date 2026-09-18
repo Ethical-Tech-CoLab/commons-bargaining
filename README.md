@@ -3,6 +3,8 @@
 **Collective Bargaining Institutions for the AI Data Commons**
 
 [Read the research](https://ethical-tech-colab.github.io/commons-bargaining/) |
+[Live overview presentation](https://ethical-tech-colab.github.io/commons-bargaining/overview.html) |
+[Open research questions](https://ethical-tech-colab.github.io/commons-bargaining/open-work.html) |
 [Source report](research/report.md) |
 [Evidence register](research/sources.json) |
 [Deployment](https://github.com/Ethical-Tech-CoLab/commons-bargaining/actions/workflows/pages.yml)
@@ -53,6 +55,8 @@ connections are documented rather than presented as a new official charter.
   eligibility-first ranking for data and the agents serving it.
 - Waze and Weather Underground participation incentives, data-quality limits,
   and falsifiable scenarios for future AI demand for a governed data club.
+- A concrete Commons Bargaining Federation blueprint and node-by-node levers
+  for changing control, bargaining power, and benefit allocation.
 
 ## Run locally
 
@@ -95,12 +99,36 @@ and sensitivity figures, and the illustrative tax-credit cap and treasury floor.
 Tests do not establish the truth of external claims or the legal enforceability
 of the proposed institutions. External source access can change.
 
+## Live overview and research work register
+
+[The overview presentation](https://ethical-tech-colab.github.io/commons-bargaining/overview.html)
+is a reader of published source data, not a separately maintained slide draft.
+The ordinary build derives `presentation-data.json` from the report, source
+register, project and demo pages, and [research/open-work.json](research/open-work.json).
+It also publishes [the work register](https://ethical-tech-colab.github.io/commons-bargaining/open-work.html)
+from that same canonical work file.
+
+On opening the presentation or returning to it, the browser requests the current
+published data with cache revalidation. Manual refresh is also available.
+Freshness identifies the published revision and build time, not the date on which
+research findings were independently reverified. Unpublished edits, failed
+deployments, or network failures cannot be promised as current; failed refreshes
+are surfaced rather than silently presenting old content as up to date.
+
+To change an open question, next step, or status, edit the canonical work register
+and push. To change the research, edit the report. The normal deployment updates
+the source data automatically; no separate presentation regeneration or AI
+summary maintenance is required. Renumbered source sections are resolved by their
+titles; removed or ambiguous titles fail validation instead of leaving stale links.
+Statuses describe empirical/institutional research, not completion of this website.
+
 ## File map
 
 | File | Role |
 |---|---|
 | `research/report.md` | Canonical original research text |
 | `research/sources.json` | Evidence, source URL, supported claim, and limitation |
+| `research/open-work.json` | Canonical research questions, next steps, statuses, and source references |
 | `site/template.html` | Accessible publication shell |
 | `site/header.html`, `site/header.css` | Shared persistent Overview, Demos, Research navigation |
 | `site/favicon.svg` | Shared green header mark and browser favicon |
@@ -108,6 +136,9 @@ of the proposed institutions. External source access can change.
 | `site/model.mjs` | Pure integer-cent illustrative settlement arithmetic |
 | `site/app.mjs` | Browser-only calculator and bibliography filter |
 | `scripts/build.mjs` | Markdown, citations, navigation, and downloads |
+| `scripts/presentation-data.mjs` | Derives live presentation data from canonical published sources |
+| `site/overview.html`, `site/overview.mjs`, `site/overview.css` | Source-loaded presentation and refresh states |
+| `site/open-work.html`, `site/open-work.css` | Source-linked research work-register view |
 | `examples/knowledge-object.json` | Fictional interoperable-object sketch, not a production contract/schema |
 | `examples/reputation-observation.json` | Unexecuted evidence-record sketch, not a real reputation score or ERC implementation |
 | `test/` | Node built-in test-runner checks |
