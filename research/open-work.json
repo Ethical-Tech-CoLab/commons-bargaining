@@ -105,6 +105,14 @@
       "status": "open",
       "nextStep": "Preregister a low-risk library-assistant study with baseline, rubric-only, and calibrated reward variants; keep evaluation independent and assess regulatory alternatives separately.",
       "sourceTitles": ["Commons-authored RL rewards and regulatory design"]
+    },
+    {
+      "id": "pro-human-stack",
+      "title": "Test the pro-human stack definition",
+      "question": "Can a bounded stack demonstrate useful capability, meaningful refusal, independent challenge, usable exit, fair accounting, and funded remedies across its components?",
+      "status": "open",
+      "nextStep": "Specify a task and jurisdiction, document every component's accountability tuple, and independently rehearse permission, failure, complaint, payment, and migration cases.",
+      "sourceTitles": ["A pro-human stack: working definition and test"]
     }
   ]
 }

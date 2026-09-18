@@ -59,6 +59,8 @@ connections are documented rather than presented as a new official charter.
   for changing control, bargaining power, and benefit allocation.
 - Commons-authored RL rewards, the limits of fixed reward quotas, and a proposed
   participation-and-outcomes regulatory pathway.
+- A proposed pro-human stack definition with component accountability, rights
+  boundaries, independent evidence, and scoped operational acceptance tests.
 
 ## Run locally
 

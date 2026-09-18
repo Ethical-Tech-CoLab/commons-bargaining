@@ -102,7 +102,7 @@ Similarly, the EDPB rejects an automatic inference that a model trained on perso
 
 ## 5. From digital Costco to a bargaining federation
 
-**The institution to build is a proposed Commons Collective Federation (CCF):** a member-governed organization that buys accountable AI services, represents specifically authorized contributors, and funds independent commons stewardship. Its first product is an enforceable service agreement, not a universal data pool. The [institution blueprint](#23-institution-blueprint-a-commons-collective-federation) specifies the functions, mandates, governance, and bounded starting sequence.
+**The institution to build is a proposed Commons Collective Federation (CCF):** a member-governed organization that buys accountable AI services, represents specifically authorized contributors, and funds independent commons stewardship. Its first product is an enforceable service agreement, not a universal data pool. The [institution blueprint](#23-institution-blueprint-a-commons-collective-federation) specifies the functions, mandates, governance, and bounded starting sequence. It supplies institutional support for a [pro-human stack](#25-a-pro-human-stack-working-definition-and-test): technology whose human agency claims can be tested and enforced.
 
 ### Two different forms of scale
 
@@ -955,7 +955,73 @@ Preregister held-out tests, subgroup analysis, uncertainty reporting, full costs
 
 **The institutional objective is accountable public influence, not a particular coefficient.** Mandating a process or share is defensible only if independently assessed outcomes, rights protections, legitimacy, and costs support it.
 
-## 25. Conclusion
+## 25. A pro-human stack: working definition and test
+
+> **A pro-human stack is a sociotechnical system that expands people's practical capabilities while preserving their ability to understand, authorize, refuse, contest, and leave consequential arrangements. It combines software and infrastructure with representative institutions, enforceable obligations, independent scrutiny, and funded human remedies.**
+
+The defining property is **accountable human agency**, not an open-source label, decentralization, or branding alone. Openness can be valuable, but it is neither necessary for every individual component nor sufficient for the whole system.
+
+This is a **proposed working definition for this research**, not official CoLab approval, a statement that the stack has been implemented, or an accreditation scheme. It draws on the published CoLab orientation toward affected people, institutional accountability, human rights, and avoidance of harm while remaining a distinct proposal. [S01] [S02]
+
+### The accountability tuple
+
+For every component, document:
+
+```text
+Accountable actor -> decision right -> enforceable condition
+-> observable evidence -> appeal/remedy -> funded exit/maintenance
+```
+
+Name who can change the component's behavior, who bears responsibility, what constrains them, how compliance is checked, how people obtain redress, and who pays when it fails or becomes obsolete. An unnamed "community," a reputation token, or an autonomous agent is not an adequate accountable actor.
+
+### Stack layers and evidence requirements
+
+| Layer | Required property under this proposed definition | Evidence to inspect |
+|---|---|---|
+| Institution and constitution | Scoped authority, plural representation, protected rights, and independent challenge | Charter, mandates, elections, conflicts, and remedy budgets [S03] [S25] |
+| Identity and permission | Minimal disclosure, specific delegation, applicable consent, expiry, and revocation | Permission records and tested controls; no universal personal trust score [S10] [S19] |
+| Harness and agent | Understandable task boundaries, meaningful interruption, and controls on consequential actions | Task traces, approval gates, refusal tests, accessible controls, and recovery exercises |
+| Protocols and tools | Documented interfaces, bounded tool permissions, and replaceable integrations | Permission manifests, interoperability and migration tests, and failure handling |
+| Knowledge and data | Purpose-aware access, provenance, and applicable permissions and exceptions | Source records, license notices, access decisions, and retention schedules [S10] [S18] [S26] |
+| Models and compute | Disclosed limitations, constrained use, and contestable selection | Version records, task evaluations, contractual controls, substitution tests, and incidents |
+| Evaluation and reward governance | Plural input, protected-rights constraints, and independently reviewed objective changes | Protocols, dissent, reward specifications, calibration, and independent findings |
+| Provenance, assurance, and reputation | Traceable claims and contextual, challengeable assessments | Linked evidence, assessor independence, uncertainty, and correction histories [S18] [S19] |
+| Settlement and commons return | Transparent charges, authorized distributions, and sustained stewardship | Reconciled accounts, allocation rules, receipts, inclusion, and maintenance budgets |
+| Physical infrastructure | Accountable resource use and meaningful host-community recourse | Metered or explicitly estimated energy and water data, methods, impact records, and remedies [S21] |
+
+Provenance and credentials can support scrutiny. They do not independently establish truth, lawful authority, task suitability, or fairness.
+
+### Seven boundaries that cannot be replaced by branding
+
+1. **Protected rights and meaningful refusal.** People must not be forced to accept unrelated data uses to participate. Explain refusal and its consequences in usable terms. Majority decisions cannot waive third-party privacy or mandatory protections. Rights retain their legal scope and exceptions; this is not a universal data-ownership claim. [S10]
+2. **Plural and bounded collective authority.** Include relevant users, contributors, and affected people, not only investors or large suppliers. Make mandates limited, reviewable, and challengeable. Contributor representation does not exhaust the interests of people affected by a model. [S03] [S25]
+3. **Usable exit and maintained alternatives.** Test export, switching, termination, assistance, and continuity while protecting others' information. Fund migration and maintenance. A nominal right to leave an unusable system is not enough.
+4. **Permission-aware knowledge without enclosure.** Assess public, private, professional, and derived data contextually. Preserve public-domain freedoms, compliant open-license permissions, and lawful exceptions. Tokens, credentials, and platform registration do not manufacture underlying rights. [S10] [S26]
+5. **Independent assurance and human remedy.** Evaluate specified claims and outcomes in stated contexts. Do not turn service reputation into an automated social-credit score or universal rating of a person. Provide accessible correction, human review, and effective remedies for harms obscured by aggregate success.
+6. **Independent commons-reward governance.** Public contributions to training objectives are a research proposal, not an existing mandate or a guaranteed optimization breakthrough. Keep objective-setting independent of commercial management, protect affected perspectives and rights floors, and commission independent review. Numerical RL reward and monetary compensation are different; neither measures a person's worth.
+7. **Fair accounting, inclusion, and community responsibility.** Disclose fees, costs, distribution, and stewardship allocations. Protect segregated liabilities and enforcement budgets. Optional paid services can fund operations, but protected rights and civic voice must not depend on selling personal data. Address host-community burdens, rather than merely reporting them. [S21]
+
+### Operational acceptance, not a moral seal
+
+Before making a conformity claim, state the users, tasks, jurisdictions, components, versions, and exclusions being assessed. Test an ordinary useful task and adverse cases: refuse an optional data use; block an unauthorized tool action; challenge an erroneous output; obtain human review; reconcile a charge; and switch suppliers while exporting only authorized information. Include accessibility and an affected-nonmember complaint.
+
+An independent reviewer should inspect the accountability tuples, permission evidence, known failures, actual remedies, resource-accounting methods, and funded maintenance. Missing essential authority, failed refusal or exit, breached mandatory protections, or unfunded promised remedies are no-go conditions. Material changes require renewed assessment.
+
+Use graded, bounded descriptions:
+
+- **Proposed:** a documented blueprint.
+- **Design-conformant within stated scope:** specified requirements and operational tests are evidenced.
+- **Independently evaluated outcome:** a named evaluator reports particular results, methods, dates, and limitations.
+
+These labels do not create accreditation or establish that the Commons Collective website itself implements the full stack.
+
+### A counterexample and a possible hybrid
+
+A fully open-source system that traps user histories, hides charges, or penalizes refusal fails this definition. Conversely, an open harness using a proprietary model and centralized payment service **could** support a bounded conformity claim if enforceable conditions, independent evidence, real substitution, protected rights, and funded remedies satisfy the requirements. Neither architecture qualifies automatically.
+
+The stack is therefore **an allocation of accountable power across the whole system**, supported by technology, not a shopping list of software labeled open.
+
+## 26. Conclusion
 
 Commons Collective is best understood as an effort to align **voice, authority, service, and benefit**, not as a universal auction of personal data. Consumer purchasing power can operate without data sales. Creator bargaining can operate without enclosing the public domain. Commons funding can operate without pretending to identify every person's contribution to a model. Communities can demand a say in physical infrastructure without first becoming data vendors.
 

@@ -34,7 +34,8 @@ test('research covers requested surfaces and labels its limits', () => {
     'non-binding clause sketches', 'ERC-8004', 'task-local ordering',
     'eligible candidates', 'validation registries', 'Waze',
     'Weather Underground', 'quality-adjusted total cost', 'Commons Reward Trust',
-    'reinforcement-learning reward', 'compensatory average']) {
+    'reinforcement-learning reward', 'compensatory average', 'pro-human stack',
+    'accountability tuple', 'funded exit/maintenance']) {
     assert.ok(html.toLowerCase().includes(term.toLowerCase()), `missing ${term}`);
   }
   assert.doesNotMatch(html, /\{\{[A-Z_]+\}\}/);
