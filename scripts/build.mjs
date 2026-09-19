@@ -1,6 +1,6 @@
 import { mkdir, readFile, writeFile, copyFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { createPresentationData } from './presentation-data.mjs';
+import { createCompanionSection, createPresentationData } from './presentation-data.mjs';
 import { renderResearch } from './render-research.mjs';
 import QRCode from 'qrcode';
 
@@ -10,8 +10,13 @@ const escape = value => String(value).replace(/[&<>"']/g, char => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
 })[char]);
 
-const sources = JSON.parse(await read('research/sources.json')).sort((a, b) => a.id.localeCompare(b.id));
+const sources = [
+  ...JSON.parse(await read('research/sources.json')),
+  ...JSON.parse(await read('research/replication-sources.json')),
+].sort((a, b) => a.id.localeCompare(b.id));
 const report = await read('research/report.md');
+const replicationPaper = await read('research/replication-blueprint.md');
+const sectorProfile = JSON.parse(await read('templates/sector-profile.json'));
 const template = await read('site/template.html');
 const diagramTemplate = await read('site/divergence.html');
 const workSource = await read('research/open-work.json');
@@ -49,7 +54,16 @@ for (const source of sources) {
 }
 
 const { html: rendered, headings, cited } = renderResearch(report, ids);
-for (const id of ids) if (!cited.has(id)) throw new Error(`Uncited source: ${id}`);
+const resolvePaperLink = href => {
+  if (/^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i.test(href)) return href;
+  const resolved = new URL(href, 'https://publication.invalid/research/replication-blueprint.md');
+  return `.${resolved.pathname}${resolved.search}${resolved.hash}`;
+};
+const blueprint = renderResearch(replicationPaper, ids, {
+  citationPrefix: './index.html#ref-',
+  resolveLink: resolvePaperLink,
+});
+for (const id of ids) if (!cited.has(id) && !blueprint.cited.has(id)) throw new Error(`Uncited source: ${id}`);
 const references = sources.map(source =>
   `<li id="ref-${source.id}"><span class="source-id">${source.id} / ${escape(source.year)}</span>
   <p><strong>${escape(source.author)}.</strong> <a href="${escape(source.url)}">${escape(source.title)}</a></p>
@@ -83,7 +97,7 @@ for (const file of ['styles.css', 'header.css', 'model.mjs', 'divergence.svg', '
 }
 const bibliography = sources.map(s => `- **${s.id}.** ${s.author} (${s.year}). [${s.title}](${s.url}). ${s.claim} Limit: ${s.limit}`).join('\n\n');
 await writeFile(new URL('dist/report.md', root), `${report}\n\n## References\n\n${bibliography}\n`);
-await copyFile(new URL('research/sources.json', root), new URL('dist/sources.json', root));
+await writeFile(new URL('dist/sources.json', root), JSON.stringify(sources, null, 2));
 await copyFile(new URL('examples/knowledge-object.json', root), new URL('dist/knowledge-object.json', root));
 await copyFile(new URL('examples/reputation-observation.json', root), new URL('dist/reputation-observation.json', root));
 await copyFile(new URL('examples/component-passport.json', root), new URL('dist/component-passport.json', root));
@@ -91,8 +105,11 @@ await copyFile(new URL('examples/service-operator-economics.json', root), new UR
 
 const presentation = createPresentationData({
   report, headings, template, diagramTemplate, work, sources,
+  additionalSections: [
+    createCompanionSection(replicationPaper, { id: 'paper-replication-blueprint', url: './blueprint.html#abstract' }),
+  ],
   revision: {
-    contentHash: fingerprint([report, template, diagramTemplate, workSource, JSON.stringify(sources)].join('\0')),
+    contentHash: fingerprint([report, replicationPaper, template, diagramTemplate, workSource, JSON.stringify(sources)].join('\0')),
     builtAt: new Date().toISOString(),
     commit: process.env.GITHUB_SHA || null,
   },
@@ -143,5 +160,38 @@ const workPage = (await read('site/open-work.html'))
 if (/\{\{[A-Z_]+\}\}/.test(workPage)) throw new Error('Unresolved work-register template placeholder');
 await writeFile(new URL('dist/open-work.html', root), workPage);
 await writeFile(new URL('dist/open-work.css', root), workCss);
+
+const paperCss = await read('site/paper.css');
+const paperContents = `<ol>${blueprint.headings.map(({ id, text }) => `<li><a href="#${id}">${text}</a></li>`).join('')}</ol>`;
+const blueprintPage = (await read('site/paper.html'))
+  .replace('{{TITLE}}', 'Replicable sector collectives')
+  .replace('{{HEADER}}', renderHeader('work'))
+  .replaceAll('./favicon.svg', faviconUrl)
+  .replace('href="./styles.css"', `href="./styles.css?v=${fingerprint(stylesheet)}"`)
+  .replace('href="./header.css"', `href="./header.css?v=${fingerprint(headerCss)}"`)
+  .replace('href="./paper.css"', `href="./paper.css?v=${fingerprint(paperCss)}"`)
+  .replace('{{MARKDOWN_URL}}', './research/replication-blueprint.md')
+  .replace('{{CONTENTS}}', paperContents)
+  .replace('{{PAPER}}', blueprint.html);
+if (/\{\{[A-Z_]+\}\}/.test(blueprintPage)) throw new Error('Unresolved blueprint template placeholder');
+await writeFile(new URL('dist/blueprint.html', root), blueprintPage);
+await writeFile(new URL('dist/paper.css', root), paperCss);
+await mkdir(new URL('dist/templates/', root), { recursive: true });
+await mkdir(new URL('dist/research/', root), { recursive: true });
+await mkdir(new URL('dist/examples/', root), { recursive: true });
+await mkdir(new URL('dist/test/', root), { recursive: true });
+for (const file of sectorProfile.packFiles) {
+  const source = new URL(file, new URL('templates/', root));
+  if (!source.href.startsWith(root.href)) throw new Error(`Template pack file is outside the project: ${file}`);
+  const relative = source.href.slice(root.href.length);
+  if (!/^(templates|research|examples|test)\/.+\.(md|json|mjs)$/i.test(relative)) {
+    throw new Error(`Unsupported template pack artifact: ${file}`);
+  }
+  await copyFile(source, new URL(`dist/${relative}`, root));
+}
+await copyFile(new URL('LICENSE', root), new URL('dist/LICENSE', root));
+const paperBibliography = sources.filter(source => blueprint.cited.has(source.id))
+  .map(s => `- **${s.id}.** ${s.author} (${s.year}). [${s.title}](${s.url}). ${s.claim} Limit: ${s.limit}`).join('\n\n');
+await writeFile(new URL('dist/research/replication-blueprint.md', root), `${replicationPaper}\n\n## Source register\n\n${paperBibliography}\n`);
 await writeFile(new URL('dist/.nojekyll', root), '');
-console.log(`Built ${headings.length} sections, ${sources.length} cited sources, and ${presentation.workItems.length} linked work items.`);
+console.log(`Built ${headings.length} report sections, a companion paper, ${sources.length} cited sources, and ${presentation.workItems.length} linked work items.`);

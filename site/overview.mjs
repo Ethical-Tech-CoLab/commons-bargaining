@@ -232,7 +232,7 @@ function renderSlides(data) {
     if (slide.id === 'project') renderProject(slide, data, article);
     if (slide.id === 'approach') appendExcerpt(article, slide.section, 'approach-source');
     if (slide.id === 'research') {
-      article.append(stats([['Research sections', data.sections.length], ['Sources in the report', data.sourceCount], ['Unfinished work items', data.counts.active]]));
+      article.append(stats([['Research sections', data.sections.length], ['Sources in the project', data.sourceCount], ['Unfinished work items', data.counts.active]]));
       appendExcerpt(article, slide.section, 'questions-source');
       article.append(researchBrowser(slide.sections));
     }

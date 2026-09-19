@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
 
 const html = await readFile(new URL('../dist/index.html', import.meta.url), 'utf8');
-const sources = JSON.parse(await readFile(new URL('../research/sources.json', import.meta.url), 'utf8'));
+const sources = JSON.parse(await readFile(new URL('../dist/sources.json', import.meta.url), 'utf8'));
 
 test('all internal anchors resolve without duplicate ids', () => {
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
@@ -72,7 +72,8 @@ test('all publication pages have shared permanent navigation with the requested 
   const diagram = await readFile(new URL('../dist/divergence.html', import.meta.url), 'utf8');
   const overview = await readFile(new URL('../dist/overview.html', import.meta.url), 'utf8');
   const work = await readFile(new URL('../dist/open-work.html', import.meta.url), 'utf8');
-  for (const page of [html, diagram, overview, work]) {
+  const blueprint = await readFile(new URL('../dist/blueprint.html', import.meta.url), 'utf8');
+  for (const page of [html, diagram, overview, work, blueprint]) {
     assert.match(page, /class="site-header"/);
     assert.match(page, /aria-label="Primary navigation"/);
     assert.match(page, /data-nav="overview"[^>]*>Overview<\/a>/);
@@ -104,11 +105,12 @@ test('all publication pages use the same green icon for the header and favicon',
   const diagram = await readFile(new URL('../dist/divergence.html', import.meta.url), 'utf8');
   const overview = await readFile(new URL('../dist/overview.html', import.meta.url), 'utf8');
   const work = await readFile(new URL('../dist/open-work.html', import.meta.url), 'utf8');
+  const blueprint = await readFile(new URL('../dist/blueprint.html', import.meta.url), 'utf8');
   const icon = await readFile(new URL('../dist/favicon.svg', import.meta.url), 'utf8');
   assert.match(icon, /viewBox="0 0 28 28"/);
   assert.match(icon, /fill="#c8f04b"/);
   assert.equal([...icon.matchAll(/<circle /g)].length, 3);
-  for (const page of [html, diagram, overview, work]) {
+  for (const page of [html, diagram, overview, work, blueprint]) {
     const favicon = page.match(/<link rel="icon"[^>]*href="([^"]+)"/);
     const headerIcon = page.match(/<img class="header-mark" src="([^"]+)"/);
     assert.ok(favicon && headerIcon);
@@ -127,21 +129,26 @@ test('presentation and open-work sources match the published report and canonica
   assert.equal(data.workItems.length, canonical.items.length);
   assert.match(data.revision.contentHash, /^[a-f0-9]{12}$/);
   assert.ok(Number.isFinite(Date.parse(data.revision.builtAt)));
+  const sectionById = new Map(data.sections.map(section => [section.id, section]));
   for (const section of data.sections) {
-    assert.ok(html.includes(`id="${section.id}"`), `missing research section ${section.id}`);
-    assert.equal(section.url, `./index.html#${section.id}`);
+    const target = new URL(section.url, 'https://publication.invalid/');
+    const document = await readFile(new URL(`../dist${target.pathname}`, import.meta.url), 'utf8');
+    assert.ok(document.includes(`id="${target.hash.slice(1)}"`), `missing source target ${section.url}`);
   }
   for (const [index, item] of data.workItems.entries()) {
     assert.equal(item.question, canonical.items[index].question);
     assert.equal(item.status, canonical.items[index].status);
     assert.ok(work.includes(`id="${item.id}"`));
-    for (const id of item.sourceIds) assert.ok(html.includes(`id="${id}"`));
+    for (const [sourceIndex, id] of item.sourceIds.entries()) {
+      assert.ok(sectionById.has(id));
+      assert.equal(item.sourceUrls[sourceIndex], sectionById.get(id).url);
+    }
   }
   assert.match(work, /source of record/);
 });
 
 test('presentation and work-register pages have resolvable local assets and source links', async () => {
-  for (const file of ['overview.html', 'open-work.html']) {
+  for (const file of ['overview.html', 'open-work.html', 'blueprint.html']) {
     const page = await readFile(new URL(`../dist/${file}`, import.meta.url), 'utf8');
     const ids = [...page.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
     assert.equal(ids.length, new Set(ids).size, `duplicate ids in ${file}`);
@@ -175,7 +182,7 @@ test('every divergence node explains the levers and tests that could change its 
 });
 
 test('current publication branding and repository links use Commons Collective', async () => {
-  for (const file of ['index.html', 'divergence.html', 'overview.html', 'open-work.html']) {
+  for (const file of ['index.html', 'divergence.html', 'overview.html', 'open-work.html', 'blueprint.html']) {
     const page = await readFile(new URL(`../dist/${file}`, import.meta.url), 'utf8');
     assert.match(page, /Commons Collective/);
     assert.match(page, /github\.com\/Ethical-Tech-CoLab\/commons-collective/);
@@ -193,4 +200,22 @@ test('the component passport is explicitly unfilled and does not approve an agen
   assert.equal(passport.eligibility.approvedForUse, false);
   assert.equal(passport.eligibility.unknownMandatoryEvidenceBlocksApproval, true);
   assert.match(passport.notice, /do not prove runtime isolation/);
+});
+
+test('the companion paper and every declared replication artifact are published', async () => {
+  const root = new URL('../', import.meta.url);
+  const profile = JSON.parse(await readFile(new URL('templates/sector-profile.json', root)));
+  for (const file of profile.packFiles) {
+    const source = new URL(file, new URL('templates/', root));
+    const relative = source.href.slice(root.href.length);
+    await access(new URL(`dist/${relative}`, root));
+  }
+  const blueprint = await readFile(new URL('dist/blueprint.html', root), 'utf8');
+  assert.match(blueprint, /replicable institution/);
+  assert.match(blueprint, /not peer-reviewed/);
+  assert.match(blueprint, /templates\/business-model\.md/);
+  assert.match(blueprint, /href="\.\/index\.html#ref-S70"/);
+  const data = JSON.parse(await readFile(new URL('dist/presentation-data.json', root)));
+  assert.ok(data.sections.some(section => section.id === 'paper-replication-blueprint'
+    && section.url === './blueprint.html#abstract'));
 });

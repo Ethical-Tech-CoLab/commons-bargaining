@@ -1,0 +1,52 @@
+[
+  {
+    "id": "S70",
+    "author": "Budapest Open Access Initiative",
+    "year": "2002",
+    "title": "Budapest Open Access Initiative: original declaration",
+    "url": "https://www.budapestopenaccessinitiative.org/read/",
+    "claim": "Defines open access to scholarly literature, proposes self-archiving and open-access journals, and distinguishes free reader access from the costs of producing and disseminating scholarship.",
+    "limit": "A declaration, not legislation, evidence of this proposal's effectiveness, or a blanket license for all research materials.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S71",
+    "author": "Open Knowledge Foundation",
+    "year": "Version 2.1; accessed 2026",
+    "title": "Open Definition 2.1",
+    "url": "https://opendefinition.org/od/2.1/en/",
+    "claim": "Defines open knowledge through public-domain status or open permissions, access, machine readability and open formats; open-license requirements include non-discrimination and no royalty condition.",
+    "limit": "A definition and interoperability standard, not authority to release personal data, waive community obligations, or override third-party rights.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S72",
+    "author": "UNESCO",
+    "year": "2021",
+    "title": "Recommendation on Open Science",
+    "url": "https://www.unesco.org/en/legal-affairs/recommendation-open-science",
+    "claim": "Adopted 23 November 2021; frames open science across knowledge creation, evaluation and communication, including infrastructure and societal engagement, while recognizing justified restrictions for privacy, confidentiality and sacred or secret Indigenous knowledge.",
+    "limit": "A recommendation to Member States, not a universal license, directly applicable authorization, or proof that every research output should be public.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S73",
+    "author": "UNESCO",
+    "year": "2019",
+    "title": "Recommendation on Open Educational Resources (OER)",
+    "url": "https://www.unesco.org/en/legal-affairs/recommendation-open-educational-resources-oer",
+    "claim": "Adopted 25 November 2019; defines OER as public-domain or openly licensed learning, teaching and research materials permitting no-cost access and reuse, and promotes inclusive and equitable access and sustainable support.",
+    "limit": "A recommendation, not authority over student records, an exemption from children's rights, or evidence of learning gains from this proposed pilot.",
+    "accessed": "2026-09-18"
+  },
+  {
+    "id": "S74",
+    "author": "Committee to Protect Journalists",
+    "year": "2019; living guidance accessed 2026",
+    "title": "Digital safety kit",
+    "url": "https://cpj.org/2019/07/digital-safety-kit-journalists/",
+    "claim": "Provides primary journalist-safety guidance on risk assessment, source and communication protection, accounts, devices, and reviewing third-party services' handling of sensitive information.",
+    "limit": "Practical safety guidance, not a guarantee of source confidentiality, legal privilege, or approval of the proposed journalism collective.",
+    "accessed": "2026-09-18"
+  }
+]

@@ -27,7 +27,24 @@ function requiredText(template, pattern, label) {
   return text;
 }
 
-export function createPresentationData({ report, headings, template, diagramTemplate, work, sources, revision }) {
+export function createCompanionSection(markdown, { id, url }) {
+  let title;
+  let inAbstract = false;
+  const paragraphs = [];
+  for (const token of marked.lexer(markdown)) {
+    if (token.type === 'heading') {
+      if (token.depth === 1 && !title) title = plainTokens(token.tokens);
+      if (token.depth === 2) inAbstract = plainTokens(token.tokens).toLowerCase() === 'abstract';
+    } else if (token.type === 'paragraph' && inAbstract) {
+      const text = plainTokens(token.tokens);
+      if (text) paragraphs.push(text);
+    }
+  }
+  if (!title || !paragraphs.length) throw new Error('Companion paper needs a title and a nonempty abstract');
+  return { id, title: `Companion paper: ${title}`, url, paragraphs };
+}
+
+export function createPresentationData({ report, headings, template, diagramTemplate, work, sources, revision, additionalSections = [] }) {
   const sections = [];
   let current;
   for (const token of marked.lexer(report)) {
@@ -47,6 +64,12 @@ export function createPresentationData({ report, headings, template, diagramTemp
     }
   }
   if (sections.length !== headings.length) throw new Error('Presentation report section count does not match');
+  const sectionIds = new Set(sections.map(section => section.id));
+  for (const section of additionalSections) {
+    if (sectionIds.has(section.id)) throw new Error(`Duplicate presentation source id: ${section.id}`);
+    sectionIds.add(section.id);
+    sections.push(section);
+  }
   const byTitle = new Map();
   for (const section of sections) {
     const title = unnumber(section.title);

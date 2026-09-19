@@ -137,6 +137,14 @@
       "status": "open",
       "nextStep": "Audit account-specific policy and processing categories, define comparable contributor measures, and test procurement, feedback, and representation mechanisms without cross-platform identity tracking.",
       "sourceTitles": ["The quasi-commons tension: contribution without control"]
+    },
+    {
+      "id": "sector-replication",
+      "title": "Validate a sector-specific institutional fork",
+      "question": "Should an existing organization be adapted or federated, or is a new sector collective justified by authority, demand, inclusion, and sustainable stewardship evidence?",
+      "status": "open",
+      "nextStep": "Select one sector and jurisdiction, complete the unfilled profile and charter with local evidence, fund independent review, and run the 90-day and 180-day gates.",
+      "sourceTitles": ["Replicable sector collectives: blueprint and templates", "Private institutions and the commons service model"]
     }
   ]
 }

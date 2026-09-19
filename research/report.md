@@ -1241,7 +1241,35 @@ Counterarguments belong in the analysis. Users obtain useful services; providers
 
 Explain what withdrawal can stop and what it cannot reliably reverse after processing or training. **Accountable contribution under legitimate authority**, rather than rhetorical conversion of every user into an involuntary owner or unpaid worker, is the testable institutional objective.
 
-## 29. Conclusion
+## 29. Replicable sector collectives: blueprint and templates
+
+The [companion research paper](./blueprint.html) defines a replicable institutional grammar: scoped procurement, contributor agency, independent commons stewardship, professional operations, independent assurance, and appropriate payment services. It proposes autonomous sector collectives connected by voluntary protocols, not a franchisor or a universal licensing cartel.
+
+**Map, adapt, and federate before founding.** Forking a document does not create an organization or authority. Create a new body only when existing institutions cannot legitimately supply the missing functions and a constituency, viable operator, safeguards, and exit budget are evidenced.
+
+| Sector | Distinct scope | Foundational boundary |
+|---|---|---|
+| Open access | Scholarly publication, preservation, and access infrastructure | Free reader access does not eliminate production costs or create authority over all research materials [S70] |
+| Open data | Documented datasets, reuse, and maintenance | Open permissions and machine-readable access do not override privacy or third-party rights [S71] |
+| Open science | Research methods, code, instruments, evaluation, and outputs | Broader than publication access; justified restrictions and participant/community obligations remain [S72] |
+| Open education | Open resources, adaptation, accessibility, and teaching support | OER openness is not permission to extract learner records or waive safeguarding [S73] |
+| Open cultural heritage | Community-directed description, preservation, and approved access | Custody, legal rights, public-domain status, and community protocols must be assessed separately [S20] |
+| Open journalism | Public-interest reporting and enabling services | Not all reporting, notes, or sources are open; editorial and source independence are protected [S74] |
+
+The editable [replication pack](./templates/README.md) includes:
+
+- [Collective charter](./templates/collective-charter.md): purpose, decision gates, representation, authority, and federation limits.
+- [Bargaining mandate](./templates/bargaining-mandate.md): specified principals, rights, purposes, counterparties, term, withdrawal, and continuing obligations.
+- [Governance and benefits](./templates/governance-and-benefits.md): protected decisions, segregated liabilities, independent appeal, succession, and wind-down.
+- [Pilot and evaluation](./templates/pilot-and-evaluation.md): cost-inclusive comparisons, evidence gates, stopping rules, and publication of negative results.
+- [Business model](./templates/business-model.md): customer and payer evidence, service pricing, separate ledgers, capital, reserves, and renewal tests.
+- [Unfilled sector profile](./templates/sector-profile.json): six distinct adapters with local fields unresolved and all essential approvals `not-reviewed`.
+
+Original templates and research are CC BY 4.0; original software/tests are MIT. Cited works retain their terms. The profile is expressly invalid for operation; no file creates an entity, opens an account, processes money, certifies compliance, or authorizes representation. Local legal, financial, community, and professional validation is part of the work, not a box solved by cloning.
+
+The [source-linked overview](./overview.html) also loads the companion paper's current abstract and the work register on opening. Changes to the source paper, main research, or work data flow through the normal publication workflow without maintaining a separate slide narrative.
+
+## 30. Conclusion
 
 Commons Collective is best understood as an effort to align **voice, authority, service, and benefit**, not as a universal auction of personal data. Consumer purchasing power can operate without data sales. Creator bargaining can operate without enclosing the public domain. Commons funding can operate without pretending to identify every person's contribution to a model. Communities can demand a say in physical infrastructure without first becoming data vendors.
 

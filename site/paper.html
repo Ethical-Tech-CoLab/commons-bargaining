@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>{{TITLE}} | Commons Collective</title>
+  <link rel="icon" type="image/svg+xml" sizes="any" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./header.css">
+  <link rel="stylesheet" href="./paper.css">
+</head>
+<body>
+  <a class="skip" href="#paper">Skip to the paper</a>
+  {{HEADER}}
+  <main>
+    <div class="paper-intro">
+      <p class="eyebrow">Commons Collective / open institutional research</p>
+      <nav class="paper-links" aria-label="Paper resources">
+        <a href="./overview.html">Live overview</a>
+        <a href="./index.html#report">Main research</a>
+        <a href="./open-work.html">Open research questions</a>
+        <a href="{{MARKDOWN_URL}}" download>Download this paper</a>
+        <a href="https://github.com/Ethical-Tech-CoLab/commons-collective/archive/refs/heads/main.zip">Download repository and templates</a>
+      </nav>
+    </div>
+    <div class="reading-layout paper-layout">
+      <aside><nav aria-label="Paper contents"><p class="eyebrow">In this paper</p>{{CONTENTS}}</nav></aside>
+      <article id="paper">{{PAPER}}</article>
+    </div>
+  </main>
+  <footer>
+    <p>Original research and templates are shared for adaptation under CC BY 4.0. Software is MIT licensed. Third-party sources retain their terms.</p>
+    <p>Proposed research and nonbinding templates, not an executed agreement, legal opinion, institutional endorsement, or certification. Local authority, rights, funding, and qualified review must be established before use.</p>
+    <a href="./index.html#references">Source register and limitations</a>
+  </footer>
+</body>
+</html>

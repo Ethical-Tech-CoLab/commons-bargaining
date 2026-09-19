@@ -1,0 +1,14 @@
+.paper-intro { padding: 2rem 5vw 0; }
+.paper-links { display: flex; flex-wrap: wrap; gap: .7rem 1.5rem; font-size: .8rem; }
+.paper-layout { padding-top: 1rem; }
+.paper-layout article h1 { font-size: clamp(2.2rem, 4.5vw, 4rem); line-height: 1.08; letter-spacing: -.04em; }
+.paper-layout article { overflow-wrap: anywhere; }
+.paper-layout aside nav { top: calc(var(--header-height, 76px) + 20px); max-height: calc(100vh - var(--header-height, 76px) - 40px); }
+@media (max-width: 720px) {
+  .paper-layout aside nav { max-height: none; }
+}
+@media print {
+  .paper-links { display: none; }
+  .paper-intro { padding: 0; }
+  .paper-layout article h1 { font-size: 28pt; }
+}

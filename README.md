@@ -5,6 +5,7 @@
 [Read the research](https://ethical-tech-colab.github.io/commons-collective/) |
 [Live overview presentation](https://ethical-tech-colab.github.io/commons-collective/overview.html) |
 [Open research questions](https://ethical-tech-colab.github.io/commons-collective/open-work.html) |
+[Replication blueprint](https://ethical-tech-colab.github.io/commons-collective/blueprint.html) |
 [Source report](research/report.md) |
 [Evidence register](research/sources.json) |
 [Deployment](https://github.com/Ethical-Tech-CoLab/commons-collective/actions/workflows/pages.yml)
@@ -67,6 +68,8 @@ connections are documented rather than presented as a new official charter.
   and an audited hypothetical cash worksheet with reserve and sensitivity checks.
 - The quasi-commons tension: account-specific Claude Code policies, context versus
   training, and why AI-user and Wikimedia-contributor counts cannot be conflated.
+- An open replication paper and editable charter, mandate, governance, pilot,
+  business-model and sector-profile templates for six autonomous sector collectives.
 
 ## Run locally
 
@@ -110,13 +113,16 @@ cash conservation, invalid inputs, rounding, the report's published baseline
 and sensitivity figures, and the illustrative tax-credit cap and treasury floor.
 Tests do not establish the truth of external claims or the legal enforceability
 of the proposed institutions. External source access can change.
+The test command targets the source test directory, not the downloadable test
+copies published inside `dist/`.
 
 ## Live overview and research work register
 
 [The overview presentation](https://ethical-tech-colab.github.io/commons-collective/overview.html)
 is a reader of published source data, not a separately maintained slide draft.
-The ordinary build derives `presentation-data.json` from the report, source
-register, project and demo pages, and [research/open-work.json](research/open-work.json).
+The ordinary build derives `presentation-data.json` from the main report, the
+companion paper's current abstract, the source registers, project and demo pages,
+and [research/open-work.json](research/open-work.json).
 It also publishes [the work register](https://ethical-tech-colab.github.io/commons-collective/open-work.html)
 from that same canonical work file.
 
@@ -139,7 +145,9 @@ Statuses describe empirical/institutional research, not completion of this websi
 | File | Role |
 |---|---|
 | `research/report.md` | Canonical original research text |
-| `research/sources.json` | Evidence, source URL, supported claim, and limitation |
+| `research/sources.json`, `research/replication-sources.json` | Canonical source registers, merged for publication with bounded claims |
+| `research/replication-blueprint.md` | Companion paper on autonomous sector collectives and evidence-gated replication |
+| `templates/` | Original nonbinding drafting pack and explicitly unfilled six-sector profile |
 | `research/open-work.json` | Canonical research questions, next steps, statuses, and source references |
 | `site/template.html` | Accessible publication shell |
 | `site/header.html`, `site/header.css` | Shared persistent Overview, Demos, Research navigation |
@@ -149,7 +157,7 @@ Statuses describe empirical/institutional research, not completion of this websi
 | `site/model.mjs` | Pure integer-cent illustrative settlement arithmetic |
 | `site/app.mjs` | Browser-only calculator and bibliography filter |
 | `scripts/build.mjs` | Markdown, citations, navigation, and downloads |
-| `scripts/render-research.mjs` | Shared citation-aware renderer for research documents |
+| `scripts/render-research.mjs` | Shared citation-aware renderer for the main report and companion paper |
 | `scripts/presentation-data.mjs` | Derives live presentation data from canonical published sources |
 | `site/overview.html`, `site/overview.mjs`, `site/overview.css` | Source-loaded presentation and refresh states |
 | `site/open-work.html`, `site/open-work.css` | Source-linked research work-register view |
@@ -181,7 +189,7 @@ https://ethical-tech-colab.github.io/commons-collective/
 
 ## License
 
-Original report text and original example data: **CC BY 4.0**. Attribute the report
+Original research, source annotations, institutional templates, and example data: **CC BY 4.0**. Attribute the report
 title and repository, identify modifications, and do not imply endorsement.
 Software: **MIT**, as set out in [LICENSE](LICENSE). External sources remain
 under their respective terms; this repository does not relicense them.

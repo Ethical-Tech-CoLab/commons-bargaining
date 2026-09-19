@@ -1,0 +1,565 @@
+{
+  "formatVersion": "0.1",
+  "documentType": "commons-collective-unfilled-sector-profile",
+  "frameworkName": "Commons Collective Framework Agreement",
+  "title": "UNFILLED illustrative profile — invalid-for-operation",
+  "executionStatus": "DRAFT-NOT-EXECUTED",
+  "syntheticExample": true,
+  "validForOperation": false,
+  "operationAllowed": false,
+  "legalCertificationClaimed": false,
+  "notice": "This file is a nonbinding drafting aid, not an entity, mandate, approval, contract, payment instruction or executable setup. Null means REQUIRED and unresolved. Completing fields or changing flags does not confer authority. Local professional and legitimate community review must occur separately.",
+  "contentLicense": "CC-BY-4.0",
+  "thirdPartyTerms": "Cited sources retain their own rights and terms. No private records or third-party works are licensed by this example.",
+  "proposedFederation": {
+    "name": "Commons Collective Federation",
+    "abbreviation": "CCF",
+    "status": "blueprint-only-not-incorporated-not-endorsed",
+    "nonexclusive": true,
+    "autonomousCollectives": true,
+    "automaticEntityCreation": false,
+    "crossCollectiveAuthority": "Requires a separate scoped lawful delegation; protocol compatibility alone grants none.",
+    "sharedProtocols": [
+      "versioned-service-descriptions",
+      "scoped-mandate-status-receipts",
+      "redacted-evidence-and-assurance",
+      "rights-vocabulary",
+      "complaint-referral",
+      "authorized-exit-and-portability"
+    ],
+    "prohibitedDefaults": [
+      "franchisor-permission-for-document-forks",
+      "mandatory-exclusivity",
+      "territorial-allocation",
+      "federation-wide-price-floors",
+      "automatic-boycotts",
+      "unreviewed-sensitive-information-sharing",
+      "automatic-pooled-liability"
+    ]
+  },
+  "allowedSectors": [
+    "open-access",
+    "open-data",
+    "open-science",
+    "open-education",
+    "open-cultural-heritage",
+    "open-journalism"
+  ],
+  "localProfile": {
+    "name": null,
+    "selectedSector": null,
+    "localVersion": null,
+    "upstreamRevision": null,
+    "responsibleMaintainer": null,
+    "jurisdiction": null,
+    "participantJurisdictions": null,
+    "legalForm": null,
+    "constituency": null,
+    "authorityEvidence": null,
+    "rightsAssessment": null,
+    "publicEvidenceSummary": null,
+    "restrictedEvidenceCustodian": null,
+    "customerServiceFunding": {
+      "foundingOrHostingInstitutions": null,
+      "customerSegments": null,
+      "payerSegments": null,
+      "serviceOfferingAndScope": null,
+      "demandAndRenewalEvidence": null,
+      "revenueOrFundingMechanism": null,
+      "startupCapitalAndRestrictions": null,
+      "recurringCostsAndFunding": null,
+      "viabilityThresholdsAndRunway": null
+    },
+    "decisionMatrix": {
+      "existingInstitutionMap": null,
+      "documentedGap": null,
+      "forkAssessment": null,
+      "adaptAssessment": null,
+      "federateAssessment": null,
+      "createNewAssessment": null,
+      "duplicationRisk": null,
+      "decision": null,
+      "decisionAuthorityEvidence": null
+    },
+    "functionAssignments": {
+      "scopedMemberProcurement": null,
+      "contributorAgency": null,
+      "independentCommonsStewardship": null,
+      "professionalOperator": null,
+      "independentAssurance": null,
+      "regulatedPayments": null
+    },
+    "membership": {
+      "eligibility": null,
+      "equalMemberVoteMechanism": null,
+      "requiredCapitalAndLegalBasis": null,
+      "lawfulCapitalSubsidy": null,
+      "memberLiabilities": null,
+      "supplierVoice": null,
+      "affectedNonmemberCouncil": null,
+      "conflictRecusalAndRecall": null
+    },
+    "mandate": {
+      "principalAndCapacity": null,
+      "authorityChainEvidence": null,
+      "permittedSchedules": null,
+      "itemVersionsAndRights": null,
+      "purposesAndExclusions": null,
+      "counterparties": null,
+      "budgetAndPriceAuthority": null,
+      "competitionCounselAssessment": null,
+      "effectiveAt": null,
+      "expiresAt": null,
+      "withdrawalChannels": null,
+      "withdrawalEffectiveTimeRule": null,
+      "downstreamNotificationDeadline": null,
+      "existingCommitmentsAndTermination": null,
+      "processingBasisAndWithdrawalDuties": null,
+      "portabilityAuthority": null
+    },
+    "funds": {
+      "currency": null,
+      "accountHolderAndRegulatoryReview": null,
+      "earmarkedAccountsAndEntitlements": null,
+      "grossInflowsAndRestrictions": null,
+      "taxesFeesAndRefunds": null,
+      "allocationBaseAndFormula": null,
+      "complaintReserve": null,
+      "exitReserve": null,
+      "independentReconciliation": null,
+      "charityStatusEvidenceIfClaimed": null
+    },
+    "complaintAndAppeal": {
+      "accessibleChannels": null,
+      "independentReviewer": null,
+      "fundedAssistance": null,
+      "responseAndAppealDeadlines": null,
+      "emergencyStopAuthority": null,
+      "externalRemedies": null
+    },
+    "records": {
+      "openMethodsAndAggregateReporting": null,
+      "privateRecordBoundary": null,
+      "accessAndRetentionSchedule": null,
+      "sourceVersionsAndAccessDates": null,
+      "legalCurrencyReviewDate": null
+    },
+    "exit": {
+      "effectiveTimeRule": null,
+      "successorSelectionAndAuthority": null,
+      "authorizedRecordTransfer": null,
+      "liabilitiesAndRestrictedBalances": null,
+      "windDownCustodian": null,
+      "openOutputPreservation": null
+    },
+    "pilot": {
+      "serviceAndScope": null,
+      "baselineComparator": null,
+      "qualityAdjustedCostDefinition": null,
+      "preregisteredHypotheses": null,
+      "outcomesAndThresholds": null,
+      "sampleAndMissingnessPlan": null,
+      "riskAndStoppingCriteria": null,
+      "independentEvaluator": null,
+      "day90GateEvidence": null,
+      "day180GateEvidence": null,
+      "approvalForAnyExpansion": null
+    }
+  },
+  "rightsFloor": {
+    "existingOpenKnowledgeRemainsOpen": true,
+    "retrospectiveRoyaltiesForExistingPermissions": false,
+    "publicDomainEnclosure": false,
+    "separateSchedules": [
+      "paid-services",
+      "authorized-new-permissions",
+      "voluntary-commons-covenants"
+    ],
+    "withdrawalRevokesCCLicense": false,
+    "historicalUseErasureGuaranteed": false,
+    "newCommitmentsAfterEffectiveWithdrawal": false,
+    "nonexclusiveMandates": true,
+    "portableOnlyWithinVerifiedAuthority": true,
+    "majorityMayWaiveThirdPartyRights": false,
+    "payToVote": false,
+    "charityOrTaxExemptionAssumed": false,
+    "allJournalismAutomaticallyOpen": false,
+    "custodyEqualsRights": false,
+    "minorOrCommunityConsentAssumed": false
+  },
+  "essentialApprovals": {
+    "jurisdictionLegalForm": {
+      "status": "not-reviewed",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null,
+      "conditionsAndExpiry": null
+    },
+    "competition": {
+      "status": "not-reviewed",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null,
+      "conditionsAndExpiry": null
+    },
+    "rightsAuthority": {
+      "status": "not-reviewed",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null,
+      "conditionsAndExpiry": null
+    },
+    "privacySecurity": {
+      "status": "not-reviewed",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null,
+      "conditionsAndExpiry": null
+    },
+    "memberGovernance": {
+      "status": "not-reviewed",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null,
+      "conditionsAndExpiry": null
+    },
+    "affectedCommunity": {
+      "status": "not-reviewed",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null,
+      "conditionsAndExpiry": null
+    },
+    "safeguarding": {
+      "status": "not-reviewed",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null,
+      "conditionsAndExpiry": null
+    },
+    "paymentsTax": {
+      "status": "not-reviewed",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null,
+      "conditionsAndExpiry": null
+    },
+    "independentAssurance": {
+      "status": "not-reviewed",
+      "reviewer": null,
+      "evidence": null,
+      "reviewedAt": null,
+      "conditionsAndExpiry": null
+    }
+  },
+  "sectorAdapters": [
+    {
+      "sector": "open-access",
+      "scope": "Scholarly publication and dissemination, not the whole research lifecycle.",
+      "constituency": [
+        "authors and editors",
+        "libraries",
+        "scholarly societies",
+        "readers and excluded researchers"
+      ],
+      "legitimateAuthority": [
+        "institutional purchasing delegation",
+        "verified author or publisher rights where new permission is necessary",
+        "independent public-access stewardship"
+      ],
+      "negotiableGoodsServices": [
+        "repository hosting and preservation",
+        "accessibility remediation",
+        "editorial infrastructure and support"
+      ],
+      "nonNegotiableBoundaries": [
+        "no new restrictions or retrospective royalties on already open articles",
+        "no buyer control of research conclusions",
+        "no presumed rights over underlying participant data"
+      ],
+      "benefitsAllocation": "Equitable publishing access, paid editorial labor and durable maintenance, using preregistered criteria.",
+      "benefitsEvidence": [
+        "author charges and exclusions by institution/language",
+        "accessible preserved article counts",
+        "audited service and maintenance costs"
+      ],
+      "buyerTypes": [
+        "library consortia",
+        "research funders",
+        "universities"
+      ],
+      "pilot": "One authorized repository-service procurement; no new entity presumed.",
+      "outcomes": [
+        "quality-adjusted cost per preserved accessible article",
+        "deposit success and access continuity"
+      ],
+      "stoppingCriteria": [
+        "new access barrier",
+        "invalid rights chain",
+        "unremedied author exclusion"
+      ],
+      "sourceIds": ["S70", "S08", "S26"]
+    },
+    {
+      "sector": "open-data",
+      "scope": "Nonrival reuse with separate privacy, permission and maintenance obligations.",
+      "constituency": [
+        "dataset maintainers",
+        "public-interest users",
+        "affected noncontributors",
+        "public bodies where relevant"
+      ],
+      "legitimateAuthority": [
+        "dataset licenses and applicable database rights",
+        "valid personal-data processing basis where relevant",
+        "public-body duties and affected-community process"
+      ],
+      "negotiableGoodsServices": [
+        "documentation and quality correction",
+        "reliable updates and secure computation",
+        "verified-authority new releases"
+      ],
+      "nonNegotiableBoundaries": [
+        "no ownership claim over public facts",
+        "no exclusive enclosure of an open dataset",
+        "no payment substituted for privacy authority",
+        "no incentive to reveal sensitive information"
+      ],
+      "benefitsAllocation": "Fund maintenance and affected-community priorities separately from any verified contractual entitlement.",
+      "benefitsEvidence": [
+        "maintenance work and correction logs",
+        "community-defined benefit assessment",
+        "reidentification and incident review"
+      ],
+      "buyerTypes": [
+        "municipalities",
+        "research institutions",
+        "service developers"
+      ],
+      "pilot": "An already open nonpersonal dataset documentation/update service.",
+      "outcomes": [
+        "reuse and correction time",
+        "quality-adjusted service cost",
+        "privacy-risk assessment"
+      ],
+      "stoppingCriteria": [
+        "unexpected personal information",
+        "invalid authorization",
+        "buyer demand for exclusivity over the open dataset"
+      ],
+      "sourceIds": ["S71", "S10", "S11", "S25"]
+    },
+    {
+      "sector": "open-science",
+      "scope": "The whole research lifecycle: methods, protocols, code, instruments, evaluation and outputs.",
+      "constituency": [
+        "researchers and laboratories",
+        "research participants",
+        "infrastructure maintainers",
+        "affected communities"
+      ],
+      "legitimateAuthority": [
+        "institutional delegation and contributor rights",
+        "ethics review and participant obligations",
+        "community authority where applicable"
+      ],
+      "negotiableGoodsServices": [
+        "workflow reproducibility support",
+        "compute and technical assistance",
+        "preservation and infrastructure maintenance"
+      ],
+      "nonNegotiableBoundaries": [
+        "no forced disclosure of confidential research records",
+        "no sacred or secret Indigenous knowledge release without legitimate authority",
+        "no buyer suppression of negative findings",
+        "no assumption that research labels authorize every use"
+      ],
+      "benefitsAllocation": "Pay reproducibility and maintenance labor and support shared infrastructure through transparent criteria.",
+      "benefitsEvidence": [
+        "independent reproduction records",
+        "maintenance hours and costs",
+        "participant and community safeguards review"
+      ],
+      "buyerTypes": [
+        "universities",
+        "laboratories",
+        "research funders"
+      ],
+      "pilot": "Independently reproduce an already shareable workflow without live sensitive participant records.",
+      "outcomes": [
+        "replication success",
+        "maintenance time",
+        "quality-adjusted total cost"
+      ],
+      "stoppingCriteria": [
+        "confidentiality breach",
+        "invalid participant permissions",
+        "pressure to suppress results"
+      ],
+      "sourceIds": ["S72", "S35", "S10", "S20"]
+    },
+    {
+      "sector": "open-education",
+      "scope": "Open educational resources and learning support, not an automatic mandate over learner records.",
+      "constituency": [
+        "teachers",
+        "students and age-appropriate minor representation",
+        "accessibility specialists",
+        "educational institutions"
+      ],
+      "legitimateAuthority": [
+        "educator and institutional rights over identified materials",
+        "separate authority for student work and records",
+        "lawful child safeguarding, representative authority and applicable assent"
+      ],
+      "negotiableGoodsServices": [
+        "OER adaptation and translation",
+        "accessible/offline hosting and materials",
+        "teacher support and paid maintenance"
+      ],
+      "nonNegotiableBoundaries": [
+        "teacher academic freedom and student refusal",
+        "no grades or essential access conditioned on participation",
+        "no student telemetry extraction disguised as OER funding",
+        "no assumed guardian power to waive every minor's right"
+      ],
+      "benefitsAllocation": "Paid adaptation and accessible resources, prioritizing underserved learners without surveillance incentives.",
+      "benefitsEvidence": [
+        "accessibility and offline-access checks",
+        "teacher workload",
+        "minimal-data learning evaluation and inclusion gaps"
+      ],
+      "buyerTypes": [
+        "schools",
+        "universities",
+        "public education purchasers"
+      ],
+      "pilot": "One accessible OER module with safeguarding review and independent refusal routes.",
+      "outcomes": [
+        "completion and learning outcomes with minimal records",
+        "teacher workload and accessible participation",
+        "quality-adjusted total cost"
+      ],
+      "stoppingCriteria": [
+        "participation affects grades or essential access",
+        "safeguarding failure",
+        "unauthorized student-record processing"
+      ],
+      "sourceIds": ["S73", "S10", "S26"]
+    },
+    {
+      "sector": "open-cultural-heritage",
+      "scope": "Community-directed heritage care with separate custody, legal rights and Indigenous/community protocols.",
+      "constituency": [
+        "Indigenous peoples and source communities",
+        "artists",
+        "archives",
+        "museums"
+      ],
+      "legitimateAuthority": [
+        "locally legitimate community authorities and consent processes",
+        "verified copyright or public-domain status",
+        "documented custody, repatriation obligations and protocols"
+      ],
+      "negotiableGoodsServices": [
+        "conservation and preservation",
+        "community-directed description",
+        "approved digitization and access services"
+      ],
+      "nonNegotiableBoundaries": [
+        "custody does not establish rights or permission",
+        "no unauthorized sacred or sensitive material disclosure",
+        "TK Labels are not generic commercial licenses",
+        "no retrospective rewriting of public-domain status"
+      ],
+      "benefitsAllocation": "Community-defined stewardship and paid cultural expertise with legitimate community allocation authority.",
+      "benefitsEvidence": [
+        "community acceptance through its chosen process",
+        "provenance correction and stewardship milestones",
+        "confidential authority evidence with a safe public summary"
+      ],
+      "buyerTypes": [
+        "museums",
+        "public cultural agencies",
+        "research institutions"
+      ],
+      "pilot": "Community-approved nonsensitive material only, with a paid local stewardship process.",
+      "outcomes": [
+        "provenance corrections",
+        "community acceptance",
+        "quality-adjusted stewardship cost"
+      ],
+      "stoppingCriteria": [
+        "contested authority",
+        "sacred-material exposure",
+        "unresolved repatriation or custody dispute"
+      ],
+      "sourceIds": ["S20", "S72", "S26"]
+    },
+    {
+      "sector": "open-journalism",
+      "scope": "Public-interest journalism and enabling services; not all reporting or source material is automatically open.",
+      "constituency": [
+        "journalists and freelancers",
+        "independent editors",
+        "newsrooms",
+        "underserved publics"
+      ],
+      "legitimateAuthority": [
+        "newsroom purchasing delegation",
+        "verified freelancer and publication rights",
+        "independent editorial governance and source-protection duties"
+      ],
+      "negotiableGoodsServices": [
+        "secure tools and transcription",
+        "preservation, translation and accessibility",
+        "specifically authorized syndication"
+      ],
+      "nonNegotiableBoundaries": [
+        "editorial independence from funders and buyers",
+        "source protection and confidential notes remain protected",
+        "public interest is not a universal reuse license",
+        "no unauthorized model training"
+      ],
+      "benefitsAllocation": "Reporting capacity, source safety and underserved coverage, never payments for favorable stories.",
+      "benefitsEvidence": [
+        "independent editorial-interference review",
+        "security and confidentiality assessment",
+        "coverage capacity and audited service costs"
+      ],
+      "buyerTypes": [
+        "newsroom networks",
+        "libraries",
+        "public-interest funders"
+      ],
+      "pilot": "Secure transcription of fictional interviews before considering sensitive material.",
+      "outcomes": [
+        "transcription accuracy",
+        "confidentiality and editorial autonomy",
+        "quality-adjusted total cost"
+      ],
+      "stoppingCriteria": [
+        "source exposure",
+        "compelled editorial influence",
+        "unauthorized training reuse"
+      ],
+      "sourceIds": ["S74", "S08", "S26"]
+    }
+  ],
+  "packFiles": [
+    "README.md",
+    "collective-charter.md",
+    "bargaining-mandate.md",
+    "governance-and-benefits.md",
+    "pilot-and-evaluation.md",
+    "business-model.md",
+    "sector-profile.json",
+    "../research/replication-blueprint.md",
+    "../research/replication-sources.json",
+    "../research/sources.json",
+    "../research/report.md",
+    "../examples/service-operator-economics.json",
+    "../test/replication.test.mjs",
+    "../test/operator-economics.test.mjs"
+  ]
+}

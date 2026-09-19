@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createPresentationData } from '../scripts/presentation-data.mjs';
+import { createCompanionSection, createPresentationData } from '../scripts/presentation-data.mjs';
 
 function input() {
   return {
@@ -112,4 +112,25 @@ test('an empty work register remains empty rather than inventing work', () => {
   const source = input();
   source.work.items = [];
   assert.deepEqual(createPresentationData(source).workItems, []);
+});
+
+test('a changed companion-paper abstract flows into the live research browser without slide edits', () => {
+  const source = input();
+  const paper = '# A companion paper\n\nStatus: draft.\n\n## Abstract\n\nAn original conclusion. [S01]\n\n## Method\n\nDetails.';
+  const descriptor = { id: 'paper-example', url: './blueprint.html#abstract' };
+  source.additionalSections = [createCompanionSection(paper, descriptor)];
+  const before = createPresentationData(source);
+  source.additionalSections = [createCompanionSection(paper.replace('original', 'revised'), descriptor)];
+  const after = createPresentationData(source);
+  assert.equal(before.sections.at(-1).paragraphs[0], 'An original conclusion.');
+  assert.equal(after.sections.at(-1).paragraphs[0], 'An revised conclusion.');
+  assert.equal(after.sections.at(-1).url, './blueprint.html#abstract');
+  assert.match(after.sections.at(-1).title, /Companion paper/);
+});
+
+test('missing companion abstracts and duplicate source identities fail explicitly', () => {
+  assert.throws(() => createCompanionSection('# Missing abstract', { id: 'paper', url: './paper.html' }), /nonempty abstract/);
+  const source = input();
+  source.additionalSections = [{ id: 'abstract', title: 'Duplicate', url: './paper.html', paragraphs: ['A claim.'] }];
+  assert.throws(() => createPresentationData(source), /Duplicate presentation source id/);
 });
