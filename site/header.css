@@ -1,3 +1,7 @@
+:root {
+  /* Match the main page's capped wrapper with its viewport-relative gutters. */
+  --site-content-width: calc(min(1440px, 100%) - 10vw);
+}
 html {
   scroll-padding-top: calc(var(--header-height, 76px) + 24px);
 }
@@ -17,9 +21,9 @@ body > .skip {
   backdrop-filter: blur(12px);
 }
 .header-inner {
-  max-width: 1440px;
+  width: var(--site-content-width);
   margin: 0 auto;
-  padding: 12px 5vw;
+  padding: 12px 0;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -85,7 +89,7 @@ body > .skip {
   .reading-layout aside > nav { max-height: none; }
 }
 @media (max-width: 560px) {
-  .header-inner { gap: 8px; padding: 10px 5vw; }
+  .header-inner { gap: 8px; padding: 10px 0; }
   .header-home span { display: none; }
   .header-tabs a { padding: 6px 9px; font-size: 0.78rem; }
 }

@@ -37,7 +37,7 @@ h3 { font-size: 1.15rem; margin: 0 0 .8rem; }
 [hidden] { display: none !important; }
 .skip { position: absolute; top: -100px; left: 1rem; padding: 1rem; background: var(--accent); color: var(--bg); }
 .skip:focus { top: 1rem; }
-main, .overview-footer { width: min(1440px, 90%); margin: 0 auto; }
+main, .overview-footer { width: var(--site-content-width); margin: 0 auto; }
 main { padding: 2.4rem 0; }
 .presentation-heading, .utility-actions, .slide-controls, .source-links, .overview-footer {
   display: flex; align-items: center; gap: 1rem;
