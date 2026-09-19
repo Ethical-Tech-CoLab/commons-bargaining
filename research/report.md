@@ -28,9 +28,9 @@ The photograph poses institutional questions; its claims about consensus, absent
 
 <!-- workshop:brief -->
 
-### Alignment with published CoLab principles
+### Alignment with published Ethical Tech CoLab principles
 
-The CoLab's public materials identify **Field-grounded**, **Prototype-first**, and **Open by default** as working principles. Its foundational ethical-AI paper emphasizes institutions, human-rights constraints, avoidance of harm, and participation by affected people. We operationalize those commitments rather than inventing an official CoLab charter. [S01] [S02]
+Ethical Tech CoLab's public materials identify **Field-grounded**, **Prototype-first**, and **Open by default** as working principles. Its foundational ethical-AI paper emphasizes institutions, human-rights constraints, avoidance of harm, and participation by affected people. We operationalize those commitments rather than inventing an official Ethical Tech CoLab charter. [S01] [S02]
 
 | Published commitment | Operational requirement for this project | Evidence needed before expansion |
 |---|---|---|
@@ -606,7 +606,7 @@ The strongest counterargument is that a new institution adds overhead without cr
 
 ### The perspective: separate five objectives
 
-The session's "pegovian tax" is interpreted as **Pigouvian tax**. A useful proposal must distinguish **a data dividend** (a distribution to a defined population), **compensation** (payment for particular work or authorized use), **commons finance** (support for shared resources), **harm correction** (making decision-makers face external costs), and **rent sharing** (redistributing returns above a defined benchmark).
+A **Pigouvian tax** is a corrective tax on an activity that imposes costs on others, designed to make decision-makers account for those external costs. [S36] A useful proposal must distinguish **a data dividend** (a distribution to a defined population), **compensation** (payment for particular work or authorized use), **commons finance** (support for shared resources), **harm correction** (making decision-makers face external costs), and **rent sharing** (redistributing returns above a defined benchmark).
 
 These objectives can coexist, but they do not justify identical instruments. A dividend may be financed from tax receipts or public investments without calculating every recipient's contribution to AI. A Pigouvian charge should correspond to marginal external harm, using credible measurement or a defensible proxy. A tax on economic rent instead targets exceptional returns. Commons maintenance has positive spillovers; supporting it does not automatically cancel an unrelated privacy, environmental, or labor harm. [S36]
 
