@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "description": "User-provided photograph of the Collective Bargaining & Institutions workshop whiteboard, containing one group brief and six individually attributed printed cards.",
+    "contextDate": "2026-09-18",
+    "dateBasis": "Context supplied by user; not independently inferred from image metadata",
+    "imageUrl": "./assets/workshop/original.png",
+    "width": 1024,
+    "height": 768,
+    "originalSha256": "b44b353fb12b15610609b1ac22a0fcd63c2ee4c82a2e82bb262647485594954f",
+    "rightsNote": "Published at the user's request. Copyright in the photograph and depicted material remains with its respective rights holders. No photographer attribution or Creative Commons license is established by the supplied image.",
+    "transcriptionNote": "AI-assisted visual transcription of the printed cards visible in the photograph, not verified spoken quotations or evidence of endorsement. The brief heading and each printed attribution are represented separately from statement body text. Printed line wrapping is normalized to spaces; wording, capitalization, and parenthetical text are retained. Any unresolved reading is marked [unclear] and described in the card's uncertainties. Internal enlargements were used only for inspection, not to claim recovery of additional detail. The published full-frame image and crops retain original pixel dimensions; they were generated from decoded pixels without copying hidden source metadata."
+  },
+  "cards": [
+    {
+      "id": "brief",
+      "kind": "brief",
+      "title": "Collective Bargaining & Institutions",
+      "attributionAsPrinted": "No individual attribution printed",
+      "affiliationAsPrinted": null,
+      "transcription": "There appears to be growing consensus that some form of collective management or bargaining institution is crucial to a sustainable data economy. Institutions that let dispersed data creators (individual workers, users of platforms, small publishers) bargain collectively with AI labs are largely absent. User-agents, such as browsers, currently don't mediate on this. There is a wide range of both terminology and substance around what such an ecosystem would look like. There is also some history about how those groups (who do represent data creators) have operated in the past in ways that seem opposed to the members that they are designed to serve. What is the right way to describe this ecosystem? What is the optimal scale of such institutions? How should they relate to each other? Can a government body serve the role effectively and efficiently? To what extent should they be novel to the AI data environment or connected to pre-existing institutions such as labor unions, collective management organizations, etc.? What is in the way of their formation: public awareness, policy, entrepreneurship, etc.?",
+      "uncertainties": [],
+      "cropUrl": "./assets/workshop/brief.png",
+      "crop": {
+        "x": 369,
+        "y": 424,
+        "width": 289,
+        "height": 245
+      }
+    },
+    {
+      "id": "zoe-cullen",
+      "kind": "individual",
+      "title": "Zoe Cullen",
+      "attributionAsPrinted": "Zoe Cullen (HBS).",
+      "affiliationAsPrinted": "HBS",
+      "transcription": "Make concrete the notion of a data trust that holds sensitive work information (corporate email, Slack channels) which is high-value for AI training but currently locked inside firms. The trust would collectively secure the data and collectively negotiate its uses, and would persist across firm insolvency so that rights survive the corporate entity that generated them.",
+      "uncertainties": [],
+      "cropUrl": "./assets/workshop/zoe-cullen.png",
+      "crop": {
+        "x": 56,
+        "y": 217,
+        "width": 297,
+        "height": 103
+      }
+    },
+    {
+      "id": "tillemann",
+      "kind": "individual",
+      "title": "Tomicah Tillemann",
+      "attributionAsPrinted": "Tomicah Tillemann (Project Liberty).",
+      "affiliationAsPrinted": "Project Liberty",
+      "transcription": "Population-scale digital cooperatives as ownership structures that distribute AI value more broadly than the traditional corporate form allows.",
+      "uncertainties": [],
+      "cropUrl": "./assets/workshop/tillemann.png",
+      "crop": {
+        "x": 388,
+        "y": 188,
+        "width": 296,
+        "height": 87
+      }
+    },
+    {
+      "id": "erika-yorio",
+      "kind": "individual",
+      "title": "Erika Yorio",
+      "attributionAsPrinted": "Erika Yorio (Helena).",
+      "affiliationAsPrinted": "Helena",
+      "transcription": "Investigate whether collective licensing or other intermediary structures can give individual data contributors meaningful bargaining power against AI companies, and whether the design of these structures can avoid creating a new layer of gatekeepers. Second thread: explore how litigation and emerging regulatory standards can begin to establish practical norms on data rights, compensation, and permissible use.",
+      "uncertainties": [],
+      "cropUrl": "./assets/workshop/erika-yorio.png",
+      "crop": {
+        "x": 660,
+        "y": 280,
+        "width": 287,
+        "height": 121
+      }
+    },
+    {
+      "id": "nicholas-vincent",
+      "kind": "individual",
+      "title": "Nicholas Vincent",
+      "attributionAsPrinted": "Nicholas Vincent.",
+      "affiliationAsPrinted": null,
+      "transcription": "Three parallel interests: (i) applying technical data valuation across data markets, business models, market design, and policy; (ii) designing effective collective bargaining institutions for data creators; (iii) creating better long-run incentives for data creators, e.g. equity stakes in data or AI companies.",
+      "uncertainties": [],
+      "cropUrl": "./assets/workshop/nicholas-vincent.png",
+      "crop": {
+        "x": 28,
+        "y": 399,
+        "width": 300,
+        "height": 77
+      }
+    },
+    {
+      "id": "beth-goldberg",
+      "kind": "individual",
+      "title": "Beth Goldberg",
+      "attributionAsPrinted": "Beth Goldberg (Humanity AI).",
+      "affiliationAsPrinted": "Humanity AI",
+      "transcription": "Public deliberations on AI data use, so that consequential decisions are not made only by elites in closed-door gatherings; participatory co-design in benefit-sharing arrangements.",
+      "uncertainties": [],
+      "cropUrl": "./assets/workshop/beth-goldberg.png",
+      "crop": {
+        "x": 62,
+        "y": 560,
+        "width": 297,
+        "height": 69
+      }
+    },
+    {
+      "id": "jaron-lanier",
+      "kind": "individual",
+      "title": "Jaron Lanier",
+      "attributionAsPrinted": "Jaron Lanier (Microsoft).",
+      "affiliationAsPrinted": "Microsoft",
+      "transcription": "What is the role of intermediaries in achieving widely distributed economic influence while avoiding centralisation and capture, and while preserving human worth, Autonomy, and creativity? Points to MIDs (mediator intermediaries) as proposed with Glen Weyl in HBR.",
+      "uncertainties": [],
+      "cropUrl": "./assets/workshop/jaron-lanier.png",
+      "crop": {
+        "x": 726,
+        "y": 471,
+        "width": 294,
+        "height": 111
+      }
+    }
+  ]
+}

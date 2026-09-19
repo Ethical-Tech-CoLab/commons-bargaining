@@ -14,11 +14,19 @@
 
 ### Session provenance and attribution
 
-The requested research circle is **Tomica Tilleman, Beth Goldberg, Yorke Rhodes, Glen Weyl, Nick Vincent, Ilan Strauss, Sonam Jindal, and Anna Tumadottir (Creative Commons, as identified in the brief)**. Names reflect the brief and subsequent corrections; remaining spelling and affiliation details, attendance, authorship, and approval require participant confirmation. Inclusion is not a claim that any individual wrote, reviewed, or agrees with this paper.
+The requested research circle is **Tomicah Tillemann, Beth Goldberg, Yorke Rhodes, Glen Weyl, Nick Vincent, Ilan Strauss, Sonam Jindal, and Anna Tumadottir (Creative Commons, as identified in the brief)**. Names reflect the brief, subsequent corrections, and the printed photograph where legible; affiliation details, attendance, authorship, and approval require participant confirmation. Inclusion is not a claim that any individual wrote, reviewed, or agrees with this paper.
 
 **Roundtable reference:** [Roundtable on Mechanisms for a Sustainable AI Data Economy | AI Disclosures Project](https://ai-disclosures.org/msr-roundtable). The convening page describes the 18 September 2026 working session at Microsoft Research New York and its focus on mechanisms across pre-training, post-training, and inference. It supplies context for this research, not participant endorsement of this draft. [S96]
 
-The accompanying workshop image supplied context about collective management, intermediaries, public deliberation, and the value of data. It is not reproduced, treated as a verified transcript, or used to attribute positions to participants. The research is a formulation of the questions, not a reconstruction of the meeting.
+At the user's request, the [workshop source record](./workshop.html) now includes the original supplied photograph, a crop of every printed card, and AI-assisted visual transcriptions. The overall group brief appears below; each attributed direction is also placed beside the relevant research. The names and affiliations on the cards are preserved as printed, not treated as verified spoken quotations or endorsements. The photograph's association with 18 September 2026 comes from the supplied context, not image metadata. [S97]
+
+The user also supplied an excerpt titled *Blueprint for a Collective Bargaining Institution for Data in the Public Interest*. Its [coverage review](./workshop.html#conference-notes) distinguishes source wording, editorial interpretation, additions, and premises requiring qualification. The pasted excerpt was reviewed; the authenticated Google Doc and its other tabs were not independently accessed. Its author line is a source record, not automatic authorship of this publication. [S99]
+
+### Original group brief and directional source map
+
+The photograph poses institutional questions; its claims about consensus, absent institutions, or browser mediation are not adopted as independently established findings. Original wording is retained so readers can inspect the framing rather than infer it from our synthesis.
+
+<!-- workshop:brief -->
 
 ### Alignment with published CoLab principles
 
@@ -106,6 +114,8 @@ Similarly, the EDPB rejects an automatic inference that a model trained on perso
 
 ## 5. From digital Costco to a bargaining federation
 
+<!-- workshop:tillemann -->
+
 **The institution to build is a proposed Commons Collective Federation (CCF):** a member-governed organization that buys accountable AI services, represents specifically authorized contributors, and funds independent commons stewardship. Its first product is an enforceable service agreement, not a universal data pool. The [institution blueprint](#23-institution-blueprint-a-commons-collective-federation) specifies the functions, mandates, governance, and bounded starting sequence. It supplies institutional support for a [pro-human stack](#25-a-pro-human-stack-working-definition-and-test): technology whose human agency claims can be tested and enforced.
 
 ### Two different forms of scale
@@ -115,6 +125,10 @@ The brief's "digital costo" is interpreted as a **digital Costco**, a membership
 **Demand-side scale:** households collectively procure AI assistance, negotiate prices, portability, accessibility, retention limits, and dispute handling. A credible ability to switch suppliers is central. Purchasing leverage exists even when members provide no training data.
 
 **Supply-side scale:** authorized contributors collectively negotiate compensation, attribution, permitted uses, audit, and remedies. Data-labor and data-leverage research motivates this possibility, but the bargaining effect depends on substitutability, model dependence, coordination, and legal authority. Neither a large membership count nor a large dataset proves scarcity or buyer willingness to pay. [S05] [S06]
+
+**Contribution is not coordinated withholding.** The supplied notes distinguish relatively easy participation in multiple collectives from the harder task of sustaining a collective refusal. This is an organizing hypothesis, not proof that contribution is effortless or a data strike effective. Multiple memberships preserve choice but can complicate overlapping mandates, allocation, and credible future-supply commitments. Any coordinated refusal needs a lawful scope, defined target and duration, a decision process, support for participants, and protected dissent. It cannot retract compliant CC permissions, disregard contracts, or damage shared resources; nonemployee coordination requires competition review. [S06] [S13] [S26] [S99]
+
+Population scale also differs from ownership and accountability. Compare direct mass membership, nested local/sectoral bodies, and federated representation on meaningful control, decision costs, inclusion, and benefit distribution. A large user count does not establish democratic ownership or prove that a conventional corporate form has been displaced.
 
 **Public-good representation:** people who use open knowledge and communities affected by AI should influence commons spending without first proving ownership of profitable data. This function is not reducible to either consumer purchasing or seller representation.
 
@@ -198,6 +212,8 @@ The first market should be narrow enough to establish authority and inspect bene
 
 ## 7. Business model and economic discipline
 
+<!-- workshop:nicholas-vincent -->
+
 ### Revenue sources should remain distinguishable
 
 1. **Member dues:** fund representation and purchasing services, with waivers or sponsored membership to prevent income-based exclusion.
@@ -235,6 +251,10 @@ Equal member payments are a governance choice, not an estimate of marginal contr
 Separate five meanings of "data value": buyer willingness to pay; contribution to a specified model-performance metric; the contributor's willingness to accept disclosure; production and maintenance cost; and net social benefit. Data Shapley addresses a particular performance-allocation problem, not an intrinsic monetary value. Acquisti, John, and Loewenstein's privacy experiment shows why willingness to accept or pay can depend on context and endowment, not simply reveal a stable price. Neither measurement alone establishes a fair dividend. [S27] [S30]
 
 ## 8. Payment, disbursement, and public-good return
+
+### Long-run incentives and possible contributor equity
+
+The photographed Vincent card explicitly raises equity stakes in data or AI companies as one possible long-run incentive. Treat this separately from a fee for current work, a royalty, cooperative patronage, or the public sovereign-fund proposal discussed later. No instrument is universally appropriate. Compare cash flow, valuation, dilution, vesting, liquidity, risk, tax/securities treatment, and who controls decisions. Contributors must not be forced to accept speculative equity instead of promised pay, and investor voting power must not silently replace civic membership rights. This is a research and legal-review question, not an offer of securities or evidence that individual data creates an ownership share in a model. [S97]
 
 ### The proposed waterfall
 
@@ -349,6 +369,8 @@ Use encrypted transport and storage, scoped short-lived credentials, least-privi
 
 For access requests, fail closed when authority, purpose, or mandate status is unresolved. For payment failures, report an actionable error and preserve the liability. Do not create success-shaped receipts for failed delivery or failed settlement.
 
+An agent trace can mix public material, private communications, professional work, third-party content, and synthetic outputs in the same record. Classify and assess authority at the appropriate component and use level; possession of the log does not clear every span or tool result for donation or redistribution. The supplied notes' shareback idea is therefore a purpose- and permission-specific process, not a default upload of everything. [S10] [S99]
+
 ### Divergence at every infrastructure node
 
 A request can use an open protocol yet still concentrate identity, attention, payment, and negotiating power elsewhere in the stack. The relevant question at **every node** is: who sets the rules, who can refuse or switch, who receives the money, and who can audit the result?
@@ -365,7 +387,13 @@ At each contract handoff, record an **enforceable condition**, an **exit or refu
 
 The companion page's [node-by-node tipping points](./divergence.html#tipping-points) identifies the countervailing power, organizing actor, enforceable instrument, evidence, and remaining capture risk at each handoff. These are proposed causal mechanisms to test, not measured transition thresholds: open infrastructure alone does not force an incumbent to share control or surplus.
 
-## 12. Alice and Bob: three end-to-end flows
+The notes attribute to Tomicah a distinction among market mechanisms, policy interventions, non-market action, and philanthropic cold-start capacity. The [ten-node mechanism matrix](./divergence.html#intervention-modes) applies all four lenses to every node. They can combine: a contract may need lawful public rules, volunteer stewardship, and seed funding. A grant does not create authority, prove buyer demand, or entitle a donor to control the institution. [S99]
+
+Treat the notes' fear/greed framing as a limited motivation hypothesis, not an exhaustive account or a warrant to manufacture fear. Reciprocal service, professional identity, community purpose, and expected gains can also matter. Likewise, the notes' IETF concern is a proposed case study of participation resources, agenda-setting, conflicts, and outcomes, not an established finding of institutional capture.
+
+<span id="12-alice-and-bob-three-end-to-end-flows"></span>
+
+## 12. Alice and Bob: end-to-end flows
 
 ### A. Alice buys an assistant; Bob is her correspondent
 
@@ -397,7 +425,24 @@ Alice has already released an article under CC BY. Bob's developer can exercise 
 
 **Outcome to test:** additional public-good funding without reduced lawful access. A successful test must compare funding gains against the cost and friction of the institution, not merely celebrate a new payment channel.
 
+### D. Alice and Bob coordinate book and music services
+
+The supplied notes attribute this example to Nick. It is an **illustrative research proposal**, not a case report about existing collecting organizations or a claim that either has particular statutory powers. Here Alice represents a hypothetical book collective-management organization (CMO), and Bob represents a music CMO. [S99]
+
+1. **Verify mandates:** identify represented rights, jurisdictions, exclusions, and overlapping representation.
+2. **Choose one service:** define a bounded educational retrieval offering; do not assume training is included.
+3. **Map interfaces:** exchange permission-safe catalog schemas and authority fields without pooling works or confidential member records.
+4. **Compare appraisal methods:** discuss curation cost, coverage, reliability, and task utility, not automatically confidential prices, margins, bids, or customer terms.
+5. **Review information exchange:** obtain jurisdiction-specific competition advice. Independent intermediaries, aggregation, or a clean room can reduce exposure but do not create immunity. [S13]
+6. **Allocate responsibilities:** specify delivery, provenance, attribution, corrections, costs, and benefits while preserving separate rights and accounts.
+7. **Choose a lawful negotiation route:** negotiate jointly only within verified authority and an appropriate legal basis; otherwise share infrastructure while retaining independent commercial decisions.
+8. **Pilot and reconcile:** test service quality, member understanding, payment allocation, complaints, and exit; publish only permission-safe methods and results.
+
+Success is reduced coordination cost and better service without unauthorized rights expansion or harmful information exchange. It does not require a universal valuation of books versus music.
+
 ## 13. Regulatory framework: present rules and proposals
+
+<!-- workshop:erika-yorio -->
 
 **This section is issue-spotting, not legal advice.** "Collective bargaining" is an institutional objective, not an automatic legal status. Laws protecting employee bargaining do not necessarily protect coordinated pricing by independent creators or businesses. The parties, market, activity, jurisdiction, and scope of any exemption matter.
 
@@ -431,6 +476,8 @@ The report does not assert that a transparency duty creates a right for every pe
 
 **Do not start with:** a universal individual property right over all observable facts, a presumption that every inference incurs a royalty, compulsory licensing of intimate communications, or a token that purports to sell rights the issuer cannot grant.
 
+**Litigation and standards as norm formation:** the photographed Yorio card makes this a separate research track. Maintain a dated, jurisdiction-specific record of the claim, decision or settlement, appeal status, and narrow implications for permissions, compensation, and remedies. Do not turn one decision, an advisory report, or a proposed standard into a universal training rule. Evaluate whether the resulting intermediary improves contributor terms or simply becomes a new gatekeeper. No new case outcome is asserted by adding this research question. [S97]
+
 ## 14. Energy, data centers, and community bargaining
 
 Digital abundance is not physical abundance. The IEA's 2025 analysis estimates global data-center electricity use at roughly **415 TWh in 2024** and projects roughly **945 TWh in 2030 in its Base Case**. These are data-center totals, not AI-only measured consumption; the 2030 number is a scenario projection, not an observation or a fresh 2026 forecast. [S21]
@@ -448,6 +495,8 @@ Digital abundance is not physical abundance. The IEA's 2025 analysis estimates g
 Report energy per useful service alongside absolute consumption. Efficiency improvements can lower cost and increase total demand; a per-query metric alone may conceal rebound. Do not invent precise per-output carbon accounting when the supplier exposes only aggregate data.
 
 Philanthropic capital should support independent measurement, community technical assistance, and procurement expertise before subsidizing speculative data-center assets. Capital-intensive energy projects need qualified engineering, interconnection, environmental, and financial diligence; this report does not establish project feasibility or recommend a particular investment.
+
+Data-center and data-commons coalitions may share procurement, technical assistance, and accountability methods, as suggested in the supplied notes. They must not redirect a host community's priorities without authority or treat a distant knowledge grant as an offset for local environmental duties. Local mitigation and a commons contribution require distinct evidence and approvals. [S99]
 
 ## 15. A philanthropic strategy relevant to Humanity AI
 
@@ -488,7 +537,11 @@ Philanthropy should buy learning and institution-building capacity, not merely a
 
 ## 16. Research program and falsifiable hypotheses
 
+<!-- workshop:beth-goldberg -->
+
 The central empirical question is whether an institution changes bargaining outcomes and control, not whether participants express abstract enthusiasm for fairness.
+
+The Goldberg card makes public deliberation and benefit-sharing co-design explicit. Compensated research should include affected people beyond the invited workshop or paying membership, preserve dissent, and record which decisions changed. A consultation count alone does not establish influence, representation, or approval of a proposed allocation. [S97]
 
 The [open research questions and work register](./open-work.html) records the current follow-on questions, next steps, and explicit statuses. It is the canonical work source for the [live overview presentation](./overview.html); presentation text is drawn from this report rather than maintained as a separate slide draft.
 
@@ -625,6 +678,8 @@ It does **not** establish a universal $2 privacy price, a fair data dividend, an
 
 ## 20. Follow-on research: a Commons Collective Framework Agreement
 
+<!-- workshop:zoe-cullen -->
+
 **Status:** an illustrative, non-binding research framework, not legal advice or a production-ready agreement. The gaps below are **not resolved in this study**; this is not a claim that no sector, jurisdiction, or existing organization has addressed them.
 
 A statutory labor collective bargaining agreement operates within applicable employment law. Other constituencies may need a **multi-party service, licensing, and governance agreement** instead. The label does not create employment status, rights ownership, a duty to bargain, or competition immunity. Local counsel must establish the legal route for actual parties and activities. [S33] [S13]
@@ -641,6 +696,12 @@ A statutory labor collective bargaining agreement operates within applicable emp
 | Host communities | Community-impact agreement with an accountable operator covering monitoring, mitigation, complaints, and benefits | Validate representation and public-law requirements; proximity alone does not confer rights over training data |
 
 Existing sectoral agreements, licensing collectives, cooperative and trust instruments, and community-benefit arrangements should be comparators. The next research step is to identify their coverage and limits, not assume institutional absence.
+
+### Workplace-data trusts and institutional continuity
+
+The Cullen card specifically proposes secure collective stewardship of sensitive work information, collective negotiation of use, and continuity through firm insolvency. This is not solved merely by creating a separate ledger or naming a trust. Assess employer and worker authority, correspondents' rights, confidentiality, trade secrets, custody, permitted purposes, creditor interests, successor responsibilities, and the treatment of contracts in the selected jurisdiction. [S07] [S10] [S97]
+
+Distinguish an institution's continued existence from continued lawful access to information or enforceability of a mandate. The research should test what can legitimately survive a sale, closure, insolvency, or operator replacement; it does not promise bankruptcy-proof rights, irrevocable worker consent, or deletion from already trained models.
 
 ### An annotated agreement architecture
 
@@ -683,7 +744,7 @@ Compare existing instruments in one selected jurisdiction and two bounded domain
 
 **Proposal:** add contextual reputation to provenance through separately signed, challengeable evidence about particular objects, versions, providers, and tasks. Do not turn "trust" into a single transferable score.
 
-The likely Ethereum referent is **ERC-8004: Trustless Agents**. At the research cutoff, the inspected official specification remains **Draft**. It proposes identity, reputation, and validation registries: ERC-721-based agent identity, contextual feedback, and requests to designated validators. Its normative interface language operates within a proposal; it is not proof of final standardization. Payments are outside its scope. [S42]
+**ERC-8004: Trustless Agents** is a researched comparator, not an identified implementation of the Ethereum example mentioned in the supplied notes. The implementation intended by those notes remains unverified. At the research cutoff, the inspected official specification remains **Draft**. It proposes identity, reputation, and validation registries: ERC-721-based agent identity, contextual feedback, and requests to designated validators. Its normative interface language operates within a proposal; it is not proof of final standardization. Payments are outside its scope. [S42] [S99]
 
 The curated contracts repository contains validation implementation code while warning that validation design remains under discussion and revision. Thus validation is neither simply absent nor established as a finalized, uniformly deployed mechanism. This report has not verified a chain deployment or contract address and does not present the example below as ERC-conformant. [S43]
 
@@ -757,6 +818,8 @@ In a fictional query, Bob requests a grounded answer within a latency and cost b
 
 **Validate the ranker, not only the candidates.** Test whether ordering predicts successful held-out task outcomes rather than clicks or purchases. Audit coverage and unequal exposure. Keep advertisements visibly separate; membership spending and Wikimedia donations are not quality evidence.
 
+The supplied notes attribute to Ilan a quality/preference-signal proposal, with payment and public-good aims in tension. A proposed resolution is an open core of provenance, methods, versions, limitations, and challengeable evaluation summaries, with separately priced assurance, integration, freshness, or delivery guarantees. Do not sell favorable findings or preferential ranking. Shared funding should make baseline evaluation accessible so lack of budget is not mistaken for low quality. Payment for a maintained signal is separate from permission to crawl or reuse underlying material; existing rights and lawful access still govern. [S26] [S42] [S61] [S99]
+
 Threat-model self-reviews, Sybil identities, fake transactions, reciprocal review rings, collusion, bribery, validator capture, and feedback loops that entrench incumbents. Use conflict disclosures, duplicate-use checks, reviewer-correlation analysis, independent samples, appeals, and bounded discovery opportunities for newcomers **only among eligible candidates**. Wallet counts are not independent-person counts, and tokenizing reputation does not resolve that problem. [S42]
 
 ## 22. Participation incentives and the future AI data club
@@ -829,6 +892,8 @@ The strategic question is not "How much data can the club collect?" It is **whic
 
 ## 23. Institution blueprint: a Commons Collective Federation
 
+<!-- workshop:jaron-lanier -->
+
 **Recommendation: build a Commons Collective Federation (CCF).** It is a member-governed institution for purchasing accountable AI services, representing specifically authorized contributors, and supporting independent public-interest stewardship. Its first product should be a competitively negotiated, enforceable AI-service agreement, not a universal data pool or a token.
 
 This is a **proposed institutional blueprint**, not an incorporated organization, validated business, statutory labor union, investment fund, or endorsement by any named researcher. "Federation" describes the governance arrangement; local counsel must establish the legal forms and actual authority.
@@ -847,6 +912,10 @@ Preserve the three-part purchasing, contributor-representation, and commons-fund
 | Regulated payment partner | Process charges and distributions through appropriately authorized services | The federation does not assume that holding or moving other people's money is unregulated |
 
 Use separate legal entities where law, fiduciary duties, or credible independence require them. Applicable DGA intermediation and neutrality requirements must be assessed before combining services or reusing intermediated data. Functional separation in a diagram is not a substitute for a required legal separation. [S11]
+
+The overall photographed brief asks whether a public body, existing union, collective-management organization, consumer organization, or new institution should perform the role. Compare legal mandate, constituency, scale, accountability, administrative cost, and usable exit before choosing a federation. Public awareness and member organizing, policy or procurement support, entrepreneurial service provision, and adaptation of existing institutions are alternative formation routes to test, not a presumption that a new organization must be created. [S03] [S97]
+
+The Lanier card's reference to "MIDs (mediator intermediaries)" is preserved as printed, not standardized into an independently verified acronym definition. [*A Blueprint for a Better Digital Society*](https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society) is linked as related HBR reading; the accessible publisher preview was not treated as a full review of the article. Intermediaries here must be judged by distributed economic influence, human agency, evidence, and remedies, not their name alone. [S98]
 
 ### Membership, representation, and mandates
 
@@ -1068,9 +1137,17 @@ The **Commons Collective Agency Starter Kit** should be a source-controlled coll
 
 A component passport records maintainer and exact release/commit; license and dependency review; permissions and egress; hosting and upstream providers; task-evaluation method, sample, results, and date; full cost and support; export and migration evidence; governance and benefit terms; and incidents, appeals, and an accountable reviewer.
 
+For nontechnical users, a convenient public catalog should offer comprehensible capabilities, permission manifests, reviewed releases, safe defaults, revocation notices, and independent challenge. A single discovery interface need not imply one unaccountable owner: permit competing mirrors, portable records, and independent evaluators. Prompt packages and tool downloads are not safe merely because a trusted institution lists them. [S61] [S99]
+
 The [unfilled component-passport sketch](./component-passport.json) is a starting artifact, not an approved component or runtime enforcement system. Keep credentials and personal information out of such public records. Mark missing evidence as unknown, not as a successful review.
 
 Use eligibility gates before ranking. Establish required authority, rights, security, accessibility, and operational conditions; then compare eligible candidates by task outcomes and cost. Supplier payments cannot buy eligibility or higher quality scores.
+
+### Selected trace contribution and permission-safe shareback
+
+Do not invite bulk uploads of raw agent logs. Start locally: select a useful example, remove credentials and unnecessary material, review third-party and employer interests, and approve recipient, purpose, and retention. Retrieved documents, tool results, and hidden context can contain information the user cannot authorize for redistribution; redaction alone does not establish anonymity or clearance. [S10] [S99]
+
+Assess retrieval, evaluation, and training separately. Exclude material with unresolved authority. Share back permission-safe corrections, schemas, methods, and approved derived examples under compatible terms while keeping sensitive evidence access-controlled. A donation creates no missing rights or automatic reversal of completed training. Routing through an agent rather than a browser is not inherently safer; test permissions, egress, retention, isolation, and reviewability. [S26]
 
 ### A workflow mapped to the agency chart
 

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "S99",
+  "sourceTitle": "Blueprint for a Collective Bargaining Institution for Data in the Public Interest",
+  "contextDate": "2026-09-18",
+  "reviewedOn": "2026-09-19",
+  "authorLineAsProvided": "Yorke Rhodes, Anna Tumadottir, Nick Vincent, Beth Goldberg, Tomicah Tilleman, Sonam Jindal, Ilan",
+  "accessBasis": "Reviewed the text excerpt supplied directly by the user. The authenticated Google Doc and its other tabs were not independently accessed.",
+  "attributionNote": "The author line and attributed suggestions belong to the supplied note, not automatically to this Commons Collective publication. Historical project links in the excerpt are superseded by the current site navigation. Drafting placeholders are not filled in as if they were original text.",
+  "assessment": "Most major themes were already covered. The additions make organizing asymmetry, safe trace contribution and shareback, the intervention/funding modes, the two-CMO example, and public quality-signal funding explicit. Strong empirical premises remain qualified rather than adopted as facts.",
+  "directions": [
+    {
+      "id": "compensation-and-data-types",
+      "attributionAsProvided": "Shared notes; no individual attribution",
+      "sourceWording": "Fair compensation & accountability; private data attribution & visibility; professional data licensing; synthetic / AI generated data.",
+      "response": "The report already separates access, rights, origin, sensitivity, and use. Existing commons funding models mean that 'no systems' is too broad; payments and accountability remain uneven. Synthetic data is not assumed universally harmful.",
+      "sectionTitles": ["A spectrum, not a single data commodity", "Private institutions and the commons service model"]
+    },
+    {
+      "id": "contribution-withholding",
+      "attributionAsProvided": "Shared notes; no individual attribution",
+      "sourceWording": "contribution is chill, can join many coops, easy; strike/withhold is hard requires discipline, major organizing issue",
+      "response": "Added the distinction between low-friction participation and sustained, lawful bargaining commitments. Multiple memberships can support choice while complicating mandate coordination. Existing open permissions cannot be retracted by calling an action a strike.",
+      "sectionTitles": ["From digital Costco to a bargaining federation", "Institution blueprint: a Commons Collective Federation"]
+    },
+    {
+      "id": "mixed-traces",
+      "attributionAsProvided": "Shared notes; no individual attribution",
+      "sourceWording": "Note that traces can contain all of these",
+      "response": "Made trace-level mixture explicit: a single agent log can contain public, private, professional, and synthetic material with different rights and sensitivities. A user's possession of a trace does not clear every component for sharing.",
+      "sectionTitles": ["A spectrum, not a single data commodity", "Open-agent incentives and a Commons Collective Agency Starter Kit"]
+    },
+    {
+      "id": "node-forks",
+      "attributionAsProvided": "Shared notes; no individual attribution",
+      "sourceWording": "Human input -> protocols -> browser / agent -> example.com -> CDN -> database",
+      "response": "The node-by-node diagram already covers this conceptual flow and its countervailing powers. The forks are design possibilities, not proof that every centralized component is captured or every open component distributes power.",
+      "sectionTitles": ["New knowledge objects and technical architecture", "A pro-human stack: working definition and test"]
+    },
+    {
+      "id": "intervention-modes",
+      "attributionAsProvided": "Tomicah, as attributed in the supplied notes",
+      "sourceWording": "identify whether each fork requires a policy solution for a market solution for a competitive marketplace OR a non-market solution supported by philanthropic capital",
+      "response": "Added a ten-node matrix separating market leverage, policy/legal instruments, non-market coordination, and philanthropic startup capacity. These modes can combine, and grants do not prove commercial demand or grant governing authority.",
+      "sectionTitles": ["New knowledge objects and technical architecture", "A philanthropic strategy relevant to Humanity AI"]
+    },
+    {
+      "id": "motivation-and-standards",
+      "attributionAsProvided": "Shared notes; no individual attribution",
+      "sourceWording": "incentives are all about fear and/or greed; Protocols: IETF capture by big companies",
+      "response": "Treat concentration concerns and expected gains as possible motivators, not an exhaustive psychology or a reason to manufacture fear. The IETF claim is a proposed governance case study, not an established finding; examine participation resources, influence, and conflicts.",
+      "sectionTitles": ["New knowledge objects and technical architecture", "Participation incentives and the future AI data club"]
+    },
+    {
+      "id": "nontechnical-distribution",
+      "attributionAsProvided": "Shared notes; no individual attribution",
+      "sourceWording": "a single repository of all the prompts and downloads stewarded by a trusted institution to enable distribution to the non-technical public",
+      "response": "The starter-kit proposal already supplies component passports and eligibility-first selection. Clarified accessible distribution, safe defaults, independent review, portability, and competing mirrors so one convenient interface does not become an unchallengeable gatekeeper.",
+      "sectionTitles": ["Open-agent incentives and a Commons Collective Agency Starter Kit", "A pro-human stack: working definition and test"]
+    },
+    {
+      "id": "trace-donation-and-shareback",
+      "attributionAsProvided": "Shared notes; no individual attribution",
+      "sourceWording": "you could donate all of your agent traces/logs to another institution; Shareback remixed data",
+      "response": "Replaced bulk-donation assumptions with a proposed local selection, authority review, minimization, recipient/purpose/retention approval, and separate training assessment. Share back only permission-safe corrections, methods, and approved derived artifacts; routing through an agent is not inherently safer than a browser.",
+      "sectionTitles": ["New knowledge objects and technical architecture", "Open-agent incentives and a Commons Collective Agency Starter Kit"]
+    },
+    {
+      "id": "sector-guilds-and-energy",
+      "attributionAsProvided": "Shared notes; no individual attribution",
+      "sourceWording": "Specialized knowledge guilds; Data Unions / Knowledge Guilds by Industry; Redirect today's Data Center organizing / bargaining toward AI data commons",
+      "response": "The six-sector replication pack and energy-community analysis already address these areas. Coalitions can share capacity, but data-commons funding must not replace local environmental duties or the host community's own priorities.",
+      "sectionTitles": ["Energy, data centers, and community bargaining", "Replicable sector collectives: blueprint and templates"]
+    },
+    {
+      "id": "two-cmo-collaboration",
+      "attributionAsProvided": "Nick, as attributed in the supplied notes",
+      "sourceWording": "a book CMO and a music CMO want to join forces; how to share internal assessments of data value / appraisal",
+      "response": "Added an illustrative Alice/Bob collaboration. It separates shared appraisal methods and permission-safe interfaces from sensitive prices and customer terms; a clean room does not itself create competition-law immunity.",
+      "sectionTitles": ["Alice and Bob: end-to-end flows", "Follow-on research: a Commons Collective Framework Agreement"]
+    },
+    {
+      "id": "quality-signals",
+      "attributionAsProvided": "Ilan, as attributed in the supplied notes",
+      "sourceWording": "pay for a quality /preference signal that the crawler could only see if they paid - ideally it'd be a public good",
+      "response": "Added a public quality-signal core with separately priced assurance, integration, freshness, and service guarantees, never payment for favorable ranking. The notes do not identify a specific Ethereum deployment; ERC-8004 remains a researched comparator, not confirmation of that implementation.",
+      "sectionTitles": ["Reputation, validation, and quality ranking", "Private institutions and the commons service model"]
+    },
+    {
+      "id": "quasi-commons-premise",
+      "attributionAsProvided": "Shared notes; no individual attribution",
+      "sourceWording": "More of humanity is (unwittingly) contributing to the quasi-commons of the claude code weights than ever before",
+      "response": "Already addressed with account-specific policy distinctions, context versus weight updates, and limits on comparing AI users with Wikimedia contributors. Neither universal involuntary training nor exclusive benefit to one provider is adopted as a verified fact.",
+      "sectionTitles": ["The quasi-commons tension: contribution without control", "Commons-authored RL rewards and regulatory design"]
+    }
+  ]
+}

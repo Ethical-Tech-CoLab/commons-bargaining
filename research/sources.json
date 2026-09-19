@@ -1,5 +1,35 @@
 [
   {
+    "id": "S97",
+    "author": "User-provided workshop photograph; card attributions preserved as printed",
+    "year": "2026 context supplied by user",
+    "title": "Collective Bargaining & Institutions: group brief and six attributed direction cards",
+    "url": "https://ethical-tech-colab.github.io/commons-collective/workshop.html",
+    "claim": "Records the printed group brief and cards attributed to Zoe Cullen, Tomicah Tillemann, Erika Yorio, Nicholas Vincent, Beth Goldberg, and Jaron Lanier, with original-frame and crop evidence.",
+    "limit": "AI-assisted visual transcription, not verified spoken quotations, independent proof of the cards' premises, or endorsement. The event-date association is contextual, not inferred from image metadata; source rights are not relicensed.",
+    "accessed": "2026-09-19"
+  },
+  {
+    "id": "S98",
+    "author": "Harvard Business Review (publisher)",
+    "year": "2018-09-26",
+    "title": "A Blueprint for a Better Digital Society",
+    "url": "https://hbr.org/2018/09/a-blueprint-for-a-better-digital-society",
+    "claim": "Publisher metadata identifies the article and publication date; its accessible introduction discusses dissatisfaction with surveillance-funded digital services and the need for an economic shift.",
+    "limit": "Bibliographic metadata and public preview only, not a full-text review. Included as related reading, not verification of every MID detail or endorsement of the proposed institution.",
+    "accessed": "2026-09-19"
+  },
+  {
+    "id": "S99",
+    "author": "Session-note authors as credited in the user-supplied excerpt",
+    "year": "2026-09-18",
+    "title": "Blueprint for a Collective Bargaining Institution for Data in the Public Interest: supplied note excerpt",
+    "url": "https://ethical-tech-colab.github.io/commons-collective/workshop.html#conference-notes",
+    "claim": "The supplied draft raises contribution versus withholding, mixed traces, node-level incentives, market/policy/non-market/philanthropic mechanisms, sector institutions, CMO collaboration, and public quality signals. Its author line and specific attributions are recorded in the source review.",
+    "limit": "Review is of the user's pasted excerpt, not authenticated access to the complete Google Doc or other tabs. Draft premises and attributed suggestions are not adopted as verified empirical findings or approval of this publication.",
+    "accessed": "2026-09-19"
+  },
+  {
     "id": "S96",
     "author": "AI Disclosures Project",
     "year": "2026",

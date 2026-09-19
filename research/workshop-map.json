@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "S97",
+  "scopeNote": "This crosswalk assesses the supplied photograph, not the completeness of the conference or any unreviewed supplemental document. Mapping and coverage notes are editorial interpretation; the transcriptions preserve the printed cards.",
+  "supplementalReview": {
+    "status": "reviewed-user-supplied-excerpt",
+    "note": "The user supplied the conference-note excerpt directly, and that text was reviewed. The authenticated Google Doc and its other tabs were not independently accessed."
+  },
+  "mappings": [
+    {
+      "cardId": "brief",
+      "primaryTitle": "Research circle and ethical commitments",
+      "summary": "The overall institutional brief: describe the ecosystem, identify legitimate representation, choose scale and relationships, compare existing and new institutions, and explain how they form.",
+      "coverage": "The brief is now reproduced in section 1. Its questions are traced across institutional comparison, regulatory options, the research program, and the federation blueprint; these remain research questions rather than demonstrated outcomes.",
+      "directions": [
+        { "label": "Define the institutional ecosystem and its relation to existing organizations", "sectionTitles": ["The commons problem and the grazing analogy", "From digital Costco to a bargaining federation", "Follow-on research: a Commons Collective Framework Agreement"] },
+        { "label": "Compare scale, coordination, public authority, and institutional formation", "sectionTitles": ["Research program and falsifiable hypotheses", "Institution blueprint: a Commons Collective Federation", "Replicable sector collectives: blueprint and templates"] }
+      ]
+    },
+    {
+      "cardId": "zoe-cullen",
+      "primaryTitle": "Follow-on research: a Commons Collective Framework Agreement",
+      "summary": "A workplace-data trust for collective protection and negotiation, with a specific continuity question when the originating firm becomes insolvent.",
+      "coverage": "Private and relational data, scoped mandates, and continuity were already discussed. The workplace-data and insolvency aspiration is now an explicit follow-on question; survival of rights is not assumed to be legally guaranteed.",
+      "directions": [
+        { "label": "Separate access to workplace information from authority to reuse it", "sectionTitles": ["A spectrum, not a single data commodity", "Gmail, private AI, and meaningful opt-in"] },
+        { "label": "Test collective negotiation, secure stewardship, and insolvency continuity", "sectionTitles": ["Follow-on research: a Commons Collective Framework Agreement", "Institution blueprint: a Commons Collective Federation"] }
+      ]
+    },
+    {
+      "cardId": "tillemann",
+      "primaryTitle": "From digital Costco to a bargaining federation",
+      "summary": "Population-scale digital cooperatives as a route to broader ownership and distribution of AI value.",
+      "coverage": "Member governance, buyer/supplier organization, and benefit return were already central. The ownership-versus-governance distinction and the trade-off between population scale and accountable representation are now made explicit.",
+      "directions": [
+        { "label": "Design ownership and governance that distribute benefits rather than merely enlarge membership", "sectionTitles": ["From digital Costco to a bargaining federation", "Payment, disbursement, and public-good return"] },
+        { "label": "Compare nested, sectoral, and population-scale arrangements", "sectionTitles": ["Institution blueprint: a Commons Collective Federation", "Replicable sector collectives: blueprint and templates"] }
+      ]
+    },
+    {
+      "cardId": "erika-yorio",
+      "primaryTitle": "Regulatory framework: present rules and proposals",
+      "summary": "Collective licensing and intermediaries should improve real bargaining power without becoming new gatekeepers; litigation and emerging regulation can be studied as routes to practical norms.",
+      "coverage": "Licensing, competition, rights, and gatekeeper risks were covered. A dated litigation-and-standards research track is added without asserting unverified case outcomes or universal new compensation rights.",
+      "directions": [
+        { "label": "Test bargaining gains against the risk of a replacement gatekeeper", "sectionTitles": ["Archetypes and the multi-sided marketplace", "Failure modes, counterarguments, and safeguards", "Reputation, validation, and quality ranking"] },
+        { "label": "Track legal and regulatory norm formation with jurisdiction and status made explicit", "sectionTitles": ["Regulatory framework: present rules and proposals", "Follow-on research: a Commons Collective Framework Agreement"] }
+      ]
+    },
+    {
+      "cardId": "nicholas-vincent",
+      "primaryTitle": "Business model and economic discipline",
+      "summary": "Connect data valuation and market design to effective contributor institutions and long-term incentives, including the possibility of equity participation.",
+      "coverage": "Valuation, business models, and collective bargaining already have dedicated analysis. Creator equity is now distinguished from cash, royalties, and the separate public sovereign-fund proposal, with unresolved governance and legal trade-offs.",
+      "directions": [
+        { "label": "Data valuation, business models, market design, and policy", "sectionTitles": ["Archetypes and the multi-sided marketplace", "Business model and economic discipline", "Private institutions and the commons service model"] },
+        { "label": "Effective contributor bargaining institutions", "sectionTitles": ["From digital Costco to a bargaining federation", "Follow-on research: a Commons Collective Framework Agreement", "Institution blueprint: a Commons Collective Federation"] },
+        { "label": "Long-run contributor incentives and possible equity stakes", "sectionTitles": ["Payment, disbursement, and public-good return", "Data dividends, Pigouvian taxes, and commons credits"] }
+      ]
+    },
+    {
+      "cardId": "beth-goldberg",
+      "primaryTitle": "Research program and falsifiable hypotheses",
+      "summary": "Public deliberation and participatory design should shape consequential AI-data decisions and benefit-sharing arrangements, rather than leaving decisions to closed elite forums.",
+      "coverage": "Affected-person participation, paid design research, member governance, and commons budgeting were covered. Their connection to public co-design beyond invited participants is now explicit.",
+      "directions": [
+        { "label": "Include affected publics in consequential data-use decisions", "sectionTitles": ["Research circle and ethical commitments", "From digital Costco to a bargaining federation", "Research program and falsifiable hypotheses"] },
+        { "label": "Co-design benefits and objectives with people affected", "sectionTitles": ["Payment, disbursement, and public-good return", "Commons-authored RL rewards and regulatory design", "A pro-human stack: working definition and test"] }
+      ]
+    },
+    {
+      "cardId": "jaron-lanier",
+      "primaryTitle": "Institution blueprint: a Commons Collective Federation",
+      "summary": "Assess intermediaries by distributed economic influence and protection of human worth, autonomy, and creativity, while resisting centralization and capture; retain the card's reference to MIDs and related work.",
+      "coverage": "Anti-capture governance, intermediaries, shared benefits, and the pro-human stack were covered. The photographed MID reference is preserved and connected to these tests without treating an acronym as proof of effectiveness.",
+      "directions": [
+        { "label": "Intermediation that broadens benefits without concentrating control", "sectionTitles": ["From digital Costco to a bargaining federation", "Institution blueprint: a Commons Collective Federation", "Replicable sector collectives: blueprint and templates"] },
+        { "label": "Human worth, autonomy, creativity, and contestable mediation", "sectionTitles": ["A pro-human stack: working definition and test", "Open-agent incentives and a Commons Collective Agency Starter Kit"] }
+      ]
+    }
+  ]
+}

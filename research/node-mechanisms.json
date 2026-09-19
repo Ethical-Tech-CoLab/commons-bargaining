@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "sourceId": "S99",
+  "note": "Editorial operationalization of the intervention distinction attributed to Tomicah in the user-supplied notes. These are proposed, potentially complementary mechanisms, not findings that any named provider is captured or that a legal power already exists.",
+  "nodes": [
+    {
+      "id": "protocols",
+      "title": "Web protocols and standards",
+      "market": "Pool procurement around independently implementable interfaces and verifiable conformance.",
+      "policy": "Apply lawful public-procurement and interoperability requirements where an authorized body can do so.",
+      "nonMarket": "Funded standards participation, open deliberation, shared maintenance, and minority appeal routes.",
+      "philanthropic": "Seed independent reference implementations, accessibility participation, and public-interest technical capacity."
+    },
+    {
+      "id": "browser-agent",
+      "title": "Browser and agent",
+      "market": "Use member-authorized purchasing and credible routing or supplier exit.",
+      "policy": "Enforce applicable consumer, privacy, disclosure, and portability duties.",
+      "nonMarket": "Share reviewed configurations, accessible guidance, and accountable user representation.",
+      "philanthropic": "Support early usability, isolation tests, migration tools, and inclusion subsidies."
+    },
+    {
+      "id": "domain-app",
+      "title": "Domain and application",
+      "market": "Combine recurring demand and authorized contributions in transparent service agreements.",
+      "policy": "Review platform terms and competitive coordination under the applicable legal framework.",
+      "nonMarket": "Member and supplier governance, published criteria, and independent complaints.",
+      "philanthropic": "Bootstrap catalogs, outreach, rights review, and participation before recurring demand exists."
+    },
+    {
+      "id": "cdn",
+      "title": "CDN and edge",
+      "market": "Negotiate pooled service, log, blocking-review, and funded exit commitments.",
+      "policy": "Use applicable communications, privacy, and review obligations; do not invent control over a provider.",
+      "nonMarket": "Maintain shared operations knowledge and permission-safe failover exercises.",
+      "philanthropic": "Fund independent testing, migration readiness, and smaller operators' technical support."
+    },
+    {
+      "id": "identity-consent",
+      "title": "Identity and permission",
+      "market": "Procure compatible identity and privacy services without selling blanket permission.",
+      "policy": "Establish lawful processing bases and preserve applicable individual and third-party protections.",
+      "nonMarket": "Rights stewardship, comprehensible mandates, and reusable refusal and appeal procedures.",
+      "philanthropic": "Support accessible consent design, alternative authentication, and independent rights expertise."
+    },
+    {
+      "id": "database-server",
+      "title": "Database, server, and cloud",
+      "market": "Buy hosting with usable export, bounded exit costs, and verified service continuity.",
+      "policy": "Review processing, confidentiality, retention, and migration obligations in the relevant jurisdictions.",
+      "nonMarket": "Shared schemas, stewardship protocols, and collective maintenance.",
+      "philanthropic": "Seed export tools, independent data review, and underfunded maintenance capacity."
+    },
+    {
+      "id": "model-compute",
+      "title": "Model and compute",
+      "market": "Compare eligible suppliers and negotiate valuable, authorized updates or contributor services.",
+      "policy": "Assess applicable rights and deployment duties; evaluate any new outcome or participation requirement separately.",
+      "nonMarket": "Maintain shared evaluations, alternatives, and plural public-interest objectives.",
+      "philanthropic": "Fund open benchmarks, bounded pilots, and participation where buyers alone will not finance them."
+    },
+    {
+      "id": "provenance-validation",
+      "title": "Provenance, quality, and validation",
+      "market": "Sell independent assurance, integration, freshness, or delivery services, not favorable scores.",
+      "policy": "Require truthful claims and usable challenge under applicable law; no automatic certification from registry entry.",
+      "nonMarket": "Maintain an open core of methods, versions, limitations, and contestable summaries.",
+      "philanthropic": "Support baseline evaluation access, independent reviewers, and trustworthy public discovery."
+    },
+    {
+      "id": "settlement",
+      "title": "Payment and settlement",
+      "market": "Contract for transparent regulated payment services and agreed benefit allocations.",
+      "policy": "Resolve payments, tax, consumer-protection, safeguarding, and unclaimed-fund duties.",
+      "nonMarket": "Participatory budgeting, independent reconciliation, and protected member liabilities.",
+      "philanthropic": "Seed ledger infrastructure, complaint capacity, and clearly disclosed participation support."
+    },
+    {
+      "id": "community-energy",
+      "title": "Community and energy return",
+      "market": "Negotiate lawful procurement and community-benefit commitments with accountable operators.",
+      "policy": "Use authorized utility, environmental, siting, and public cost-allocation processes.",
+      "nonMarket": "Community organizing, deliberation, independent monitoring, and public-interest advocacy.",
+      "philanthropic": "Fund independent engineering and representation without buying consent or offsetting unrelated local harms."
+    }
+  ]
+}

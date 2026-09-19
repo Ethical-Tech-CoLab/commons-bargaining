@@ -7,6 +7,7 @@
 [Open research questions](https://ethical-tech-colab.github.io/commons-collective/open-work.html) |
 [Replication blueprint](https://ethical-tech-colab.github.io/commons-collective/blueprint.html) |
 [AI usage audit](https://ethical-tech-colab.github.io/commons-collective/ai-usage.html) |
+[Workshop sources](https://ethical-tech-colab.github.io/commons-collective/workshop.html) |
 [Source report](research/report.md) |
 [Evidence register](research/sources.json) |
 [Deployment](https://github.com/Ethical-Tech-CoLab/commons-collective/actions/workflows/pages.yml)
@@ -24,9 +25,17 @@ research circle; their inclusion is not a claim of authorship, attendance,
 funding, affiliation verification, or endorsement. Human editorial and legal
 review are required before treating the proposals as institutional commitments.
 
-The supplied workshop image informed the questions but is not redistributed.
-No private communications, real consumer data, credentials, or payment details
-are included. Only the explicitly fictional example object is published.
+At the user's request, the supplied workshop photograph and each printed-card
+crop are published with AI-assisted visual transcriptions and an editorial
+research crosswalk. Original embedded image metadata is not copied. Printed
+attributions are not verified spoken quotations or endorsements. Image and
+quoted-source rights remain with their respective rights holders; the
+research's license does not relicense them.
+
+The user-supplied conference-note excerpt was reviewed for coverage. This is not
+a claim of authenticated access to the full Google Doc or its other tabs. No
+private communications, real consumer records, credentials, or payment details
+are included.
 
 The report operationalizes the CoLab's published field-grounded,
 prototype-first, and open-by-default principles. It also draws on the CoLab's
@@ -71,6 +80,8 @@ connections are documented rather than presented as a new official charter.
   training, and why AI-user and Wikimedia-contributor counts cannot be conflated.
 - An open replication paper and editable charter, mandate, governance, pilot,
   business-model and sector-profile templates for six autonomous sector collectives.
+- The original workshop brief, six attributed source cards and crops, a
+  source-to-research map, and a review of the supplied conference-note excerpt.
 
 ## Run locally
 
@@ -143,6 +154,25 @@ summary maintenance is required. Renumbered source sections are resolved by thei
 titles; removed or ambiguous titles fail validation instead of leaving stale links.
 Statuses describe empirical/institutional research, not completion of this website.
 
+## Workshop source traceability
+
+The provided photograph, seven card records, and printed attributions are held
+in `research/workshop-statements.json`. The editorial coverage map is separate,
+in `research/workshop-map.json`. Report markers such as `<!-- workshop:brief -->`
+are expanded from those records into the website and Markdown download; the
+same records also supply the standalone source page and live overview.
+
+The user-provided conference-note excerpt is reviewed in
+`research/conference-notes-review.json`; that is not a claim of authenticated
+access to the complete Google Doc. `research/node-mechanisms.json` supplies the
+four-mode intervention matrix. Source wording and editorial response are
+distinguished, and printed attributions are not treated as spoken quotations.
+
+The original attachment is unchanged. Published PNGs are generated from its
+pixels without original embedded metadata; crops have declared coordinates and
+are pixel-checked against the published frame. Source-image rights remain
+separate from the project's original research and code licenses.
+
 ## AI usage accounting
 
 The [AI usage page](https://ethical-tech-colab.github.io/commons-collective/ai-usage.html)
@@ -168,6 +198,10 @@ explicit local operation, not part of a website visit or normal build.
 | `research/replication-blueprint.md` | Companion paper on autonomous sector collectives and evidence-gated replication |
 | `templates/` | Original nonbinding drafting pack and explicitly unfilled six-sector profile |
 | `research/open-work.json` | Canonical research questions, next steps, statuses, and source references |
+| `research/workshop-statements.json` | Photo provenance, printed attributions, and canonical transcriptions |
+| `research/workshop-map.json` | Editorial placement and coverage of every photographed direction |
+| `research/conference-notes-review.json` | Bounded review of the user-provided note excerpt, not full-document access |
+| `research/node-mechanisms.json` | Market, policy, non-market and philanthropic lenses for every request node |
 | `site/template.html` | Accessible publication shell |
 | `site/header.html`, `site/header.css` | Shared persistent Overview, Demos, Research navigation |
 | `site/favicon.svg` | Shared green header mark and browser favicon |
@@ -185,6 +219,7 @@ explicit local operation, not part of a website visit or normal build.
 | `site/ai-usage.html`, `site/ai-usage.css` | Dedicated model-by-model usage disclosure |
 | `site/overview.html`, `site/overview.mjs`, `site/overview.css` | Source-loaded presentation and refresh states |
 | `site/open-work.html`, `site/open-work.css` | Source-linked research work-register view |
+| `site/workshop.html`, `site/workshop.css` | Original-image, card, and note provenance page |
 | `examples/knowledge-object.json` | Fictional interoperable-object sketch, not a production contract/schema |
 | `examples/reputation-observation.json` | Unexecuted evidence-record sketch, not a real reputation score or ERC implementation |
 | `examples/component-passport.json` | Unfilled component-review record, not approval or runtime isolation |
@@ -213,7 +248,9 @@ https://ethical-tech-colab.github.io/commons-collective/
 
 ## License
 
-Original research, source annotations, institutional templates, and example data: **CC BY 4.0**. Attribute the report
+Original research, editorial source annotations, institutional templates, and example data: **CC BY 4.0**. Attribute the report
 title and repository, identify modifications, and do not imply endorsement.
 Software: **MIT**, as set out in [LICENSE](LICENSE). External sources remain
 under their respective terms; this repository does not relicense them.
+The user-supplied workshop photograph, derived crops, and quoted/transcribed
+source wording are expressly excluded from the project's licensing grant.

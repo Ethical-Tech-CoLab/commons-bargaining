@@ -23,7 +23,7 @@
       "title": "Measure supplier bargaining gains",
       "question": "Can collective representation improve contributors' net compensation and enforceable conditions without depending indefinitely on subsidy?",
       "status": "open",
-      "nextStep": "Compare bounded licensing or stewardship offers, full transaction costs, repeat buyer demand, and contributor outcomes.",
+      "nextStep": "Compare bounded licensing or stewardship offers, full transaction costs, repeat demand, and long-run contributor outcomes; distinguish easy contribution and multiple memberships from lawful sustained bargaining commitments.",
       "sourceTitles": ["Research program and falsifiable hypotheses", "From digital Costco to a bargaining federation"]
     },
     {
@@ -55,7 +55,7 @@
       "title": "Validate a bargaining agreement",
       "question": "Which representative mandates, contract terms, enforcement resources, and competition-law routes are defensible for the selected participants and jurisdiction?",
       "status": "open",
-      "nextStep": "Compare existing instruments, commission local legal review, and test a redlined nonbinding framework before any executed pilot.",
+      "nextStep": "Compare existing instruments, commission local legal review, track dated litigation and standards, and test a redlined nonbinding framework before any executed pilot.",
       "sourceTitles": ["Follow-on research: a Commons Collective Framework Agreement", "Regulatory framework: present rules and proposals"]
     },
     {
@@ -63,7 +63,7 @@
       "title": "Evaluate contextual reputation and ranking",
       "question": "Does eligibility-first, task-specific ranking predict successful outcomes while resisting manipulation and giving qualified newcomers fair exposure?",
       "status": "open",
-      "nextStep": "Define a held-out evaluation, publish component metrics and uncertainty, and test conflicts, fake feedback, version changes, and appeals.",
+      "nextStep": "Define held-out evaluations, public component metrics and uncertainty, and test conflicts, fake feedback, version changes, appeals, and funding for a public quality-signal core without pay-to-rank.",
       "sourceTitles": ["Reputation, validation, and quality ranking"]
     },
     {
@@ -95,7 +95,7 @@
       "title": "Validate a minimum viable bargaining institution",
       "question": "Can a professionally operated Commons Collective Federation secure an enforceable agreement and demonstrable member benefits before taking on unnecessary institutional complexity?",
       "status": "open",
-      "nextStep": "Choose a jurisdiction and founding cohort, fund counsel and enforcement, ratify a capped mandate, and compare credible vendor offers.",
+      "nextStep": "Choose a jurisdiction, compare public bodies and existing unions/collectives with a new federation, fund counsel and enforcement, ratify a capped mandate, and compare credible vendor offers.",
       "sourceTitles": ["Institution blueprint: a Commons Collective Federation", "From digital Costco to a bargaining federation"]
     },
     {
@@ -145,6 +145,22 @@
       "status": "open",
       "nextStep": "Select one sector and jurisdiction, complete the unfilled profile and charter with local evidence, fund independent review, and run the 90-day and 180-day gates.",
       "sourceTitles": ["Replicable sector collectives: blueprint and templates", "Private institutions and the commons service model"]
+    },
+    {
+      "id": "workplace-trust-continuity",
+      "title": "Test workplace-data trust continuity",
+      "question": "What lawful authority, confidentiality protections, custody, and successor arrangements could preserve a workplace-data trust's legitimate functions through a firm's sale, closure, or insolvency?",
+      "status": "open",
+      "nextStep": "Select a jurisdiction, map employer/worker/third-party and creditor interests, and review contractual and institutional continuity without promising bankruptcy-proof rights.",
+      "sourceTitles": ["Follow-on research: a Commons Collective Framework Agreement", "Gmail, private AI, and meaningful opt-in"]
+    },
+    {
+      "id": "cross-cmo-appraisal",
+      "title": "Pilot collaboration between collecting organizations",
+      "question": "Can book and music collecting organizations share permission-safe interfaces and appraisal methods while preserving rights, independent decisions, and lawful information exchange?",
+      "status": "open",
+      "nextStep": "Use fictional catalogs for the Alice/Bob case, obtain competition and rights review, distinguish methods from sensitive prices, and test service and allocation responsibilities.",
+      "sourceTitles": ["Alice and Bob: end-to-end flows", "Follow-on research: a Commons Collective Framework Agreement"]
     }
   ]
 }

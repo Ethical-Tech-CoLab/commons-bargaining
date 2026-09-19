@@ -4,6 +4,11 @@ import { createCompanionSection, createPresentationData } from './presentation-d
 import { renderResearch } from './render-research.mjs';
 import QRCode from 'qrcode';
 import { validateUsageAudit, renderUsageAudit, usageAuditSection } from './usage-audit.mjs';
+import {
+  validateWorkshop, loadWorkshopAssets, validateWorkshopPlacements, expandWorkshopMarkers,
+  renderWorkshopOriginal, renderWorkshopCard, renderWorkshopCrosswalk, workshopPresentationSection,
+  validateConferenceReview, renderConferenceReview, conferencePresentationSection, renderNodeMechanisms,
+} from './workshop.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => readFile(new URL(path, root), 'utf8');
@@ -16,6 +21,11 @@ const sources = [
   ...JSON.parse(await read('research/replication-sources.json')),
 ].sort((a, b) => a.id.localeCompare(b.id));
 const report = await read('research/report.md');
+const workshopSource = await read('research/workshop-statements.json');
+const workshopMappingSource = await read('research/workshop-map.json');
+const conferenceSource = await read('research/conference-notes-review.json');
+const nodeMechanismsSource = await read('research/node-mechanisms.json');
+const workshopCss = await read('site/workshop.css');
 const replicationPaper = await read('research/replication-blueprint.md');
 const sectorProfile = JSON.parse(await read('templates/sector-profile.json'));
 const template = await read('site/template.html');
@@ -65,7 +75,16 @@ for (const source of sources) {
   ids.add(source.id);
 }
 
-const { html: rendered, headings, cited } = renderResearch(report, ids);
+const { html: reportHtml, headings, cited } = renderResearch(report, ids);
+const workshop = validateWorkshop(JSON.parse(workshopSource), JSON.parse(workshopMappingSource), headings);
+if (!ids.has(workshop.mapping.sourceId)) throw new Error('The workshop photograph is not registered as a source');
+validateWorkshopPlacements(report, workshop);
+const workshopAssets = await loadWorkshopAssets(workshop, root);
+const expandedReport = expandWorkshopMarkers(report, workshop, workshopAssets);
+const rendered = expandWorkshopMarkers(reportHtml, workshop, workshopAssets);
+const conferenceReview = validateConferenceReview(JSON.parse(conferenceSource), workshop);
+if (!ids.has(conferenceReview.sourceId)) throw new Error('The conference-note excerpt is not registered as a source');
+const nodeMechanisms = renderNodeMechanisms(JSON.parse(nodeMechanismsSource));
 const resolvePaperLink = href => {
   if (/^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i.test(href)) return href;
   const resolved = new URL(href, 'https://publication.invalid/research/replication-blueprint.md');
@@ -90,6 +109,7 @@ const html = template.replace('{{REPORT}}', rendered).replace('{{CONTENTS}}', co
   .replace('href="./styles.css"', `href="./styles.css?v=${fingerprint(stylesheet)}"`)
   .replace('href="./header.css"', `href="./header.css?v=${fingerprint(headerCss)}"`)
   .replace('href="./qr-share.css"', `href="./qr-share.css?v=${fingerprint(qrCss)}"`)
+  .replace('href="./workshop.css"', `href="./workshop.css?v=${fingerprint(workshopCss)}"`)
   .replace('src="./app.mjs"', `src="./app.mjs?v=${fingerprint(app)}"`);
 if (/\{\{[A-Z_]+\}\}/.test(html)) throw new Error('Unresolved template placeholder');
 
@@ -100,15 +120,17 @@ await writeFile(new URL('dist/qr-share.css', root), qrCss);
 await writeFile(new URL('dist/index.html', root), html);
 await writeFile(new URL('dist/app.mjs', root), app);
 const diagram = diagramTemplate.replace('{{HEADER}}', renderHeader('diagram'))
+  .replace('{{NODE_MECHANISMS}}', nodeMechanisms)
   .replaceAll('./favicon.svg', faviconUrl)
-  .replace('href="./header.css"', `href="./header.css?v=${fingerprint(headerCss)}"`);
+  .replace('href="./header.css"', `href="./header.css?v=${fingerprint(headerCss)}"`)
+  .replace('href="./workshop.css"', `href="./workshop.css?v=${fingerprint(workshopCss)}"`);
 if (/\{\{[A-Z_]+\}\}/.test(diagram)) throw new Error('Unresolved diagram template placeholder');
 await writeFile(new URL('dist/divergence.html', root), diagram);
 for (const file of ['styles.css', 'header.css', 'model.mjs', 'divergence.svg', 'favicon.svg']) {
   await copyFile(new URL(`site/${file}`, root), new URL(`dist/${file}`, root));
 }
 const bibliography = sources.map(s => `- **${s.id}.** ${s.author} (${s.year}). [${s.title}](${s.url}). ${s.claim} Limit: ${s.limit} Accessed ${s.accessed}.`).join('\n\n');
-await writeFile(new URL('dist/report.md', root), `${report}\n\n## References\n\n${bibliography}\n`);
+await writeFile(new URL('dist/report.md', root), `${expandedReport}\n\n## References\n\n${bibliography}\n`);
 await writeFile(new URL('dist/sources.json', root), JSON.stringify(sources, null, 2));
 await copyFile(new URL('examples/knowledge-object.json', root), new URL('dist/knowledge-object.json', root));
 await copyFile(new URL('examples/reputation-observation.json', root), new URL('dist/reputation-observation.json', root));
@@ -116,13 +138,16 @@ await copyFile(new URL('examples/component-passport.json', root), new URL('dist/
 await copyFile(new URL('examples/service-operator-economics.json', root), new URL('dist/service-operator-economics.json', root));
 
 const presentation = createPresentationData({
-  report, headings, template, diagramTemplate, work, sources,
+  report: expandedReport, headings, template, diagramTemplate, work, sources,
   additionalSections: [
     createCompanionSection(replicationPaper, { id: 'paper-replication-blueprint', url: './blueprint.html#abstract' }),
     usageAuditSection(usageAudit),
+    workshopPresentationSection(workshop),
+    conferencePresentationSection(conferenceReview),
   ],
   revision: {
-    contentHash: fingerprint([report, replicationPaper, template, diagramTemplate, workSource, usageSource, JSON.stringify(sources)].join('\0')),
+    contentHash: fingerprint([expandedReport, replicationPaper, template, diagramTemplate, workSource, usageSource,
+      workshopSource, workshopMappingSource, conferenceSource, nodeMechanismsSource, JSON.stringify(sources)].join('\0')),
     builtAt: new Date().toISOString(),
     commit: process.env.GITHUB_SHA || null,
   },
@@ -189,6 +214,30 @@ await writeFile(new URL('dist/ai-usage.json', root), usageSource);
 await copyFile(new URL('usage/audit-config.json', root), new URL('dist/usage-audit-config.json', root));
 await copyFile(new URL('vendor/usage-calc/UPSTREAM.json', root), new URL('dist/usage-calc-provenance.json', root));
 await copyFile(new URL('usage/README.md', root), new URL('dist/usage-method.md', root));
+
+const workshopPage = (await read('site/workshop.html'))
+  .replace('{{HEADER}}', renderHeader('work'))
+  .replaceAll('./favicon.svg', faviconUrl)
+  .replace('href="./styles.css"', `href="./styles.css?v=${fingerprint(stylesheet)}"`)
+  .replace('href="./header.css"', `href="./header.css?v=${fingerprint(headerCss)}"`)
+  .replace('href="./workshop.css"', `href="./workshop.css?v=${fingerprint(workshopCss)}"`)
+  .replace('{{SOURCE_NOTE}}', `${escape(workshop.data.source.transcriptionNote)} ${escape(workshop.data.source.dateBasis)}.`)
+  .replace('{{ORIGINAL_IMAGE}}', renderWorkshopOriginal(workshop, workshopAssets))
+  .replace('{{CARDS}}', [...workshop.cards.keys()].map(id => renderWorkshopCard(workshop, workshopAssets, id)).join('\n'))
+  .replace('{{MAPPING_NOTE}}', escape(workshop.mapping.scopeNote))
+  .replace('{{CROSSWALK}}', renderWorkshopCrosswalk(workshop))
+  .replace('{{NOTES_REVIEW}}', renderConferenceReview(conferenceReview, workshop));
+if (/\{\{[A-Z_]+\}\}/.test(workshopPage)) throw new Error('Unresolved workshop source-page placeholder');
+await writeFile(new URL('dist/workshop.html', root), workshopPage);
+await writeFile(new URL('dist/workshop.css', root), workshopCss);
+await writeFile(new URL('dist/workshop-statements.json', root), workshopSource);
+await writeFile(new URL('dist/workshop-map.json', root), workshopMappingSource);
+await writeFile(new URL('dist/conference-notes-review.json', root), conferenceSource);
+await writeFile(new URL('dist/node-mechanisms.json', root), nodeMechanismsSource);
+await mkdir(new URL('dist/assets/workshop/', root), { recursive: true });
+for (const asset of workshopAssets.values()) {
+  await writeFile(new URL(`dist/${asset.relative}`, root), asset.bytes);
+}
 
 const paperCss = await read('site/paper.css');
 const paperContents = `<ol>${blueprint.headings.map(({ id, text }) => `<li><a href="#${id}">${text}</a></li>`).join('')}</ol>`;
