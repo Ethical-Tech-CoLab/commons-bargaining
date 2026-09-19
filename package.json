@@ -10,7 +10,8 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "test": "node --test \"test/*.test.mjs\"",
-    "preview": "python -m http.server 4173 --bind 127.0.0.1 --directory dist"
+    "preview": "python -m http.server 4173 --bind 127.0.0.1 --directory dist",
+    "audit:usage": "python scripts/capture-ai-usage.py"
   },
   "dependencies": {
     "marked": "18.0.12",

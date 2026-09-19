@@ -6,6 +6,7 @@
 [Live overview presentation](https://ethical-tech-colab.github.io/commons-collective/overview.html) |
 [Open research questions](https://ethical-tech-colab.github.io/commons-collective/open-work.html) |
 [Replication blueprint](https://ethical-tech-colab.github.io/commons-collective/blueprint.html) |
+[AI usage audit](https://ethical-tech-colab.github.io/commons-collective/ai-usage.html) |
 [Source report](research/report.md) |
 [Evidence register](research/sources.json) |
 [Deployment](https://github.com/Ethical-Tech-CoLab/commons-collective/actions/workflows/pages.yml)
@@ -73,7 +74,8 @@ connections are documented rather than presented as a new official charter.
 
 ## Run locally
 
-Requires Node.js 22 or newer. Node.js 24 is used in GitHub Actions.
+Requires Node.js 22 or newer for building and Python 3.8 or newer for the audit
+collector and its synthetic-ledger tests. Node.js 24 is used in GitHub Actions.
 
 ```powershell
 npm ci
@@ -83,7 +85,8 @@ npm run preview
 ```
 
 Preview uses Python 3's built-in HTTP server and listens only on
-`http://127.0.0.1:4173`. Python is not required for building or deployment.
+`http://127.0.0.1:4173`. The site build itself uses only Node; tests also exercise
+the Python audit collector without accessing a real ledger.
 
 Build-time dependencies are `marked` and `qrcode`, locked in the lockfile.
 The QR code is generated locally from the canonical site URL, with a white
@@ -140,6 +143,22 @@ summary maintenance is required. Renumbered source sections are resolved by thei
 titles; removed or ambiguous titles fail validation instead of leaving stale links.
 Statuses describe empirical/institutional research, not completion of this website.
 
+## AI usage accounting
+
+The [AI usage page](https://ethical-tech-colab.github.io/commons-collective/ai-usage.html)
+uses a reviewed aggregate snapshot and pinned, unmodified calculation modules
+from [Ethical Tech CoLab usage-calc](https://github.com/Ethical-Tech-CoLab/usage-calc).
+It reports recorded model IDs, requests, token channels, main/delegated work,
+observed rates, and overlap-aware request time. USD figures are the tool's
+list-price equivalents, **not actual subscription charges**.
+
+See [usage/README.md](usage/README.md) for scope and reproduction. The initial
+cutoff precedes this audit request, so its creation and later work are excluded.
+No raw prompts, responses, working paths, machine names, or session/agent IDs
+are published. The website and CI validate committed aggregates; they never
+open the private session store. `python scripts\capture-ai-usage.py` is an
+explicit local operation, not part of a website visit or normal build.
+
 ## File map
 
 | File | Role |
@@ -159,6 +178,11 @@ Statuses describe empirical/institutional research, not completion of this websi
 | `scripts/build.mjs` | Markdown, citations, navigation, and downloads |
 | `scripts/render-research.mjs` | Shared citation-aware renderer for the main report and companion paper |
 | `scripts/presentation-data.mjs` | Derives live presentation data from canonical published sources |
+| `scripts/capture-ai-usage.py` | Read-only, scoped local capture using CoLab usage-calc |
+| `scripts/usage-audit.mjs` | Aggregate privacy/reconciliation validation and audit rendering |
+| `usage/` | Public aggregate snapshot, fixed scope, and reproduction method; no raw ledger |
+| `vendor/usage-calc/` | Pinned calculation subset, original MIT license, and source checksums |
+| `site/ai-usage.html`, `site/ai-usage.css` | Dedicated model-by-model usage disclosure |
 | `site/overview.html`, `site/overview.mjs`, `site/overview.css` | Source-loaded presentation and refresh states |
 | `site/open-work.html`, `site/open-work.css` | Source-linked research work-register view |
 | `examples/knowledge-object.json` | Fictional interoperable-object sketch, not a production contract/schema |

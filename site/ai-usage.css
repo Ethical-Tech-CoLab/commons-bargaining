@@ -1,0 +1,42 @@
+.audit-main { max-width: 1280px; padding: 3rem 5vw; }
+.audit-main h1 { font-size: clamp(2.7rem, 6vw, 5.8rem); line-height: 1.03; margin: 1.5rem 0; }
+.audit-main h2 { font-size: 1.8rem; }
+.audit-main section + section { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.audit-lede { max-width: 850px; color: var(--muted); font-size: 1.2rem; }
+.audit-warning { padding: 1rem 1.3rem; border-left: 3px solid var(--accent); background: var(--surface); font-size: .9rem; }
+.audit-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 2rem 0; }
+.audit-metrics > div { padding: 1.2rem; background: var(--card); border-top: 2px solid var(--accent); }
+.audit-metrics dt { font-size: .78rem; }
+.audit-metrics dd { font-size: clamp(1.6rem, 2.6vw, 2.6rem); margin-top: .5rem; color: var(--accent); }
+.audit-links { display: flex; flex-wrap: wrap; gap: .8rem 1.5rem; font-size: .85rem; }
+.audit-main table { min-width: 650px; }
+.audit-main td { font-variant-numeric: tabular-nums; }
+.audit-note { color: var(--muted); font-size: .83rem; }
+.audit-main summary { cursor: pointer; color: var(--accent); }
+.audit-main details { padding: 1rem 0; }
+.audit-main details[open] > summary { margin-bottom: 1rem; }
+.audit-facts { display: grid; gap: 1rem; margin: 1.5rem 0; }
+.audit-facts > div { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 1rem; padding-bottom: .8rem; border-bottom: 1px solid var(--line); }
+.audit-facts dt { color: var(--muted); }
+.audit-facts dd { margin: 0; font-size: .9rem; font-weight: 400; overflow-wrap: anywhere; }
+.audit-main code { overflow-wrap: anywhere; }
+.audit-main a { overflow-wrap: anywhere; }
+.audit-main time { overflow-wrap: anywhere; }
+@media(max-width:700px) {
+  .audit-main { padding-top: 2rem; }
+  .audit-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .audit-facts > div { grid-template-columns: 1fr; gap: .25rem; }
+}
+@media(max-width:420px) {
+  .audit-metrics { grid-template-columns: 1fr; }
+}
+@media print {
+  .audit-main { max-width: none; padding: 0; }
+  .audit-main h1 { font-size: 30pt; }
+  .audit-metrics { grid-template-columns: repeat(3, 1fr); }
+  .audit-warning, .audit-metrics > div { background: white; color: #111; }
+  .audit-metrics dd, .audit-main summary { color: #111; }
+  .audit-links { display: none; }
+  .audit-facts dt, .audit-note { color: #333; }
+  .audit-main table { min-width: 0; }
+}

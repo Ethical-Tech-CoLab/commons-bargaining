@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "project": "Commons Collective",
+  "repository": "https://github.com/Ethical-Tech-CoLab/commons-collective",
+  "materialCommit": "14215be94badc7389edd195b0bc8934a339a9cb2",
+  "cutoffExclusive": "2026-09-19T13:47:16.543Z",
+  "cutoffReason": "Start of the AI usage-audit request. This snapshot covers preceding project production and verification, not the cost of producing or later refreshing the audit.",
+  "scopePolicy": "Exact normalized working-directory match in one local session store; no all-project export.",
+  "approvedModels": ["gpt-6-astra"]
+}

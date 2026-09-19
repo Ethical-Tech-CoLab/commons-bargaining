@@ -73,7 +73,8 @@ test('all publication pages have shared permanent navigation with the requested 
   const overview = await readFile(new URL('../dist/overview.html', import.meta.url), 'utf8');
   const work = await readFile(new URL('../dist/open-work.html', import.meta.url), 'utf8');
   const blueprint = await readFile(new URL('../dist/blueprint.html', import.meta.url), 'utf8');
-  for (const page of [html, diagram, overview, work, blueprint]) {
+  const audit = await readFile(new URL('../dist/ai-usage.html', import.meta.url), 'utf8');
+  for (const page of [html, diagram, overview, work, blueprint, audit]) {
     assert.match(page, /class="site-header"/);
     assert.match(page, /aria-label="Primary navigation"/);
     assert.match(page, /data-nav="overview"[^>]*>Overview<\/a>/);
@@ -106,11 +107,12 @@ test('all publication pages use the same green icon for the header and favicon',
   const overview = await readFile(new URL('../dist/overview.html', import.meta.url), 'utf8');
   const work = await readFile(new URL('../dist/open-work.html', import.meta.url), 'utf8');
   const blueprint = await readFile(new URL('../dist/blueprint.html', import.meta.url), 'utf8');
+  const audit = await readFile(new URL('../dist/ai-usage.html', import.meta.url), 'utf8');
   const icon = await readFile(new URL('../dist/favicon.svg', import.meta.url), 'utf8');
   assert.match(icon, /viewBox="0 0 28 28"/);
   assert.match(icon, /fill="#c8f04b"/);
   assert.equal([...icon.matchAll(/<circle /g)].length, 3);
-  for (const page of [html, diagram, overview, work, blueprint]) {
+  for (const page of [html, diagram, overview, work, blueprint, audit]) {
     const favicon = page.match(/<link rel="icon"[^>]*href="([^"]+)"/);
     const headerIcon = page.match(/<img class="header-mark" src="([^"]+)"/);
     assert.ok(favicon && headerIcon);
@@ -148,7 +150,7 @@ test('presentation and open-work sources match the published report and canonica
 });
 
 test('presentation and work-register pages have resolvable local assets and source links', async () => {
-  for (const file of ['overview.html', 'open-work.html', 'blueprint.html']) {
+  for (const file of ['overview.html', 'open-work.html', 'blueprint.html', 'ai-usage.html']) {
     const page = await readFile(new URL(`../dist/${file}`, import.meta.url), 'utf8');
     const ids = [...page.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
     assert.equal(ids.length, new Set(ids).size, `duplicate ids in ${file}`);
@@ -182,7 +184,7 @@ test('every divergence node explains the levers and tests that could change its 
 });
 
 test('current publication branding and repository links use Commons Collective', async () => {
-  for (const file of ['index.html', 'divergence.html', 'overview.html', 'open-work.html', 'blueprint.html']) {
+  for (const file of ['index.html', 'divergence.html', 'overview.html', 'open-work.html', 'blueprint.html', 'ai-usage.html']) {
     const page = await readFile(new URL(`../dist/${file}`, import.meta.url), 'utf8');
     assert.match(page, /Commons Collective/);
     assert.match(page, /github\.com\/Ethical-Tech-CoLab\/commons-collective/);

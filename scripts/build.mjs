@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { createCompanionSection, createPresentationData } from './presentation-data.mjs';
 import { renderResearch } from './render-research.mjs';
 import QRCode from 'qrcode';
+import { validateUsageAudit, renderUsageAudit, usageAuditSection } from './usage-audit.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => readFile(new URL(path, root), 'utf8');
@@ -21,6 +22,12 @@ const template = await read('site/template.html');
 const diagramTemplate = await read('site/divergence.html');
 const workSource = await read('research/open-work.json');
 const work = JSON.parse(workSource);
+const usageSource = await read('usage/ai-usage.json');
+const usageConfig = JSON.parse(await read('usage/audit-config.json'));
+const usageProvenance = JSON.parse(await read('vendor/usage-calc/UPSTREAM.json'));
+const captureAdapterSha256 = createHash('sha256')
+  .update((await read('scripts/capture-ai-usage.py')).replace(/^\uFEFF/, '').replace(/\r\n/g, '\n')).digest('hex');
+const usageAudit = validateUsageAudit(JSON.parse(usageSource), usageConfig, usageProvenance, captureAdapterSha256);
 const header = await read('site/header.html');
 const headerCss = await read('site/header.css');
 const renderHeader = page => header.replaceAll('{{PREFIX}}', page === 'main' ? '#' : './index.html#')
@@ -107,9 +114,10 @@ const presentation = createPresentationData({
   report, headings, template, diagramTemplate, work, sources,
   additionalSections: [
     createCompanionSection(replicationPaper, { id: 'paper-replication-blueprint', url: './blueprint.html#abstract' }),
+    usageAuditSection(usageAudit),
   ],
   revision: {
-    contentHash: fingerprint([report, replicationPaper, template, diagramTemplate, workSource, JSON.stringify(sources)].join('\0')),
+    contentHash: fingerprint([report, replicationPaper, template, diagramTemplate, workSource, usageSource, JSON.stringify(sources)].join('\0')),
     builtAt: new Date().toISOString(),
     commit: process.env.GITHUB_SHA || null,
   },
@@ -160,6 +168,22 @@ const workPage = (await read('site/open-work.html'))
 if (/\{\{[A-Z_]+\}\}/.test(workPage)) throw new Error('Unresolved work-register template placeholder');
 await writeFile(new URL('dist/open-work.html', root), workPage);
 await writeFile(new URL('dist/open-work.css', root), workCss);
+
+const auditCss = await read('site/ai-usage.css');
+const auditPage = (await read('site/ai-usage.html'))
+  .replace('{{HEADER}}', renderHeader('work'))
+  .replaceAll('./favicon.svg', faviconUrl)
+  .replace('href="./styles.css"', `href="./styles.css?v=${fingerprint(stylesheet)}"`)
+  .replace('href="./header.css"', `href="./header.css?v=${fingerprint(headerCss)}"`)
+  .replace('href="./ai-usage.css"', `href="./ai-usage.css?v=${fingerprint(auditCss)}"`)
+  .replace('{{AUDIT}}', renderUsageAudit(usageAudit));
+if (/\{\{[A-Z_]+\}\}/.test(auditPage)) throw new Error('Unresolved AI-usage template placeholder');
+await writeFile(new URL('dist/ai-usage.html', root), auditPage);
+await writeFile(new URL('dist/ai-usage.css', root), auditCss);
+await writeFile(new URL('dist/ai-usage.json', root), usageSource);
+await copyFile(new URL('usage/audit-config.json', root), new URL('dist/usage-audit-config.json', root));
+await copyFile(new URL('vendor/usage-calc/UPSTREAM.json', root), new URL('dist/usage-calc-provenance.json', root));
+await copyFile(new URL('usage/README.md', root), new URL('dist/usage-method.md', root));
 
 const paperCss = await read('site/paper.css');
 const paperContents = `<ol>${blueprint.headings.map(({ id, text }) => `<li><a href="#${id}">${text}</a></li>`).join('')}</ol>`;

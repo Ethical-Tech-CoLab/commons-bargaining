@@ -1,0 +1,310 @@
+{
+  "schemaVersion": 1,
+  "project": "Commons Collective",
+  "repository": "https://github.com/Ethical-Tech-CoLab/commons-collective",
+  "generatedAt": "2026-09-19T14:30:12.446262Z",
+  "scope": {
+    "policy": "Exact normalized working-directory match in one local session store; no all-project export.",
+    "cutoffExclusive": "2026-09-19T13:47:16.543Z",
+    "cutoffReason": "Start of the AI usage-audit request. This snapshot covers preceding project production and verification, not the cost of producing or later refreshing the audit.",
+    "materialCommit": "14215be94badc7389edd195b0bc8934a339a9cb2",
+    "machinesObserved": 1,
+    "matchingSessions": 1,
+    "sessionsWithIncludedUsage": 1,
+    "matchingSessionsWithoutIncludedUsage": 0,
+    "sessionFingerprints": [
+      "0e7148858a0cbdda5f7a0349f247012a5f2e6ee37fa1b89c151509bcfad088e5"
+    ],
+    "firstRecordedAt": "2026-09-18T17:27:23.164Z",
+    "lastRecordedAt": "2026-09-19T13:44:42.234Z",
+    "excludedRowsAtOrAfterCutoff": 32,
+    "otherMachinesVerified": false
+  },
+  "upstream": {
+    "name": "Ethical Tech CoLab usage-calc",
+    "repository": "https://github.com/Ethical-Tech-CoLab/usage-calc",
+    "commit": "d688a913d298cec5cca722d73c328f756b3dd685",
+    "version": "0.1.0",
+    "functions": [
+      "store.load_events(strict=True)",
+      "metrics.group",
+      "intervals.busy_union"
+    ]
+  },
+  "pricing": {
+    "nanoAiuPerCredit": "1000000000",
+    "assumedUsdPerCredit": "0.01",
+    "invoiceMeasured": false,
+    "interpretation": "Recorded token charges converted using usage-calc's AI-credit assumption; a list-price equivalent, not subscription spending or an invoice."
+  },
+  "coverage": {
+    "includedRows": 401,
+    "rowsWithTokenDetails": 401,
+    "rowsWithRecordedDuration": 401,
+    "rowsWithReasoningMetadata": 401,
+    "rowsWithNonzeroReasoningMetadata": 348,
+    "rowsWithFlatTokenColumnDifferences": 401,
+    "allSelectedChargesReconciled": true
+  },
+  "integrity": {
+    "sourceUsageRecordsSha256": "17497c8440ae5131f5eab61a8de089f21b7416237179d44a2a86d4c353a97b30",
+    "captureAdapterSha256": "c57817b00ea9a608c85125003e589baec2d366ffb9b166c13ff2fff4fa743d79",
+    "captureConfigSha256": "535937b9ef6ffdb82f10882690a65e513a9160f793fcbf204271c57b14b5a463",
+    "note": "Digest commits to selected usage metadata, not prompts. It is not a provider signature or independent attestation of the private ledger."
+  },
+  "totals": {
+    "requests": 401,
+    "tokens": {
+      "input": 1203,
+      "cache_read": 64410300,
+      "cache_write": 2340525,
+      "output": 476807
+    },
+    "pricedTokens": 67228835,
+    "reasoningMetadataTokens": 205683,
+    "nanoAiu": "16486140250000",
+    "listPriceUsdExact": "164.8614025",
+    "modelWorkMs": 12359025,
+    "requestActiveUnionMs": 10040587,
+    "busyBlocks": 261,
+    "embeddedAgentCount": 7
+  },
+  "models": [
+    {
+      "model": "gpt-6-astra",
+      "requests": 401,
+      "tokens": {
+        "input": 1203,
+        "cache_read": 64410300,
+        "cache_write": 2340525,
+        "output": 476807
+      },
+      "pricedTokens": 67228835,
+      "reasoningMetadataTokens": 205683,
+      "nanoAiu": "16486140250000",
+      "listPriceUsdExact": "164.8614025",
+      "modelWorkMs": 12359025
+    }
+  ],
+  "roles": [
+    {
+      "role": "main-assistant",
+      "requests": 236,
+      "tokens": {
+        "input": 708,
+        "cache_read": 55764138,
+        "cache_write": 1370932,
+        "output": 281087
+      },
+      "pricedTokens": 57416865,
+      "reasoningMetadataTokens": 151126,
+      "nanoAiu": "13430437800000",
+      "listPriceUsdExact": "134.304378",
+      "modelWorkMs": 8013697
+    },
+    {
+      "role": "delegated-agents",
+      "requests": 165,
+      "tokens": {
+        "input": 495,
+        "cache_read": 8646162,
+        "cache_write": 969593,
+        "output": 195720
+      },
+      "pricedTokens": 9811970,
+      "reasoningMetadataTokens": 54557,
+      "nanoAiu": "3055702450000",
+      "listPriceUsdExact": "30.5570245",
+      "modelWorkMs": 4345328
+    }
+  ],
+  "modelRoles": [
+    {
+      "role": "main-assistant",
+      "requests": 236,
+      "tokens": {
+        "input": 708,
+        "cache_read": 55764138,
+        "cache_write": 1370932,
+        "output": 281087
+      },
+      "pricedTokens": 57416865,
+      "reasoningMetadataTokens": 151126,
+      "nanoAiu": "13430437800000",
+      "listPriceUsdExact": "134.304378",
+      "modelWorkMs": 8013697,
+      "model": "gpt-6-astra"
+    },
+    {
+      "role": "delegated-agents",
+      "requests": 165,
+      "tokens": {
+        "input": 495,
+        "cache_read": 8646162,
+        "cache_write": 969593,
+        "output": 195720
+      },
+      "pricedTokens": 9811970,
+      "reasoningMetadataTokens": 54557,
+      "nanoAiu": "3055702450000",
+      "listPriceUsdExact": "30.5570245",
+      "modelWorkMs": 4345328,
+      "model": "gpt-6-astra"
+    }
+  ],
+  "channels": [
+    {
+      "channel": "input",
+      "tokens": 1203,
+      "nanoAiu": "1482000000",
+      "listPriceUsdExact": "0.01482"
+    },
+    {
+      "channel": "cache_read",
+      "tokens": 64410300,
+      "nanoAiu": "9934324500000",
+      "listPriceUsdExact": "99.343245"
+    },
+    {
+      "channel": "cache_write",
+      "tokens": 2340525,
+      "nanoAiu": "3809408750000",
+      "listPriceUsdExact": "38.0940875"
+    },
+    {
+      "channel": "output",
+      "tokens": 476807,
+      "nanoAiu": "2740925000000",
+      "listPriceUsdExact": "27.40925"
+    }
+  ],
+  "rates": [
+    {
+      "model": "gpt-6-astra",
+      "channel": "cache_read",
+      "nanoAiuPerToken": "100000",
+      "usdPerMillionTokensExact": "1",
+      "tokens": 29477355,
+      "requests": 308,
+      "nanoAiu": "2947735500000"
+    },
+    {
+      "model": "gpt-6-astra",
+      "channel": "cache_read",
+      "nanoAiuPerToken": "200000",
+      "usdPerMillionTokensExact": "2",
+      "tokens": 34932945,
+      "requests": 93,
+      "nanoAiu": "6986589000000"
+    },
+    {
+      "model": "gpt-6-astra",
+      "channel": "cache_write",
+      "nanoAiuPerToken": "1250000",
+      "usdPerMillionTokensExact": "12.5",
+      "tokens": 1633523,
+      "requests": 308,
+      "nanoAiu": "2041903750000"
+    },
+    {
+      "model": "gpt-6-astra",
+      "channel": "cache_write",
+      "nanoAiuPerToken": "2500000",
+      "usdPerMillionTokensExact": "25",
+      "tokens": 707002,
+      "requests": 93,
+      "nanoAiu": "1767505000000"
+    },
+    {
+      "model": "gpt-6-astra",
+      "channel": "input",
+      "nanoAiuPerToken": "1000000",
+      "usdPerMillionTokensExact": "10",
+      "tokens": 924,
+      "requests": 308,
+      "nanoAiu": "924000000"
+    },
+    {
+      "model": "gpt-6-astra",
+      "channel": "input",
+      "nanoAiuPerToken": "2000000",
+      "usdPerMillionTokensExact": "20",
+      "tokens": 279,
+      "requests": 93,
+      "nanoAiu": "558000000"
+    },
+    {
+      "model": "gpt-6-astra",
+      "channel": "output",
+      "nanoAiuPerToken": "5000000",
+      "usdPerMillionTokensExact": "50",
+      "tokens": 334051,
+      "requests": 308,
+      "nanoAiu": "1670255000000"
+    },
+    {
+      "model": "gpt-6-astra",
+      "channel": "output",
+      "nanoAiuPerToken": "7500000",
+      "usdPerMillionTokensExact": "75",
+      "tokens": 142756,
+      "requests": 93,
+      "nanoAiu": "1070670000000"
+    }
+  ],
+  "days": [
+    {
+      "date": "2026-09-18",
+      "requests": 392,
+      "tokens": {
+        "input": 1176,
+        "cache_read": 60513731,
+        "cache_write": 1844188,
+        "output": 465716
+      },
+      "pricedTokens": 62824811,
+      "reasoningMetadataTokens": 196764,
+      "nanoAiu": "14382747450000",
+      "listPriceUsdExact": "143.8274745",
+      "modelWorkMs": 11975326
+    },
+    {
+      "date": "2026-09-19",
+      "requests": 9,
+      "tokens": {
+        "input": 27,
+        "cache_read": 3896569,
+        "cache_write": 496337,
+        "output": 11091
+      },
+      "pricedTokens": 4404024,
+      "reasoningMetadataTokens": 8919,
+      "nanoAiu": "2103392800000",
+      "listPriceUsdExact": "21.033928",
+      "modelWorkMs": 383699
+    }
+  ],
+  "dayBoundary": "UTC date of the recorded usage event, not inferred human workdays",
+  "privacy": {
+    "containsPrompts": false,
+    "containsResponses": false,
+    "containsTurnLabels": false,
+    "containsPaths": false,
+    "containsMachineNames": false,
+    "containsRawSessionIds": false,
+    "containsRawAgentIds": false,
+    "containsIndividualRequestRows": false
+  },
+  "limitations": [
+    "This is a one-machine, selected-record snapshot, not proof that all project activity or other machines were logged.",
+    "The fixed cutoff excludes this audit's production and later work; the snapshot does not refresh from private telemetry in GitHub Pages.",
+    "Model identifiers are reported exactly as recorded, not mapped to unverified public product names.",
+    "Requests are ledger events, not human messages; cached input is repeated traffic, not unique authored content.",
+    "Reasoning metadata is not added to the priced token-channel total; zero does not establish absence of reasoning.",
+    "Summed request duration is model work; union time removes overlaps using usage-calc's completion-timestamp interpretation. Neither measures GPU-hours or human attention.",
+    "Recorded charge units reconcile; their USD interpretation follows the upstream conversion assumption and is not an actual bill.",
+    "No energy, water, carbon, human labor, or output value is measured by this audit.",
+    "Non-model tool services, CI, storage, network charges, and any hidden upstream routing are not measured.",
+    "Raw records remain private. Readers can reconcile the published aggregates, but independent confirmation of the underlying ledger requires authorized local access."
+  ]
+}

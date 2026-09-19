@@ -36,6 +36,8 @@ The CoLab's public materials identify **Field-grounded**, **Prototype-first**, a
 
 This is a **scoping synthesis and design proposal**, not a systematic review. Sources were selected for direct relevance to common-resource governance, data labor and leverage, applicable legal instruments, open licensing, philanthropic intent, provenance, consumer privacy, and energy demand. The evidence register distinguishes what each source supports from what it does not establish. Primary legal texts and official institutional publications take precedence over commentary for descriptions of rules and programs.
 
+**AI usage disclosure:** the [model-by-model usage audit](./ai-usage.html) documents a bounded local-ledger snapshot for the production of these materials using CoLab's usage-calc calculations. It distinguishes recorded requests and token charges from dollar-conversion assumptions, actual billing, human labor, and unobserved activity. The raw conversation and individual request records are not published; usage volume does not establish the quality or truth of this research.
+
 The principal legal comparison is the European Union and United States. It is not a complete global survey, and rules differ within and beyond these jurisdictions. Source access is dated 18 September 2026; legislation, guidance, litigation, and product settings may change. A pilot needs a jurisdiction-specific legal memorandum immediately before launch, including current amendments and implementation schedules.
 
 We use three epistemic labels in substance:

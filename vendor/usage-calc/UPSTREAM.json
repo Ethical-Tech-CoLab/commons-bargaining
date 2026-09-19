@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/Ethical-Tech-CoLab/usage-calc",
+  "commit": "d688a913d298cec5cca722d73c328f756b3dd685",
+  "version": "0.1.0",
+  "license": "MIT",
+  "hashNormalization": "UTF-8 text with CRLF normalized to LF",
+  "files": {
+    "usagecalc/store.py": "e774ac8d3aa6ffb880fb6d5842c7311c9187523151580de6def92c0b7355fafb",
+    "usagecalc/metrics.py": "e4c687cfa307a8ed3c7127397bb2628c6a3de2c90d228cad69aed4013aa80b53",
+    "usagecalc/intervals.py": "c7ce6d0ea969bb43bd94532e3d72be8ce37731cde4fbdf9213517201bddfd3e0",
+    "LICENSE": "ebb40e4eef936086e205a0a25657cbd84949b480e92df2f153c94c734aa254dc"
+  },
+  "adaptation": "The three calculation modules and license are unmodified. A minimal local package initializer avoids importing unused dashboard modules. Project capture, cutoff, privacy filtering, and presentation are separate adapters."
+}
