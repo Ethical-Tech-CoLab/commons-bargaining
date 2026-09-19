@@ -49,8 +49,10 @@
     </section>
     <div class="reading-layout">
       <aside>
-        <nav aria-label="Research contents"><p class="eyebrow">In this paper</p>{{CONTENTS}}</nav>
-        <p class="aside-note">Evidence, interpretation, and proposals are distinguished throughout. No participant endorsement is implied.</p>
+        <div class="reading-sidebar">
+          <nav aria-label="Research contents" tabindex="0"><p class="eyebrow">In this paper</p>{{CONTENTS}}</nav>
+          <p class="aside-note">Evidence, interpretation, and proposals are distinguished throughout. No participant endorsement is implied.</p>
+        </div>
       </aside>
       <article id="report">{{REPORT}}</article>
     </div>
@@ -82,7 +84,7 @@
     <section id="references" class="references" aria-labelledby="references-title">
       <p class="eyebrow">Evidence register</p>
       <h2 id="references-title">Sources &amp; their limits</h2>
-      <p>Primary materials and academic research. Accessed 18 September 2026. A source supports the stated claim, not every proposal built upon it.</p>
+      <p>Primary materials and academic research. Access dates are recorded with each source. A source supports the stated claim, not every proposal built upon it.</p>
       <label for="source-search">Filter sources by author, topic, or title</label>
       <input type="search" id="source-search" placeholder="Try: copyright, commons, energy...">
       <p id="source-count" role="status">{{SOURCE_COUNT}} sources</p>

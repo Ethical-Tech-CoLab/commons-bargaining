@@ -21,14 +21,16 @@ test('bibliography has verified metadata and every source is referenced', () => 
   assert.ok(sources.length >= 25);
   for (const source of sources) {
     assert.match(html, new RegExp(`href="#ref-${source.id}"`));
-    assert.equal(source.accessed, '2026-09-18');
+    assert.match(source.accessed, /^\d{4}-\d{2}-\d{2}$/);
+    assert.equal(new Date(`${source.accessed}T00:00:00Z`).toISOString().slice(0, 10), source.accessed);
+    assert.ok(html.includes(`Accessed ${source.accessed}.`));
     assert.ok(source.claim && source.limit);
   }
 });
 test('research covers requested surfaces and labels its limits', () => {
   for (const term of ['Alice', 'Bob', 'Humanity AI', 'Creative Commons', 'synthetic',
     'Gmail', 'Costco', 'energy', 'philanthrop', 'antitrust', 'Tomica', 'Sonam',
-    'Ilan', 'payment', 'knowledge object', 'not peer-reviewed', 'Field-grounded',
+    'Ilan Strauss', 'payment', 'knowledge object', 'not peer-reviewed', 'Field-grounded',
     'Pigouvian', 'Sanders', 'Wikimedia', 'Treasury payment', 'What Is Privacy Worth',
     'Soho House', 'supplier chamber', 'Free opt-in', 'Schedule G',
     'non-binding clause sketches', 'ERC-8004', 'task-local ordering',
@@ -43,6 +45,21 @@ test('research covers requested surfaces and labels its limits', () => {
   }
   assert.doesNotMatch(html, /\{\{[A-Z_]+\}\}/);
   assert.doesNotMatch(html, /<script[^>]+src="https?:/);
+});
+
+test('participant correction and roundtable reference remain source-linked without implying endorsement', async () => {
+  assert.match(html, /Ilan Strauss, Sonam/);
+  assert.doesNotMatch(html, /Nick Vincent, Ilan, Sonam/);
+  assert.match(html, /href="https:\/\/ai-disclosures\.org\/msr-roundtable"/);
+  assert.match(html, /not participant endorsement of this draft/);
+  const roundtable = sources.find(source => source.id === 'S96');
+  assert.ok(roundtable);
+  assert.equal(roundtable.url, 'https://ai-disclosures.org/msr-roundtable');
+  assert.equal(roundtable.accessed, '2026-09-19');
+  const presentation = JSON.parse(await readFile(new URL('../dist/presentation-data.json', import.meta.url)));
+  const attribution = presentation.sections.find(section => section.id === '1-research-circle-and-ethical-commitments');
+  assert.ok(attribution.paragraphs.some(paragraph => paragraph.includes('Ilan Strauss')));
+  assert.ok(attribution.paragraphs.some(paragraph => paragraph.includes('AI Disclosures Project')));
 });
 test('example is explicitly fictional and grants no blanket training permission', async () => {
   const example = JSON.parse(await readFile(new URL('../examples/knowledge-object.json', import.meta.url)));

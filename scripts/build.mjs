@@ -57,6 +57,11 @@ for (const source of sources) {
   for (const key of ['title', 'author', 'year', 'claim', 'limit', 'accessed']) {
     if (!source[key]) throw new Error(`Source ${source.id} missing ${key}`);
   }
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(source.accessed)
+    || !Number.isFinite(Date.parse(`${source.accessed}T00:00:00Z`))
+    || new Date(`${source.accessed}T00:00:00Z`).toISOString().slice(0, 10) !== source.accessed) {
+    throw new Error(`Source ${source.id} has an invalid access date`);
+  }
   ids.add(source.id);
 }
 
@@ -74,7 +79,7 @@ for (const id of ids) if (!cited.has(id) && !blueprint.cited.has(id)) throw new 
 const references = sources.map(source =>
   `<li id="ref-${source.id}"><span class="source-id">${source.id} / ${escape(source.year)}</span>
   <p><strong>${escape(source.author)}.</strong> <a href="${escape(source.url)}">${escape(source.title)}</a></p>
-  <p>${escape(source.claim)}</p><p class="limit"><strong>Limit:</strong> ${escape(source.limit)}</p></li>`
+  <p>${escape(source.claim)}</p><p class="limit"><strong>Limit:</strong> ${escape(source.limit)} <span>Accessed ${escape(source.accessed)}.</span></p></li>`
 ).join('\n');
 const contents = `<ol>${headings.map(({ id, text }) => `<li><a href="#${id}">${text}</a></li>`).join('')}</ol>`;
 const html = template.replace('{{REPORT}}', rendered).replace('{{CONTENTS}}', contents)
@@ -102,7 +107,7 @@ await writeFile(new URL('dist/divergence.html', root), diagram);
 for (const file of ['styles.css', 'header.css', 'model.mjs', 'divergence.svg', 'favicon.svg']) {
   await copyFile(new URL(`site/${file}`, root), new URL(`dist/${file}`, root));
 }
-const bibliography = sources.map(s => `- **${s.id}.** ${s.author} (${s.year}). [${s.title}](${s.url}). ${s.claim} Limit: ${s.limit}`).join('\n\n');
+const bibliography = sources.map(s => `- **${s.id}.** ${s.author} (${s.year}). [${s.title}](${s.url}). ${s.claim} Limit: ${s.limit} Accessed ${s.accessed}.`).join('\n\n');
 await writeFile(new URL('dist/report.md', root), `${report}\n\n## References\n\n${bibliography}\n`);
 await writeFile(new URL('dist/sources.json', root), JSON.stringify(sources, null, 2));
 await copyFile(new URL('examples/knowledge-object.json', root), new URL('dist/knowledge-object.json', root));
@@ -215,7 +220,7 @@ for (const file of sectorProfile.packFiles) {
 }
 await copyFile(new URL('LICENSE', root), new URL('dist/LICENSE', root));
 const paperBibliography = sources.filter(source => blueprint.cited.has(source.id))
-  .map(s => `- **${s.id}.** ${s.author} (${s.year}). [${s.title}](${s.url}). ${s.claim} Limit: ${s.limit}`).join('\n\n');
+  .map(s => `- **${s.id}.** ${s.author} (${s.year}). [${s.title}](${s.url}). ${s.claim} Limit: ${s.limit} Accessed ${s.accessed}.`).join('\n\n');
 await writeFile(new URL('dist/research/replication-blueprint.md', root), `${replicationPaper}\n\n## Source register\n\n${paperBibliography}\n`);
 await writeFile(new URL('dist/.nojekyll', root), '');
 console.log(`Built ${headings.length} report sections, a companion paper, ${sources.length} cited sources, and ${presentation.workItems.length} linked work items.`);

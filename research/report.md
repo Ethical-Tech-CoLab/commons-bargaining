@@ -14,7 +14,9 @@
 
 ### Session provenance and attribution
 
-The requested research circle is **Tomica Tilleman, Beth Goldberg, Yorke Rhodes, Glen Weyl, Nick Vincent, Ilan, Sonam, and Anna Tumadottir (Creative Commons, as identified in the brief)**. Names are reproduced from the brief; spelling, full identities for first-name-only entries, affiliations, attendance, authorship, and approval require participant confirmation. Inclusion is not a claim that any individual wrote, reviewed, or agrees with this paper.
+The requested research circle is **Tomica Tilleman, Beth Goldberg, Yorke Rhodes, Glen Weyl, Nick Vincent, Ilan Strauss, Sonam, and Anna Tumadottir (Creative Commons, as identified in the brief)**. Names reflect the brief and subsequent corrections; remaining spelling questions, full identities for first-name-only entries, affiliations, attendance, authorship, and approval require participant confirmation. Inclusion is not a claim that any individual wrote, reviewed, or agrees with this paper.
+
+**Roundtable reference:** [Roundtable on Mechanisms for a Sustainable AI Data Economy | AI Disclosures Project](https://ai-disclosures.org/msr-roundtable). The convening page describes the 18 September 2026 working session at Microsoft Research New York and its focus on mechanisms across pre-training, post-training, and inference. It supplies context for this research, not participant endorsement of this draft. [S96]
 
 The accompanying workshop image supplied context about collective management, intermediaries, public deliberation, and the value of data. It is not reproduced, treated as a verified transcript, or used to attribute positions to participants. The research is a formulation of the questions, not a reconstruction of the meeting.
 
@@ -38,7 +40,7 @@ This is a **scoping synthesis and design proposal**, not a systematic review. So
 
 **AI usage disclosure:** the [model-by-model usage audit](./ai-usage.html) documents a bounded local-ledger snapshot for the production of these materials using CoLab's usage-calc calculations. It distinguishes recorded requests and token charges from dollar-conversion assumptions, actual billing, human labor, and unobserved activity. The raw conversation and individual request records are not published; usage volume does not establish the quality or truth of this research.
 
-The principal legal comparison is the European Union and United States. It is not a complete global survey, and rules differ within and beyond these jurisdictions. Source access is dated 18 September 2026; legislation, guidance, litigation, and product settings may change. A pilot needs a jurisdiction-specific legal memorandum immediately before launch, including current amendments and implementation schedules.
+The principal legal comparison is the European Union and United States. It is not a complete global survey, and rules differ within and beyond these jurisdictions. The original scoping review used sources accessed on 18 September 2026; later additions carry their individual access dates in the source register. Legislation, guidance, litigation, and product settings may change. A pilot needs a jurisdiction-specific legal memorandum immediately before launch, including current amendments and implementation schedules.
 
 We use three epistemic labels in substance:
 

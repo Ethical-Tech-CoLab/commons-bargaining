@@ -71,15 +71,18 @@ body > .skip {
   font-size: 0.75rem;
   text-decoration: none;
 }
-.reading-layout aside nav {
+.reading-layout .reading-sidebar,
+.reading-layout aside > nav {
   top: calc(var(--header-height, 76px) + 20px);
   max-height: calc(100vh - var(--header-height, 76px) - 40px);
+  max-height: calc(100dvh - var(--header-height, 76px) - 40px);
 }
 @media (max-width: 760px) {
   .header-repository { display: none; }
 }
 @media (max-width: 720px) {
-  .reading-layout aside nav { max-height: none; }
+  .reading-layout .reading-sidebar,
+  .reading-layout aside > nav { max-height: none; }
 }
 @media (max-width: 560px) {
   .header-inner { gap: 8px; padding: 10px 5vw; }
