@@ -29,7 +29,7 @@ test('bibliography has verified metadata and every source is referenced', () => 
 });
 test('research covers requested surfaces and labels its limits', () => {
   for (const term of ['Alice', 'Bob', 'Humanity AI', 'Creative Commons', 'synthetic',
-    'Gmail', 'Costco', 'energy', 'philanthrop', 'antitrust', 'Tomica', 'Sonam',
+    'Gmail', 'Costco', 'energy', 'philanthrop', 'antitrust', 'Tomica', 'Sonam Jindal',
     'Ilan Strauss', 'payment', 'knowledge object', 'not peer-reviewed', 'Field-grounded',
     'Pigouvian', 'Sanders', 'Wikimedia', 'Treasury payment', 'What Is Privacy Worth',
     'Soho House', 'supplier chamber', 'Free opt-in', 'Schedule G',
@@ -48,7 +48,8 @@ test('research covers requested surfaces and labels its limits', () => {
 });
 
 test('participant correction and roundtable reference remain source-linked without implying endorsement', async () => {
-  assert.match(html, /Ilan Strauss, Sonam/);
+  assert.match(html, /Ilan Strauss, Sonam Jindal/);
+  assert.doesNotMatch(html, /Ilan Strauss, Sonam, and/);
   assert.doesNotMatch(html, /Nick Vincent, Ilan, Sonam/);
   assert.match(html, /href="https:\/\/ai-disclosures\.org\/msr-roundtable"/);
   assert.match(html, /not participant endorsement of this draft/);

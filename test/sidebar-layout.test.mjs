@@ -8,19 +8,23 @@ const [html, styles, header, paper, blueprint] = await Promise.all(
     .map(path => readFile(new URL(path, root), 'utf8')),
 );
 
-test('research contents and disclaimer share one sticky container', () => {
+test('the research sidebar holds only its contents and the disclosure lives in the footer', () => {
   const aside = html.match(/<aside>([\s\S]*?)<\/aside>/)?.[1];
   assert.ok(aside, 'research sidebar exists');
   assert.match(aside, /^\s*<div class="reading-sidebar">[\s\S]*<\/div>\s*$/);
-  assert.match(aside, /<nav aria-label="Research contents" tabindex="0">[\s\S]*<\/nav>\s*<p class="aside-note">Evidence, interpretation, and proposals are distinguished throughout\. No participant endorsement is implied\.<\/p>/);
-  assert.equal((aside.match(/class="aside-note"/g) ?? []).length, 1);
+  assert.match(aside, /<nav aria-label="Research contents" tabindex="0">[\s\S]*<\/nav>/);
+  assert.doesNotMatch(aside, /Evidence, interpretation|endorsement|aside-note/);
+  const footer = html.match(/<footer>([\s\S]*?)<\/footer>/)?.[1];
+  assert.ok(footer);
+  assert.match(footer, /<p class="evidence-note">Evidence, interpretation, and proposals are distinguished throughout\. No participant endorsement is implied\.<\/p>/);
+  assert.equal((html.match(/class="evidence-note"/g) ?? []).length, 1);
 });
 
-test('only contents shrink and scroll; the disclaimer retains its own space', () => {
+test('the contents retain bounded independent scrolling without an overlaid note', () => {
   assert.match(styles, /\.reading-sidebar\{[^}]*position:sticky;[^}]*display:flex;flex-direction:column;[^}]*max-height:/);
   assert.match(styles, /\.reading-sidebar>nav\{[^}]*position:static;min-height:0;max-height:none;/);
   assert.match(styles, /aside nav\{[^}]*overflow:auto/);
-  assert.match(styles, /\.reading-sidebar>\.aside-note\{flex:none;margin:1rem 0 0\}/);
+  assert.doesNotMatch(styles, /\.reading-sidebar>\.aside-note/);
   assert.match(header, /\.reading-layout \.reading-sidebar,\s*\.reading-layout aside > nav\s*\{[^}]*top: calc\(var\(--header-height, 76px\) \+ 20px\);[^}]*max-height: calc\(100dvh - var\(--header-height, 76px\) - 40px\);/);
   assert.doesNotMatch(header, /\.reading-layout aside nav\s*\{/);
 });

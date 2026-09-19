@@ -14,7 +14,7 @@
 
 ### Session provenance and attribution
 
-The requested research circle is **Tomica Tilleman, Beth Goldberg, Yorke Rhodes, Glen Weyl, Nick Vincent, Ilan Strauss, Sonam, and Anna Tumadottir (Creative Commons, as identified in the brief)**. Names reflect the brief and subsequent corrections; remaining spelling questions, full identities for first-name-only entries, affiliations, attendance, authorship, and approval require participant confirmation. Inclusion is not a claim that any individual wrote, reviewed, or agrees with this paper.
+The requested research circle is **Tomica Tilleman, Beth Goldberg, Yorke Rhodes, Glen Weyl, Nick Vincent, Ilan Strauss, Sonam Jindal, and Anna Tumadottir (Creative Commons, as identified in the brief)**. Names reflect the brief and subsequent corrections; remaining spelling and affiliation details, attendance, authorship, and approval require participant confirmation. Inclusion is not a claim that any individual wrote, reviewed, or agrees with this paper.
 
 **Roundtable reference:** [Roundtable on Mechanisms for a Sustainable AI Data Economy | AI Disclosures Project](https://ai-disclosures.org/msr-roundtable). The convening page describes the 18 September 2026 working session at Microsoft Research New York and its focus on mechanisms across pre-training, post-training, and inference. It supplies context for this research, not participant endorsement of this draft. [S96]
 
