@@ -3,6 +3,7 @@
 **Collective Bargaining Institutions for the AI Data Commons**
 
 [Read the research](https://ethical-tech-colab.github.io/commons-collective/) |
+[Research PDF](https://ethical-tech-colab.github.io/commons-collective/commons-collective.pdf) |
 [Focused first-draft paper](https://ethical-tech-colab.github.io/commons-collective/paper.html) |
 [Institutional example](https://ethical-tech-colab.github.io/commons-collective/institution-example.html) |
 [Live overview presentation](https://ethical-tech-colab.github.io/commons-collective/overview.html) |
@@ -87,13 +88,18 @@ connections are documented rather than presented as a new official charter.
 
 ## Run locally
 
-Requires Node.js 22 or newer for building and Python 3.8 or newer for the audit
-collector and its synthetic-ledger tests. Node.js 24 is used in GitHub Actions.
+Requires Node.js 22 or newer for building and Python for validation. The audit
+collector supports Python 3.8+; use Python 3.12 for the complete test/PDF workflow.
+GitHub Actions uses Node.js 24 and Python 3.12.
 
 ```powershell
 npm ci
+npx playwright install chromium
+python -m pip install -r requirements-pdf.txt
 npm run build
+npm run pdf
 npm test
+npm run test:pdf
 npm run preview
 ```
 
@@ -109,11 +115,30 @@ API calls, cookies, or account system. The calculator processes only hypothetica
 numbers locally in the browser. GitHub's own hosting infrastructure may retain
 ordinary request logs under its policies.
 
+## Controlled research PDF
+
+`npm run pdf` exports the built main report through pinned Playwright and a
+Chromium browser version 131 or newer. It uses a temporary loopback server that
+closes after export; it does not read private sessions or external web resources.
+The generator uses an installed compatible Chrome/Edge/Chromium when available,
+or the browser installed by Playwright. `PDF_BROWSER_PATH` can select one explicitly.
+
+The cover is one page with no running header; Abstract starts on page 2; every
+numbered main-report section begins a new page. The footer has
+`Commons Collective | Ethical Tech CoLab` on the left and current/total page
+numbers on the right. Green and violet treatments remain visible using
+print-safe contrasts; the dark cover retains its lime highlight.
+
+`npm run test:pdf` inspects the actual generated PDF for page starts, headers,
+footers, text preservation, semantic text colors, and in-margin raster images.
+Regenerate the PDF after every site build. Pages CI performs both generation and
+validation before publishing. Overview-slide printing is separate and unchanged.
+
 ## Edit and publish
 
 1. Edit [research/report.md](research/report.md), citing evidence with `[S01]`
    style markers. Define each source in [research/sources.json](research/sources.json).
-2. Run `npm run build` and `npm test`.
+2. Run `npm run build`, `npm run pdf`, `npm test`, and `npm run test:pdf`.
 3. Commit and push to `main`.
 
 Every push to `main` automatically builds, tests, and deploys the site through
@@ -214,6 +239,8 @@ explicit local operation, not part of a website visit or normal build.
 | `site/model.mjs` | Pure integer-cent illustrative settlement arithmetic |
 | `site/app.mjs` | Browser-only calculator and bibliography filter |
 | `scripts/build.mjs` | Markdown, citations, navigation, and downloads |
+| `scripts/generate-pdf.mjs`, `site/pdf.css` | Controlled main-report PDF export and print layout |
+| `test/pdf-validation.py` | Actual-PDF pagination, content, image, footer, and color checks |
 | `scripts/render-research.mjs` | Shared citation-aware renderer for the main report and companion paper |
 | `scripts/publications.mjs` | Public-paper link resolution and exclusion of repository-only drafts |
 | `scripts/presentation-data.mjs` | Derives live presentation data from canonical published sources |

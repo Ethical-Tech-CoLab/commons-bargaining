@@ -27,8 +27,6 @@ function update(event) {
 form.addEventListener('submit', update);
 update();
 
-document.querySelector('#print').addEventListener('click', () => window.print());
-
 const search = document.querySelector('#source-search');
 const sourceItems = [...document.querySelectorAll('#references li')];
 search.addEventListener('input', () => {

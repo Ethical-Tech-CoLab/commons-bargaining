@@ -1,0 +1,208 @@
+/* Main research report only. The overview presentation has its own print layout. */
+@media print {
+  @page {
+    size: A4;
+    margin: 18mm 17mm 20mm;
+
+    @top-left {
+      content: "Commons Collective";
+      color: #61419a;
+      font-family: Arial, sans-serif;
+      font-size: 8pt;
+    }
+
+    @bottom-left {
+      content: "Commons Collective | Ethical Tech CoLab";
+      text-align: left;
+      color: #4d4257;
+      font-family: Arial, sans-serif;
+      font-size: 8pt;
+    }
+
+    @bottom-right {
+      content: counter(page) "/" counter(pages);
+      text-align: right;
+      color: #4d4257;
+      font-family: Arial, sans-serif;
+      font-size: 8pt;
+    }
+  }
+
+  @page :first {
+    @top-left { content: none; }
+  }
+
+  :root {
+    --bg: #fff;
+    --surface: #f5f2f8;
+    --card: #efebf5;
+    --text: #21172c;
+    --muted: #53465e;
+    --line: #c4b7d1;
+    --accent: #416109;
+    --violet: #61419a;
+    color-scheme: light;
+    color: var(--text);
+    background: #fff;
+    font-size: 10pt;
+    line-height: 1.48;
+  }
+
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  html, body { margin: 0; padding: 0; }
+  body { color: var(--text); background: #fff; }
+  main, article, body > footer { max-width: none; }
+  .site-header, header, aside, .skip, .actions, .thesis,
+  #calculator, #print, #source-search, #source-count,
+  label[for="source-search"], .lab > a { display: none !important; }
+
+  p { margin: 0 0 3.2mm; orphans: 3; widows: 3; }
+  article p, article li { font-size: 10pt; }
+  a, .eyebrow { color: var(--accent); }
+  strong { color: inherit; }
+  a { overflow-wrap: anywhere; }
+  h2, h3, h4, summary { break-after: avoid-page; }
+  h3 { margin: 7mm 0 3mm; font-size: 14pt; }
+  h4 { margin: 5mm 0 2mm; font-size: 11pt; }
+  article > h2 {
+    break-before: page;
+    margin: 0 0 6mm;
+    padding: 0 0 4mm;
+    border-top: 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 20pt;
+  }
+
+  .hero {
+    position: relative;
+    display: block;
+    min-height: 245mm;
+    margin: 0;
+    padding: 15mm 12mm 58mm;
+    background: #120c1a;
+    color: #f3eefb;
+    break-inside: avoid-page;
+    break-after: page;
+  }
+  .hero .eyebrow { color: #c8f04b; font-size: 8pt; }
+  .hero h1 { margin: 12mm 0 10mm; font-size: 61pt; }
+  .hero h1 em { color: #c8f04b; }
+  .hero .deck {
+    margin: 0 0 9mm;
+    font-size: 17pt;
+    line-height: 1.35;
+    color: #c1b6d2 !important;
+  }
+  .hero-bottom {
+    display: block;
+    font-size: 10pt;
+    color: #c1b6d2 !important;
+  }
+  .hero-bottom .status {
+    display: inline-block;
+    margin-top: 3mm;
+    color: #c8f04b;
+    border-color: #79648f;
+    white-space: normal;
+    font-size: 8pt;
+  }
+  .hero > .project-qr {
+    position: absolute;
+    right: 12mm;
+    bottom: 9mm;
+    width: 37mm;
+    margin: 0;
+    padding: 2mm;
+    border-radius: 2mm;
+  }
+  .project-qr figcaption { margin-top: 1mm; font-size: 6pt; }
+  .project-qr figcaption a { margin-top: 1mm; font-size: 5pt; }
+  .project-qr figcaption strong { color: #141414; }
+
+  .reading-layout { display: block; padding: 0; margin: 0; }
+  article { min-width: 0; }
+  article li { break-inside: auto; orphans: 3; widows: 3; }
+  blockquote {
+    color: var(--muted);
+    border-left-color: var(--accent);
+    margin: 4mm 0;
+    padding: 1mm 4mm;
+  }
+  .table-wrap, .mechanism-table {
+    overflow: visible !important;
+    margin: 4mm 0;
+    border-radius: 0;
+  }
+  table, #intervention-modes table { min-width: 0; font-size: 8pt; }
+  th, td { padding: 2mm; overflow-wrap: anywhere; }
+  th, #intervention-modes th { color: var(--accent); background: var(--card); }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid-page; }
+  pre, code, .results > div { background: var(--card); color: var(--text); }
+  pre { white-space: pre-wrap; overflow-wrap: anywhere; overflow: visible; }
+  pre code { overflow-wrap: anywhere; }
+  article img, .workshop-original img, .workshop-card img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 155mm;
+    object-fit: contain;
+    break-inside: avoid-page;
+  }
+  article img { margin: 4mm 0; }
+  article img[src$="divergence.svg"] { background: #120c1a; }
+  figure { margin: 4mm 0; break-inside: avoid-page; }
+  figcaption { font-size: 8pt; }
+
+  .workshop-card {
+    padding: 4mm;
+    margin: 5mm 0;
+    background: var(--surface);
+    color: var(--text);
+    break-inside: auto;
+  }
+  .workshop-card-layout {
+    display: block;
+  }
+  .workshop-card figure { max-width: 115mm; margin: 0 0 4mm; }
+  .workshop-card img { max-height: 95mm; }
+  .workshop-transcription { color: var(--text); }
+  .workshop-kicker { color: var(--accent); }
+  .workshop-card h3 { break-after: avoid-page; }
+  .workshop-card details { font-size: 9pt; }
+  .workshop-card details li { font-size: 9pt; }
+  .workshop-caption, .workshop-card figcaption, .workshop-original figcaption,
+  .workshop-uncertainty { color: var(--muted); }
+
+  .lab, .references {
+    break-before: page;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: #fff;
+  }
+  .lab h2, .references h2 { font-size: 22pt; }
+  .small, .limit, dt, body > footer, .lab > p {
+    color: var(--muted) !important;
+  }
+  .results { grid-template-columns: repeat(3, 1fr); }
+  .results > div { break-inside: avoid-page; }
+  .references li, .references li[hidden] {
+    display: block !important;
+    break-inside: avoid-page;
+    padding: 4mm 0;
+    font-size: 9pt;
+  }
+  .references .source-id { color: var(--violet); }
+  body > footer {
+    padding: 6mm 0 0;
+    margin-top: 6mm;
+    font-size: 8pt;
+  }
+  body > footer .brand { color: var(--violet); }
+  body > footer .brand span { color: var(--muted); }
+}

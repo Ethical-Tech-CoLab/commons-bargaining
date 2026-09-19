@@ -9,6 +9,8 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
+    "pdf": "node scripts/generate-pdf.mjs",
+    "test:pdf": "python test/pdf-validation.py",
     "test": "node --test \"test/*.test.mjs\"",
     "preview": "python -m http.server 4173 --bind 127.0.0.1 --directory dist",
     "audit:usage": "python scripts/capture-ai-usage.py"
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "jsqr": "1.4.0",
+    "playwright": "1.63.0",
     "pngjs": "7.0.0"
   }
 }

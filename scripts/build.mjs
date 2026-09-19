@@ -27,6 +27,7 @@ const workshopMappingSource = await read('research/workshop-map.json');
 const conferenceSource = await read('research/conference-notes-review.json');
 const nodeMechanismsSource = await read('research/node-mechanisms.json');
 const workshopCss = await read('site/workshop.css');
+const pdfCss = await read('site/pdf.css');
 const publicationManifest = validatePublications(JSON.parse(await read('research/publications.json')));
 const publicationDocuments = [];
 for (const publication of publicationManifest.public) {
@@ -119,6 +120,7 @@ const html = template.replace('{{REPORT}}', rendered).replace('{{CONTENTS}}', co
   .replace('href="./header.css"', `href="./header.css?v=${fingerprint(headerCss)}"`)
   .replace('href="./qr-share.css"', `href="./qr-share.css?v=${fingerprint(qrCss)}"`)
   .replace('href="./workshop.css"', `href="./workshop.css?v=${fingerprint(workshopCss)}"`)
+  .replace('href="./pdf.css"', `href="./pdf.css?v=${fingerprint(pdfCss)}"`)
   .replace('src="./app.mjs"', `src="./app.mjs?v=${fingerprint(app)}"`);
 if (/\{\{[A-Z_]+\}\}/.test(html)) throw new Error('Unresolved template placeholder');
 
@@ -128,6 +130,7 @@ await writeFile(new URL('dist/project-qr.png', root), await QRCode.toBuffer(proj
 await writeFile(new URL('dist/qr-share.css', root), qrCss);
 await writeFile(new URL('dist/index.html', root), html);
 await writeFile(new URL('dist/app.mjs', root), app);
+await writeFile(new URL('dist/pdf.css', root), pdfCss);
 const diagram = diagramTemplate.replace('{{HEADER}}', renderHeader('diagram'))
   .replace('{{NODE_MECHANISMS}}', nodeMechanisms)
   .replaceAll('./favicon.svg', faviconUrl)
