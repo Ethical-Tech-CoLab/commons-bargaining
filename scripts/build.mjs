@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile, copyFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile, copyFile, readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { createCompanionSection, createPresentationData } from './presentation-data.mjs';
 import { renderResearch } from './render-research.mjs';
@@ -9,6 +9,7 @@ import {
   renderWorkshopOriginal, renderWorkshopCard, renderWorkshopCrosswalk, workshopPresentationSection,
   validateConferenceReview, renderConferenceReview, conferencePresentationSection, renderNodeMechanisms,
 } from './workshop.mjs';
+import { validatePublications, publicationLink, assertNoRepositoryOnlyReferences } from './publications.mjs';
 
 const root = new URL('../', import.meta.url);
 const read = path => readFile(new URL(path, root), 'utf8');
@@ -26,7 +27,13 @@ const workshopMappingSource = await read('research/workshop-map.json');
 const conferenceSource = await read('research/conference-notes-review.json');
 const nodeMechanismsSource = await read('research/node-mechanisms.json');
 const workshopCss = await read('site/workshop.css');
-const replicationPaper = await read('research/replication-blueprint.md');
+const publicationManifest = validatePublications(JSON.parse(await read('research/publications.json')));
+const publicationDocuments = [];
+for (const publication of publicationManifest.public) {
+  const markdown = await read(publication.source);
+  assertNoRepositoryOnlyReferences(markdown, publicationManifest);
+  publicationDocuments.push({ ...publication, markdown });
+}
 const sectorProfile = JSON.parse(await read('templates/sector-profile.json'));
 const template = await read('site/template.html');
 const diagramTemplate = await read('site/divergence.html');
@@ -85,16 +92,18 @@ const rendered = expandWorkshopMarkers(reportHtml, workshop, workshopAssets);
 const conferenceReview = validateConferenceReview(JSON.parse(conferenceSource), workshop);
 if (!ids.has(conferenceReview.sourceId)) throw new Error('The conference-note excerpt is not registered as a source');
 const nodeMechanisms = renderNodeMechanisms(JSON.parse(nodeMechanismsSource));
-const resolvePaperLink = href => {
-  if (/^(?:[a-z][a-z0-9+.-]*:|\/\/|#)/i.test(href)) return href;
-  const resolved = new URL(href, 'https://publication.invalid/research/replication-blueprint.md');
-  return `.${resolved.pathname}${resolved.search}${resolved.hash}`;
-};
-const blueprint = renderResearch(replicationPaper, ids, {
-  citationPrefix: './index.html#ref-',
-  resolveLink: resolvePaperLink,
-});
-for (const id of ids) if (!cited.has(id) && !blueprint.cited.has(id)) throw new Error(`Uncited source: ${id}`);
+const renderedPublications = publicationDocuments.map(publication => ({
+  ...publication,
+  ...renderResearch(publication.markdown, ids, {
+    citationPrefix: './index.html#ref-',
+    resolveLink: href => publicationLink(href, publication.source, publicationManifest),
+  }),
+}));
+for (const id of ids) {
+  if (!cited.has(id) && !renderedPublications.some(publication => publication.cited.has(id))) {
+    throw new Error(`Uncited source: ${id}`);
+  }
+}
 const references = sources.map(source =>
   `<li id="ref-${source.id}"><span class="source-id">${source.id} / ${escape(source.year)}</span>
   <p><strong>${escape(source.author)}.</strong> <a href="${escape(source.url)}">${escape(source.title)}</a></p>
@@ -140,13 +149,15 @@ await copyFile(new URL('examples/service-operator-economics.json', root), new UR
 const presentation = createPresentationData({
   report: expandedReport, headings, template, diagramTemplate, work, sources,
   additionalSections: [
-    createCompanionSection(replicationPaper, { id: 'paper-replication-blueprint', url: './blueprint.html#abstract' }),
+    ...publicationDocuments.map(publication => createCompanionSection(publication.markdown, {
+      id: publication.id, url: `./${publication.output}#abstract`,
+    })),
     usageAuditSection(usageAudit),
     workshopPresentationSection(workshop),
     conferencePresentationSection(conferenceReview),
   ],
   revision: {
-    contentHash: fingerprint([expandedReport, replicationPaper, template, diagramTemplate, workSource, usageSource,
+    contentHash: fingerprint([expandedReport, ...publicationDocuments.map(publication => publication.markdown), template, diagramTemplate, workSource, usageSource,
       workshopSource, workshopMappingSource, conferenceSource, nodeMechanismsSource, JSON.stringify(sources)].join('\0')),
     builtAt: new Date().toISOString(),
     commit: process.env.GITHUB_SHA || null,
@@ -240,22 +251,11 @@ for (const asset of workshopAssets.values()) {
 }
 
 const paperCss = await read('site/paper.css');
-const paperContents = `<ol>${blueprint.headings.map(({ id, text }) => `<li><a href="#${id}">${text}</a></li>`).join('')}</ol>`;
-const blueprintPage = (await read('site/paper.html'))
-  .replace('{{TITLE}}', 'Replicable sector collectives')
-  .replace('{{HEADER}}', renderHeader('work'))
-  .replaceAll('./favicon.svg', faviconUrl)
-  .replace('href="./styles.css"', `href="./styles.css?v=${fingerprint(stylesheet)}"`)
-  .replace('href="./header.css"', `href="./header.css?v=${fingerprint(headerCss)}"`)
-  .replace('href="./paper.css"', `href="./paper.css?v=${fingerprint(paperCss)}"`)
-  .replace('{{MARKDOWN_URL}}', './research/replication-blueprint.md')
-  .replace('{{CONTENTS}}', paperContents)
-  .replace('{{PAPER}}', blueprint.html);
-if (/\{\{[A-Z_]+\}\}/.test(blueprintPage)) throw new Error('Unresolved blueprint template placeholder');
-await writeFile(new URL('dist/blueprint.html', root), blueprintPage);
+const paperTemplate = await read('site/paper.html');
 await writeFile(new URL('dist/paper.css', root), paperCss);
 await mkdir(new URL('dist/templates/', root), { recursive: true });
 await mkdir(new URL('dist/research/', root), { recursive: true });
+await mkdir(new URL('dist/papers/', root), { recursive: true });
 await mkdir(new URL('dist/examples/', root), { recursive: true });
 await mkdir(new URL('dist/test/', root), { recursive: true });
 for (const file of sectorProfile.packFiles) {
@@ -268,8 +268,43 @@ for (const file of sectorProfile.packFiles) {
   await copyFile(source, new URL(`dist/${relative}`, root));
 }
 await copyFile(new URL('LICENSE', root), new URL('dist/LICENSE', root));
-const paperBibliography = sources.filter(source => blueprint.cited.has(source.id))
-  .map(s => `- **${s.id}.** ${s.author} (${s.year}). [${s.title}](${s.url}). ${s.claim} Limit: ${s.limit} Accessed ${s.accessed}.`).join('\n\n');
-await writeFile(new URL('dist/research/replication-blueprint.md', root), `${replicationPaper}\n\n## Source register\n\n${paperBibliography}\n`);
+for (const publication of renderedPublications) {
+  const paperContents = `<ol>${publication.headings.map(({ id, text }) => `<li><a href="#${id}">${text}</a></li>`).join('')}</ol>`;
+  const page = paperTemplate
+    .replace('{{TITLE}}', escape(publication.title))
+    .replace('{{HEADER}}', renderHeader('work'))
+    .replaceAll('./favicon.svg', faviconUrl)
+    .replace('href="./styles.css"', `href="./styles.css?v=${fingerprint(stylesheet)}"`)
+    .replace('href="./header.css"', `href="./header.css?v=${fingerprint(headerCss)}"`)
+    .replace('href="./paper.css"', `href="./paper.css?v=${fingerprint(paperCss)}"`)
+    .replace('{{MARKDOWN_URL}}', `./${publication.source}`)
+    .replace('{{CONTENTS}}', paperContents)
+    .replace('{{PAPER}}', publication.html);
+  if (/\{\{[A-Z_]+\}\}/.test(page)) throw new Error(`Unresolved paper template: ${publication.output}`);
+  assertNoRepositoryOnlyReferences(page, publicationManifest);
+  await writeFile(new URL(`dist/${publication.output}`, root), page);
+  const paperBibliography = sources.filter(source => publication.cited.has(source.id))
+    .map(s => `- **${s.id}.** ${s.author} (${s.year}). [${s.title}](${s.url}). ${s.claim} Limit: ${s.limit} Accessed ${s.accessed}.`).join('\n\n');
+  const download = /^## (References|Bibliography)\b/m.test(publication.markdown)
+    ? publication.markdown
+    : `${publication.markdown}\n\n## Source register\n\n${paperBibliography}\n`;
+  await writeFile(new URL(`dist/${publication.source}`, root), download);
+}
+async function checkPublicationBoundary(directory) {
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const path = new URL(entry.name + (entry.isDirectory() ? '/' : ''), directory);
+    if (entry.isDirectory()) await checkPublicationBoundary(path);
+    else {
+      for (const item of publicationManifest.repositoryOnly) {
+        const stem = item.source.split('/').at(-1).replace(/\.md$/, '');
+        if (entry.name.startsWith(stem + '.')) throw new Error('A repository-only draft is present in the website output');
+      }
+      if (/\.(html|json|md|mjs|css)$/i.test(entry.name)) {
+        assertNoRepositoryOnlyReferences(await readFile(path, 'utf8'), publicationManifest);
+      }
+    }
+  }
+}
+await checkPublicationBoundary(new URL('dist/', root));
 await writeFile(new URL('dist/.nojekyll', root), '');
-console.log(`Built ${headings.length} report sections, a companion paper, ${sources.length} cited sources, and ${presentation.workItems.length} linked work items.`);
+console.log(`Built ${headings.length} report sections, ${renderedPublications.length} public papers, ${sources.length} cited sources, and ${presentation.workItems.length} linked work items.`);

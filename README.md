@@ -3,6 +3,8 @@
 **Collective Bargaining Institutions for the AI Data Commons**
 
 [Read the research](https://ethical-tech-colab.github.io/commons-collective/) |
+[Focused first-draft paper](https://ethical-tech-colab.github.io/commons-collective/paper.html) |
+[Institutional example](https://ethical-tech-colab.github.io/commons-collective/institution-example.html) |
 [Live overview presentation](https://ethical-tech-colab.github.io/commons-collective/overview.html) |
 [Open research questions](https://ethical-tech-colab.github.io/commons-collective/open-work.html) |
 [Replication blueprint](https://ethical-tech-colab.github.io/commons-collective/blueprint.html) |
@@ -196,6 +198,8 @@ explicit local operation, not part of a website visit or normal build.
 | `research/report.md` | Canonical original research text |
 | `research/sources.json`, `research/replication-sources.json` | Canonical source registers, merged for publication with bounded claims |
 | `research/replication-blueprint.md` | Companion paper on autonomous sector collectives and evidence-gated replication |
+| `research/publications.json` | Explicit public-paper allowlist and repository-only publication boundary |
+| `papers/` | Standalone working drafts; only explicitly public entries are rendered or copied to the site |
 | `templates/` | Original nonbinding drafting pack and explicitly unfilled six-sector profile |
 | `research/open-work.json` | Canonical research questions, next steps, statuses, and source references |
 | `research/workshop-statements.json` | Photo provenance, printed attributions, and canonical transcriptions |
@@ -211,6 +215,7 @@ explicit local operation, not part of a website visit or normal build.
 | `site/app.mjs` | Browser-only calculator and bibliography filter |
 | `scripts/build.mjs` | Markdown, citations, navigation, and downloads |
 | `scripts/render-research.mjs` | Shared citation-aware renderer for the main report and companion paper |
+| `scripts/publications.mjs` | Public-paper link resolution and exclusion of repository-only drafts |
 | `scripts/presentation-data.mjs` | Derives live presentation data from canonical published sources |
 | `scripts/capture-ai-usage.py` | Read-only, scoped local capture using CoLab usage-calc |
 | `scripts/usage-audit.mjs` | Aggregate privacy/reconciliation validation and audit rendering |

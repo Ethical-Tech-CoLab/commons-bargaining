@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "public": [
+    {
+      "id": "paper-replication-blueprint",
+      "source": "research/replication-blueprint.md",
+      "output": "blueprint.html",
+      "title": "Replicable sector collectives"
+    },
+    {
+      "id": "paper-prioritized-draft",
+      "source": "papers/commons-collective-paper-draft.md",
+      "output": "paper.html",
+      "title": "Commons Collective: prioritized research paper"
+    },
+    {
+      "id": "paper-institution-example",
+      "source": "papers/institutional-blueprint-example.md",
+      "output": "institution-example.html",
+      "title": "A library-led institutional blueprint"
+    }
+  ],
+  "repositoryOnly": [
+    {
+      "source": "papers/funding-proposal-draft.md",
+      "reason": "User explicitly requested a Markdown document in GitHub without a website link or publication."
+    }
+  ]
+}
